@@ -4,6 +4,20 @@
 
 제작 방식은 [원화 제작과 배치](artwork-production.md)을 따른다. 얼굴 원화와 말풍선/문자 조판을 분리하고 최종 결과에서 함께 검수한다.
 
+## 이미지 생성에 반드시 전달할 화풍
+
+대화·발표·관계도·얼굴 단품의 인물 원화에는 아래 블록을 **매 호출마다 그대로 포함**한다. ‘평가원 스타일’, ‘KICE’, ‘교과서풍’ 한마디로 요약하거나 동의어로 재작성하지 않는다. 이 블록은 원화의 화풍 계약이며 예시 이미지나 완성 템플릿이 아니다. 자유 삽화의 풍경·회화 질감에는 적용하지 않는다. 사용자가 명시적으로 다른 화풍을 요청하면 그 지시를 우선한다.
+
+```text
+STYLE CONTRACT: Draw a living human character as a clean Korean examination textbook cartoon ink illustration. Use natural human anatomy and restrained, readable facial features. Use crisp black contours, lighter and fewer interior lines, opaque white skin, and broad flat gray areas in the hair and clothing. Group hair and beard into a few clear masses with sparse directional lines. Use only a few small flat shadow shapes; keep the face predominantly white. Keep large shapes readable at the final small printed size. The rendering is flat illustrated line art, not a depiction of a sculpted object.
+EXCLUDE: statues, sculptural busts, marble, plaster, stone surfaces, pedestals, carved facial planes, charcoal, graphite or pencil texture, etching, engraving, hatching, cross-hatching, stippled shading, dense individual hair strands, photographic skin, 3D rendering, dramatic lighting, continuous tonal modeling, diffuse gray halos, oversized anime eyes, emoji or geometric placeholder faces. Do not introduce these styles through historical subject references.
+ASSET: Isolate the character on a transparent exterior background, with opaque white skin and any white clothing areas. Keep the requested head and body extent complete with minimal transparent outer padding. No lettering, name labels, speech bubbles, frames, or scenery. Include only props explicitly required by the request.
+```
+
+블록 앞에는 대상·시대·외형·복장·표정·시선·인물 수·절단 범위·배치할 가로세로 비율만 구체화한다. ‘고대 사상가’는 살아 있는 사람의 복장과 외형으로 표현한다. 사용자가 특정 인물을 지명했으면 정체성은 유지하되 `Socrates style`처럼 이름을 화풍으로 쓰거나 유명 석고상·박물관 흉상을 모델로 삼지 않는다. 일반 사상가 요청에 특정 철학자의 이름을 자동 추가하지 않는다. `detailed charcoal-and-ink`, `classical sculpture`, `realistic shaded bust` 같은 상충하는 수식어를 긍정 지시로 덧붙이지 않는다.
+
+인물이 여러 명이어도 이 화풍 블록은 동일하게 쓰고 대상 설명만 바꾼다. ‘앞 인물과 같은 스타일’이라는 문장만으로 대체하지 않는다. 실제 도구에 보낸 최종 프롬프트와 생성 원화 경로를 결과 폴더의 제작 기록에 남겨, 사용자 요청과 모델이 추가한 표현을 구별할 수 있게 한다.
+
 ## 표현
 
 - 검정/회색의 정돈된 윤곽, 흰 피부 면, 회색 머리카락·의복과 소수의 명암 면으로 그린다. 사진 질감·지나친 음영·과장된 애니메이션 눈·이모지·원 안의 점 두 개 얼굴을 기본 인물로 사용하지 않는다.
@@ -24,5 +38,14 @@
 - 시선과 얼굴 방향은 상대나 발언 공간을 향하게 한다. 인물을 반전하더라도 이름/대사는 반전하지 않는다. 초상 틀은 요청상 필요할 때만 넣는다.
 
 ## 완성 검사
+
+**원화 승인 전에는 최종 조판에 채택하지 않는다.** 원화 확대 화면과 예정된 출력 크기에서 다음을 모두 확인한다.
+
+- 흰 얼굴과 회색 머리·의복의 큰 면이 먼저 읽히며, 머리·수염이 가는 선의 덩어리로만 표현되지 않는다.
+- 피부·수염·옷에 목탄 입자, 빗금 음영, 연속적인 입체 명암, 석재·석고 질감이 없다. 역사적 복장을 입은 살아 있는 인물로 읽힌다.
+- 눈·코·입과 표정이 작은 크기에서도 구별되고, 과도한 디테일이 얼굴을 얼룩이나 회색 덩어리로 만들지 않는다.
+- 아래의 인물 범위·비례와 해당 대화 유형에서 예약한 폭·높이를 만족한다.
+
+하나라도 어기면 원화 불합격이다. 검출한 문제와 목표 외형을 명시하고 동일한 화풍 블록을 유지해 다시 생성한다. 축소·흐리게 만들기·벡터 추적·회색 양자화로 화풍 위반을 숨기지 않는다. 인물별 최초 생성 뒤 최대 3회까지 수정 생성하고, 계속 실패하면 결과를 통과로 납품하지 말고 미충족 항목과 미완료 상태를 알린다. 프롬프트를 지켰다는 사실만으로 그림이 통과했다고 판정하지 않는다.
 
 인물은 완성된 원화 이미지 또는 벡터 그림이어야 한다. 빈 타원·임시 실루엣·‘인물’ 글자로 대신하지 않는다. 최종 크기에서 얼굴 특징이 뭉치지 않는지, 목·어깨가 연결되는지, 반복 인물이 같은 사람인지 확인한다. 원화 인물은 한 이미지 개체로 이동·크기 조절·교체할 수 있으면 된다. 얼굴·머리·몸통까지 경로로 분해할 의무는 없다. 독립적으로 수정해야 하는 소품만 별도 개체로 둔다. 얼굴만 확대해 코의 돌출, 두 눈의 원근, 머리의 이중 테두리를 확인하고, 전체 크기에서는 머리와 상반신의 비율을 다시 본다. 정돈된 만화 선화가 되어야 하며 단순 아이콘의 부품을 조합한 모습으로 끝내지 않는다.
