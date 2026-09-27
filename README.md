@@ -77,20 +77,9 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$env:USERPROFILE\plugin
 
 ## 다른 MCP 클라이언트
 
-앱 경로를 직접 등록할 수 있는 stdio MCP 클라이언트는 설치한 앱 실행 파일에 `--mcp-stdio`를 전달합니다. 예를 들어 Windows 설정은 다음과 같습니다.
+사용하는 운영체제 ZIP의 `.mcp.json`에서 `vectora` 항목을 해당 클라이언트의 MCP 설정에 복사합니다. macOS에서는 앱 실행 파일에 `--mcp-stdio`를 직접 전달할 수도 있습니다.
 
-```json
-{
-  "mcpServers": {
-    "vectora": {
-      "command": "C:\\Program Files\\Vectora\\Vectora.exe",
-      "args": ["--mcp-stdio"]
-    }
-  }
-}
-```
-
-이 경우 Codex 플러그인에 포함된 OS별 앱 경로 탐색기는 사용하지 않습니다. 앱 경로는 실제 설치 위치로 바꿉니다.
+Windows에서는 제공된 PowerShell 실행기를 사용해야 합니다. 실행기는 Codex와 표준 입출력으로 통신하고, 편집 엔진과는 현재 Windows 사용자만 접근할 수 있는 로컬 통신 연결을 사용합니다. Windows GUI 실행 파일의 표준 입력이 조기에 닫히는 문제를 피하며 별도 Node.js 설치나 네트워크 포트는 필요하지 않습니다. `.exe --mcp-stdio`만 직접 등록하는 방식은 Windows에서 지원하지 않습니다.
 
 ## 배포 파일 만들기
 

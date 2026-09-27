@@ -75,27 +75,62 @@ if ($isOldVersion -or $isUnreleasedPrerelease) {
 # Electron treats this variable as a Node.js child-process request. Never inherit it into Vectora.
 Remove-Item Env:ELECTRON_RUN_AS_NODE -ErrorAction SilentlyContinue
 
-# Forward bytes directly: PowerShell text pipelines can recode Korean JSON-RPC.
-$startInfo = [System.Diagnostics.ProcessStartInfo]::new()
-$startInfo.FileName = $vectoraExe
-$startInfo.Arguments = '--mcp-stdio'
-$startInfo.UseShellExecute = $false
-$startInfo.CreateNoWindow = $true
-$startInfo.RedirectStandardInput = $true
-$startInfo.RedirectStandardOutput = $true
-$startInfo.RedirectStandardError = $true
-$process = [System.Diagnostics.Process]::Start($startInfo)
-$inputCopy = [Console]::OpenStandardInput().CopyToAsync($process.StandardInput.BaseStream)
-$outputCopy = $process.StandardOutput.BaseStream.CopyToAsync([Console]::OpenStandardOutput())
-$errorCopy = $process.StandardError.BaseStream.CopyToAsync([Console]::OpenStandardError())
-$inputClosed = $false
-while (-not $process.WaitForExit(250)) {
-    if (-not $inputClosed -and $inputCopy.IsCompleted) {
-        $process.StandardInput.Close()
-        $inputClosed = $true
+# Electron's Windows GUI stdin can close before the MCP handshake. Use a
+# current-user-only duplex pipe inside the launcher; Codex still sees stdio.
+$pipeName = 'vectora-mcp-' + [Guid]::NewGuid().ToString('N')
+$pipeSecurity = [System.IO.Pipes.PipeSecurity]::new()
+$pipeSecurity.SetAccessRuleProtection($true, $false)
+$userSid = [System.Security.Principal.WindowsIdentity]::GetCurrent().User
+$pipeSecurity.AddAccessRule([System.IO.Pipes.PipeAccessRule]::new(
+    $userSid, [System.IO.Pipes.PipeAccessRights]::FullControl,
+    [System.Security.AccessControl.AccessControlType]::Allow))
+$pipe = [System.IO.Pipes.NamedPipeServerStream]::new(
+    $pipeName, [System.IO.Pipes.PipeDirection]::InOut, 1,
+    [System.IO.Pipes.PipeTransmissionMode]::Byte,
+    [System.IO.Pipes.PipeOptions]::Asynchronous, 65536, 65536, $pipeSecurity)
+$process = $null
+$exitCode = 1
+try {
+    $startInfo = [System.Diagnostics.ProcessStartInfo]::new()
+    $startInfo.FileName = $vectoraExe
+    $startInfo.Arguments = "--mcp-stdio --mcp-pipe=$pipeName"
+    $startInfo.UseShellExecute = $false
+    $startInfo.CreateNoWindow = $true
+    $startInfo.EnvironmentVariables['ELECTRON_NO_ATTACH_CONSOLE'] = '1'
+    $startInfo.RedirectStandardOutput = $true
+    $startInfo.RedirectStandardError = $true
+    $process = [System.Diagnostics.Process]::Start($startInfo)
+    # Runtime console noise must never enter the JSON-RPC output channel.
+    $noiseCopy = $process.StandardOutput.BaseStream.CopyToAsync([System.IO.Stream]::Null)
+    $diagnosticCopy = $process.StandardError.BaseStream.CopyToAsync([Console]::OpenStandardError())
+    $connection = $pipe.WaitForConnectionAsync()
+    $clock = [System.Diagnostics.Stopwatch]::StartNew()
+    while (-not $connection.Wait(100)) {
+        if ($process.HasExited) { throw "Vectora exited before MCP connected (code $($process.ExitCode))." }
+        if ($clock.Elapsed.TotalSeconds -gt 35) { throw 'Vectora MCP startup timed out.' }
+    }
+    [void]$connection.GetAwaiter().GetResult()
+    $inputCopy = [Console]::OpenStandardInput().CopyToAsync($pipe)
+    $outputCopy = $pipe.CopyToAsync([Console]::OpenStandardOutput())
+    while (-not $process.WaitForExit(250)) {
+        if ($inputCopy.IsCompleted -or $outputCopy.IsCompleted) {
+            $pipe.Dispose()
+            if (-not $process.WaitForExit(5000)) { $process.Kill() }
+            break
+        }
+    }
+    [void]$process.WaitForExit()
+    $exitCode = $process.ExitCode
+    try { [void][Threading.Tasks.Task]::WaitAll(@($noiseCopy, $diagnosticCopy), 2000) } catch {}
+} catch {
+    [Console]::Error.WriteLine("Vectora MCP: $($_.Exception.Message)")
+} finally {
+    $pipe.Dispose()
+    if ($null -ne $process) {
+        if (-not $process.HasExited) {
+            if (-not $process.WaitForExit(5000)) { $process.Kill() }
+        }
+        $process.Dispose()
     }
 }
-[System.Threading.Tasks.Task]::WaitAll(@($outputCopy, $errorCopy))
-$exitCode = $process.ExitCode
-$process.Dispose()
 exit $exitCode
