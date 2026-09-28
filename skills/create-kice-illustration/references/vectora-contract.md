@@ -6,7 +6,7 @@
 
 - 연결된 `vectora_status`로 지원 기능/문서 세션을 확인하고 `vectora_fonts`, `vectora_check_font`로 실제 사용할 문자 전체를 검사한다.
 - `vectora_new_document` 또는 별도 문서의 `vectora_open_document` → `vectora_apply`/`vectora_import_svg` → `vectora_inspect` → `vectora_preview` → `vectora_save`/`vectora_export`를 사용한다. 현재 MCP 문서는 일반 UI 탭과 독립 세션이다.
-- 사용자가 출력 배율·픽셀 크기를 지정하지 않으면 완성 PNG/JPEG/WebP는 **4배**로 내보낸다. 이전 앱과 연결해도 같은 결과가 나오도록 `vectora_export`에 `scale:4`, `vectora_export_package`에 `pngScale:4`를 명시한다. 사용자 지정 크기·배율이 있으면 그것을 우선한다. SVG/PDF와 편집 원본의 물리 치수·글자 크기는 그대로 유지하며, 검수용 `vectora_preview`는 화면에 맞는 제한된 크기를 사용한다.
+- 사용자가 출력 배율·픽셀 크기를 지정하지 않으면 완성 PNG/JPEG/WebP는 **4배**로 내보낸다. `vectora_export`에 `scale:4`를 명시한다. `vectora_export_package`의 도구 스키마가 `pngScale`을 지원하면 `pngScale:4`를 명시하고, 지원하지 않는 이전 앱에서는 PNG를 `vectora_export(scale:4)`로 따로 내보낸다. 사용자 지정 크기·배율이 있으면 그것을 우선한다. SVG/PDF와 편집 원본의 물리 치수·글자 크기는 그대로 유지하며, 검수용 `vectora_preview`는 화면에 맞는 제한된 크기를 사용한다.
 - 변경 요청의 `documentId`, `expectedRevision`, `requestId`는 실제 응답에서 얻어 사용한다. 같은 재시도는 같은 requestId, 다른 편집은 새 ID. 대상 개체 ID를 확인한다. 일반 일괄 명령은 1,000개 이하이며 실패 시 복원된다.
 - 도구가 연결되지 않았으면 벡터 SVG를 직접 만들고 사용할 수 있는 실제 Editor 경로로 검사한다. 파일 생성만 했으면 앱 저장/재열기 검증을 완료했다고 말하지 않는다. 스킬 작업 중 앱 기능 개발이나 외부 모델 연결로 범위를 넓히지 않는다.
 
