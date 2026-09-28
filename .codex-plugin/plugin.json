@@ -1,6 +1,6 @@
 {
   "name": "vectora",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "macOS와 Windows에서 Vectora의 실제 편집 엔진을 MCP로 사용해 벡터를 만들고 편집·저장합니다.",
   "author": {
     "name": "Vectora"
@@ -9,7 +9,7 @@
   "interface": {
     "displayName": "Vectora",
     "shortDescription": "macOS와 Windows에서 MCP로 벡터 그림을 편집",
-    "longDescription": "macOS와 Windows의 Vectora 편집 엔진을 MCP로 연결합니다. 텍스트 배경·그래프·대화·모식도, 실제 UND 조판, 연결선, 인물 자산, 확대·잔상, 제작 규격 검사와 SVG·PDF·PNG 묶음 저장을 지원합니다. 도형·곡률·1~14번 화살표도 Computer Use 없이 편집합니다.",
+    "longDescription": "macOS와 Windows의 Vectora 편집 엔진을 MCP로 연결합니다. 텍스트 배경·그래프·대화·모식도, 실제 UND 조판, 연결선, 인물 자산, 확대·잔상, 제작 규격 검사와 SVG·PDF·PNG 묶음 저장을 지원합니다. 도형·곡률·화살표도 Computer Use 없이 편집합니다.",
     "developerName": "Vectora",
     "category": "Productivity",
     "capabilities": [

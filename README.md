@@ -1,4 +1,4 @@
-# Vectora MCP + 평가원 스타일 스킬 1.0.1
+# Vectora MCP + 평가원 스타일 스킬 1.0.2
 
 Vectora 데스크톱 앱의 실제 편집 엔진을 Codex MCP로 연결하고, 최신 `create-kice-illustration` 평가원 스타일 제작 스킬과 `use-vectora` 도구 사용 안내를 함께 제공합니다. macOS와 Windows 패키지는 각 운영체제의 실행기 설정을 담은 별도 ZIP입니다.
 
@@ -90,4 +90,4 @@ node scripts/build-packages.mjs
 node --test tests/launchers.test.mjs
 ```
 
-결과는 `release/1.0.1/macos/`와 `release/1.0.1/windows/`에 각각 ZIP, 펼친 플러그인, SHA-256을 포함한 `release/1.0.1/manifest.json`으로 생성됩니다. Windows용 ZIP은 Windows PowerShell 실행기 설정을 포함합니다.
+결과는 `release/1.0.2/macos/`와 `release/1.0.2/windows/`에 각각 ZIP, 펼친 플러그인, SHA-256을 포함한 `release/1.0.2/manifest.json`으로 생성됩니다. Windows용 ZIP은 Windows PowerShell 실행기 설정을 포함합니다.
