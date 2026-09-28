@@ -45,7 +45,7 @@ Vectora MCP 도구를 사용한다. 화면 클릭, Computer Use, 브라우저 DO
 3. `vectora_apply`에 `documentId`, `expectedRevision`, 고유 `requestId`, `commands`를 보낸다. 한 배치는 한 실행 취소 단위이며 실패하면 문서가 되돌아간다. 대상에 `select`한 뒤 `style/transform` 등을 적용한다. `add`는 생성한 개체를 선택한다. 개체 ID를 추측하지 않는다.
 4. 같은 요청의 재전송에는 동일한 인자와 requestId를 사용한다. 다른 편집에는 새 ID를 사용한다. 버전 충돌이면 다시 inspect하고 내용을 확인한다. 실행 중인 작업의 취소는 이미 적용된 편집을 되돌린다는 뜻이 아니므로 취소·응답 유실 후에도 inspect로 상태를 확인한다. `vectora_history`로 실행 취소/다시 실행한다.
 5. `vectora_preview`가 반환하는 PNG 이미지를 직접 보고 배치·글리프·겹침·잘림·화살표 방향을 확인한다. 실제 편집 엔진의 렌더이며 데스크톱 캡처가 아니다. 렌더링 성공만으로 시각 검수가 끝났다고 말하지 않는다.
-6. 편집 원본은 `vectora_save`로 SVG와 필요 시 `.vectora`를 저장한다. `vectora_export`는 PNG/JPEG/WebP/PDF 또는 배포용 SVG를 만든다. 덮어쓰기는 사용자가 그 파일 수정을 요청했을 때 `overwrite:true`; 새 결과는 새 경로를 쓴다. 반환 경로·바이트 수·SHA256으로 실제 저장을 확인한다.
+6. 편집 원본은 `vectora_save`로 SVG와 필요 시 `.vectora`를 저장한다. `vectora_export`는 PNG/JPEG/WebP/PDF 또는 배포용 SVG를 만든다. 사용자 지정 배율·픽셀 크기가 없으면 완성 PNG/JPEG/WebP는 **4배**가 기본이다. 이전 앱과의 연결도 고려해 `vectora_export`에 `scale:4`, `vectora_export_package`에 `pngScale:4`를 명시한다. 사용자 지정 값은 우선하며 SVG/PDF·편집 원본의 물리 치수와 글자 크기는 바꾸지 않는다. `vectora_preview`는 검수용 크기 제한을 유지한다. 덮어쓰기는 사용자가 그 파일 수정을 요청했을 때 `overwrite:true`; 새 결과는 새 경로를 쓴다. 반환 경로·바이트 수·SHA256으로 실제 저장을 확인한다.
 7. 저장한 SVG/작업 파일을 다시 열어 개체·문자·글꼴·그룹·물리 크기를 확인한다. 파일 링크와 실제 검증 상태를 전달한다. 문서 ID는 파일이 아니다. 완료한 문서는 닫아 16개 한도를 관리한다. MCP 연결이 끝나면 미저장 문서는 남지 않는다.
 
 ## 글꼴과 가져오기
