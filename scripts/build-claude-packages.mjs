@@ -39,7 +39,8 @@ function copySkillSource(name, targetRoot) {
     recursive: true,
     filter(sourcePath) {
       const relative = path.relative(source, sourcePath).split(path.sep).join('/');
-      return relative !== 'agents/openai.yaml' && !relative.startsWith('agents/openai.yaml/');
+      return relative !== 'agents/openai.yaml' && !relative.startsWith('agents/openai.yaml/')
+        && !relative.split('/').includes('__pycache__') && !relative.endsWith('.pyc');
     },
   });
   return target;
@@ -210,14 +211,14 @@ function installSkillDependencies(skillRoot) {
   const pythonVendor = path.join(skillRoot, 'vendor', 'python');
   mkdirSync(pythonVendor, { recursive: true });
   execFileSync('python3', [
-    '-m', 'pip', 'install', '--disable-pip-version-check', '--no-warn-script-location',
+    '-m', 'pip', 'install', '--disable-pip-version-check', '--no-warn-script-location', '--no-compile',
     '--only-binary=:all:', '--no-deps', '--platform', 'any', '--implementation', 'py',
     '--abi', 'none', '--python-version', '3.10', '--target', pythonVendor,
     'fonttools==4.63.0',
   ], { stdio: 'inherit' });
   assertPortableFontTools(pythonVendor);
   assertNoNativeBinaries(skillRoot, 'standalone Claude KICE skill');
-  execFileSync('python3', ['-c', "import sys; sys.path.insert(0, sys.argv[1]); from fontTools.ttLib import TTFont; assert callable(TTFont.getBestCmap)", pythonVendor], { stdio: 'inherit' });
+  execFileSync('python3', ['-B', '-c', "import sys; sys.path.insert(0, sys.argv[1]); from fontTools.ttLib import TTFont; assert callable(TTFont.getBestCmap)", pythonVendor], { stdio: 'inherit' });
 }
 
 function copyLauncherScripts(targetRoot) {
@@ -344,6 +345,7 @@ export function buildClaudePackages(outputRoot = OUTPUT_ROOT) {
     cpSync(useSkill, path.join(codeRoot, 'skills', 'use-vectora'), { recursive: true });
     cpSync(kiceSkill, path.join(codeRoot, 'skills', 'create-kice-illustration'), { recursive: true });
     writeFileSync(path.join(codeRoot, 'README.md'), '# Vectora for Claude Code\n\nThis plugin provides the local Vectora MCP server and two Korean skills. Vectora must be installed on this computer. The local MCP server is unavailable to Claude web/cloud sessions. See the accompanying `CLAUDE_INSTALLATION.md` for setup and platform notes.\n');
+    cpSync(path.join(root, 'CLAUDE_INSTALLATION.md'), path.join(codeRoot, 'CLAUDE_INSTALLATION.md'));
 
     mkdirSync(path.join(marketplaceRoot, '.claude-plugin'), { recursive: true });
     mkdirSync(path.join(marketplaceRoot, 'plugins'), { recursive: true });
@@ -399,9 +401,14 @@ export function buildClaudePackages(outputRoot = OUTPUT_ROOT) {
     cpSync(path.join(root, 'scripts', 'configure-app.sh'), path.join(utilityRoot, 'configure-app.sh'));
     cpSync(path.join(root, 'scripts', 'configure-app.ps1'), path.join(utilityRoot, 'configure-app.ps1'));
     cpSync(path.join(root, 'CLAUDE_INSTALLATION.md'), path.join(output, 'CLAUDE_INSTALLATION.md'));
-    cpSync(desktopRoot, path.join(outputDesktop, 'extension'), { recursive: true });
-    cpSync(codeRoot, path.join(outputCode, 'vectora'), { recursive: true });
-    cpSync(marketplaceRoot, path.join(outputCode, 'marketplace'), { recursive: true });
+    for (const [source, destination] of [
+      [desktopRoot, path.join(outputDesktop, 'extension')],
+      [codeRoot, path.join(outputCode, 'vectora')],
+      [marketplaceRoot, path.join(outputCode, 'marketplace')],
+    ]) {
+      rmSync(destination, { recursive: true, force: true });
+      cpSync(source, destination, { recursive: true });
+    }
 
     const artifacts = [
       { type: 'mcpb', file: path.relative(output, mcpbPath).split(path.sep).join('/'), bytes: statSync(mcpbPath).size, sha256: sha256(mcpbPath), entryPoint: bundleManifest.server.entry_point },
@@ -412,9 +419,7 @@ export function buildClaudePackages(outputRoot = OUTPUT_ROOT) {
     const result = {
       plugin: 'vectora',
       sourcePluginVersion: sourcePlugin.version,
-      versionChanged: false,
-      appSourceChanged: false,
-      codexReleaseTouched: false,
+      version: CLAUDE_PACKAGE_VERSION,
       artifacts,
       runtimeNotes: {
         desktopExtension: 'Local stdio MCP; Claude Desktop provides its Node runtime.',

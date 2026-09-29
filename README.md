@@ -1,4 +1,4 @@
-# Vectora MCP + 평가원 스타일 스킬 1.0.2
+# Vectora MCP + 평가원 스타일 스킬 1.0.3
 
 Vectora 데스크톱 앱의 실제 편집 엔진을 Codex MCP로 연결하고, 최신 `create-kice-illustration` 평가원 스타일 제작 스킬과 `use-vectora` 도구 사용 안내를 함께 제공합니다. macOS와 Windows 패키지는 각 운영체제의 실행기 설정을 담은 별도 ZIP입니다.
 
@@ -85,11 +85,14 @@ Windows에서는 제공된 PowerShell 실행기를 사용해야 합니다. 실�
 
 ## 배포 파일 만들기
 
-개발자용 패키징은 Node.js의 기본 모듈과 macOS `zip` 유틸리티만 사용합니다. 앱 사용자는 실행기나 MCP 작업을 위해 Node.js/Python을 설치할 필요가 없습니다.
+Codex용 패키징은 Node.js의 기본 모듈과 macOS `zip` 유틸리티를 사용합니다. Codex MCP 연결에는 별도 Node.js/Python이 필요하지 않습니다. Claude용 빌드는 Node.js/npm과 Python/pip을 사용하며, Claude Code 사용자는 Node.js 18 이상이 필요하고 Desktop은 내장 Node를 사용합니다.
 
 ```sh
 node scripts/build-packages.mjs
-node --test tests/launchers.test.mjs
+node scripts/build-claude-packages.mjs
+node --test tests/*.test.mjs
 ```
 
-결과는 `release/1.0.2/macos/`와 `release/1.0.2/windows/`에 각각 ZIP, 펼친 플러그인, SHA-256을 포함한 `release/1.0.2/manifest.json`으로 생성됩니다. Windows용 ZIP은 Windows PowerShell 실행기 설정을 포함합니다.
+결과는 `release/1.0.3/macos/`와 `release/1.0.3/windows/`에 각각 ZIP, 펼친 플러그인, SHA-256을 포함한 `release/1.0.3/manifest.json`으로 생성됩니다. Windows용 ZIP은 Windows PowerShell 실행기 설정을 포함합니다.
+
+Claude 산출물은 `release/claude/1.0.3/`에 생성됩니다. 소스 커밋 후 `node scripts/stage-release.mjs`를 실행하면 7종 패키지, 설치 안내, 경로 설정 도구, 충돌 없는 Codex/Claude manifest와 합산 `SHA256SUMS.txt`가 `release/staging/1.0.3/`에 모입니다. 이 단계는 GitHub 게시를 수행하지 않습니다.

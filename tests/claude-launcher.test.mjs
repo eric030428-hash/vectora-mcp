@@ -42,25 +42,26 @@ test('Claude launcher rejects platforms without a packaged app runner', () => {
 });
 
 const packagedArchives = [
-  path.join(OUTPUT_ROOT, 'desktop', `Vectora-Claude-Desktop-${CLAUDE_PACKAGE_VERSION}.mcpb`),
-  path.join(OUTPUT_ROOT, 'claude-code', `Vectora-Claude-Code-${CLAUDE_PACKAGE_VERSION}.zip`),
+  { file: path.join(OUTPUT_ROOT, 'desktop', `Vectora-Claude-Desktop-${CLAUDE_PACKAGE_VERSION}.mcpb`), prefix: '' },
+  { file: path.join(OUTPUT_ROOT, 'claude-code', `Vectora-Claude-Code-${CLAUDE_PACKAGE_VERSION}.zip`), prefix: '' },
+  { file: path.join(OUTPUT_ROOT, 'claude-code', `Vectora-Claude-Code-Marketplace-${CLAUDE_PACKAGE_VERSION}.zip`), prefix: 'claude-code-marketplace/plugins/vectora' },
 ];
-const canExercisePackagedMacLaunchers = process.platform === 'darwin' && packagedArchives.every(existsSync);
+const canExercisePackagedMacLaunchers = process.platform === 'darwin' && packagedArchives.every(({ file }) => existsSync(file));
 
-test('extracted MCPB and Claude Code archives invoke the real colocated launcher and start-mcp script', {
+test('extracted MCPB, Code plugin and marketplace invoke the colocated launcher in Unicode paths', {
   skip: canExercisePackagedMacLaunchers ? false : 'Build Claude packages on macOS before this archive-level smoke test.',
 }, (t) => {
   const testRoot = mkdtempSync(path.join(os.tmpdir(), 'Vectora Claude 추출 경로 with spaces-'));
   t.after(() => rmSync(testRoot, { recursive: true, force: true }));
   const appPath = makeMacApp(testRoot);
 
-  for (const archive of packagedArchives) {
+  for (const { file: archive, prefix } of packagedArchives) {
     const extractedRoot = path.join(testRoot, path.basename(archive, path.extname(archive)));
     mkdirSync(extractedRoot, { recursive: true });
     execFileSync('unzip', ['-q', '-o', archive, '-d', extractedRoot]);
 
-    const launcherPath = path.join(extractedRoot, 'scripts', 'claude', 'claude-mcp-launcher.mjs');
-    const startScriptPath = path.join(extractedRoot, 'scripts', 'start-mcp.sh');
+    const launcherPath = path.join(extractedRoot, prefix, 'scripts', 'claude', 'claude-mcp-launcher.mjs');
+    const startScriptPath = path.join(extractedRoot, prefix, 'scripts', 'start-mcp.sh');
     assert.ok(existsSync(launcherPath), `missing extracted launcher in ${archive}`);
     assert.ok(existsSync(startScriptPath), `missing extracted start-mcp script in ${archive}`);
 

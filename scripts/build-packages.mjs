@@ -4,8 +4,8 @@ import { cpSync, existsSync, mkdirSync, readFileSync, readdirSync, rmSync, statS
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-export const PLUGIN_VERSION = '1.0.2';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+export const PLUGIN_VERSION = JSON.parse(readFileSync(path.join(root, '.codex-plugin/plugin.json'), 'utf8')).version;
 
 export const PLUGIN_ROOT = root;
 const fixtureDirectory = path.join(root, 'tests', 'fixtures');
@@ -39,14 +39,21 @@ function excluded(relativePath) {
   const base = segments.at(-1) ?? '';
   return segments.some((segment) => ['.git', 'node_modules', 'release', 'tests', '__pycache__'].includes(segment))
     || base === '.DS_Store'
-    || base.endsWith('.pyc')
-    || relativePath === path.join('scripts', 'build-packages.mjs');
+    || base.endsWith('.pyc');
 }
 
-function copyPlugin(targetRoot) {
+function copyPlugin(targetRoot, platform) {
   mkdirSync(targetRoot, { recursive: true });
-  for (const name of readdirSync(root)) {
-    if (excluded(name)) continue;
+  const extension = platform === 'macos' ? 'sh' : 'ps1';
+  // Explicit runtime inputs prevent new development scripts from leaking into installers.
+  const entries = [
+    '.codex-plugin/plugin.json', 'README.md', 'CLAUDE_INSTALLATION.md',
+    'assets/vectora.png', 'skills',
+    'src/production/frames-core.mjs', 'src/production/graphs-core.mjs', 'src/production/graphs-points.mjs',
+    `scripts/start-mcp.${extension}`, `scripts/configure-app.${extension}`,
+  ];
+  for (const name of entries) {
+    mkdirSync(path.dirname(path.join(targetRoot, name)), { recursive: true });
     cpSync(path.join(root, name), path.join(targetRoot, name), {
       recursive: true,
       filter(sourcePath) {
@@ -97,7 +104,7 @@ export function buildPackages(outputRoot = path.join(root, 'release', PLUGIN_VER
     if (existsSync(targetRoot)) rmSync(targetRoot, { recursive: true, force: true });
     if (existsSync(archivePath)) rmSync(archivePath, { force: true });
 
-    copyPlugin(targetRoot);
+    copyPlugin(targetRoot, platform);
     const configPath = path.join(fixtureDirectory, `${platform}-mcp.json`);
     const configBytes = readFileSync(configPath);
     writeFileSync(path.join(targetRoot, '.mcp.json'), configBytes);
