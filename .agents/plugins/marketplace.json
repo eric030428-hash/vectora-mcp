@@ -1,0 +1,32 @@
+{
+  "name": "vectora",
+  "interface": {
+    "displayName": "Vectora"
+  },
+  "plugins": [
+    {
+      "name": "vectora-macos",
+      "source": {
+        "source": "local",
+        "path": "./plugins/vectora-macos"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "vectora-windows",
+      "source": {
+        "source": "local",
+        "path": "./plugins/vectora-windows"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

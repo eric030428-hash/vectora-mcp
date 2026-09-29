@@ -42,7 +42,7 @@ function excluded(relativePath) {
     || base.endsWith('.pyc');
 }
 
-function copyPlugin(targetRoot, platform) {
+export function copyPlugin(targetRoot, platform) {
   mkdirSync(targetRoot, { recursive: true });
   const extension = platform === 'macos' ? 'sh' : 'ps1';
   // Explicit runtime inputs prevent new development scripts from leaking into installers.
