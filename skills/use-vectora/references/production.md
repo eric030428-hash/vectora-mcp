@@ -3,7 +3,13 @@
 
 Use `vectora_production` with `documentId`, latest `expectedRevision`, new `requestId`, and `action`. `create` takes `spec`; `update` takes the component `id` and a partial `patch`. `policy: preserve` is the default; `reset` explicitly drops manual edits. The response contains `production.components`, saved source specs, warnings and `roles: {key:{id,role}}`. Inspect these actual IDs; never invent them. Arrays in patches replace arrays, omitted fields remain unchanged, and explicit `null` removes an optional field. Retain speaker/turn/series/node IDs when editing or reordering.
 
-Production lengths always use explicitly named `*Mm` and `*Pt` fields. They are not converted again by `vectora_apply.units`. Existing `vectora.kice/v1` recipes remain pixel-based. New production text uses installed UND Regular 8pt, tracking -60. No font fallback and no reference-artwork search are built in. Creation adds a component to the current isolated document; create a new document first for a new illustration. Artboard size remains explicit: leave margins or enlarge the board when content grows. A component's width is not an instruction to scale its letters.
+Production lengths always use explicitly named `*Mm` and `*Pt` fields. They are not converted again by `vectora_apply.units`. Existing `vectora.kice/v1` recipes remain pixel-based. New production text uses installed UND Regular 8pt, tracking -60. All new horizontal and vertical app text also defaults to `charSpacing:-60` (1/1000 em); pass `-60` when the live creation schema exposes `charSpacing`, and measure with the same tracking. Do not change existing text tracking without a request. No font fallback and no reference-artwork search are built in. Creation adds a component to the current isolated document; create a new document first for a new illustration. Artboard size remains explicit: leave margins or enlarge the board when content grows. A component's width is not an instruction to scale its letters.
+
+### Check live tool schemas
+
+Use `vectora_fonts` as the installed-font listing tool. Use `vectora_check_font` only when it appears in the current tool list. Send `colorMode` to `vectora_new_document` only when its live input schema includes the field; use `cmyk` by default and `rgb` only for an RGB request. Send `fontReplacements: {"source font":"installed font"}` to `vectora_open_document` or `vectora_import_svg` only when that tool's schema includes it. On `MISSING_FONTS`, inspect the missing-font list, check installed choices with `vectora_fonts`, and retry only after choosing a replacement. Do not guess unsupported fields or silently substitute the assessment UND font.
+
+The current arrow UI name is `화살표` with tool value `arrow-3`. Check `tools/list` for the current arrow fields and accepted values; do not use old numbered arrow ranges.
 
 ### Measure and reflow
 
@@ -74,4 +80,4 @@ Legacy `vectora.kice/v1` primitives accept validated `charSpacing`, `opacity`, `
 
 ## 0.9 원 그래프와 프리셋
 
-`pieChart`의 이름과 비율은 두 줄 가운데 정렬, UND 8pt·자간 -60입니다. `vectora_create_preset`의 원 그래프도 같은 데이터 편집과 글자 크기 유지 기능을 사용합니다. 새 도식 21종은 최신 유형 원칙으로 재구성했으며 자료·말풍선 틀은 빈 상태입니다. 신규 화살표 번호는 `arrow-1`~`arrow-14`입니다. 기존 15~39번은 저장된 파일의 표시용으로 유지합니다.
+`pieChart`의 이름과 비율은 두 줄 가운데 정렬, UND 8pt·자간 -60입니다. `vectora_create_preset`의 원 그래프도 같은 데이터 편집과 글자 크기 유지 기능을 사용합니다. 내장 도식은 최신 유형 원칙으로 재구성했으며 자료·말풍선 틀은 빈 상태입니다.

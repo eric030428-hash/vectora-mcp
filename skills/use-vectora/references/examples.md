@@ -13,7 +13,7 @@ ID/버전은 실제 도구 응답으로 바꾼다. 도구 이름 앞의 MCP 서�
     {"type":"typography","profile":"kice"},
     {"type":"add","shape":"rect","values":{"name":"상자 A","left":10,"top":20,"width":30,"height":16,"fill":"#ffffff","stroke":"#000000","strokeWidth":0.3}},
     {"type":"add","shape":"text","values":{"name":"A 라벨","left":14,"top":25,"width":22,"text":"A 지역","fontFamily":"UND폰트v2.1","fontSize":8,"charSpacing":-60,"fill":"#000000","textAlign":"center"}},
-    {"type":"add","shape":"line","values":{"left":43,"top":28,"width":22,"stroke":"#000000","strokeWidth":0.3,"arrowStart":"triangle","arrowEnd":"triangle"}},
+    {"type":"add","shape":"line","values":{"left":43,"top":28,"width":22,"stroke":"#000000","strokeWidth":0.3,"arrowStart":"arrow-3","arrowEnd":"arrow-3"}},
     {"type":"add","shape":"ellipse","values":{"left":68,"top":20,"width":26,"height":16,"fill":"none","stroke":"#000000","strokeWidth":0.3}}
   ]
 }
@@ -30,12 +30,12 @@ ID/버전은 실제 도구 응답으로 바꾼다. 도구 이름 앞의 MCP 서�
 ```json
 [
   {"type":"select","ids":["실제 선 ID"]},
-  {"type":"style","values":{"strokeDashArray":[1.5,1],"arrowStart":"open","arrowEnd":"triangle","arrowScale":1}},
+  {"type":"style","values":{"strokeDashArray":[1.5,1],"arrowStart":"arrow-3","arrowEnd":"arrow-3","arrowScale":1}},
   {"type":"transform","values":{"x":25,"y":30,"width":50}}
 ]
 ```
 
-화살표는 열린 선/경로에 적용한다. `none/triangle/open`을 양끝별로 설정한다. `arrowScale`은 0.25–4다. 세로선은 `width:0,y2:높이`로 만들고 경로는 `shape:path,d:"M 10 10 L 30 20"`처럼 명령의 기하 단위로 지정한다.
+화살표는 열린 선/경로에 적용한다. 현재 스키마 값 `none/arrow-3`을 양끝별로 설정한다. `arrow-3`의 UI 이름은 “화살표”다. `arrowScale`은 0.25–4다. 세로선은 `width:0,y2:높이`로 만들고 경로는 `shape:path,d:"M 10 10 L 30 20"`처럼 명령의 기하 단위로 지정한다.
 
 `vectora_apply` 지원: 도형/문자 추가, 선택, 이동·크기·회전·뒤집기, 서식, 앞뒤 순서, 그룹/해제, 정렬/분배, 합치기/빼기/교차/차이/분할, 클리핑, 그라디언트/그림자, 경로 오프셋·노드·단순화·연결·반전, 문자/선 윤곽선, 복제/복사/붙여넣기, 잠금/숨김, 대지/가이드/레이어. 실제 세부 스키마는 tools/list를 따른다. 화면 확대·패널 배치·마우스 제스처는 문서 편집 명령이 아니다.
 

@@ -2,7 +2,9 @@
 
 Vectora 데스크톱 앱의 실제 편집 엔진을 Codex MCP로 연결하고, 최신 `create-kice-illustration` 평가원 스타일 제작 스킬과 `use-vectora` 도구 사용 안내를 함께 제공합니다. macOS와 Windows 패키지는 각 운영체제의 실행기 설정을 담은 별도 ZIP입니다.
 
-플러그인 실행에는 **Vectora 1.0.0 이상**이 필요합니다. 앱은 별도로 설치해야 하며 플러그인에는 앱이나 UND 글꼴 파일이 포함되지 않습니다. 편집 엔진은 설치된 Vectora 앱 실행 파일을 `--mcp-stdio`로 직접 실행하므로 MCP 사용에 Node.js, Python, Computer Use, 화면 녹화 권한은 필요하지 않습니다. 스킬에 포함된 일부 보조 제작 스크립트는 그 스크립트를 직접 실행할 때만 해당 런타임이 필요합니다.
+Claude Desktop, Claude Code, Claude 스킬 설치 파일과 절차는 [Claude 설치 안내](CLAUDE_INSTALLATION.md)를 참고하세요.
+
+플러그인 실행에는 **Vectora 1.0.0 이상**이 필요합니다. 앱은 별도로 설치해야 하며 플러그인에는 앱이나 UND 글꼴 파일이 포함되지 않습니다. Codex 실행기는 설치된 Vectora 앱 실행 파일을 `--mcp-stdio`로 직접 실행하므로 MCP 연결에 Node.js나 Python이 필요하지 않습니다. Claude Code 플러그인은 Node.js 18 이상이 PATH에 있어야 하며, Claude Desktop 확장은 내장 Node 런타임을 사용합니다. 스킬에 포함된 일부 보조 제작 스크립트는 직접 실행할 때만 해당 런타임이 필요합니다.
 
 ## 포함 기능
 

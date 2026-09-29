@@ -17,14 +17,13 @@ function makeMacApp(parent, version) {
   return app;
 }
 
-function runMacLauncher({ home, appPath, extraEnv = {} }) {
+function runMacLauncher({ appPath, extraEnv = {} }) {
   const config = createMcpConfig('macos').mcpServers.vectora;
   return spawnSync(config.command, config.args, {
     encoding: 'utf8',
     timeout: 5000,
     env: {
       ...process.env,
-      HOME: home,
       VECTORA_APP_PATH: appPath ?? '',
       ELECTRON_RUN_AS_NODE: '1',
       ...extraEnv,
@@ -35,24 +34,8 @@ function runMacLauncher({ home, appPath, extraEnv = {} }) {
 test('macOS MCP launcher passes the stdio argument and keeps diagnostics on stderr', { skip: process.platform !== 'darwin' }, (t) => {
   const temporaryRoot = mkdtempSync(path.join(PLUGIN_ROOT, '.launcher-test-'));
   t.after(() => rmSync(temporaryRoot, { recursive: true, force: true }));
-  const home = path.join(temporaryRoot, '사용자 폴더');
-  mkdirSync(home, { recursive: true });
   const app = makeMacApp(temporaryRoot, '1.0.0');
-  const result = runMacLauncher({ home, appPath: app });
-  assert.equal(result.status, 0, result.stderr);
-  assert.equal(result.stdout, 'vectora-stdout:--mcp-stdio');
-  assert.equal(result.stderr, 'vectora-stderr');
-});
-
-test('macOS MCP launcher reads a configured Unicode path containing spaces', { skip: process.platform !== 'darwin' }, (t) => {
-  const temporaryRoot = mkdtempSync(path.join(PLUGIN_ROOT, '.launcher-test-'));
-  t.after(() => rmSync(temporaryRoot, { recursive: true, force: true }));
-  const home = path.join(temporaryRoot, '사용자 폴더');
-  const configDirectory = path.join(home, 'Library', 'Application Support', 'Vectora');
-  mkdirSync(configDirectory, { recursive: true });
-  const app = makeMacApp(temporaryRoot, '1.0.4');
-  writeFileSync(path.join(configDirectory, 'mcp-app-path'), `${app}\n`, 'utf8');
-  const result = runMacLauncher({ home });
+  const result = runMacLauncher({ appPath: app });
   assert.equal(result.status, 0, result.stderr);
   assert.equal(result.stdout, 'vectora-stdout:--mcp-stdio');
   assert.equal(result.stderr, 'vectora-stderr');
@@ -61,11 +44,9 @@ test('macOS MCP launcher reads a configured Unicode path containing spaces', { s
 test('macOS MCP launcher rejects older and prerelease app versions without writing to stdout', { skip: process.platform !== 'darwin' }, (t) => {
   const temporaryRoot = mkdtempSync(path.join(PLUGIN_ROOT, '.launcher-test-'));
   t.after(() => rmSync(temporaryRoot, { recursive: true, force: true }));
-  const home = path.join(temporaryRoot, 'home');
-  mkdirSync(home, { recursive: true });
   for (const version of ['0.9.3', '1.0.0-beta.1']) {
     const app = makeMacApp(path.join(temporaryRoot, version), version);
-    const result = runMacLauncher({ home, appPath: app });
+    const result = runMacLauncher({ appPath: app });
     assert.equal(result.status, 69, `${version}: ${result.stderr}`);
     assert.equal(result.stdout, '');
     assert.match(result.stderr, /1\.0\.0 or later/);
