@@ -1,26 +1,40 @@
-import { cpSync, existsSync, lstatSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
+import {
+  cpSync, existsSync, lstatSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSync,
+} from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { copyPlugin, createMcpConfig, PLUGIN_ROOT, PLUGIN_VERSION } from './build-packages.mjs';
+import { buildClaudePlugin } from './build-claude-packages.mjs';
+import { copyCodexPlugin, PLUGIN_ROOT } from './build-packages.mjs';
 
-const MARKETPLACE_PATH = path.join(PLUGIN_ROOT, '.agents', 'plugins', 'marketplace.json');
 const PLUGINS_ROOT = path.join(PLUGIN_ROOT, 'plugins');
-const PLATFORMS = [
+const CODEX_CATALOG = path.join(PLUGIN_ROOT, '.agents', 'plugins', 'marketplace.json');
+const CLAUDE_CATALOG = path.join(PLUGIN_ROOT, '.claude-plugin', 'marketplace.json');
+const CODEX_PLUGINS = [
   { id: 'vectora-macos', platform: 'macos', displayName: 'Vectora (macOS)' },
   { id: 'vectora-windows', platform: 'windows', displayName: 'Vectora (Windows)' },
 ];
+const CLAUDE_PLUGIN = { id: 'vectora' };
 
-function marketplaceText() {
+function codexMarketplaceText() {
   return `${JSON.stringify({
     name: 'vectora',
     interface: { displayName: 'Vectora' },
-    plugins: PLATFORMS.map(({ id }) => ({
+    plugins: CODEX_PLUGINS.map(({ id }) => ({
       name: id,
       source: { source: 'local', path: `./plugins/${id}` },
       policy: { installation: 'AVAILABLE', authentication: 'ON_INSTALL' },
       category: 'Productivity',
     })),
+  }, null, 2)}\n`;
+}
+
+function claudeMarketplaceText() {
+  return `${JSON.stringify({
+    name: 'vectora',
+    owner: { name: 'Vectora' },
+    description: 'Vectora MCP and Korean assessment illustration skills for Claude.',
+    plugins: [{ name: 'vectora', source: './plugins/vectora' }],
   }, null, 2)}\n`;
 }
 
@@ -40,42 +54,38 @@ function requireDirectoryIfPresent(target) {
   }
 }
 
+function validateCatalog(pathname, expectedName, allowedPlugins) {
+  const stat = optionalStat(pathname);
+  if (!stat) return;
+  if (!stat.isFile() || stat.isSymbolicLink()) throw new Error(`Refusing to replace non-file or linked catalog: ${pathname}`);
+  const current = JSON.parse(readFileSync(pathname, 'utf8'));
+  if (current.name !== expectedName) throw new Error(`Refusing to replace marketplace '${current.name}' at ${pathname}.`);
+  const names = current.plugins?.map((entry) => entry?.name) ?? [];
+  if (names.some((name) => !allowedPlugins.includes(name)) || new Set(names).size !== names.length) {
+    throw new Error(`Refusing to replace unexpected plugin entries in ${pathname}.`);
+  }
+}
+
+function validatePluginOutput(id, manifestRelativePath) {
+  const target = path.join(PLUGINS_ROOT, id);
+  const stat = optionalStat(target);
+  if (!stat) return;
+  if (!stat.isDirectory() || stat.isSymbolicLink()) throw new Error(`Refusing to replace non-directory or linked plugin output: ${target}`);
+  const manifestPath = path.join(target, manifestRelativePath);
+  if (!existsSync(manifestPath)) throw new Error(`Refusing to replace plugin output without its manifest: ${target}`);
+  const manifest = JSON.parse(readFileSync(manifestPath, 'utf8'));
+  if (manifest.name !== id) throw new Error(`Refusing to replace ${target}; its manifest name is '${manifest.name}'.`);
+}
+
 function validateOutputLocations() {
   requireDirectoryIfPresent(PLUGINS_ROOT);
-  requireDirectoryIfPresent(path.join(PLUGIN_ROOT, '.agents'));
-  requireDirectoryIfPresent(path.dirname(MARKETPLACE_PATH));
-
-  for (const { id } of PLATFORMS) {
-    const target = path.join(PLUGINS_ROOT, id);
-    const stat = optionalStat(target);
-    if (!stat) continue;
-    if (!stat.isDirectory() || stat.isSymbolicLink()) {
-      throw new Error(`Refusing to replace non-directory or linked plugin output: ${target}`);
-    }
-    const manifestPath = path.join(target, '.codex-plugin', 'plugin.json');
-    if (!existsSync(manifestPath)) {
-      throw new Error(`Refusing to replace plugin output without its manifest: ${target}`);
-    }
-    const manifest = JSON.parse(readFileSync(manifestPath, 'utf8'));
-    if (manifest.name !== id) {
-      throw new Error(`Refusing to replace ${target}; its manifest name is '${manifest.name}'.`);
-    }
+  for (const folder of [path.join(PLUGIN_ROOT, '.agents'), path.dirname(CODEX_CATALOG), path.dirname(CLAUDE_CATALOG)]) {
+    requireDirectoryIfPresent(folder);
   }
-
-  const marketplaceStat = optionalStat(MARKETPLACE_PATH);
-  if (marketplaceStat && (!marketplaceStat.isFile() || marketplaceStat.isSymbolicLink())) {
-    throw new Error(`Refusing to replace non-file or linked marketplace path: ${MARKETPLACE_PATH}`);
-  }
-  if (marketplaceStat) {
-    const current = JSON.parse(readFileSync(MARKETPLACE_PATH, 'utf8'));
-    if (current.name !== 'vectora') {
-      throw new Error(`Refusing to replace marketplace '${current.name}' at ${MARKETPLACE_PATH}.`);
-    }
-    const names = current.plugins?.map((entry) => entry?.name) ?? [];
-    if (names.some((name) => !PLATFORMS.some(({ id }) => id === name)) || new Set(names).size !== names.length) {
-      throw new Error(`Refusing to replace unexpected plugin entries in ${MARKETPLACE_PATH}.`);
-    }
-  }
+  for (const { id } of CODEX_PLUGINS) validatePluginOutput(id, '.codex-plugin/plugin.json');
+  validatePluginOutput(CLAUDE_PLUGIN.id, '.claude-plugin/plugin.json');
+  validateCatalog(CODEX_CATALOG, 'vectora', CODEX_PLUGINS.map(({ id }) => id));
+  validateCatalog(CLAUDE_CATALOG, 'vectora', [CLAUDE_PLUGIN.id]);
 }
 
 function listFiles(directory, prefix = '') {
@@ -107,50 +117,50 @@ function treesMatch(actualRoot, expectedRoot) {
   return actualFiles.every((file) => readFileSync(path.join(actualRoot, file)).equals(readFileSync(path.join(expectedRoot, file))));
 }
 
-function stagePlugin(stageRoot, { id, platform, displayName }) {
-  const targetRoot = path.join(stageRoot, id);
-  copyPlugin(targetRoot, platform);
-
-  const manifestPath = path.join(targetRoot, '.codex-plugin', 'plugin.json');
-  const manifest = JSON.parse(readFileSync(manifestPath, 'utf8'));
-  manifest.name = id;
-  manifest.version = PLUGIN_VERSION;
-  manifest.interface.displayName = displayName;
-  writeFileSync(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
-  writeFileSync(path.join(targetRoot, '.mcp.json'), `${JSON.stringify(createMcpConfig(platform), null, 2)}\n`);
-  return targetRoot;
+function stageMarketplace(stageRoot) {
+  for (const plugin of CODEX_PLUGINS) {
+    copyCodexPlugin(path.join(stageRoot, plugin.id), plugin.platform, plugin);
+  }
+  buildClaudePlugin(path.join(stageRoot, CLAUDE_PLUGIN.id));
 }
 
 export function buildMarketplace({ check = false } = {}) {
   validateOutputLocations();
   const stageRoot = mkdtempSync(path.join(os.tmpdir(), 'vectora-marketplace-'));
   try {
-    const staged = new Map(PLATFORMS.map((plugin) => [plugin.id, stagePlugin(stageRoot, plugin)]));
-    const expectedMarketplace = marketplaceText();
+    stageMarketplace(stageRoot);
+    const expectedCatalogs = new Map([
+      [CODEX_CATALOG, codexMarketplaceText()],
+      [CLAUDE_CATALOG, claudeMarketplaceText()],
+    ]);
+    const plugins = [...CODEX_PLUGINS.map(({ id }) => id), CLAUDE_PLUGIN.id];
 
     if (check) {
       const drift = [];
-      for (const { id } of PLATFORMS) {
-        if (!treesMatch(path.join(PLUGINS_ROOT, id), staged.get(id))) drift.push(`plugins/${id}`);
+      for (const id of plugins) {
+        if (!treesMatch(path.join(PLUGINS_ROOT, id), path.join(stageRoot, id))) drift.push(`plugins/${id}`);
       }
-      const marketplaceStat = optionalStat(MARKETPLACE_PATH);
-      if (!marketplaceStat?.isFile() || marketplaceStat.isSymbolicLink()
-        || !readFileSync(MARKETPLACE_PATH).equals(Buffer.from(expectedMarketplace))) {
-        drift.push('.agents/plugins/marketplace.json');
+      for (const [pathname, expected] of expectedCatalogs) {
+        const stat = optionalStat(pathname);
+        if (!stat?.isFile() || stat.isSymbolicLink() || !readFileSync(pathname).equals(Buffer.from(expected))) {
+          drift.push(path.relative(PLUGIN_ROOT, pathname).split(path.sep).join('/'));
+        }
       }
       if (drift.length) throw new Error(`Marketplace output is stale: ${drift.join(', ')}. Run node scripts/build-marketplace.mjs.`);
-      return { checked: true, version: PLUGIN_VERSION, plugins: PLATFORMS.map(({ id }) => id) };
+      return { checked: true, plugins, catalogs: ['.agents/plugins/marketplace.json', '.claude-plugin/marketplace.json'] };
     }
 
     mkdirSync(PLUGINS_ROOT, { recursive: true });
-    for (const { id } of PLATFORMS) {
+    for (const id of plugins) {
       const target = path.join(PLUGINS_ROOT, id);
       rmSync(target, { recursive: true, force: true });
-      cpSync(staged.get(id), target, { recursive: true });
+      cpSync(path.join(stageRoot, id), target, { recursive: true });
     }
-    mkdirSync(path.dirname(MARKETPLACE_PATH), { recursive: true });
-    writeFileSync(MARKETPLACE_PATH, expectedMarketplace, 'utf8');
-    return { checked: false, version: PLUGIN_VERSION, plugins: PLATFORMS.map(({ id }) => id) };
+    for (const [pathname, contents] of expectedCatalogs) {
+      mkdirSync(path.dirname(pathname), { recursive: true });
+      writeFileSync(pathname, contents, 'utf8');
+    }
+    return { checked: false, plugins, catalogs: ['.agents/plugins/marketplace.json', '.claude-plugin/marketplace.json'] };
   } finally {
     rmSync(stageRoot, { recursive: true, force: true });
   }

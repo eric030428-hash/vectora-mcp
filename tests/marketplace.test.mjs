@@ -100,7 +100,7 @@ test('generated trees contain the complete canonical skills and runtime allowlis
     const target = path.join(PLUGIN_ROOT, 'plugins', id);
     const actual = listFiles(target);
     const expected = [
-      '.codex-plugin/plugin.json', '.mcp.json', 'README.md', 'CLAUDE_INSTALLATION.md', 'assets/vectora.png',
+      '.codex-plugin/plugin.json', '.mcp.json', 'README.md', 'assets/vectora.png',
       ...expectedSkills,
       ...productionFiles,
       `scripts/configure-app.${script}`, `scripts/start-mcp.${script}`,
@@ -129,6 +129,8 @@ test('generation is idempotent and --check detects drift without changing output
   const outputs = [
     ...generated.map(({ id }) => path.join(PLUGIN_ROOT, 'plugins', id)),
     path.dirname(marketplacePath),
+    path.join(PLUGIN_ROOT, 'plugins/vectora'),
+    path.join(PLUGIN_ROOT, '.claude-plugin'),
   ];
   execFileSync(process.execPath, [script], { cwd: PLUGIN_ROOT });
   const afterFirstBuild = outputs.map(treeHash);
@@ -138,13 +140,13 @@ test('generation is idempotent and --check detects drift without changing output
   execFileSync(process.execPath, [script, '--check'], { cwd: PLUGIN_ROOT });
   assert.deepEqual(outputs.map(treeHash), afterSecondBuild);
 
-  const skillCopy = path.join(PLUGIN_ROOT, 'plugins', 'vectora-macos', 'skills', 'use-vectora', 'SKILL.md');
+  const skillCopy = path.join(PLUGIN_ROOT, 'plugins', 'vectora', 'skills', 'use-vectora', 'SKILL.md');
   const original = readFileSync(skillCopy);
   try {
     writeFileSync(skillCopy, Buffer.concat([original, Buffer.from('\nmarketplace drift fixture\n')]));
     const drift = spawnSync(process.execPath, [script, '--check'], { cwd: PLUGIN_ROOT, encoding: 'utf8' });
     assert.notEqual(drift.status, 0);
-    assert.match(drift.stderr, /plugins\/vectora-macos/);
+    assert.match(drift.stderr, /plugins\/vectora/);
   } finally {
     writeFileSync(skillCopy, original);
   }

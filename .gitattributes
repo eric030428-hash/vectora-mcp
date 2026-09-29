@@ -1,2 +1,6 @@
 * text=auto eol=lf
 *.png binary
+# Keep packaged third-party runtime bytes identical to the pinned vendor archive.
+plugins/vectora/skills/create-kice-illustration/node_modules/** -text
+plugins/vectora/skills/create-kice-illustration/vendor/python/** -text
+scripts/claude-runtime/runtime-vendor.zip binary

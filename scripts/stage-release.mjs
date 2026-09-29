@@ -1,75 +1,217 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
-import { copyFileSync, mkdirSync, mkdtempSync, readFileSync, renameSync, rmSync, statSync, writeFileSync } from 'node:fs';
+import {
+  copyFileSync,
+  lstatSync,
+  mkdirSync,
+  mkdtempSync,
+  readFileSync,
+  readdirSync,
+  renameSync,
+  rmSync,
+  writeFileSync,
+} from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { PLUGIN_ROOT, PLUGIN_VERSION } from './build-packages.mjs';
 
-const sha256 = (file) => createHash('sha256').update(readFileSync(file)).digest('hex');
-const readJson = (file) => JSON.parse(readFileSync(file, 'utf8'));
-const writeJson = (file, value) => writeFileSync(file, `${JSON.stringify(value, null, 2)}\n`);
+const PLUGIN_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const ROOT_MANIFEST = '.codex-plugin/plugin.json';
+const CODEX_CATALOG = '.agents/plugins/marketplace.json';
+const CLAUDE_CATALOG = '.claude-plugin/marketplace.json';
+const CLAUDE_PLUGIN_MANIFEST = '.claude-plugin/plugin.json';
+const CODEX_PLUGINS = ['vectora-macos', 'vectora-windows'];
+const CLAUDE_PLUGIN = 'vectora';
 
-export function stageRelease() {
-  const git = (...args) => execFileSync('git', args, { cwd: PLUGIN_ROOT, encoding: 'utf8' }).trim();
-  assert.equal(git('status', '--porcelain'), '', 'Commit the reviewed source changes before staging a release.');
-  assert.deepEqual(readFileSync(path.join(PLUGIN_ROOT, 'docs/CLAUDE_INSTALLATION.md')), readFileSync(path.join(PLUGIN_ROOT, 'CLAUDE_INSTALLATION.md')), 'Keep the app-linked source guide and release guide identical.');
-  const codexRoot = path.join(PLUGIN_ROOT, 'release', PLUGIN_VERSION);
-  const claudeRoot = path.join(PLUGIN_ROOT, 'release', 'claude', PLUGIN_VERSION);
-  const codex = readJson(path.join(codexRoot, 'manifest.json'));
-  const claude = readJson(path.join(claudeRoot, 'manifest.json'));
-  assert.equal(codex.version, PLUGIN_VERSION);
-  assert.equal(claude.sourcePluginVersion, PLUGIN_VERSION);
-  const packages = [
-    ...codex.packages.map((item) => ({ ...item, type: 'codex-plugin', source: path.join(codexRoot, item.archive), file: path.basename(item.archive) })),
-    ...claude.artifacts.map((item) => ({ ...item, source: path.join(claudeRoot, item.file), file: path.basename(item.file) })),
-  ];
-  assert.equal(packages.length, 7, 'Expected two Codex and five Claude packages.');
-  assert.equal(new Set(packages.map((item) => item.file)).size, 7, 'Release asset names must be unique.');
-  const parent = path.join(PLUGIN_ROOT, 'release', 'staging');
-  mkdirSync(parent, { recursive: true });
-  const temporary = mkdtempSync(path.join(parent, '.vectora-'));
-  const destination = path.join(parent, PLUGIN_VERSION);
+function pathStat(file) {
   try {
-    const artifacts = packages.map((item) => {
-      assert.equal(sha256(item.source), item.sha256, `Hash mismatch: ${item.file}`);
-      assert.equal(statSync(item.source).size, item.bytes, `Size mismatch: ${item.file}`);
-      copyFileSync(item.source, path.join(temporary, item.file));
-      return { type: item.type, ...(item.platform ? { platform: item.platform } : {}), ...(item.skill ? { skill: item.skill } : {}), file: item.file, bytes: item.bytes, sha256: item.sha256 };
-    });
-    writeJson(path.join(temporary, 'codex-manifest.json'), {
-      ...codex,
-      packages: codex.packages.map((item) => ({ ...item, archive: path.basename(item.archive) })),
-    });
-    writeJson(path.join(temporary, 'claude-manifest.json'), {
-      ...claude,
-      artifacts: claude.artifacts.map((item) => ({ ...item, file: path.basename(item.file) })),
-    });
-    const supportFiles = [
-      ['README.md', 'README.md'],
-      ['CLAUDE_INSTALLATION.md', 'CLAUDE_INSTALLATION.md'],
-      ['RELEASE_NOTES.md', 'RELEASE_NOTES.md'],
-      ['scripts/configure-app.sh', 'configure-app.sh'],
-      ['scripts/configure-app.ps1', 'configure-app.ps1'],
-    ];
-    for (const [source, name] of supportFiles) copyFileSync(path.join(PLUGIN_ROOT, source), path.join(temporary, name));
-    const supportNames = ['codex-manifest.json', 'claude-manifest.json', ...supportFiles.map(([, name]) => name)];
-    const supportAssets = supportNames.map((file) => ({ file, bytes: statSync(path.join(temporary, file)).size, sha256: sha256(path.join(temporary, file)) }));
-    const manifest = {
+    return lstatSync(file);
+  } catch (error) {
+    if (error.code === 'ENOENT') return undefined;
+    throw error;
+  }
+}
+
+function requireRegularFile(file) {
+  const stat = pathStat(file);
+  assert.ok(stat?.isFile() && !stat.isSymbolicLink(), `Expected a regular file: ${file}`);
+  return file;
+}
+
+function readJson(file) {
+  return JSON.parse(readFileSync(requireRegularFile(file), 'utf8'));
+}
+
+function optionalVersion(value, version, label) {
+  if (value !== undefined) assert.equal(value, version, `${label} version must match the root manifest.`);
+}
+
+function listTreeFiles(directory, prefix = '') {
+  const rootStat = lstatSync(directory);
+  assert.ok(rootStat.isDirectory() && !rootStat.isSymbolicLink(), `Expected a real marketplace tree: ${directory}`);
+  const files = [];
+  for (const name of readdirSync(directory).sort((left, right) => left.localeCompare(right, 'en'))) {
+    const absolute = path.join(directory, name);
+    const relative = prefix ? `${prefix}/${name}` : name;
+    const stat = lstatSync(absolute);
+    assert.equal(stat.isSymbolicLink(), false, `Marketplace trees cannot contain symlinks: ${absolute}`);
+    if (stat.isDirectory()) files.push(...listTreeFiles(absolute, relative));
+    else {
+      assert.ok(stat.isFile(), `Unsupported marketplace tree entry: ${absolute}`);
+      files.push(relative);
+    }
+  }
+  return files;
+}
+
+function treeSha256(directory) {
+  const hash = createHash('sha256');
+  for (const relative of listTreeFiles(directory)) {
+    const content = readFileSync(path.join(directory, relative));
+    hash.update(relative).update('\0').update(String(content.length)).update('\0').update(content).update('\0');
+  }
+  return hash.digest('hex');
+}
+
+function fileSha256(file) {
+  return createHash('sha256').update(readFileSync(requireRegularFile(file))).digest('hex');
+}
+
+function validateCatalogSource(source, expectedPath, label, sourceType) {
+  if (typeof source === 'string') {
+    assert.equal(source, expectedPath, `${label} source must be ${expectedPath}.`);
+    return;
+  }
+  assert.ok(source && typeof source === 'object', `${label} must declare its local source.`);
+  if (sourceType) assert.equal(source.source, sourceType, `${label} source type must be ${sourceType}.`);
+  assert.equal(source.path, expectedPath, `${label} source must be ${expectedPath}.`);
+}
+
+function validateMarketplace(root) {
+  const rootManifest = readJson(path.join(root, ROOT_MANIFEST));
+  assert.equal(rootManifest.name, 'vectora', 'Root plugin manifest name must be vectora.');
+  assert.match(rootManifest.version, /^\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$/, 'Root plugin manifest must declare a release version.');
+  const { version } = rootManifest;
+
+  const codexCatalog = readJson(path.join(root, CODEX_CATALOG));
+  assert.equal(codexCatalog.name, rootManifest.name, 'Codex marketplace name must match the root plugin manifest.');
+  optionalVersion(codexCatalog.version, version, 'Codex marketplace');
+  assert.ok(Array.isArray(codexCatalog.plugins), 'Codex marketplace must declare its plugins.');
+  assert.deepEqual(
+    codexCatalog.plugins.map((plugin) => plugin?.name).sort(),
+    [...CODEX_PLUGINS].sort(),
+    'Codex marketplace must contain exactly the macOS and Windows Vectora plugins.',
+  );
+
+  const codexPlugins = CODEX_PLUGINS.map((name) => {
+    const entry = codexCatalog.plugins.find((plugin) => plugin.name === name);
+    validateCatalogSource(entry.source, `./plugins/${name}`, `Codex plugin ${name}`, 'local');
+    optionalVersion(entry.version, version, `Codex catalog entry ${name}`);
+    const manifestPath = path.join(root, 'plugins', name, '.codex-plugin/plugin.json');
+    const manifest = readJson(manifestPath);
+    assert.equal(manifest.name, name, `${name} plugin manifest name must match its catalog entry.`);
+    assert.equal(manifest.version, version, `${name} plugin version must match the root manifest.`);
+    return { name, path: `plugins/${name}`, version: manifest.version, sha256: treeSha256(path.dirname(path.dirname(manifestPath))) };
+  });
+
+  const claudeCatalog = readJson(path.join(root, CLAUDE_CATALOG));
+  assert.equal(claudeCatalog.name, rootManifest.name, 'Claude marketplace name must match the root plugin manifest.');
+  optionalVersion(claudeCatalog.version, version, 'Claude marketplace');
+  assert.ok(Array.isArray(claudeCatalog.plugins), 'Claude marketplace must declare its plugins.');
+  assert.deepEqual(claudeCatalog.plugins.map((plugin) => plugin?.name), [CLAUDE_PLUGIN], 'Claude marketplace must contain only the Vectora plugin.');
+  const claudeEntry = claudeCatalog.plugins[0];
+  validateCatalogSource(claudeEntry.source, './plugins/vectora', 'Claude plugin vectora');
+  optionalVersion(claudeEntry.version, version, 'Claude catalog entry vectora');
+  const claudeManifest = readJson(path.join(root, 'plugins', CLAUDE_PLUGIN, CLAUDE_PLUGIN_MANIFEST));
+  assert.equal(claudeManifest.name, CLAUDE_PLUGIN, 'Claude plugin manifest name must match its catalog entry.');
+  assert.equal(claudeManifest.version, version, 'Claude plugin version must match the root manifest.');
+
+  const rootGuide = requireRegularFile(path.join(root, 'CLAUDE_INSTALLATION.md'));
+  const docsGuide = requireRegularFile(path.join(root, 'docs/CLAUDE_INSTALLATION.md'));
+  assert.deepEqual(readFileSync(rootGuide), readFileSync(docsGuide), 'Keep docs/CLAUDE_INSTALLATION.md identical to the root Claude installation guide.');
+
+  return {
+    version,
+    rootManifest: { path: ROOT_MANIFEST, name: rootManifest.name, version },
+    catalogs: [
+      { path: CODEX_CATALOG, sha256: fileSha256(path.join(root, CODEX_CATALOG)) },
+      { path: CLAUDE_CATALOG, sha256: fileSha256(path.join(root, CLAUDE_CATALOG)) },
+    ],
+    plugins: [
+      ...codexPlugins,
+      {
+        name: CLAUDE_PLUGIN,
+        path: 'plugins/vectora',
+        version: claudeManifest.version,
+        sha256: treeSha256(path.join(root, 'plugins', CLAUDE_PLUGIN)),
+      },
+    ],
+  };
+}
+
+function ensureDirectory(directory) {
+  const current = pathStat(directory);
+  if (!current) mkdirSync(directory);
+  const stat = pathStat(directory);
+  assert.ok(stat?.isDirectory() && !stat.isSymbolicLink(), `Expected a real directory: ${directory}`);
+}
+
+export function stageRelease({ root = PLUGIN_ROOT } = {}) {
+  const repoRoot = path.resolve(root);
+  const git = (...args) => execFileSync('git', args, { cwd: repoRoot, encoding: 'utf8' }).trim();
+  assert.equal(git('status', '--porcelain'), '', 'Commit the reviewed source changes before staging a release.');
+
+  const marketplace = validateMarketplace(repoRoot);
+  const buildCheck = path.join(repoRoot, 'scripts/build-marketplace.mjs');
+  requireRegularFile(buildCheck);
+  execFileSync(process.execPath, [buildCheck, '--check'], { cwd: repoRoot, encoding: 'utf8' });
+
+  const notesSource = requireRegularFile(path.join(repoRoot, 'RELEASE_NOTES.md'));
+  const firstTitle = readFileSync(notesSource, 'utf8').split(/\r?\n/).find((line) => /^#\s+\S/.test(line));
+  assert.ok(firstTitle, 'RELEASE_NOTES.md must begin with a Markdown title.');
+  const escapedVersion = marketplace.version.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  assert.match(firstTitle, new RegExp(`(?:^|[^0-9A-Za-z.])v?${escapedVersion}(?:$|[^0-9A-Za-z.])`), 'The first release notes title must match the root plugin version.');
+  const sourceCommit = git('rev-parse', 'HEAD');
+  const releaseRoot = path.join(repoRoot, 'release');
+  ensureDirectory(releaseRoot);
+  const parent = path.join(releaseRoot, 'staging');
+  ensureDirectory(parent);
+  const destination = path.join(parent, marketplace.version);
+  const prior = pathStat(destination);
+  assert.ok(!prior || (prior.isDirectory() && !prior.isSymbolicLink()), `Refusing to replace non-directory staging path: ${destination}`);
+
+  const temporary = mkdtempSync(path.join(parent, '.vectora-'));
+  try {
+    copyFileSync(notesSource, path.join(temporary, 'RELEASE_NOTES.md'));
+    const evidence = {
+      purpose: 'internal-only; do not upload to the GitHub release',
       plugin: 'vectora',
-      version: PLUGIN_VERSION,
-      sourceCommit: git('rev-parse', 'HEAD'),
-      minimumVectoraVersion: codex.minimumVectoraVersion,
-      artifacts,
-      supportAssets,
+      version: marketplace.version,
+      distribution: 'marketplace-only',
+      sourceCommit,
+      assets: [],
+      verification: {
+        cleanWorkingTree: true,
+        marketplaceCheck: 'passed',
+        claudeGuideMatchesRoot: true,
+      },
+      rootManifest: marketplace.rootManifest,
+      catalogs: marketplace.catalogs,
+      plugins: marketplace.plugins,
     };
-    writeJson(path.join(temporary, 'release-manifest.json'), manifest);
-    const checksummed = [...artifacts, ...supportAssets, { file: 'release-manifest.json', sha256: sha256(path.join(temporary, 'release-manifest.json')) }];
-    writeFileSync(path.join(temporary, 'SHA256SUMS.txt'), `${checksummed.sort((a, b) => a.file.localeCompare(b.file, 'en')).map((item) => `${item.sha256}  ${item.file}`).join('\n')}\n`);
-    // Only this version's generated staging directory is replaced; old releases stay intact.
+    writeFileSync(path.join(temporary, 'evidence.json'), `${JSON.stringify(evidence, null, 2)}\n`);
+
     rmSync(destination, { recursive: true, force: true });
     renameSync(temporary, destination);
-    return { directory: destination, sourceCommit: manifest.sourceCommit, packages: artifacts.length, assets: checksummed.length + 1 };
+    return {
+      directory: destination,
+      version: marketplace.version,
+      sourceCommit,
+      distribution: 'marketplace-only',
+      assets: [],
+      preparedFiles: ['RELEASE_NOTES.md', 'evidence.json'],
+      evidence: path.join(destination, 'evidence.json'),
+    };
   } finally {
     rmSync(temporary, { recursive: true, force: true });
   }

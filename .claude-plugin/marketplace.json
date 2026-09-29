@@ -1,0 +1,13 @@
+{
+  "name": "vectora",
+  "owner": {
+    "name": "Vectora"
+  },
+  "description": "Vectora MCP and Korean assessment illustration skills for Claude.",
+  "plugins": [
+    {
+      "name": "vectora",
+      "source": "./plugins/vectora"
+    }
+  ]
+}

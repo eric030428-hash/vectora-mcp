@@ -1,5 +1,7 @@
 release/
 node_modules/
+!plugins/vectora/skills/create-kice-illustration/node_modules/
+!plugins/vectora/skills/create-kice-illustration/node_modules/**
 __pycache__/
 *.pyc
 .DS_Store

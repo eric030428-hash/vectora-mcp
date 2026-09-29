@@ -1,21 +1,15 @@
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
-import { copyFileSync, cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
+import {
+  cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync,
+} from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { PLUGIN_ROOT, PLUGIN_VERSION } from './build-packages.mjs';
 
-const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const sourcePlugin = JSON.parse(readFileSync(path.join(root, '.codex-plugin', 'plugin.json'), 'utf8'));
-export const CLAUDE_PACKAGE_VERSION = sourcePlugin.version;
-export const OUTPUT_ROOT = path.join(root, 'release', 'claude', CLAUDE_PACKAGE_VERSION);
-const MCPB_CLI = '@anthropic-ai/mcpb@2.1.2';
-const NODE_SKILL_DEPENDENCIES = {
-  'fontkit': '2.0.4',
-  'imagetracerjs': '1.2.6',
-  'jpeg-js': '0.4.4',
-  'pngjs': '7.0.0',
-};
+export const CLAUDE_PLUGIN_VERSION = PLUGIN_VERSION;
+const runtimeRoot = path.join(PLUGIN_ROOT, 'scripts', 'claude-runtime');
 
 function replaceExactlyOnce(value, before, after, label) {
   const first = value.indexOf(before);
@@ -28,12 +22,12 @@ function replaceExactlyOnce(value, before, after, label) {
 function updateFile(filePath, transform) {
   const before = readFileSync(filePath, 'utf8');
   const after = transform(before);
-  if (after === before) throw new Error(`Claude adaptation did not change ${path.relative(root, filePath)}.`);
+  if (after === before) throw new Error(`Claude adaptation did not change ${path.relative(PLUGIN_ROOT, filePath)}.`);
   writeFileSync(filePath, after);
 }
 
 function copySkillSource(name, targetRoot) {
-  const source = path.join(root, 'skills', name);
+  const source = path.join(PLUGIN_ROOT, 'skills', name);
   const target = path.join(targetRoot, name);
   cpSync(source, target, {
     recursive: true,
@@ -64,13 +58,12 @@ function adaptUseVectora(skillRoot) {
     value = value.slice(0, start) + intro + value.slice(end + introEnd.length);
     value = value.replaceAll('이 Mac의 절대 경로', '현재 컴퓨터의 절대 경로');
     value = value.replace('설치 방법은 플러그인 루트 `README.md`와 앱 프로젝트의 `docs/MCP_INSTALLATION.md`를 참고한다.', '설치 방법은 배포 패키지의 `CLAUDE_INSTALLATION.md`를 참고한다.');
-    value = replaceExactlyOnce(
+    return replaceExactlyOnce(
       value,
       '- Windows에서 MCP 실행기는 Windows PowerShell 기본 `powershell.exe`와 설치된 `Vectora.exe`를 사용한다. Node.js/Python 런타임은 필요하지 않다. 앱 경로 우선순위는 `VECTORA_APP_PATH`, `%APPDATA%\\Vectora\\mcp-app-path`, `%LOCALAPPDATA%\\Programs\\Vectora\\Vectora.exe`, `%ProgramFiles%\\Vectora\\Vectora.exe`, `%ProgramFiles(x86)%\\Vectora\\Vectora.exe`다. 사용자 지정 경로는 `scripts/configure-app.ps1 -AppPath <Vectora.exe 절대 경로>`로 저장한다. macOS는 `scripts/configure-app.sh <Vectora.app 절대 경로>` 또는 Applications 기본 위치를 사용한다.',
-      '- Claude Desktop과 Claude Code의 Vectora MCP는 이 컴퓨터에 설치된 앱을 실행한다. 기본 설치 위치에서 앱을 찾지 못하면 배포 안내 `CLAUDE_INSTALLATION.md`의 앱 경로 등록 단계를 따른다. 스킬 ZIP만 올린 Claude 웹 세션에는 로컬 MCP 실행기가 없으므로 이 지침으로 앱에 연결할 수 없다.',
+      '- Claude Desktop Cowork 로컬 세션과 Claude Code의 Vectora MCP는 이 컴퓨터에 설치된 앱을 실행한다. 기본 설치 위치에서 앱을 찾지 못하면 플러그인 안의 `configure-app.sh` 또는 `configure-app.ps1`을 사용한다. 마켓플레이스에 플러그인을 추가해도 Claude 일반 웹 채팅에는 로컬 MCP 실행기가 연결되지 않는다.',
       'use-vectora local app setup guidance',
     );
-    return value;
   });
 
   const examplesPath = path.join(skillRoot, 'references', 'examples.md');
@@ -80,7 +73,6 @@ function adaptUseVectora(skillRoot) {
     'Claude용 실행기는 Windows에서 PowerShell 경로를 안전하게 전달하고 Vectora.exe와 로컬 MCP 연결을 중계한다. 사용자는 실행 파일을 직접 MCP 설정에 넣지 않는다.',
     'use-vectora/references/examples.md',
   ));
-
 }
 
 function adaptCreateKice(skillRoot) {
@@ -119,29 +111,38 @@ function adaptCreateKice(skillRoot) {
   });
 }
 
-function stageSkill(name, stagingRoot, { standalone }) {
+function stageSkill(name, stagingRoot) {
   const skillRoot = copySkillSource(name, stagingRoot);
   if (name === 'use-vectora') adaptUseVectora(skillRoot);
   else if (name === 'create-kice-illustration') adaptCreateKice(skillRoot);
   else throw new Error(`Unexpected skill: ${name}`);
-  if (standalone) {
-    for (const relative of listFiles(skillRoot).filter((file) => file.endsWith('.md'))) {
-      const filePath = path.join(skillRoot, relative);
-      const before = readFileSync(filePath, 'utf8');
-      const after = before
-        .replaceAll('node skills/create-kice-illustration/scripts/', 'node scripts/')
-        .replaceAll('python3 skills/create-kice-illustration/scripts/', 'python3 scripts/');
-      if (after !== before) writeFileSync(filePath, after);
-    }
+  for (const relative of listFiles(skillRoot).filter((file) => file.endsWith('.md'))) {
+    const filePath = path.join(skillRoot, relative);
+    const before = readFileSync(filePath, 'utf8');
+    const after = before
+      .replaceAll('node skills/create-kice-illustration/scripts/', 'node scripts/')
+      .replaceAll('python3 skills/create-kice-illustration/scripts/', 'python3 scripts/');
+    if (after !== before) writeFileSync(filePath, after);
   }
   return skillRoot;
+}
+
+function listFiles(directory, prefix = '') {
+  const result = [];
+  for (const name of readdirSync(directory).sort()) {
+    const fullPath = path.join(directory, name);
+    const relative = prefix ? `${prefix}/${name}` : name;
+    if (statSync(fullPath).isDirectory()) result.push(...listFiles(fullPath, relative));
+    else result.push(relative.split(path.sep).join('/'));
+  }
+  return result;
 }
 
 function addProductionSources(skillRoot) {
   const productionRoot = path.join(skillRoot, 'scripts', 'production');
   mkdirSync(productionRoot, { recursive: true });
   for (const filename of ['frames-core.mjs', 'graphs-core.mjs', 'graphs-points.mjs']) {
-    cpSync(path.join(root, 'src', 'production', filename), path.join(productionRoot, filename));
+    cpSync(path.join(PLUGIN_ROOT, 'src', 'production', filename), path.join(productionRoot, filename));
   }
   const graphBuilder = path.join(skillRoot, 'scripts', 'build_graph.mjs');
   updateFile(graphBuilder, (value) => {
@@ -166,8 +167,7 @@ function addProductionSources(skillRoot) {
   }
   throw new Error('Installed UND Regular font not found. Supply --font; no fallback is used.');
 }`;
-    value = replaceExactlyOnce(value, oldFontSearch, newFontSearch, 'build_graph.mjs font lookup');
-    return value;
+    return replaceExactlyOnce(value, oldFontSearch, newFontSearch, 'build_graph.mjs font lookup');
   });
   const frameBuilder = path.join(skillRoot, 'scripts', 'build_text_frame.mjs');
   updateFile(frameBuilder, (value) => replaceExactlyOnce(
@@ -176,7 +176,45 @@ function addProductionSources(skillRoot) {
     "'./production/frames-core.mjs'",
     'build_text_frame.mjs source import',
   ));
-  cpSync(path.join(root, 'scripts', 'claude', 'trace_artwork.mjs'), path.join(skillRoot, 'scripts', 'trace_artwork.mjs'));
+}
+
+function ensurePortableVendor(temporaryRoot, kiceSkill) {
+  const archivePath = path.join(runtimeRoot, 'runtime-vendor.zip');
+  const metadataPath = path.join(runtimeRoot, 'runtime-vendor.json');
+  if (!existsSync(archivePath) || !existsSync(metadataPath)) {
+    throw new Error('Missing pinned Claude helper dependencies. Run node scripts/build-claude-runtime.mjs once to create the portable vendor archive.');
+  }
+  const bytes = readFileSync(archivePath);
+  const expected = JSON.parse(readFileSync(metadataPath, 'utf8'));
+  const actualHash = createHash('sha256').update(bytes).digest('hex');
+  if (actualHash !== expected.sha256 || bytes.length !== expected.bytes) {
+    throw new Error('Claude helper dependency archive does not match its checked-in hash manifest.');
+  }
+  const unpackedRoot = path.join(temporaryRoot, 'vendor-source');
+  const pythonCommand = process.platform === 'win32' ? 'py' : 'python3';
+  const pythonArgs = process.platform === 'win32' ? ['-3'] : [];
+  const extractedFiles = Number(execFileSync(pythonCommand, [
+    ...pythonArgs,
+    path.join(runtimeRoot, 'extract-vendor.py'),
+    archivePath,
+    unpackedRoot,
+  ], { encoding: 'utf8' }).trim());
+  if (extractedFiles !== expected.files) throw new Error('Claude helper dependency archive file count does not match its manifest.');
+  const nodeRoot = path.join(unpackedRoot, 'node_modules');
+  const pythonRoot = path.join(unpackedRoot, 'python');
+  if (!existsSync(path.join(nodeRoot, 'fontkit', 'package.json'))
+    || !existsSync(path.join(nodeRoot, 'imagetracerjs', 'package.json'))
+    || !existsSync(path.join(pythonRoot, 'fonttools-4.63.0.dist-info', 'WHEEL'))) {
+    throw new Error('Claude helper dependency archive is missing a required runtime package.');
+  }
+  const wheelRecord = readFileSync(path.join(pythonRoot, 'fonttools-4.63.0.dist-info', 'WHEEL'), 'utf8');
+  if (!/^Tag: py3-none-any$/m.test(wheelRecord)) throw new Error('Vendored fontTools must be platform-independent.');
+  cpSync(nodeRoot, path.join(kiceSkill, 'node_modules'), { recursive: true });
+  cpSync(pythonRoot, path.join(kiceSkill, 'vendor', 'python'), { recursive: true });
+  return { files: extractedFiles, bytes: bytes.length, sha256: actualHash };
+}
+
+function adaptAuditHelper(skillRoot) {
   const auditPath = path.join(skillRoot, 'scripts', 'audit_svg.py');
   updateFile(auditPath, (value) => {
     value = replaceExactlyOnce(
@@ -200,138 +238,46 @@ function addProductionSources(skillRoot) {
   });
 }
 
-function installSkillDependencies(skillRoot) {
-  writeFileSync(path.join(skillRoot, 'package.json'), `${JSON.stringify({
-    name: 'vectora-kice-skill-runtime',
-    private: true,
-    type: 'module',
-    dependencies: NODE_SKILL_DEPENDENCIES,
-  }, null, 2)}\n`);
-  execFileSync('npm', ['install', '--omit=dev', '--no-audit', '--no-fund'], { cwd: skillRoot, stdio: 'inherit' });
-  const pythonVendor = path.join(skillRoot, 'vendor', 'python');
-  mkdirSync(pythonVendor, { recursive: true });
-  execFileSync('python3', [
-    '-m', 'pip', 'install', '--disable-pip-version-check', '--no-warn-script-location', '--no-compile',
-    '--only-binary=:all:', '--no-deps', '--platform', 'any', '--implementation', 'py',
-    '--abi', 'none', '--python-version', '3.10', '--target', pythonVendor,
-    'fonttools==4.63.0',
-  ], { stdio: 'inherit' });
-  assertPortableFontTools(pythonVendor);
-  assertNoNativeBinaries(skillRoot, 'standalone Claude KICE skill');
-  execFileSync('python3', ['-B', '-c', "import sys; sys.path.insert(0, sys.argv[1]); from fontTools.ttLib import TTFont; assert callable(TTFont.getBestCmap)", pythonVendor], { stdio: 'inherit' });
-}
-
-function copyLauncherScripts(targetRoot) {
-  const scriptsRoot = path.join(targetRoot, 'scripts');
-  mkdirSync(scriptsRoot, { recursive: true });
-  for (const filename of ['start-mcp.sh', 'start-mcp.ps1']) {
-    let value = readFileSync(path.join(root, 'scripts', filename), 'utf8');
-    value = value.replaceAll('Codex still sees stdio.', 'The MCP client still uses standard input and output.');
-    writeFileSync(path.join(scriptsRoot, filename), value);
-  }
-  const claudeScriptsRoot = path.join(scriptsRoot, 'claude');
-  mkdirSync(claudeScriptsRoot, { recursive: true });
-  cpSync(path.join(root, 'scripts', 'claude', 'claude-mcp-launcher.mjs'), path.join(claudeScriptsRoot, 'claude-mcp-launcher.mjs'));
-}
-
-function listFiles(directory, prefix = '') {
-  const result = [];
-  for (const name of readdirSync(directory).sort()) {
-    const fullPath = path.join(directory, name);
-    const relativePath = prefix ? `${prefix}/${name}` : name;
-    if (statSync(fullPath).isDirectory()) result.push(...listFiles(fullPath, relativePath));
-    else result.push(relativePath.split(path.sep).join('/'));
-  }
-  return result;
-}
-
-const nativeBinarySuffix = /\.(?:node|so|dylib|dll|pyd|exe|o|a|lib)$/i;
-
-function assertNoNativeBinaries(directory, label) {
-  const nativeFiles = listFiles(directory).filter((file) => nativeBinarySuffix.test(file));
-  if (nativeFiles.length) throw new Error(`${label} contains non-portable native binaries: ${nativeFiles.join(', ')}`);
-}
-
-function assertArchiveHasNoNativeBinaries(archivePath) {
-  const entries = execFileSync('unzip', ['-Z1', archivePath], { encoding: 'utf8' }).split(/\r?\n/).filter(Boolean);
-  const nativeFiles = entries.filter((entry) => nativeBinarySuffix.test(entry));
-  if (nativeFiles.length) throw new Error(`${path.basename(archivePath)} contains non-portable native binaries: ${nativeFiles.join(', ')}`);
-}
-
-function assertPortableFontTools(pythonVendor) {
-  const wheelMetadata = listFiles(pythonVendor).filter((file) => /^fonttools-[^/]+\.dist-info\/WHEEL$/i.test(file));
-  if (wheelMetadata.length !== 1) throw new Error(`Expected one vendored fontTools WHEEL record; found ${wheelMetadata.length}.`);
-  const wheelRecord = readFileSync(path.join(pythonVendor, wheelMetadata[0]), 'utf8');
-  if (!/^Tag: py3-none-any$/m.test(wheelRecord)) throw new Error('fontTools must be installed from a py3-none-any wheel.');
-  assertNoNativeBinaries(pythonVendor, 'vendored fontTools');
-}
-
-function sha256(filePath) {
-  return createHash('sha256').update(readFileSync(filePath)).digest('hex');
-}
-
-function makeMcpb(bundleRoot, archivePath) {
-  const manifest = {
-    manifest_version: '0.3',
-    name: 'vectora',
-    version: CLAUDE_PACKAGE_VERSION,
-    display_name: 'Vectora',
-    description: 'Connect Claude Desktop and Claude Code to the local Vectora vector editor over MCP.',
-    long_description: 'Uses the installed Vectora desktop application as a local stdio MCP server. The Vectora application must be installed separately.',
-    author: { name: 'Vectora' },
-    icon: 'assets/vectora.png',
-    server: {
-      type: 'node',
-      entry_point: 'scripts/claude/claude-mcp-launcher.mjs',
-      mcp_config: {
-        command: 'node',
-        args: ['${__dirname}/scripts/claude/claude-mcp-launcher.mjs'],
-        env: {},
-      },
-    },
-    tools_generated: true,
-    keywords: ['vector', 'svg', 'illustration', 'MCP', 'Vectora'],
-    compatibility: {
-      platforms: ['darwin', 'win32'],
-      runtimes: { node: '>=18' },
-    },
-  };
-  writeFileSync(path.join(bundleRoot, 'manifest.json'), `${JSON.stringify(manifest, null, 2)}\n`);
-  execFileSync('npx', ['--yes', MCPB_CLI, 'validate', path.join(bundleRoot, 'manifest.json')], { cwd: root, stdio: 'inherit' });
-  execFileSync('npx', ['--yes', MCPB_CLI, 'pack', bundleRoot, archivePath], { cwd: root, stdio: 'inherit' });
-  return manifest;
-}
-
-export function buildClaudePackages(outputRoot = OUTPUT_ROOT) {
-  const tempRoot = mkdtempSync(path.join(os.tmpdir(), 'vectora-claude-packages-'));
-  const stagedArchivesRoot = path.join(tempRoot, 'archives');
-  const desktopRoot = path.join(tempRoot, 'desktop-extension');
-  const codeRoot = path.join(tempRoot, 'claude-code-plugin');
-  const marketplaceRoot = path.join(tempRoot, 'claude-code-marketplace');
-  const skillsRoot = path.join(tempRoot, 'standalone-skills');
-  const output = path.resolve(outputRoot);
-  mkdirSync(output, { recursive: true });
-  mkdirSync(stagedArchivesRoot, { recursive: true });
+export function buildClaudePlugin(targetRoot) {
+  const temporaryRoot = mkdtempSync(path.join(os.tmpdir(), 'vectora-claude-plugin-'));
+  const temporarySkills = path.join(temporaryRoot, 'skills');
+  const stagedRoot = path.join(temporaryRoot, 'plugin');
   try {
-    const useSkill = stageSkill('use-vectora', skillsRoot, { standalone: true });
-    const kiceSkill = stageSkill('create-kice-illustration', skillsRoot, { standalone: true });
-    addProductionSources(kiceSkill);
-    installSkillDependencies(kiceSkill);
+    const useSkill = stageSkill('use-vectora', temporarySkills);
+    const kiceSkill = stageSkill('create-kice-illustration', temporarySkills);
+    mkdirSync(stagedRoot, { recursive: true });
+    mkdirSync(path.join(stagedRoot, 'skills'), { recursive: true });
+    cpSync(useSkill, path.join(stagedRoot, 'skills', 'use-vectora'), { recursive: true });
+    cpSync(kiceSkill, path.join(stagedRoot, 'skills', 'create-kice-illustration'), { recursive: true });
+    addProductionSources(path.join(stagedRoot, 'skills', 'create-kice-illustration'));
 
-    mkdirSync(desktopRoot, { recursive: true });
-    copyLauncherScripts(desktopRoot);
-    cpSync(path.join(root, 'assets', 'vectora.png'), path.join(mkdirSync(path.join(desktopRoot, 'assets'), { recursive: true }) && path.join(desktopRoot, 'assets'), 'vectora.png'));
-    writeFileSync(path.join(desktopRoot, '.mcpbignore'), '.DS_Store\n.git\nnode_modules\n');
+    const scriptsRoot = path.join(stagedRoot, 'scripts');
+    mkdirSync(path.join(scriptsRoot, 'claude'), { recursive: true });
+    for (const filename of ['configure-app.sh', 'configure-app.ps1', 'start-mcp.sh', 'start-mcp.ps1']) {
+      cpSync(path.join(PLUGIN_ROOT, 'scripts', filename), path.join(scriptsRoot, filename));
+    }
+    cpSync(
+      path.join(PLUGIN_ROOT, 'scripts', 'claude', 'claude-mcp-launcher.mjs'),
+      path.join(scriptsRoot, 'claude', 'claude-mcp-launcher.mjs'),
+    );
+    cpSync(
+      path.join(PLUGIN_ROOT, 'scripts', 'claude', 'trace_artwork.mjs'),
+      path.join(stagedRoot, 'skills', 'create-kice-illustration', 'scripts', 'trace_artwork.mjs'),
+    );
+    adaptAuditHelper(path.join(stagedRoot, 'skills', 'create-kice-illustration'));
+    const dependencyPayload = ensurePortableVendor(
+      temporaryRoot,
+      path.join(stagedRoot, 'skills', 'create-kice-illustration'),
+    );
 
-    mkdirSync(codeRoot, { recursive: true });
-    mkdirSync(path.join(codeRoot, '.claude-plugin'), { recursive: true });
-    writeFileSync(path.join(codeRoot, '.claude-plugin', 'plugin.json'), `${JSON.stringify({
+    mkdirSync(path.join(stagedRoot, '.claude-plugin'), { recursive: true });
+    writeFileSync(path.join(stagedRoot, '.claude-plugin', 'plugin.json'), `${JSON.stringify({
       name: 'vectora',
-      version: CLAUDE_PACKAGE_VERSION,
-      description: 'Local Vectora MCP tools and Korean assessment-style illustration skills for Claude Code.',
+      version: PLUGIN_VERSION,
+      description: 'Local Vectora MCP and two assessment-style illustration skills for Claude.',
       author: { name: 'Vectora' },
     }, null, 2)}\n`);
-    writeFileSync(path.join(codeRoot, '.mcp.json'), `${JSON.stringify({
+    writeFileSync(path.join(stagedRoot, '.mcp.json'), `${JSON.stringify({
       mcpServers: {
         vectora: {
           type: 'stdio',
@@ -340,105 +286,12 @@ export function buildClaudePackages(outputRoot = OUTPUT_ROOT) {
         },
       },
     }, null, 2)}\n`);
-    copyLauncherScripts(codeRoot);
-    mkdirSync(path.join(codeRoot, 'skills'), { recursive: true });
-    cpSync(useSkill, path.join(codeRoot, 'skills', 'use-vectora'), { recursive: true });
-    cpSync(kiceSkill, path.join(codeRoot, 'skills', 'create-kice-illustration'), { recursive: true });
-    writeFileSync(path.join(codeRoot, 'README.md'), '# Vectora for Claude Code\n\nThis plugin provides the local Vectora MCP server and two Korean skills. Vectora must be installed on this computer. The local MCP server is unavailable to Claude web/cloud sessions. See the accompanying `CLAUDE_INSTALLATION.md` for setup and platform notes.\n');
-    cpSync(path.join(root, 'CLAUDE_INSTALLATION.md'), path.join(codeRoot, 'CLAUDE_INSTALLATION.md'));
+    cpSync(path.join(PLUGIN_ROOT, 'CLAUDE_INSTALLATION.md'), path.join(stagedRoot, 'CLAUDE_INSTALLATION.md'));
 
-    mkdirSync(path.join(marketplaceRoot, '.claude-plugin'), { recursive: true });
-    mkdirSync(path.join(marketplaceRoot, 'plugins'), { recursive: true });
-    cpSync(codeRoot, path.join(marketplaceRoot, 'plugins', 'vectora'), { recursive: true });
-    writeFileSync(path.join(marketplaceRoot, '.claude-plugin', 'marketplace.json'), `${JSON.stringify({
-      name: 'vectora-local',
-      description: 'Local Claude Code marketplace for the Vectora MCP plugin.',
-      owner: { name: 'Vectora' },
-      plugins: [{
-        name: 'vectora',
-        source: './plugins/vectora',
-        description: 'Local Vectora MCP tools and Korean assessment-style illustration skills for Claude Code.',
-        version: CLAUDE_PACKAGE_VERSION,
-      }],
-    }, null, 2)}\n`);
-
-    const outputDesktop = path.join(output, 'desktop');
-    const outputCode = path.join(output, 'claude-code');
-    const outputSkills = path.join(output, 'skills');
-    mkdirSync(outputDesktop, { recursive: true });
-    mkdirSync(outputCode, { recursive: true });
-    mkdirSync(outputSkills, { recursive: true });
-    const mcpbPath = path.join(outputDesktop, `Vectora-Claude-Desktop-${CLAUDE_PACKAGE_VERSION}.mcpb`);
-    const codeZip = path.join(outputCode, `Vectora-Claude-Code-${CLAUDE_PACKAGE_VERSION}.zip`);
-    const marketplaceZip = path.join(outputCode, `Vectora-Claude-Code-Marketplace-${CLAUDE_PACKAGE_VERSION}.zip`);
-    const stagedMcpbPath = path.join(stagedArchivesRoot, path.basename(mcpbPath));
-    const stagedCodeZip = path.join(stagedArchivesRoot, path.basename(codeZip));
-    const stagedMarketplaceZip = path.join(stagedArchivesRoot, path.basename(marketplaceZip));
-    const standaloneZips = [
-      { name: 'use-vectora', source: useSkill, file: path.join(outputSkills, `use-vectora-${CLAUDE_PACKAGE_VERSION}.zip`), stagedFile: path.join(stagedArchivesRoot, `use-vectora-${CLAUDE_PACKAGE_VERSION}.zip`) },
-      { name: 'create-kice-illustration', source: kiceSkill, file: path.join(outputSkills, `create-kice-illustration-${CLAUDE_PACKAGE_VERSION}.zip`), stagedFile: path.join(stagedArchivesRoot, `create-kice-illustration-${CLAUDE_PACKAGE_VERSION}.zip`) },
-    ];
-    const bundleManifest = makeMcpb(desktopRoot, stagedMcpbPath);
-
-    execFileSync('zip', ['-qr', '-X', stagedCodeZip, '.'], { cwd: codeRoot, stdio: 'inherit' });
-    execFileSync('zip', ['-qr', '-X', stagedMarketplaceZip, 'claude-code-marketplace'], { cwd: tempRoot, stdio: 'inherit' });
-    for (const item of standaloneZips) {
-      execFileSync('zip', ['-qr', '-X', item.stagedFile, item.name], { cwd: skillsRoot, stdio: 'inherit' });
-    }
-    for (const archive of [stagedMcpbPath, stagedCodeZip, stagedMarketplaceZip, ...standaloneZips.map((item) => item.stagedFile)]) {
-      assertArchiveHasNoNativeBinaries(archive);
-    }
-
-    for (const [staged, target] of [
-      [stagedMcpbPath, mcpbPath],
-      [stagedCodeZip, codeZip],
-      [stagedMarketplaceZip, marketplaceZip],
-      ...standaloneZips.map((item) => [item.stagedFile, item.file]),
-    ]) copyFileSync(staged, target);
-
-    const utilityRoot = path.join(output, 'utilities');
-    mkdirSync(utilityRoot, { recursive: true });
-    cpSync(path.join(root, 'scripts', 'configure-app.sh'), path.join(utilityRoot, 'configure-app.sh'));
-    cpSync(path.join(root, 'scripts', 'configure-app.ps1'), path.join(utilityRoot, 'configure-app.ps1'));
-    cpSync(path.join(root, 'CLAUDE_INSTALLATION.md'), path.join(output, 'CLAUDE_INSTALLATION.md'));
-    for (const [source, destination] of [
-      [desktopRoot, path.join(outputDesktop, 'extension')],
-      [codeRoot, path.join(outputCode, 'vectora')],
-      [marketplaceRoot, path.join(outputCode, 'marketplace')],
-    ]) {
-      rmSync(destination, { recursive: true, force: true });
-      cpSync(source, destination, { recursive: true });
-    }
-
-    const artifacts = [
-      { type: 'mcpb', file: path.relative(output, mcpbPath).split(path.sep).join('/'), bytes: statSync(mcpbPath).size, sha256: sha256(mcpbPath), entryPoint: bundleManifest.server.entry_point },
-      { type: 'claude-code-plugin', file: path.relative(output, codeZip).split(path.sep).join('/'), bytes: statSync(codeZip).size, sha256: sha256(codeZip), packagedFiles: listFiles(codeRoot).length },
-      { type: 'claude-code-marketplace', file: path.relative(output, marketplaceZip).split(path.sep).join('/'), bytes: statSync(marketplaceZip).size, sha256: sha256(marketplaceZip), packagedFiles: listFiles(marketplaceRoot).length },
-      ...standaloneZips.map((item) => ({ type: 'skill-zip', skill: item.name, file: path.relative(output, item.file).split(path.sep).join('/'), bytes: statSync(item.file).size, sha256: sha256(item.file), packagedFiles: listFiles(item.source).length })),
-    ];
-    const result = {
-      plugin: 'vectora',
-      sourcePluginVersion: sourcePlugin.version,
-      version: CLAUDE_PACKAGE_VERSION,
-      artifacts,
-      runtimeNotes: {
-        desktopExtension: 'Local stdio MCP; Claude Desktop provides its Node runtime.',
-        claudeCodePlugin: 'Local stdio MCP plus bundled skill helpers; install persistently from the included local marketplace, or load the unpacked plugin folder for one session.',
-        webSkills: 'Skill instructions only; cannot connect to the local Vectora process.',
-        conditionalAppFeatures: 'Use colorMode and fontReplacements only when the live tools/list input schema exposes them.',
-      },
-    };
-    writeFileSync(path.join(output, 'manifest.json'), `${JSON.stringify(result, null, 2)}\n`);
-    writeFileSync(path.join(output, 'SHA256SUMS.txt'), `${artifacts.map((item) => `${item.sha256}  ${item.file}`).join('\n')}\n`);
-    return result;
+    mkdirSync(path.dirname(targetRoot), { recursive: true });
+    cpSync(stagedRoot, targetRoot, { recursive: true });
+    return { version: PLUGIN_VERSION, dependencyPayload };
   } finally {
-    rmSync(tempRoot, { recursive: true, force: true });
+    rmSync(temporaryRoot, { recursive: true, force: true });
   }
-}
-
-const invokedPath = process.argv[1] && path.resolve(process.argv[1]);
-if (invokedPath === fileURLToPath(import.meta.url)) {
-  const outputRoot = process.argv[2] ? path.resolve(process.argv[2]) : OUTPUT_ROOT;
-  const result = buildClaudePackages(outputRoot);
-  process.stdout.write(`${JSON.stringify(result, null, 2)}\n`);
 }

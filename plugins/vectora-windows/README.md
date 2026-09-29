@@ -1,71 +1,25 @@
-# Vectora MCP + 평가원 스타일 스킬 1.0.3
+# Vectora MCP + 평가원 스타일 스킬 1.0.4
 
-Vectora 데스크톱 앱의 실제 편집 엔진을 Codex MCP로 연결하고, 최신 `create-kice-illustration` 평가원 스타일 제작 스킬과 `use-vectora` 도구 사용 안내를 함께 제공합니다. Codex에서는 GitHub 마켓플레이스로 설치하거나, 운영체제별 ZIP을 사용할 수 있습니다.
+Codex와 Claude에서 **GitHub 마켓플레이스로 설치**합니다. Vectora 편집 도구와 `use-vectora`, `create-kice-illustration` 두 스킬이 함께 설치됩니다.
 
-Claude Desktop, Claude Code, Claude 스킬 설치 파일과 절차는 [Claude 설치 안내](CLAUDE_INSTALLATION.md)를 참고하세요.
+마켓플레이스 출처는 두 클라이언트 모두 **`eric030428-hash/vectora-mcp`**입니다. MCP 저장소는 공개이므로 다운로드용 GitHub 토큰이 필요하지 않습니다. Vectora 앱은 별도로 설치하며, 앱의 비공개 배포 권한과 업데이트는 별도입니다. 플러그인에는 앱이나 UND 글꼴 파일이 들어 있지 않습니다.
 
-플러그인 실행에는 **Vectora 1.0.0 이상**이 필요합니다. 앱은 별도로 설치해야 하며 플러그인에는 앱이나 UND 글꼴 파일이 포함되지 않습니다. Codex 실행기는 설치된 Vectora 앱 실행 파일을 `--mcp-stdio`로 직접 실행하므로 MCP 연결에 Node.js나 Python이 필요하지 않습니다. Claude Code 플러그인은 Node.js 18 이상이 PATH에 있어야 하며, Claude Desktop 확장은 내장 Node 런타임을 사용합니다. 스킬에 포함된 일부 보조 제작 스크립트는 직접 실행할 때만 해당 런타임이 필요합니다.
-
-## 포함 기능
-
-26개 도구는 다음과 같습니다.
-
-| 기능 | 도구 |
+| 사용할 환경 | 설치할 항목 |
 |---|---|
-| 상태와 문서 | `vectora_status`, `vectora_new_document`, `vectora_open_document`, `vectora_list_documents`, `vectora_close_document` |
-| 개체 편집 | `vectora_inspect`, `vectora_apply`, `vectora_history`, `vectora_import_svg` |
-| 글꼴 | `vectora_fonts`, `vectora_check_font` |
-| 기본·사용자 프리셋 | `vectora_list_presets`, `vectora_create_preset`, `vectora_save_preset`, `vectora_update_preset`, `vectora_delete_preset`, `vectora_restore_preset` |
-| 평가원 제작 | `vectora_apply_illustration`, `vectora_audit_illustration`, `vectora_measure_text`, `vectora_production`, `vectora_export_package` |
-| 미리보기와 파일 | `vectora_preview`, `vectora_save`, `vectora_export`, `vectora_trace_image` |
-
-정확한 입출력 스키마는 Codex의 MCP 도구 설명과 [앱 MCP 사용 안내](https://github.com/eric030428-hash/vectora-studio/blob/main/docs/MCP.md)를 따른다.
-
-도형 위치와 크기는 mm, 문자 크기와 선 굵기는 pt, 자간은 1/1000em입니다. 기본 도형은 채우기 없음·0.4pt, 문자는 UND폰트v2.1 8pt입니다. SVG와 `.vectora`를 편집 가능한 원본으로 저장하고 PNG/JPEG/WebP/PDF로 내보낼 수 있습니다. AI 저장은 지원하지 않으며 AI 가져오기는 PDF 호환 데이터가 있는 파일에 한합니다.
-
-평가원 작업에는 현재 작업 공간의 [최신 평가원 제작 스킬](skills/create-kice-illustration/SKILL.md)을 사용합니다. 모든 글꼴은 설치된 UND폰트v2.1을 확인하고 사용하며, 글꼴 파일은 플러그인에 복사하거나 결과물에 포함하지 않습니다.
-
-## 사용자 프리셋 예시
-
-현재 열린 MCP 문서로 새 개인 그래프 프리셋을 만들려면:
-
-```json
-{
-  "documentId": "vectora_new_document 또는 vectora_open_document 응답의 documentId",
-  "title": "사회 집단 구성비",
-  "category": "graph",
-  "description": "흑백 원 그래프"
-}
-```
-
-이 객체를 `vectora_save_preset`에 전달한다. 새 프리셋이면 `id`는 생략하고, 기존 사용자 프리셋의 그림을 바꿀 때만 `id`를 추가한다. `vectora_update_preset`은 이름·분류·설명을 변경하고 `vectora_delete_preset`은 사용자 프리셋을 지운다. 기본 프리셋을 숨기거나 `vectora_restore_preset`으로 되돌릴 수도 있다. 복원 호출에서 `id`를 생략하면 숨긴 기본 프리셋을 모두 되살리며 개인 프리셋은 유지한다. 각 변경 뒤 `vectora_list_presets`로 다시 확인한다.
+| Codex macOS | Vectora (macOS) · `vectora-macos@vectora` |
+| Codex Windows | Vectora (Windows) · `vectora-windows@vectora` |
+| Claude Code / 데스크톱 Cowork | Vectora · `vectora@vectora` |
 
 ## Codex 설치
 
-### GitHub 마켓플레이스에서 설치
+1. 컴퓨터에 Vectora 1.0.0 이상을 설치합니다. 평가원 그림에는 UND폰트v2.1도 설치합니다.
+2. Codex의 **플러그인 → 마켓플레이스 추가**에서 출처에 `eric030428-hash/vectora-mcp`, Git ref에 `main`을 입력하고 Sparse 경로는 비워 둡니다.
+3. Vectora 마켓플레이스에서 운영체제에 맞는 **한 항목만** 설치합니다.
+4. 새 대화에서 “Vectora 연결 상태를 확인해줘”라고 요청합니다. MCP와 두 스킬이 함께 표시되어야 합니다.
 
-1. 사용할 컴퓨터에 Vectora 앱을 별도로 설치합니다.
-2. Codex의 **플러그인 → 마켓플레이스 추가**에서 다음을 입력합니다.
+기존 ZIP·개인 마켓플레이스로 설치한 Vectora가 있다면 새 항목을 확인한 후 기존 항목을 꺼서 같은 도구가 중복되지 않게 합니다.
 
-| 항목 | 입력값 |
-|---|---|
-| 출처 | `eric030428-hash/vectora-mcp` |
-| Git ref | `main` |
-| Sparse 경로 | 비워 두기 |
-
-3. 추가된 **Vectora** 마켓플레이스에서 사용하는 운영체제에 맞는 **한 항목만** 설치합니다.
-
-| 운영체제 | 설치할 플러그인 |
-|---|---|
-| macOS | **Vectora (macOS)** |
-| Windows | **Vectora (Windows)** |
-
-4. 기존 개인 마켓플레이스나 ZIP으로 설치한 Vectora가 있다면 기존 플러그인을 끄고 새 항목만 사용합니다. 같은 도구와 스킬이 중복으로 표시되는 것을 방지합니다.
-5. 새 Codex 대화에서 "Vectora 연결 상태를 확인해줘"라고 요청합니다. 평가원 스타일 제작 스킬과 도구 사용 스킬도 함께 설치됩니다.
-
-이 MCP 저장소는 공개이므로 플러그인 다운로드에 GitHub 토큰이 필요하지 않습니다. Vectora 앱의 비공개 배포·업데이트 접근 권한은 별개입니다. 설치한 MCP는 사용자 컴퓨터의 Vectora 편집 엔진을 사용합니다.
-
-명령줄에서도 같은 마켓플레이스를 등록할 수 있습니다.
+명령줄에서도 설치할 수 있습니다.
 
 ```sh
 codex plugin marketplace add eric030428-hash/vectora-mcp --ref main
@@ -75,70 +29,61 @@ codex plugin add vectora-macos@vectora
 codex plugin add vectora-windows@vectora
 ```
 
-목록이 보이지 않으면 플러그인 화면을 다시 열거나 Codex를 다시 시작합니다. 명령줄에서는 `codex plugin marketplace list`와 `codex plugin list --marketplace vectora --available --json`으로 등록 상태를 확인합니다. 새 구성을 받으려면 `codex plugin marketplace upgrade vectora` 후 사용하는 항목을 다시 설치합니다.
+Codex 연결에는 별도 Node.js나 Python 설치가 필요하지 않습니다. Windows에서는 함께 설치된 PowerShell 실행기가 앱과 통신합니다.
 
-### ZIP으로 설치
+## Claude 설치
 
-1. Vectora 1.0.0 이상을 설치합니다.
-2. 사용하는 운영체제용 ZIP을 풉니다. 플러그인 폴더 이름은 `vectora`로 유지합니다.
-3. `vectora` 폴더를 개인 마켓플레이스가 가리키는 `plugins/vectora` 경로에 복사합니다. 기존 개인 마켓플레이스에 Vectora 항목이 없다면 OpenAI의 [Codex 플러그인 설치 안내](https://developers.openai.com/plugins/build/plugins)에 따라 로컬 마켓플레이스에 추가한 뒤 Codex의 플러그인 화면에서 Vectora를 설치합니다.
-4. 아래 운영체제별 경로 설정을 확인한 뒤 새 Codex 대화를 시작합니다.
+Claude의 **Customize → Plugins → Add → Add marketplace → Add from a repository**에서 `eric030428-hash/vectora-mcp`를 추가하고 **Vectora**를 설치합니다. Cowork에서는 먼저 데스크톱 앱의 Cowork 탭을 엽니다.
 
-Codex는 플러그인 매니페스트의 스킬과 MCP 설정을 함께 읽습니다. MCP 연결은 앱을 숨겨진 별도 문서 세션으로 실행하며 일반 Vectora 창의 미저장 탭을 자동으로 조작하지 않습니다. 작업할 파일을 MCP로 열거나 새 문서를 만든 뒤 저장합니다.
-
-### macOS
-
-`Vectora.app`을 `/Applications` 또는 `~/Applications`에 설치하면 자동으로 찾습니다. 다른 위치에 설치했다면 다음을 실행해 앱 경로를 저장합니다.
+Claude Code 명령줄에서는 다음 두 줄을 실행합니다.
 
 ```sh
-/bin/sh "$HOME/plugins/vectora/scripts/configure-app.sh" "/Applications/Vectora.app"
+claude plugin marketplace add eric030428-hash/vectora-mcp
+claude plugin install vectora@vectora --scope user
 ```
 
-경로는 `~/Library/Application Support/Vectora/mcp-app-path`에 기록됩니다. `VECTORA_APP_PATH` 환경변수를 설정하면 해당 경로가 우선됩니다.
+MCP와 두 스킬이 함께 설치되므로 별도 스킬 ZIP 업로드가 필요하지 않습니다. Claude용 실행기는 Node.js 18 이상을 사용하며, Claude Code에서는 `node`가 PATH에 있어야 합니다. 설치 후 새 로컬 세션에서 Vectora 도구와 `/vectora:use-vectora`, `/vectora:create-kice-illustration`을 확인합니다.
 
-### Windows
+**Vectora의 로컬 MCP는 Claude Code와 데스크톱 Cowork 로컬 세션에서 사용합니다. 일반 Claude 채팅·웹/클라우드 세션에서는 컴퓨터의 Vectora 앱에 연결되지 않습니다.** 계정에서 플러그인만 보인다고 로컬 도구가 연결된 것은 아닙니다. 설치 범위와 경로 문제는 [Claude 설치 안내](CLAUDE_INSTALLATION.md)를 참고하세요.
 
-`Vectora.exe`를 기본 설치 위치에 두면 `%LOCALAPPDATA%\Programs\Vectora\Vectora.exe`, `%ProgramFiles%\Vectora\Vectora.exe`, `%ProgramFiles(x86)%\Vectora\Vectora.exe` 순서로 자동 탐색합니다. 사용자 지정 위치는 PowerShell에서 설정합니다.
+## 업데이트
 
-```powershell
-& "$env:USERPROFILE\plugins\vectora\scripts\configure-app.ps1" -AppPath "$env:LOCALAPPDATA\Programs\Vectora\Vectora.exe"
-```
+마켓플레이스는 GitHub의 `main`에 게시된 파일을 가져옵니다. GitHub Release만 게시하면 기존 설치가 즉시 갱신된다고 보장하지 않습니다.
 
-실행기는 `%APPDATA%\Vectora\mcp-app-path`에서 설정을 읽으며, `VECTORA_APP_PATH` 환경변수로 덮어쓸 수 있습니다. 설치·Codex 연결·Windows 점검 항목은 [MCP 설치 및 Windows 테스트 안내](https://github.com/eric030428-hash/vectora-studio/blob/main/docs/MCP_INSTALLATION.md)를 참고하세요.
+- Codex: `codex plugin marketplace upgrade vectora`로 목록을 갱신하고 사용하는 항목을 다시 설치한 뒤 새 대화를 시작합니다.
+- Claude Code: `claude plugin marketplace update vectora`와 `claude plugin update vectora@vectora`를 실행합니다. 현재 세션은 `/reload-plugins` 또는 새 세션으로 반영합니다.
+- Claude Code의 자동 업데이트는 `/plugin`의 Marketplaces에서 Vectora의 **Enable auto-update**로 켤 수 있습니다. 사용자 추가 마켓플레이스는 기본적으로 꺼져 있습니다.
 
-PowerShell 실행 정책으로 설정 도구가 막히면 다음과 같이 현재 실행에만 정책을 지정해 호출할 수 있습니다.
+v1.0.4부터 GitHub Releases는 버전과 변경 안내를 기록합니다. 수동 설치 ZIP, MCPB, 개별 스킬 ZIP, 별도 설정 도구와 관리용 JSON을 릴리스 첨부 파일로 배포하지 않습니다. GitHub가 자동으로 표시하는 Source code 압축파일은 설치할 필요가 없습니다.
 
-```powershell
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$env:USERPROFILE\plugins\vectora\scripts\configure-app.ps1" -AppPath "$env:LOCALAPPDATA\Programs\Vectora\Vectora.exe"
-```
+## 앱 경로와 연결
 
-`configure-app.ps1`은 사용자 경로 파일만 기록하며 앱을 실행하거나 Codex 설정을 수정하지 않습니다.
+macOS의 `/Applications/Vectora.app` 또는 `~/Applications/Vectora.app`, Windows의 사용자 Programs 또는 Program Files 기본 위치에서 앱을 자동으로 찾습니다. 사용자 지정 경로는 `VECTORA_APP_PATH` 또는 다음 파일의 한 줄로 지정할 수 있습니다.
 
-## 다른 MCP 클라이언트
+- macOS: `~/Library/Application Support/Vectora/mcp-app-path` — `Vectora.app`의 절대 경로
+- Windows: `%APPDATA%\Vectora\mcp-app-path` — `Vectora.exe`의 절대 경로
 
-사용하는 운영체제 ZIP의 `.mcp.json`에서 `vectora` 항목을 해당 클라이언트의 MCP 설정에 복사합니다. macOS에서는 앱 실행 파일에 `--mcp-stdio`를 직접 전달할 수도 있습니다.
+경로 등록용 `scripts/configure-app.sh`와 `scripts/configure-app.ps1`은 해당 플러그인 안에 포함합니다. 별도 설치 파일로 배포하지 않습니다. 클라이언트가 연결하지 못하면 실제 앱 경로, 런타임, MCP 오류를 확인합니다.
 
-Windows에서는 제공된 PowerShell 실행기를 사용해야 합니다. 실행기는 Codex와 표준 입출력으로 통신하고, 편집 엔진과는 현재 Windows 사용자만 접근할 수 있는 로컬 통신 연결을 사용합니다. Windows GUI 실행 파일의 표준 입력이 조기에 닫히는 문제를 피하며 별도 Node.js 설치나 네트워크 포트는 필요하지 않습니다. `.exe --mcp-stdio`만 직접 등록하는 방식은 Windows에서 지원하지 않습니다.
+MCP는 일반 편집 창의 미저장 문서를 자동 조작하지 않습니다. 작업 파일을 저장한 뒤 `vectora_open_document`로 열거나 새 문서를 만들어 작업합니다.
 
-## 배포 파일 만들기
+## 포함 기능
 
-GitHub 마켓플레이스의 설치목록은 `.agents/plugins/marketplace.json`이며 설치용 폴더는 `plugins/vectora-macos/`와 `plugins/vectora-windows/`입니다. 루트의 매니페스트·실행기·스킬이 원본입니다. 스킬이나 실행기를 바꾼 뒤 아래 명령으로 두 폴더를 동기화하고, 원본과 생성된 변경을 함께 커밋합니다. 생성된 스킬 사본을 따로 편집하지 않습니다.
+26개 MCP 도구로 문서 생성·가져오기·편집·저장, 도형·경로·문자·곡률·양끝 화살표, 그룹·레이어·대지, 글꼴 확인·조판 측정, 프리셋, 그림 규격 검사와 이미지 내보내기를 수행합니다. 정확한 입력은 연결된 MCP의 최신 도구 스키마를 따릅니다.
+
+도형 위치·크기는 mm, 문자·선은 pt, 자간은 1/1000em입니다. 평가원 제작에는 설치된 UND폰트v2.1을 사용하고, 같은 이름의 `.vectora` 원본과 기본 4배 `.jpeg`를 전달합니다. 이미지 생성 모델과 글꼴 파일은 포함하지 않습니다.
+
+## 유지보수와 릴리스
+
+루트의 매니페스트·실행기·`skills/`가 원본이고 `plugins/`는 마켓플레이스에서 설치하는 생성본입니다. Claude에는 클라이언트별 도구·파일 경로 안내를 적용하되 평가원 화풍 규칙을 유지합니다. 생성·검사에는 Node.js와 Python 3가 필요합니다. 아래 명령은 저장소에 포함된 의존성을 사용하므로 네트워크 설치를 하지 않습니다.
 
 ```sh
 node scripts/build-marketplace.mjs
 node scripts/build-marketplace.mjs --check
 ```
 
-마켓플레이스 구성은 GitHub의 `main`에서 가져옵니다. 이 명령은 기존 ZIP·태그·GitHub Releases나 플러그인 버전을 변경하지 않습니다.
+의존성을 변경할 때만 `node scripts/build-claude-runtime.mjs`로 고정된 npm 잠금파일과 Python 해시에 맞춰 내부 의존성 묶음을 다시 만듭니다. 이 내부 묶음은 설치파일이나 릴리스 첨부가 아닙니다. 의존성 변경 뒤 마켓플레이스 생성 명령도 실행합니다.
 
-Codex용 패키징은 Node.js의 기본 모듈과 macOS `zip` 유틸리티를 사용합니다. Codex MCP 연결에는 별도 Node.js/Python이 필요하지 않습니다. Claude용 빌드는 Node.js/npm과 Python/pip을 사용하며, Claude Code 사용자는 Node.js 18 이상이 필요하고 Desktop은 내장 Node를 사용합니다.
+원본과 생성된 파일을 함께 커밋합니다. `--check`는 소스와 설치본의 불일치를 검사하며 네트워크 설치나 파일 수정을 하지 않습니다. 릴리스는 사용자 요청이 있을 때만 버전을 올리고 생성본을 갱신한 뒤, 필요한 검증·커밋·푸시·태그·GitHub Release 게시를 수행합니다. `node scripts/stage-release.mjs`는 깨끗한 소스와 생성본을 확인하고 게시할 설명문과 내부 검증 기록만 준비합니다. 설치 아카이브를 만들거나 업로드하지 않습니다.
 
-```sh
-node scripts/build-packages.mjs
-node scripts/build-claude-packages.mjs
-node --test tests/*.test.mjs
-```
-
-결과는 `release/1.0.3/macos/`와 `release/1.0.3/windows/`에 각각 ZIP, 펼친 플러그인, SHA-256을 포함한 `release/1.0.3/manifest.json`으로 생성됩니다. Windows용 ZIP은 Windows PowerShell 실행기 설정을 포함합니다.
-
-Claude 산출물은 `release/claude/1.0.3/`에 생성됩니다. 소스 커밋 후 `node scripts/stage-release.mjs`를 실행하면 7종 패키지, 설치 안내, 경로 설정 도구, 충돌 없는 Codex/Claude manifest와 합산 `SHA256SUMS.txt`가 `release/staging/1.0.3/`에 모입니다. 이 단계는 GitHub 게시를 수행하지 않습니다.
+[Codex 플러그인 공식 안내](https://developers.openai.com/plugins/build/plugins) · [Claude 마켓플레이스 설치](https://support.claude.com/en/articles/13837440-use-plugins-in-claude) · [Claude Code 설치·업데이트](https://code.claude.com/docs/en/plugins/install)

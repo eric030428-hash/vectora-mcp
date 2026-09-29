@@ -18,3 +18,5 @@ jobs:
           node-version: 22
       - name: Check generated plugins match their canonical sources
         run: node scripts/build-marketplace.mjs --check
+      - name: Test marketplace release staging safeguards
+        run: node --test tests/stage-release.test.mjs

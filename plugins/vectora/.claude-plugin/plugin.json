@@ -1,0 +1,8 @@
+{
+  "name": "vectora",
+  "version": "1.0.4",
+  "description": "Local Vectora MCP and two assessment-style illustration skills for Claude.",
+  "author": {
+    "name": "Vectora"
+  }
+}
