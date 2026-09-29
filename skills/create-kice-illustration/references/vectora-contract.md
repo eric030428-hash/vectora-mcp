@@ -6,7 +6,7 @@
 
 - 연결된 `vectora_status`로 지원 기능/문서 세션을 확인하고 `vectora_fonts`, `vectora_check_font`로 실제 사용할 문자 전체를 검사한다.
 - `vectora_new_document` 또는 별도 문서의 `vectora_open_document` → `vectora_apply`/`vectora_import_svg` → `vectora_inspect` → `vectora_preview` → `vectora_save`/`vectora_export`를 사용한다. 현재 MCP 문서는 일반 UI 탭과 독립 세션이다.
-- 사용자가 출력 배율·픽셀 크기를 지정하지 않으면 완성 PNG/JPEG/WebP는 **4배**로 내보낸다. `vectora_export`에 `scale:4`를 명시한다. `vectora_export_package`의 도구 스키마가 `pngScale`을 지원하면 `pngScale:4`를 명시하고, 지원하지 않는 이전 앱에서는 PNG를 `vectora_export(scale:4)`로 따로 내보낸다. 사용자 지정 크기·배율이 있으면 그것을 우선한다. SVG/PDF와 편집 원본의 물리 치수·글자 크기는 그대로 유지하며, 검수용 `vectora_preview`는 화면에 맞는 제한된 크기를 사용한다.
+- 기본 전달용 이미지는 **JPEG**다. 출력 배율·픽셀 크기를 지정하지 않으면 `vectora_export`에 `format:"jpeg", scale:4, transparent:false`를 명시한다. 사용자 지정 크기·배율은 우선하며 편집 원본의 물리 치수·글자 크기는 유지한다. 검수용 `vectora_preview`는 화면에 맞는 제한된 크기를 사용한다. `vectora_export_package`는 SVG·PNG 등 추가 파일을 생성하므로 기본 두 파일 납품에 사용하지 않는다. 사용자가 그 묶음을 명시적으로 요청했을 때만 사용한다.
 - 변경 요청의 `documentId`, `expectedRevision`, `requestId`는 실제 응답에서 얻어 사용한다. 같은 재시도는 같은 requestId, 다른 편집은 새 ID. 대상 개체 ID를 확인한다. 일반 일괄 명령은 1,000개 이하이며 실패 시 복원된다.
 - 도구가 연결되지 않았으면 벡터 SVG를 직접 만들고 사용할 수 있는 실제 Editor 경로로 검사한다. 파일 생성만 했으면 앱 저장/재열기 검증을 완료했다고 말하지 않는다. 스킬 작업 중 앱 기능 개발이나 외부 모델 연결로 범위를 넓히지 않는다.
 
@@ -50,6 +50,14 @@
 
 ## 저장과 검증
 
-실제 Editor에서 로컬 폰트를 로드한 PNG를 확인하고, 문자 수정·도형 선택·원화 이미지 이동/크기 조절이 가능한 SVG/작업 파일을 저장·재열기한다. 이미지가 있으면 임시 원본 경로 없이도 유지되는지 확인한다. 외부 SVG 렌더러 미리보기만으로 Vectora 보존을 단정하지 않는다. 문서 px의 단위 없는 SVG도 96px/in이면 같은 물리 크기지만 최종 전달 파일에는 mm를 명시할 수 있다. 실제 크기와 viewBox를 함께 유지한다.
+[공통 결과 파일 규칙](common.md#결과-파일과-저장-위치)으로 저장 폴더와 파일명 본체를 먼저 확정한다.
+
+1. 실제 Editor에서 글꼴·개체·선·배치와 복합형 각 요소를 검수한다. 최종 문서를 `vectora_save({documentId,path:"/저장폴더/이름.vectora",format:"vectora"})`로 저장하고 실제 성공 응답과 파일 존재를 확인한다. SVG의 확장자만 `.vectora`로 바꾸지 않는다.
+2. 저장한 `.vectora`를 `vectora_open_document`로 다시 열어 문자·도형·이미지·그룹·물리 크기와 원화 포함 여부를 확인한다. 원화의 임시 파일이 없어도 이미지가 유지되어야 한다.
+3. 재열어 확인한 문서 ID로 `vectora_export({documentId,path:"/저장폴더/이름.jpeg",format:"jpeg",scale:4,transparent:false})`를 실행한다. 흰 바탕으로 내보내되 의도된 장면 배경은 보존한다. 사용자 배율/크기가 있으면 4배 대신 그 값을 적용한다. 여러 대지가 있는 기존 파일이면 요청한 완성 그림의 `artboardId`를 명시한다.
+4. 실제 JPEG 파일을 열어 글·선·여백·해상도·잘림과 저장본 일치를 확인한다. 후속 수정이 생기면 `.vectora` 저장과 재열기, JPEG 내보내기를 다시 수행해 둘이 같은 최종 상태가 되게 한다.
+5. 같은 폴더·같은 이름의 두 파일과 실제 저장 경로를 확인하고 JPEG를 대화창에 이미지로 표시한다. `.vectora`는 파일 링크로 제공한다. 폴더는 호출 전에 존재해야 하며 기존 파일 교체는 허용된 대상에만 `overwrite:true`로 지정한다.
+
+MCP가 없으면 실제 Vectora 앱의 저장·재열기·JPEG 내보내기로 같은 순서를 수행한다. 외부 SVG 미리보기만으로 저장/재열기/내보내기 완료를 주장하지 않는다. 작업용 SVG를 사용한 경우에도 mm와 viewBox, 실제 물리 크기를 보존해 가져온다.
 
 `vectora_export(format:pdf, outlineText:true)`는 원본 문자를 보존한 윤곽선 출력 경로다. 편집 원본을 먼저 보관한다. 저장 경로/성공 응답/재열기 상태를 구분해 기록하고 기존 파일은 요청 범위에서만 변경한다.
