@@ -14,7 +14,7 @@ EXCLUDE: statues, sculptural busts, marble, plaster, stone surfaces, pedestals, 
 ASSET: Isolate the character on a transparent exterior background, with opaque white skin and any white clothing areas. Keep the requested head and body extent complete with minimal transparent outer padding. No lettering, name labels, speech bubbles, frames, or scenery. Include only props explicitly required by the request.
 ```
 
-블록 앞에는 대상·시대·외형·복장·표정·시선·인물 수·절단 범위·배치할 가로세로 비율만 구체화한다. ‘고대 사상가’는 살아 있는 사람의 복장과 외형으로 표현한다. 사용자가 특정 인물을 지명했으면 정체성은 유지하되 `Socrates style`처럼 이름을 화풍으로 쓰거나 유명 석고상·박물관 흉상을 모델로 삼지 않는다. 일반 사상가 요청에 특정 철학자의 이름을 자동 추가하지 않는다. `detailed charcoal-and-ink`, `classical sculpture`, `realistic shaded bust` 같은 상충하는 수식어를 긍정 지시로 덧붙이지 않는다.
+블록 앞에는 대상·시대·외형·복장·표정·시선·인물 수·절단 범위·배치할 가로세로 비율만 구체화한다. ‘고대 사상가’는 살아 있는 사람의 복장과 외형으로 표현한다. 사용자가 특정 인물을 지명했으면 [참조 검색](artwork-production.md#이름이-지정된-대상의-참조-검색)으로 확인한 얼굴·복식 특징을 반영한다. `Socrates style`처럼 이름을 화풍으로 쓰지 않으며, 조각상 자료는 정체성의 근거로만 사용하고 조각의 재질·받침대·깎인 명암을 재현하지 않는다. 일반 사상가 요청에 특정 철학자의 이름을 자동 추가하지 않는다. `detailed charcoal-and-ink`, `classical sculpture`, `realistic shaded bust` 같은 상충하는 수식어를 긍정 지시로 덧붙이지 않는다.
 
 인물이 여러 명이어도 이 화풍 블록은 동일하게 쓰고 대상 설명만 바꾼다. ‘앞 인물과 같은 스타일’이라는 문장만으로 대체하지 않는다. 실제 도구에 보낸 최종 프롬프트와 생성 원화 경로를 결과 폴더의 제작 기록에 남겨, 사용자 요청과 모델이 추가한 표현을 구별할 수 있게 한다.
 
@@ -29,6 +29,7 @@ ASSET: Isolate the character on a transparent exterior background, with opaque w
 
 ## 범위와 상대 크기
 
+- 먼저 **인물이 쓰이는 장면**으로 절단 범위를 정한다. 화상 수업·인터뷰·대화의 참가자를 ‘작은 얼굴’이라고 부른 것만으로 머리 단품으로 해석하지 않는다. 이때는 목·어깨~가슴이 연결된 작은 흉상이 기본이다. ‘얼굴만/머리만/몸은 빼고’처럼 범위를 명시적으로 제한했거나 독립 얼굴 단품을 요청했을 때 아래 얼굴만 규칙을 적용한다.
 - **얼굴만:** 머리카락 윗부분부터 턱·보이는 귀까지. 몸통·말풍선·이름·배경 틀을 자동 추가하지 않는다. 크기 미지정의 작은 단품은 머리 폭 **약 10–15mm**부터 검토한다.
 - **세로대화용 인물:** 목·어깨~가슴을 포함한다. 해당 용도의 ‘인물만’도 흉상이다. 명시적인 ‘머리만/몸 제외’가 우선한다. 손짓·소품이 필요하면 범위를 넓힌다.
 - **발표용 인물:** 목·어깨~가슴을 최소한 포함한다. [발표 배치 순서](dialogue-illustrations.md#발표)에 따라 말풍선 크기와 남은 폭부터 확정하고, 그 영역에 맞는 자세·신체 범위로 새로 생성한다. 작은 흉상을 단순 확대해 높이를 맞추지 않는다.
