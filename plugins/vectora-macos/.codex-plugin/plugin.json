@@ -1,6 +1,6 @@
 {
   "name": "vectora-macos",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "macOS와 Windows에서 Vectora의 실제 편집 엔진을 MCP로 사용해 벡터를 만들고 편집·저장합니다.",
   "author": {
     "name": "Vectora"

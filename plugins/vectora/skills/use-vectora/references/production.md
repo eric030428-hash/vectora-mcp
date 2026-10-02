@@ -17,6 +17,10 @@ The current arrow UI name is `화살표` with tool value `arrow-3`. Check `tools
 
 Ink bounds use measured glyphs; `decorationBounds` and `underlineBounds` are separate. Measurement bounds, baselines and inline-blank positions are relative to the frame's top-left in mm. An unavailable measurement is reported as unavailable, never substituted with an em box. Text, graph, dialogue and schematic components can opt into `fitToArtboard:true,artboardInsetMm:4`; changing the linked artboard width regenerates layout at the same font/stroke sizes. The default remains an explicit component width. Impossible sizes roll back the edit. Artboard height does not grow automatically.
 
+### 새 그래프·벤 계약
+
+새 그래프의 `chartStyle` 16스타일과 `layout:"venn"`은 [그래프·벤 실행](../../create-kice-illustration/references/graph-venn-production.md)을 따른다. 일부 옵션만 미지원이면 생성기로 기본 자료 구조를 만든 뒤 미지원 부분만 실제 개체 ID로 수정·보충한다. 보충 개체의 자동 재배치는 보장되지 않으므로 후속 변경 뒤 재검수하며 전체 SVG 대체나 불필요한 detach를 하지 않는다. 아래 Graph의 type/layout 설명은 **chartStyle 없는 legacy 계약**이다. 새 spec에 legacy 전용 필드를 혼합하지 않는다. 이 참조의 옛 버전·UND 메뉴 설명은 최신 앱 UI 기능을 제한하는 근거가 아니다.
+
 ### Production specifications
 
 - Text: `{kind:"text",variant,widthMm,body,title?,background?,cards?}`. Variants: `newspaper-wave`, `newspaper-band`, `scroll`, `browser`, `noticeboard`. Cards contain stable `id`, `body`, optional `title`/`author`. Background settings reserve padding, chrome/title/footer heights, columns and optional illustration space; the actual body determines the final height. Reserved illustration space does not invent artwork.

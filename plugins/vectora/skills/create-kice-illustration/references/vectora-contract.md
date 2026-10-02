@@ -5,11 +5,8 @@
 ## 실행 경로
 
 - 연결된 `vectora_status`로 지원 기능/문서 세션을 확인하고 `vectora_fonts`, `vectora_check_font`로 실제 사용할 문자 전체를 검사한다.
-- Claude에서 현재 MCP 도구 목록으로 정확한 도구 이름을 확인한 뒤 `vectora_new_document` 또는 `vectora_open_document` → `vectora_apply`/`vectora_import_svg` → `vectora_inspect` → `vectora_preview` → `vectora_save`/`vectora_export`의 해당 호출을 한다. 현재 MCP 문서는 일반 UI 탭과 독립 세션이다.
-- 글꼴 목록은 실제 글꼴 목록 도구인 `vectora_fonts`로 확인하고, `vectora_check_font`가 노출되어 있으면 출력할 전체 문장도 검사한다.
-- 새 문서의 실제 도구 스키마에 `colorMode`가 있을 때만 사용한다. 해당 필드가 있고 사용자가 RGB를 요구하지 않았다면 기본 `cmyk`, RGB 요청이면 `rgb`를 보낸다.
-- 열기/가져오기 도구 스키마에 `fontReplacements`가 있을 때만 `{"원본 글꼴명":"설치 글꼴명"}` 매핑을 전달한다. `MISSING_FONTS` 오류의 목록을 읽고 `vectora_fonts`로 설치 글꼴을 확인한 뒤 명시적으로 선택한 매핑으로 재시도한다. 평가원 제작의 UND폰트v2.1은 사용자 승인 없이 다른 글꼴로 바꾸지 않는다.
-- 새 가로·세로 문자 기본 자간은 `-60`(1/1000 em)이다. 생성 스키마에 `charSpacing`이 있으면 `-60`을 전달하고, 측정 도구가 있으면 같은 자간으로 측정한다.
+- `vectora_new_document` 또는 별도 문서의 `vectora_open_document` → `vectora_production`/`vectora_apply`/`vectora_import_svg` → `vectora_inspect` → `vectora_preview` → `vectora_save`/`vectora_export`를 사용한다. 현재 MCP 문서는 일반 UI 탭과 독립 세션이다.
+- 새 그래프·벤은 [그래프·벤 실행](graph-venn-production.md)의 해당 절만 읽고 UI와 같은 production 엔진을 우선 사용한다. `vectora_status`가 앱 버전·production 정보만 반환할 수 있으므로 존재하지 않는 `chartStyle` capability 키를 가정하지 않는다. 실제 연결본의 스키마와 호출 오류로 지원을 확인한다. 일부 옵션만 미지원이면 production으로 기본 자료 구조를 만든 뒤 그 부분만 수정·보충한다. 전체 대체는 유형 자체의 기본 자료 관계를 표현할 수 없거나 실제 생성 경로가 없는 경우에 한한다. 서버 `vectora://guide`에 예전 그래프 계약이나 UND 메뉴 설명이 남아 있으면 새 `chartStyle`과 혼용하지 않는다.
 - 기본 전달용 이미지는 **JPEG**다. 출력 배율·픽셀 크기를 지정하지 않으면 `vectora_export`에 `format:"jpeg", scale:4, transparent:false`를 명시한다. 사용자 지정 크기·배율은 우선하며 편집 원본의 물리 치수·글자 크기는 유지한다. 검수용 `vectora_preview`는 화면에 맞는 제한된 크기를 사용한다. `vectora_export_package`는 SVG·PNG 등 추가 파일을 생성하므로 기본 두 파일 납품에 사용하지 않는다. 사용자가 그 묶음을 명시적으로 요청했을 때만 사용한다.
 - 변경 요청의 `documentId`, `expectedRevision`, `requestId`는 실제 응답에서 얻어 사용한다. 같은 재시도는 같은 requestId, 다른 편집은 새 ID. 대상 개체 ID를 확인한다. 일반 일괄 명령은 1,000개 이하이며 실패 시 복원된다.
 - 도구가 연결되지 않았으면 Claude 웹/클라우드에서는 비최종 설계안만 준비하고 저장·재열기를 완료했다고 말하지 않는다. 로컬 세션에서 실제 Editor를 사용할 수 있을 때만 직접 SVG 경로로 검수한다. 스킬 작업 중 앱 기능 개발이나 외부 모델 연결로 범위를 넓히지 않는다.
@@ -19,6 +16,7 @@
 | 입력 경로 | 길이 | 글/획/파선 | tracking |
 |---|---|---|---|
 | 일반 MCP `units: mm-pt`(기본) | mm | pt | 1/1000em |
+| production `*Mm`/`*Pt` | 명시된 mm | 명시된 pt; UND 8pt 고정 | -60 고정 |
 | Editor 내부, `units: px`, 기존 recipe v1 | px | px | 1/1000em |
 | 직접 SVG의 96px/in viewBox | mm×96/25.4 | pt×96/72 | letter-spacing=-0.06×font-size |
 
