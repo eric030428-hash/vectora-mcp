@@ -16,7 +16,7 @@
 
 ## 새 그래프
 
-`spec`은 `kind:"graph"`, `chartStyle`, 아래의 `type`, `dataFidelity:"exact"|"approximate"`, `categories`와 `series`로 구성한다. 정확한 값은 exact, 근삿값이 실제 제공된 경우만 approximate다. `relative`는 새 chartStyle 계약에서 허용하지 않는다. 수치가 없는 개형을 임의 숫자로 변환하지 않는다.
+`spec`은 `kind:"graph"`, `chartStyle`, 아래의 `type`, `dataFidelity:"exact"|"approximate"`, `categories`와 `series`로 구성한다. 정확한 원자료를 값·좌표로 입력하고 표시만 반올림하면 `exact`이며, 사용자 제공 근삿값 또는 [실자료 조사에서 확인한 원자료를 반올림한 값](real-data.md) 자체를 입력으로 사용하면 `approximate`로 지정한다. `relative`는 새 chartStyle 계약에서 허용하지 않는다. 수치가 없는 개형을 임의 숫자로 변환하지 않는다.
 
 | chartStyle | type | 조건·용도 |
 |---|---|---|
