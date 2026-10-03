@@ -1,14 +1,21 @@
-# 승인 지도 바탕 실행
+# 지도 프리셋과 바탕 참고
 
-.vectora 양식 또는 지도 바탕 SVG를 실제 편집할 때 읽는다. 공통 스타일·문자·지리 원칙은 [지도 공통](map-illustrations.md), 저장·재열기·JPEG 납품은 [실행 계약](vectora-contract.md)을 따른다.
+지도 양식이 필요하면 UND 메뉴의 프리셋 목록에서 골라 새 문서를 시작한다. 공통 스타일·문자·지리 원칙은 [지도 공통](map-illustrations.md), 저장·재열기·JPEG 납품은 [실행 계약](vectora-contract.md)을 따른다.
 
-## 바탕 선택: 필요한 manifest 하나만
+## 프리셋 선택과 새 문서
 
-- [library index](../assets/maps/library/index.json)에서 요청 범위·고정 도법·상세도에 맞는 항목을 고른 뒤 **선택한 항목의 manifest 하나와 해당 SVG만** 읽는다. index는 지리 바탕 목록이며 기출 예시 카탈로그가 아니다. 전체 manifest를 순회하거나 파일명·자산 수를 고정하지 않는다.
-- manifest의 `schema`와 실제 존재하는 파일·출처·권리·좌표 계약을 확인한다. 일반 template은 `svg`·`sha256`·`bytes`, `source`의 원자료 revision·해시·resolution, `projection`, `viewBox`, `widthMm/heightMm`, `gaps`를 확인하고, source variant는 아래 특수 양식 분기를 따른다. `status`·`nativeValidation`의 pending을 import/save/reopen/export 통과로 해석하지 않는다.
-- `countries`가 국가 객체 배열인 양식만 해당 범위의 `countries`에서 국가명·ISO·source feature와 `partIds`를 대조한다. `visiblePartCount`는 이 창에 보이는 부분 수이며 원자료 전체 섬의 존재 보증이 아니다. 대상이 없으면 추정 경로를 선택하지 않는다.
-- 원본 자산은 보존하고 작업 문서에 `vectora_import_svg`로 가져온다. `inspect`로 실제 객체 ID·이름·계층·mask를 확인하고 실제 그룹 ID를 우선해 대응시킨다. 이름 없는 단일 자식 그룹 등 일부 raw SVG 구조에서는 그룹이 합쳐져 그룹 ID가 자식에 남을 수 있다. 실제 inspect에서 그런 차이가 있을 때만 그룹 ID·경로 기하와 manifest를 대조하며, 누락된 part ID만으로 지리 면 누락을 판정하지 않는다. ID 변경/중복 또는 대응 불확실성이 있으면 추측 선택을 중단한다.
-- 새 범위가 필요하면 기존 확보 권한으로 출처·권리·정확도를 검증한 별도 바탕을 마련한다. 아직 없는 helper·planner·map kind나 projection API를 호출 지침으로 만들지 않는다.
+- `vectora_list_presets({})`를 category 필터 없이 호출한다. 이 목록은 UND 메뉴의 새 도식 프리셋과 같은 현재 OS 사용자 카탈로그이며 map category가 없으므로 범주 필터를 걸지 않는다. 실제 반환 목록의 이름·설명·ID만 사용하고 사용자별 ID나 지도 양식 수를 하드코딩하지 않는다.
+- 요청 범위·경계·도법·상세도에 맞는 실제 목록 항목을 골라 `vectora_create_preset({presetId:실제 ID,name?:작업명})`으로 새 격리 편집 문서를 만든다. 반환된 documentId와 revision을 기록하고 `vectora_inspect`로 실제 객체 ID·이름·계층·mask를 확인한 뒤 편집한다.
+- 사용자가 이번 작업용 별도 파일을 명시했다면 그 파일을 우선한다. 그 외에는 `world_continents.vectora`나 library SVG를 직접 열거나 `vectora_import_svg`로 가져와 제작을 시작하지 않는다.
+- 목록 조회가 불가능하거나 적합한 프리셋이 없으면 그 상태를 알린다. 원본 SVG를 조용히 대체 경로로 사용하거나 프리셋을 사용했다고 말하지 않는다.
+
+## 선택 양식의 출처와 manifest 참고
+
+- 기존 지도 자산과 manifest는 보존한다. 선택한 프리셋의 이름·설명과 대응하는 바탕을 확인한 경우에만 [library index](../assets/maps/library/index.json)에서 해당 항목을 찾아 manifest 하나와 연결 SVG를 출처·권리·경계·투영·상세도·ID 설명의 참고로 읽는다. 전체 manifest를 순회하거나 파일명·자산 수를 고정하지 않는다. 대응이 모호하면 임의로 연결하지 않는다.
+- manifest의 `schema`와 실제 존재하는 파일·출처·권리·좌표 계약을 확인한다. 일반 template은 `svg`·`sha256`·`bytes`, `source`의 원자료 revision·해시·resolution, `projection`, `viewBox`, `widthMm/heightMm`, `gaps`를 확인하고, source variant는 아래 특수 양식 분기를 따른다. `status`·`nativeValidation`의 pending은 원본 자산 상태이며 새 프리셋 문서의 inspect/save/reopen/export 검증을 뜻하지 않는다.
+- `countries`가 국가 객체 배열인 원본 양식만 해당 범위의 `countries`에서 국가명·ISO·source feature와 `partIds`를 대조한다. `visiblePartCount`는 이 창에 보이는 부분 수이며 원자료 전체 섬의 존재 보증이 아니다. 대상이 없으면 추정 경로를 선택하지 않는다.
+- Manifest의 ID는 출처 정보이며 새 문서의 편집 ID는 inspect 결과를 사용한다. inspect에서 단일 자식 collapse로 manifest ID가 자식 경로에 남은 것이 확인되면 그 ID·기하와 manifest를 대조한다. 누락된 part ID만으로 지리 면 누락을 판단하지 않으며, ID 변경·중복 또는 대응이 모호하면 추측 선택을 중단한다.
+- 새 범위·도법이 프리셋에서 지원되지 않으면 그 한계를 알린다. helper·planner·map kind나 projection API가 있다고 가정하지 않는다.
 
 SVG의 `data-ne-id` 등 임의 `data-*` 속성은 native 저장에 보존되지 않는다. 원자료 feature ID·출처·좌표 등록 등 메타데이터는 manifest sidecar에 유지하고, native 객체 ID·이름과 별도로 대응시킨다.
 
@@ -16,21 +23,21 @@ SVG의 `data-ne-id` 등 임의 `data-*` 속성은 native 저장에 보존되지 
 
 ## 강조 방식 구분
 
-### 기존 세계지도: 회색 면을 앞으로
+### 세계지도 출처를 참조하는 양식: 회색 면과 선의 대응
 
-- [world_continents.vectora](../assets/maps/world_continents.vectora)를 별도 작업본으로 연다. 흰 육지·실선 해안·점선 국경 그룹 아래의 회색 ‘경로’는 숨김이 아니라 가려진 강조 면이다.
-- 작업본에서 윤곽·위치·본토·섬·인접국을 확인한 회색 면만 `bringFront`한다. 동일 이름·배열 순서·좌표 상자만으로 국가를 단정하지 않는다. 요청 범위의 분리면도 포함한다.
+- 선택 프리셋이 [world_continents.vectora](../assets/maps/world_continents.vectora)에서 왔음이 확인된 경우에만 원본의 레이어 설명을 참고한다. 원본을 편집 문서로 직접 열지 않는다. 흰 육지·실선 해안·점선 국경 아래 회색 경로는 가려진 강조 면일 수 있다.
+- 새 문서에서 inspect한 윤곽·위치·본토·섬·인접국과 실제 ID를 대조한 면만 `bringFront`한다. 동일 이름·배열 순서·좌표 상자만으로 국가나 ID 대응을 단정하지 않는다. 요청 범위의 분리면도 확인한다.
 - 필요한 채움 없는 해안/국경 선은 위에 보존한다. 흰 육지 전체를 다시 앞으로 올려 강조를 덮지 않는다. 이 양식의 회색 `#AAAAAA`·바다 `#EEEEEE`는 다른 바탕의 강제값이 아니다.
 
-### 새 SVG 양식: 국가 면의 채움 변경
+### 원본 국가 면 정보: 프리셋과 대응이 확인될 때
 
-- manifest의 `countries[].id`를 실제 inspect의 국가 그룹 ID·기하와 먼저 대응시킨다. 복수 자식이면 **실제로 존재하는 해당 면 path 전부**를 선택하고, 단일 자식 collapse로 국가 그룹 ID가 path에 남았으면 그 path를 선택해 `style.values.fill`을 변경한다. `partIds`는 실제 inspect에서 보존·대응이 확인되면 실행 ID로 사용할 수 있다. 해당 구조에서 collapse가 확인된 경우에만 실제 객체 ID로 대응시킨다. 그룹 fill 변경이 자식의 명시 fill을 덮는다고 가정하지 않는다. 이 방식에 기존 세계지도의 회색 면 `bringFront`를 적용하지 않는다.
+- 선택 프리셋과 대응하는 원본 manifest의 `countries[].id`를 새 문서의 실제 inspect 결과와 기하로 대응한다. 복수 자식이면 **실제로 존재하는 해당 면 path 전부**를 선택하고, ID 대응이 확인된 경우에만 `style.values.fill`을 변경한다. `partIds`도 실제 inspect에서 같은 개체임이 확인된 경우만 실행 ID로 쓴다. 그룹 fill이 자식의 명시 fill을 덮는다고 가정하지 않는다. 이 방식에 기존 세계지도의 회색 면 `bringFront`를 적용하지 않는다.
 - `highlightEdit`와 `svgGroupIds`의 실제 구조를 따른다. 별도 강조 overlay가 필요하면 `highlights`에 대응하는 계층에 두고 coastline/national-boundaries 아래를 유지한다.
 - 인접국 오채움·분리면 누락·선 가림을 확인한다. 면과 경계가 합쳐진 다른 SVG에는 이 독립 레이어 구조를 가정하지 않는다.
 
-### 출처 SVG 기반 특수 양식
+### 선택 프리셋의 출처 SVG 기반 특수 양식
 
-- 먼저 선택한 manifest의 `schema`를 확인한다. `vectora-map-template/v1`의 국가 객체 대응과 달리, `library/source-variants/`의 `vectora-map-source-variant/v1`은 `countries`가 ISO 문자열 배열 또는 빈 배열이다. 이 목록에 `countries[].id/partIds` 명령을 적용하지 않는다.
+- 프리셋과 대응하는 manifest의 `schema`를 확인한다. `vectora-map-template/v1`의 국가 객체 대응과 달리, `library/source-variants/`의 `vectora-map-source-variant/v1`은 `countries`가 ISO 문자열 배열 또는 빈 배열이다. 이 목록에 `countries[].id/partIds` 명령을 적용하지 않는다.
 - source variant의 물리 치수·좌표는 `coordinateManifest.widthMm/heightMm`와 `originalViewBox/outputViewBox` 등 실제 필드로 확인한다. `source`의 출처/권리 필드와 `derivativeLicense`도 해당 manifest에 있는 계약만 따른다. 일반 template의 최상위 viewBox·source 필드 구조를 강제하지 않는다.
 - 국가 객체 매핑이 없는 판 경계·빙하 등의 역할은 source group의 `data-name`과 실제 `inspect`의 이름·그룹 ID·기하로 선택한다. `roles`만으로 객체 ID를 만들어내지 않으며, 수치 경위도 등록이 unavailable이면 원 SVG 좌표를 보존한 조판만 수행한다.
 - `countries`가 없다는 이유만으로 사용 불가로 판단하지 않는다. 출처 SVG를 바탕으로 만든 특수 양식은 manifest의 출처·권리·해시·범위·사용 제약과 실제 inspect의 경로·그룹 구조를 확인해 사용한다.
@@ -67,11 +74,10 @@ SVG의 `data-ne-id` 등 임의 `data-*` 속성은 native 저장에 보존되지 
 
 - 외부 SVG는 경로 기하·ID 보존 검사만으로 통과시키지 말고 실제 Vectora에서 내보낸 JPEG를 확인한다. 누적 축소/확대 변환으로 선 굵기가 달라지면 변환을 경로 좌표에 정규화하거나 작업본의 최종 선 굵기를 재설정한 뒤 저장·재열기·JPEG 확인을 수행한다.
 
-## 반복 편집 전처리 단축
+## helper의 조건부 사용
 
-- 실제 [map-template-edit.py](../scripts/map-template-edit.py)를 표준 Python으로 실행한다. `--list --iso KOR`, `--source-kind`, `--projection`으로 바탕 후보를 좁힌 뒤 선택한 manifest만 확인한다.
-- 지리 데이터 기반 양식은 `--template <id> --output <new.svg> --highlight KOR JPN --national none|solid|dashed --admin show|hide`로 국가 채움·기존 경계 표시를 전처리할 수 있다. output은 library 밖의 새 파일이며 원본을 덮어쓰지 않는다.
-- source variants는 조회만 지원한다. 결과 SVG를 실제 Vectora로 가져와 검사하며, 이 helper를 도법·좌표 생성 API나 native 저장/재열기/출력 검증으로 설명하지 않는다.
+- [map-template-edit.py](../scripts/map-template-edit.py)는 사용자가 프리셋 등록 준비를 명시한 경우에 후보 조회와 새 SVG 준비에 사용하거나, 사용자가 편집 대상으로 지정한 별도 SVG 작업에만 사용한다. helper가 만든 SVG를 일반 지도 제작에서 프리셋 대신 가져와 시작하지 않는다.
+- 이 helper를 도법·좌표 생성 API나 프리셋 문서의 native 저장/재열기/출력 검증으로 설명하지 않는다.
 
 ## 추가 표현이 있을 때만
 

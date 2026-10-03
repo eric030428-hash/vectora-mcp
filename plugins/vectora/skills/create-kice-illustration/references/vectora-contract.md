@@ -7,7 +7,7 @@
 - 연결된 `vectora_status`로 지원 기능/문서 세션을 확인하고 `vectora_fonts`, `vectora_check_font`로 실제 사용할 문자 전체를 검사한다.
 - `vectora_new_document` 또는 별도 문서의 `vectora_open_document` → `vectora_production`/`vectora_apply`/`vectora_import_svg` → `vectora_inspect` → `vectora_preview` → `vectora_save`/`vectora_export`를 사용한다. 현재 MCP 문서는 일반 UI 탭과 독립 세션이다.
 - 새 그래프·벤은 [그래프·벤 실행](graph-venn-production.md)의 해당 절만 읽고 UI와 같은 production 엔진을 우선 사용한다. `vectora_status`가 앱 버전·production 정보만 반환할 수 있으므로 존재하지 않는 `chartStyle` capability 키를 가정하지 않는다. 실제 연결본의 스키마와 호출 오류로 지원을 확인한다. 일부 옵션만 미지원이면 production으로 기본 자료 구조를 만든 뒤 그 부분만 수정·보충한다. 전체 대체는 유형 자체의 기본 자료 관계를 표현할 수 없거나 실제 생성 경로가 없는 경우에 한한다. 서버 `vectora://guide`에 예전 그래프 계약이나 UND 메뉴 설명이 남아 있으면 새 `chartStyle`과 혼용하지 않는다.
-- 지도는 [바탕 실행](map-template.md)의 해당 자산 절만 읽고 일반 SVG import·선택·style·clip과 실제 production `pattern`/`magnify`/`graph`를 조합한다. 현재 `kind:"map"`, 지도 planner·새 투영·자동 지리 join API는 없다. 자산 manifest·SVG helper는 실제 설치된 파일/호출 계약만 사용한다.
+- 지도는 [바탕 실행](map-template.md)에 따라 적합한 UND 프리셋에서 새 문서를 시작한 뒤 일반 선택·style·clip과 실제 production `pattern`/`magnify`/`graph`를 조합한다.
 - 기본 전달용 이미지는 **JPEG**다. 출력 배율·픽셀 크기를 지정하지 않으면 `vectora_export`에 `format:"jpeg", scale:4, transparent:false`를 명시한다. 사용자 지정 크기·배율은 우선하며 편집 원본의 물리 치수·글자 크기는 유지한다. 검수용 `vectora_preview`는 화면에 맞는 제한된 크기를 사용한다. `vectora_export_package`는 SVG·PNG 등 추가 파일을 생성하므로 기본 두 파일 납품에 사용하지 않는다. 사용자가 그 묶음을 명시적으로 요청했을 때만 사용한다.
 - 변경 요청의 `documentId`, `expectedRevision`, `requestId`는 실제 응답에서 얻어 사용한다. 같은 재시도는 같은 requestId, 다른 편집은 새 ID. 대상 개체 ID를 확인한다. 일반 일괄 명령은 1,000개 이하이며 실패 시 복원된다.
 - 도구가 연결되지 않았으면 Claude 웹/클라우드에서는 비최종 설계안만 준비하고 저장·재열기를 완료했다고 말하지 않는다. 로컬 세션에서 실제 Editor를 사용할 수 있을 때만 직접 SVG 경로로 검수한다. 스킬 작업 중 앱 기능 개발이나 외부 모델 연결로 범위를 넓히지 않는다.

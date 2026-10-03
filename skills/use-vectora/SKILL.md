@@ -21,7 +21,7 @@ Vectora MCP 도구를 사용한다. 화면 클릭, Computer Use, 브라우저 DO
 - 새 도형은 채우기 없음·검정 선 0.4pt, 새 문자는 UND폰트v2.1 8pt·자간 `charSpacing:-60`(1/1000em)이 기본이다. 이 기본 자간은 가로·세로 새 문자 생성에 모두 적용한다. 입력 스키마가 `charSpacing`을 노출하면 `-60`을 전달하고, 측정 도구가 있으면 같은 자간으로 측정한다. 기존 문자의 자간은 요청 없이 바꾸지 않는다. 평가원 작업은 별도 제작 원칙의 유형별 선 굵기와 자간 등을 따른다.
 - `vectora_inspect(includeObjects:true)`의 `pathNodes`는 각 개체의 **문서 좌표 mm**와 0부터 시작하는 점 번호를 제공한다. `objects`의 원시 경로 px와 혼동하지 않는다.
 - 개별 점은 `vectora_apply`의 `{type:"pathPoint",id,index,point:{x,y}}`로 이동한다. `incoming`/`outgoing`은 곡률 핸들의 절대 좌표이며 `null`이면 그 핸들을 접는다. 점만 옮기면 연결된 핸들도 함께 움직인다. 사각형·타원 등의 한 꼭짓점을 수정하면 같은 ID를 유지한 편집 경로가 된다. 잠긴 대상은 먼저 해당 잠금을 해제한다.
-- 사용자가 프리셋을 요청하면 `vectora_list_presets`로 실제 ID를 조회하고 `vectora_create_preset`으로 새 문서를 만든다. 자료 틀과 말풍선은 빈 틀이며 그래프·모식도의 글·수치는 편집용 예시다. 사용자의 자료로 교체한다. 원 그래프 프리셋은 `pieChart` 명령으로 수치를 다시 수정할 수 있다. 일반 평가원 그림 제작은 최신 create-kice-illustration 원칙으로 새로 설계하며 자동으로 프리셋을 복사하지 않는다.
+- 사용자가 프리셋을 요청하면 `vectora_list_presets`로 실제 ID를 조회하고 `vectora_create_preset`으로 새 문서를 만든다. 자료 틀과 말풍선은 빈 틀이며 그래프·모식도의 글·수치는 편집용 예시다. 사용자의 자료로 교체한다. 원 그래프 프리셋은 `pieChart` 명령으로 수치를 다시 수정할 수 있다. 일반 평가원 그림은 최신 create-kice-illustration 원칙으로 새로 설계하되, 지도 양식이 필요하면 해당 스킬의 지도 원칙에 따라 적합한 프리셋을 조회해 새 문서로 시작한다.
 
 ## 사용자 프리셋
 
