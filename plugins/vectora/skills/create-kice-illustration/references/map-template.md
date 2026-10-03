@@ -4,10 +4,16 @@
 
 ## 프리셋 선택과 새 문서
 
-- `vectora_list_presets({})`를 category 필터 없이 호출한다. 이 목록은 UND 메뉴의 새 도식 프리셋과 같은 현재 OS 사용자 카탈로그이며 map category가 없으므로 범주 필터를 걸지 않는다. 실제 반환 목록의 이름·설명·ID만 사용하고 사용자별 ID나 지도 양식 수를 하드코딩하지 않는다.
+- `vectora_list_presets({})`를 category 필터 없이 호출한다. 이 목록은 UND 메뉴의 새 도식 프리셋과 같은 현재 OS 사용자 카탈로그이며 연결본에 따라 map category 지원이 다르므로 범주 필터를 걸지 않는다. 실제 반환 목록의 이름(title/name)·설명·ID만 사용하고 사용자별 ID나 지도 양식 수를 하드코딩하지 않는다.
 - 요청 범위·경계·도법·상세도에 맞는 실제 목록 항목을 골라 `vectora_create_preset({presetId:실제 ID,name?:작업명})`으로 새 격리 편집 문서를 만든다. 반환된 documentId와 revision을 기록하고 `vectora_inspect`로 실제 객체 ID·이름·계층·mask를 확인한 뒤 편집한다.
 - 사용자가 이번 작업용 별도 파일을 명시했다면 그 파일을 우선한다. 그 외에는 `world_continents.vectora`나 library SVG를 직접 열거나 `vectora_import_svg`로 가져와 제작을 시작하지 않는다.
+- 카탈로그의 그룹·출처 메타데이터는 실제 반환 필드가 있을 때만 해석한다. `category`·`source`를 지리 역할/국가 binding으로 해석하거나 없는 group 필드를 만들어내지 않는다.
+- 소스의 프리셋 구현·자산 목록은 실행 번들의 카탈로그와 다를 수 있다. 지도 planner의 template 목록도 UND 프리셋 목록이 아니다. 실제 프리셋 조회 결과만 시작 가능 여부의 근거로 사용한다.
 - 목록 조회가 불가능하거나 적합한 프리셋이 없으면 그 상태를 알린다. 원본 SVG를 조용히 대체 경로로 사용하거나 프리셋을 사용했다고 말하지 않는다.
+
+## 실행 경로 선택
+
+프리셋 새 문서와 출처 확인 후, 연결본의 승인 양식 W0/W1 capability가 확인되면 [지도 production 실행](map-production.md)을 읽는다. 다른 지도 프리셋을 모두 native map으로 취급하거나 선택 바탕을 world_continents로 바꾸지 않는다. 아래 일반 선택·style·clip은 신도구가 없는 설치 앱과 다른 양식의 기존 편집 경로다. 관리되는 map 컴포넌트에는 일반 경로 이동·클립을 무조건 적용하지 않고 해당 실행 문서의 binding 보존 규칙을 따른다.
 
 ## 선택 양식의 출처와 manifest 참고
 
@@ -15,7 +21,7 @@
 - manifest의 `schema`와 실제 존재하는 파일·출처·권리·좌표 계약을 확인한다. 일반 template은 `svg`·`sha256`·`bytes`, `source`의 원자료 revision·해시·resolution, `projection`, `viewBox`, `widthMm/heightMm`, `gaps`를 확인하고, source variant는 아래 특수 양식 분기를 따른다. `status`·`nativeValidation`의 pending은 원본 자산 상태이며 새 프리셋 문서의 inspect/save/reopen/export 검증을 뜻하지 않는다.
 - `countries`가 국가 객체 배열인 원본 양식만 해당 범위의 `countries`에서 국가명·ISO·source feature와 `partIds`를 대조한다. `visiblePartCount`는 이 창에 보이는 부분 수이며 원자료 전체 섬의 존재 보증이 아니다. 대상이 없으면 추정 경로를 선택하지 않는다.
 - Manifest의 ID는 출처 정보이며 새 문서의 편집 ID는 inspect 결과를 사용한다. inspect에서 단일 자식 collapse로 manifest ID가 자식 경로에 남은 것이 확인되면 그 ID·기하와 manifest를 대조한다. 누락된 part ID만으로 지리 면 누락을 판단하지 않으며, ID 변경·중복 또는 대응이 모호하면 추측 선택을 중단한다.
-- 새 범위·도법이 프리셋에서 지원되지 않으면 그 한계를 알린다. helper·planner·map kind나 projection API가 있다고 가정하지 않는다.
+- 새 범위·도법이 프리셋에서 지원되지 않으면 그 한계를 알린다. 승인 양식 W0/W1의 기능 확인과 실행은 [지도 production 실행](map-production.md)에 한정한다. 다른 프리셋이나 helper에 같은 planner·map kind·projection 지원을 가정하지 않는다.
 
 SVG의 `data-ne-id` 등 임의 `data-*` 속성은 native 저장에 보존되지 않는다. 원자료 feature ID·출처·좌표 등록 등 메타데이터는 manifest sidecar에 유지하고, native 객체 ID·이름과 별도로 대응시킨다.
 

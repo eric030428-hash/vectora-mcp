@@ -29,7 +29,7 @@ Claude Desktop 스킬의 코드 실행 첨부 경로는 별도 작업공간일 �
 ## 사용자 프리셋
 
 - 먼저 `vectora_list_presets`로 기본·사용자 프리셋과 ID를 확인한다. 기본 프리셋은 `vectora_create_preset`으로 새 문서에서 연다.
-- 현재 문서를 사용자 프리셋으로 저장할 때 `vectora_save_preset({documentId,title,category,description})`을 호출한다. `category`는 `text|graph|schematic|dialogue`다. 새 항목은 `id`를 생략하고, 저장한 사용자 프리셋의 그림을 교체할 때만 그 프리셋의 `id`를 전달한다. 현재 문서는 저장 후에도 열린 상태다.
+- 현재 문서를 사용자 프리셋으로 저장할 때 `vectora_save_preset({documentId,title,category,description})`을 호출한다. `category`는 연결본 스키마의 허용값을 따른다(`text|graph|schematic|dialogue`, map 지원 연결본은 `map`도 가능). 새 항목은 `id`를 생략하고, 저장한 사용자 프리셋의 그림을 교체할 때만 그 프리셋의 `id`를 전달한다. 현재 문서는 저장 후에도 열린 상태다.
 - 예: `vectora_save_preset({documentId:"실제 문서 ID",title:"새 구성비 도식",category:"graph",description:"흑백 원 그래프"})`. 문서 ID는 `vectora_new_document`, `vectora_open_document` 또는 `vectora_create_preset` 응답에서 가져온다.
 - `vectora_update_preset({id,title?,category?,description?})`은 사용자 프리셋 정보를 수정한다. 변경하지 않을 속성은 생략한다. 그림 자체를 교체하려면 `vectora_save_preset`에 기존 사용자 프리셋 ID를 전달한다.
 - `vectora_delete_preset({id})`은 사용자 프리셋을 삭제하고, 기본 프리셋을 지정하면 해당 사용자의 목록에서 숨긴다. `vectora_restore_preset({id})`은 지정한 기본 프리셋의 원본 그림과 설명을 되살린다. `vectora_restore_preset({})`은 숨겨진 기본 프리셋을 모두 되살리며 사용자 프리셋은 유지한다.
@@ -65,7 +65,7 @@ Claude Desktop 스킬의 코드 실행 첨부 경로는 별도 작업공간일 �
 
 ## 내용 기반 제작 (0.7.1)
 
-반복 배치는 `vectora_measure_text`, `vectora_production`, `vectora_export_package`를 우선한다. 호출 전 [제작 API](references/production.md)의 실제 종류별 계약을 읽는다. 새 그래프 만들기는 `kind:"graph", chartStyle`, 벤 다이어그램 만들기는 `kind:"schematic", layout:"venn"`으로 UI와 같은 production 엔진을 호출한다. 지원되는 요청에서는 개별 도형·SVG보다 이 경로를 우선하고 [그래프·벤 실행](../create-kice-illustration/references/graph-venn-production.md)의 해당 절만 읽는다. 일부 옵션만 미지원이면 production으로 기본 수치·축·자료점·서식을 최대한 만든 뒤 실제 역할 ID로 수정하거나 별도 편집 가능한 개체로 해당 부분만 보충한다. 전체 대체는 유형 자체의 기본 자료 관계를 표현할 수 없거나 생성 경로를 사용할 수 없는 경우에 한한다. 저장 spec과 자료 대응을 보존하며 preserve 수정 뒤 수동 편집 유지와 별도 보충 개체의 위치를 재검수하고 불필요하게 detach하지 않는다. chartStyle 없는 legacy 그래프와 새 계약을 섞지 않는다. `vectora_status`에 스타일별 capability가 있다고 가정하지 말고 실제 연결본의 스키마·호출 응답을 확인한다. 예전 서버 guide의 메뉴 설명은 새 기능 지원의 근거로 사용하지 않는다. mm/pt 접미사 필드는 일반 명령 단위로 다시 환산하지 않는다. 수동 편집 유지가 기본이며 `policy:"reset"`은 사용자가 초기화하려는 경우만 사용한다. 응답 캐시 만료는 편집 재실행을 뜻하지 않는다. `REQUEST_RESULT_EXPIRED`이면 inspect로 현재 상태를 확인한다.
+반복 배치는 `vectora_measure_text`, `vectora_production`, `vectora_export_package`를 우선한다. 호출 전 [제작 API](references/production.md)의 실제 종류별 계약을 읽는다. 지도 W0/W1은 연결본의 capability와 승인 양식을 확인한 경우에만 [지도 production 실행](../create-kice-illustration/references/map-production.md)을 읽는다. 새 그래프 만들기는 `kind:"graph", chartStyle`, 벤 다이어그램 만들기는 `kind:"schematic", layout:"venn"`으로 UI와 같은 production 엔진을 호출한다. 지원되는 요청에서는 개별 도형·SVG보다 이 경로를 우선하고 [그래프·벤 실행](../create-kice-illustration/references/graph-venn-production.md)의 해당 절만 읽는다. 일부 옵션만 미지원이면 production으로 기본 수치·축·자료점·서식을 최대한 만든 뒤 실제 역할 ID로 수정하거나 별도 편집 가능한 개체로 해당 부분만 보충한다. 전체 대체는 유형 자체의 기본 자료 관계를 표현할 수 없거나 생성 경로를 사용할 수 없는 경우에 한한다. 저장 spec과 자료 대응을 보존하며 preserve 수정 뒤 수동 편집 유지와 별도 보충 개체의 위치를 재검수하고 불필요하게 detach하지 않는다. chartStyle 없는 legacy 그래프와 새 계약을 섞지 않는다. `vectora_status`에 스타일별 capability가 있다고 가정하지 말고 실제 연결본의 스키마·호출 응답을 확인한다. 예전 서버 guide의 메뉴 설명은 새 기능 지원의 근거로 사용하지 않는다. mm/pt 접미사 필드는 일반 명령 단위로 다시 환산하지 않는다. 수동 편집 유지가 기본이며 `policy:"reset"`은 사용자가 초기화하려는 경우만 사용한다. 응답 캐시 만료는 편집 재실행을 뜻하지 않는다. `REQUEST_RESULT_EXPIRED`이면 inspect로 현재 상태를 확인한다.
 
 제작 내용을 바꿀 때 누락한 속성은 유지하고, 선택 항목을 지우려면 `null`을 보냅니다. 시리즈·발언·노드·혼합 본문 블록의 ID를 유지하고, 반환된 실제 하위 개체 ID로 후속 편집합니다. 여러 그래프가 들어간 그림도 저장 후 다시 열어 자료 대응을 확인합니다. 규격 검사의 미확인 항목을 합격으로 보고하지 않습니다.
 
