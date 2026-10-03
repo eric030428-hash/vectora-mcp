@@ -1,0 +1,2633 @@
+{
+  "schema": "vectora-map-template/v1",
+  "id": "hemisphere-west",
+  "title": "서반구",
+  "svg": "hemisphere-west.svg",
+  "sourceKind": "reprojected-geographic-data",
+  "originalDownloadedSvg": false,
+  "status": "nativeVerified",
+  "sha256": "3ad4eeda7c9fe8687fc7b51e3053529593dff71bfb4bd3c1252282ca2ef0a1c4",
+  "bytes": 216642,
+  "source": {
+    "repository": "https://github.com/nvkelso/natural-earth-vector",
+    "commit": "ca96624a56bd078437bca8184e78163e5039ad19",
+    "resolution": "110m",
+    "license": "public-domain",
+    "rightsURL": "https://www.naturalearthdata.com/about/terms-of-use/",
+    "datasets": [
+      {
+        "file": "ne_110m_lakes.geojson",
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_110m_lakes.geojson",
+        "sha256": "eb02ecc86c82004fccbf979058bfabbbd6c2d07968c7844d38eb1c9152d2ffc9",
+        "bytes": 36648,
+        "revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "kind": "geographic-data"
+      },
+      {
+        "file": "ne_110m_coastline.geojson",
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_110m_coastline.geojson",
+        "sha256": "851f581ff5ffb844deed8ae1a9ce22e3c4bb3d74fa342cadb5d8e39b41ae7c3c",
+        "bytes": 139907,
+        "revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "kind": "geographic-data"
+      },
+      {
+        "file": "ne_110m_admin_0_boundary_lines_land.geojson",
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_110m_admin_0_boundary_lines_land.geojson",
+        "sha256": "d42479fd79552cca4eec7f85fcdca717a790d29ff06be7676f1af0568c6d3f7c",
+        "bytes": 340010,
+        "revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "kind": "geographic-data"
+      },
+      {
+        "file": "ne_110m_admin_0_countries.geojson",
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_110m_admin_0_countries.geojson",
+        "sha256": "6866c877d39cba9c357620878839b336d569f8c662d3cfab4cb1dbe2d39c977f",
+        "bytes": 838726,
+        "revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "kind": "geographic-data"
+      },
+      {
+        "file": "ne_110m_rivers_lake_centerlines.geojson",
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_110m_rivers_lake_centerlines.geojson",
+        "sha256": "55aa4497405afc07cdc931b7fbe062c4d6693ba2a550c0d24899953f5d507c8d",
+        "bytes": 38087,
+        "revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "kind": "geographic-data"
+      }
+    ]
+  },
+  "projection": {
+    "name": "Orthographic",
+    "implementation": "d3-geo@3.1.1",
+    "inputCRS": "WGS84 geographic longitude/latitude degrees",
+    "centralMeridian": -90,
+    "rotation": [
+      90,
+      0,
+      0
+    ],
+    "center": [
+      0,
+      0
+    ],
+    "scale": 200.09448818897638,
+    "translate": [
+      204.09448818897638,
+      204.09448818897638
+    ],
+    "clipAngle": 90,
+    "clipExtent": null,
+    "extentLonLat": null,
+    "units": "SVG viewBox px at 96px/in",
+    "antimeridian": "d3 spherical antimeridian preclip after rotation",
+    "latitudeOrientation": "north-up; pole north/south use registered rotation"
+  },
+  "widthMm": 108,
+  "heightMm": 108,
+  "viewBox": [
+    0,
+    0,
+    408.18897637795277,
+    408.18897637795277
+  ],
+  "targetISO": null,
+  "countries": [
+    {
+      "id": "hemisphere-west--country-FJI",
+      "iso3": "FJI",
+      "iso2": "FJ",
+      "naturalEarthCode": "FJI",
+      "naturalEarthId": 1159320625,
+      "sourceFeatures": [
+        {
+          "neId": 1159320625,
+          "name": "Fiji",
+          "isoA3": "FJI",
+          "isoA3EH": "FJI"
+        }
+      ],
+      "name": "Fiji",
+      "sourcePartCount": 3,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-FJI-part-0003"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            11.772686404170145,
+            259.3181014865406
+          ],
+          [
+            12.294801187486968,
+            261.10926057069435
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-ESH",
+      "iso3": "ESH",
+      "iso2": "EH",
+      "naturalEarthCode": "SAH",
+      "naturalEarthId": 1159321223,
+      "sourceFeatures": [
+        {
+          "neId": 1159321223,
+          "name": "W. Sahara",
+          "isoA3": "ESH",
+          "isoA3EH": "ESH"
+        }
+      ],
+      "name": "Western Sahara",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-ESH-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            379.04802145403477,
+            111.21691756990973
+          ],
+          [
+            385.76093621155803,
+            132.38784530886085
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-CAN",
+      "iso3": "CAN",
+      "iso2": "CA",
+      "naturalEarthCode": "CAN",
+      "naturalEarthId": 1159320467,
+      "sourceFeatures": [
+        {
+          "neId": 1159320467,
+          "name": "Canada",
+          "isoA3": "CAN",
+          "isoA3EH": "CAN"
+        }
+      ],
+      "name": "Canada",
+      "sourcePartCount": 30,
+      "visiblePartCount": 30,
+      "partIds": [
+        "hemisphere-west--country-CAN-part-0001",
+        "hemisphere-west--country-CAN-part-0002",
+        "hemisphere-west--country-CAN-part-0003",
+        "hemisphere-west--country-CAN-part-0004",
+        "hemisphere-west--country-CAN-part-0005",
+        "hemisphere-west--country-CAN-part-0006",
+        "hemisphere-west--country-CAN-part-0007",
+        "hemisphere-west--country-CAN-part-0008",
+        "hemisphere-west--country-CAN-part-0009",
+        "hemisphere-west--country-CAN-part-0010",
+        "hemisphere-west--country-CAN-part-0011",
+        "hemisphere-west--country-CAN-part-0012",
+        "hemisphere-west--country-CAN-part-0013",
+        "hemisphere-west--country-CAN-part-0014",
+        "hemisphere-west--country-CAN-part-0015",
+        "hemisphere-west--country-CAN-part-0016",
+        "hemisphere-west--country-CAN-part-0017",
+        "hemisphere-west--country-CAN-part-0018",
+        "hemisphere-west--country-CAN-part-0019",
+        "hemisphere-west--country-CAN-part-0020",
+        "hemisphere-west--country-CAN-part-0021",
+        "hemisphere-west--country-CAN-part-0022",
+        "hemisphere-west--country-CAN-part-0023",
+        "hemisphere-west--country-CAN-part-0024",
+        "hemisphere-west--country-CAN-part-0025",
+        "hemisphere-west--country-CAN-part-0026",
+        "hemisphere-west--country-CAN-part-0027",
+        "hemisphere-west--country-CAN-part-0028",
+        "hemisphere-west--country-CAN-part-0029",
+        "hemisphere-west--country-CAN-part-0030"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            127.06684729079603,
+            13.879266971796966
+          ],
+          [
+            274.1074021312259,
+            71.05048687853767
+          ]
+        ],
+        [
+          [
+            213.7776710273997,
+            25.945402234715175
+          ],
+          [
+            217.02350327998496,
+            27.16117658055498
+          ]
+        ],
+        [
+          [
+            213.04424537725734,
+            11.984307843776037
+          ],
+          [
+            218.13592594861302,
+            13.00833764745579
+          ]
+        ],
+        [
+          [
+            219.8131933812945,
+            26.793340972448732
+          ],
+          [
+            221.49962905019441,
+            28.026739812122543
+          ]
+        ],
+        [
+          [
+            197.9147737633261,
+            10.245393204016096
+          ],
+          [
+            200.82691749030798,
+            11.191410854419928
+          ]
+        ],
+        [
+          [
+            199.36765904912855,
+            8.493434206376804
+          ],
+          [
+            201.31384685187828,
+            8.749584151959965
+          ]
+        ],
+        [
+          [
+            198.14028851980143,
+            7.762131137133139
+          ],
+          [
+            200.20281135284918,
+            8.481690184790352
+          ]
+        ],
+        [
+          [
+            198.40938336706458,
+            9.002395463706677
+          ],
+          [
+            213.2809730433773,
+            11.378193966662678
+          ]
+        ],
+        [
+          [
+            187.11782740782093,
+            8.262182138542357
+          ],
+          [
+            189.96086186956526,
+            8.81189485980022
+          ]
+        ],
+        [
+          [
+            188.68043968634885,
+            7.776930933283751
+          ],
+          [
+            190.78854822261147,
+            8.082022003766639
+          ]
+        ],
+        [
+          [
+            271.8906171388862,
+            47.21215199221544
+          ],
+          [
+            286.616232430401,
+            58.667016642374534
+          ]
+        ],
+        [
+          [
+            208.41541743687284,
+            21.672028578076805
+          ],
+          [
+            219.31781014526496,
+            25.726022701629603
+          ]
+        ],
+        [
+          [
+            203.8758811675357,
+            11.94129705282512
+          ],
+          [
+            242.89333414125446,
+            27.534967038391358
+          ]
+        ],
+        [
+          [
+            197.92413946597355,
+            11.621991533240475
+          ],
+          [
+            203.59948487588107,
+            13.766795286974144
+          ]
+        ],
+        [
+          [
+            178.04719747825044,
+            8.633847867109495
+          ],
+          [
+            185.19330054192255,
+            10.028427516981822
+          ]
+        ],
+        [
+          [
+            122.5633150656308,
+            41.86644735619686
+          ],
+          [
+            126.00437649434869,
+            46.030716997151785
+          ]
+        ],
+        [
+          [
+            193.543976934163,
+            7.478050095259903
+          ],
+          [
+            197.05274977531292,
+            8.439930230220966
+          ]
+        ],
+        [
+          [
+            124.79594924034585,
+            49.097174622014194
+          ],
+          [
+            130.92632223293788,
+            54.531828842117534
+          ]
+        ],
+        [
+          [
+            167.55643846509886,
+            11.325084979033079
+          ],
+          [
+            179.5831292193531,
+            15.01354522081246
+          ]
+        ],
+        [
+          [
+            180.36152566457713,
+            9.29136617422887
+          ],
+          [
+            190.81994620504878,
+            11.376349640323127
+          ]
+        ],
+        [
+          [
+            172.60346078427253,
+            12.424850706937804
+          ],
+          [
+            191.07395744513406,
+            17.877608049092828
+          ]
+        ],
+        [
+          [
+            191.0786181218785,
+            11.902307996280825
+          ],
+          [
+            197.2641294875874,
+            14.593353023782669
+          ]
+        ],
+        [
+          [
+            187.49693081689927,
+            12.101655292936812
+          ],
+          [
+            189.79835856262548,
+            12.98990795907423
+          ]
+        ],
+        [
+          [
+            193.29585627701957,
+            9.350703499070192
+          ],
+          [
+            197.69587863173058,
+            10.911065435988462
+          ]
+        ],
+        [
+          [
+            200.09820102716472,
+            6.324873227563188
+          ],
+          [
+            206.79682819784935,
+            8.217577920090122
+          ]
+        ],
+        [
+          [
+            203.31311564151264,
+            5.393851649536828
+          ],
+          [
+            216.62427212925914,
+            9.79411240092901
+          ]
+        ],
+        [
+          [
+            220.94883347499177,
+            18.196701796053418
+          ],
+          [
+            223.71152540454256,
+            19.77209183491732
+          ]
+        ],
+        [
+          [
+            192.11463503645697,
+            15.896314556548987
+          ],
+          [
+            197.07224539260093,
+            17.595941158805573
+          ]
+        ],
+        [
+          [
+            259.57331805210293,
+            50.909383063481556
+          ],
+          [
+            265.98436055263494,
+            52.88171543948522
+          ]
+        ],
+        [
+          [
+            263.3747348173323,
+            57.66890573806566
+          ],
+          [
+            268.79952479123637,
+            60.23577526972002
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-USA",
+      "iso3": "USA",
+      "iso2": "US",
+      "naturalEarthCode": "USA",
+      "naturalEarthId": 1159321369,
+      "sourceFeatures": [
+        {
+          "neId": 1159321369,
+          "name": "United States of America",
+          "isoA3": "USA",
+          "isoA3EH": "USA"
+        }
+      ],
+      "name": "United States of America",
+      "sourcePartCount": 10,
+      "visiblePartCount": 10,
+      "partIds": [
+        "hemisphere-west--country-USA-part-0001",
+        "hemisphere-west--country-USA-part-0002",
+        "hemisphere-west--country-USA-part-0003",
+        "hemisphere-west--country-USA-part-0004",
+        "hemisphere-west--country-USA-part-0005",
+        "hemisphere-west--country-USA-part-0006",
+        "hemisphere-west--country-USA-part-0007",
+        "hemisphere-west--country-USA-part-0008",
+        "hemisphere-west--country-USA-part-0009",
+        "hemisphere-west--country-USA-part-0010"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            117.69435932287404,
+            52.19337343182747
+          ],
+          [
+            259.6422207425806,
+            119.27777747117486
+          ]
+        ],
+        [
+          [
+            31.404970317535742,
+            134.78198817259164
+          ],
+          [
+            33.445531313148194,
+            139.22690866542996
+          ]
+        ],
+        [
+          [
+            32.3671005270524,
+            132.34631667335117
+          ],
+          [
+            33.17770310228286,
+            133.78311371357495
+          ]
+        ],
+        [
+          [
+            31.841861550437045,
+            131.6716574215176
+          ],
+          [
+            32.65391574907986,
+            132.16300452807042
+          ]
+        ],
+        [
+          [
+            31.10372849168428,
+            130.0551711823523
+          ],
+          [
+            31.732285584165368,
+            131.52570166048474
+          ]
+        ],
+        [
+          [
+            30.060906886898124,
+            128.3736591013066
+          ],
+          [
+            30.73611923505257,
+            129.5168093485634
+          ]
+        ],
+        [
+          [
+            106.21787143890766,
+            30.140658628429037
+          ],
+          [
+            108.01982290589181,
+            31.2379522138784
+          ]
+        ],
+        [
+          [
+            105.44289301924306,
+            34.46219240904182
+          ],
+          [
+            109.72697795518839,
+            36.78758445154594
+          ]
+        ],
+        [
+          [
+            91.70888523072,
+            14.498351638955455
+          ],
+          [
+            150.18630539472775,
+            41.38902448198016
+          ]
+        ],
+        [
+          [
+            114.69555754129185,
+            24.585001966782386
+          ],
+          [
+            116.64100526392092,
+            25.84558351945421
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-ARG",
+      "iso3": "ARG",
+      "iso2": "AR",
+      "naturalEarthCode": "ARG",
+      "naturalEarthId": 1159320331,
+      "sourceFeatures": [
+        {
+          "neId": 1159320331,
+          "name": "Argentina",
+          "isoA3": "ARG",
+          "isoA3EH": "ARG"
+        }
+      ],
+      "name": "Argentina",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "hemisphere-west--country-ARG-part-0001",
+        "hemisphere-west--country-ARG-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            246.04491016650115,
+            363.12958904549276
+          ],
+          [
+            252.86873278531976,
+            368.50151170855327
+          ]
+        ],
+        [
+          [
+            240.7024542024647,
+            278.5079004061225
+          ],
+          [
+            310.6319070010326,
+            362.52064152669783
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-CHL",
+      "iso3": "CHL",
+      "iso2": "CL",
+      "naturalEarthCode": "CHL",
+      "naturalEarthId": 1159320493,
+      "sourceFeatures": [
+        {
+          "neId": 1159320493,
+          "name": "Chile",
+          "isoA3": "CHL",
+          "isoA3EH": "CHL"
+        }
+      ],
+      "name": "Chile",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "hemisphere-west--country-CHL-part-0001",
+        "hemisphere-west--country-CHL-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            236.0657589163121,
+            362.87901614381974
+          ],
+          [
+            249.12784975620832,
+            369.2184888518189
+          ]
+        ],
+        [
+          [
+            235.69703979941414,
+            264.53049628729366
+          ],
+          [
+            276.11342569080057,
+            365.6791632018429
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-HTI",
+      "iso3": "HTI",
+      "iso2": "HT",
+      "naturalEarthCode": "HTI",
+      "naturalEarthId": 1159320839,
+      "sourceFeatures": [
+        {
+          "neId": 1159320839,
+          "name": "Haiti",
+          "isoA3": "HTI",
+          "isoA3EH": "HTI"
+        }
+      ],
+      "name": "Haiti",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-HTI-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            254.98460242126535,
+            135.93491611805064
+          ],
+          [
+            263.80617009506705,
+            142.15896031888852
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-DOM",
+      "iso3": "DOM",
+      "iso2": "DO",
+      "naturalEarthCode": "DOM",
+      "naturalEarthId": 1159320563,
+      "sourceFeatures": [
+        {
+          "neId": 1159320563,
+          "name": "Dominican Rep.",
+          "isoA3": "DOM",
+          "isoA3EH": "DOM"
+        }
+      ],
+      "name": "Dominican Republic",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-DOM-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            262.86438877100716,
+            136.03596754740812
+          ],
+          [
+            274.1542536385044,
+            143.59671988163709
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-RUS",
+      "iso3": "RUS",
+      "iso2": "RU",
+      "naturalEarthCode": "RUS",
+      "naturalEarthId": 1159321201,
+      "sourceFeatures": [
+        {
+          "neId": 1159321201,
+          "name": "Russia",
+          "isoA3": "RUS",
+          "isoA3EH": "RUS"
+        }
+      ],
+      "name": "Russia",
+      "sourcePartCount": 14,
+      "visiblePartCount": 2,
+      "partIds": [
+        "hemisphere-west--country-RUS-part-0012",
+        "hemisphere-west--country-RUS-part-0013"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            117.7598819549247,
+            17.33573886370894
+          ],
+          [
+            132.2684918222686,
+            23.865653865286617
+          ]
+        ],
+        [
+          [
+            138.39628921531207,
+            14.276397537914931
+          ],
+          [
+            140.79669001676422,
+            15.093030905638955
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-BHS",
+      "iso3": "BHS",
+      "iso2": "BS",
+      "naturalEarthCode": "BHS",
+      "naturalEarthId": 1159320415,
+      "sourceFeatures": [
+        {
+          "neId": 1159320415,
+          "name": "Bahamas",
+          "isoA3": "BHS",
+          "isoA3EH": "BHS"
+        }
+      ],
+      "name": "The Bahamas",
+      "sourcePartCount": 3,
+      "visiblePartCount": 3,
+      "partIds": [
+        "hemisphere-west--country-BHS-part-0001",
+        "hemisphere-west--country-BHS-part-0002",
+        "hemisphere-west--country-BHS-part-0003"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            238.2374669936246,
+            113.65824193527034
+          ],
+          [
+            241.8492857788458,
+            115.06288298036658
+          ]
+        ],
+        [
+          [
+            241.78762537350264,
+            113.12904689298952
+          ],
+          [
+            244.34519827127195,
+            116.75827038109145
+          ]
+        ],
+        [
+          [
+            240.65795984747615,
+            118.86585281405415
+          ],
+          [
+            243.62400580247746,
+            123.6349770108
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-FLK",
+      "iso3": "FLK",
+      "iso2": "FK",
+      "naturalEarthCode": "FLK",
+      "naturalEarthId": 1159320711,
+      "sourceFeatures": [
+        {
+          "neId": 1159320711,
+          "name": "Falkland Is.",
+          "isoA3": "FLK",
+          "isoA3EH": "FLK"
+        }
+      ],
+      "name": "Falkland Islands",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-FLK-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            263.6406112399913,
+            359.81665267986807
+          ],
+          [
+            270.48949822376403,
+            362.41395606118
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-GRL",
+      "iso3": "GRL",
+      "iso2": "GL",
+      "naturalEarthCode": "GRL",
+      "naturalEarthId": 1159320551,
+      "sourceFeatures": [
+        {
+          "neId": 1159320551,
+          "name": "Greenland",
+          "isoA3": "GRL",
+          "isoA3EH": "GRL"
+        }
+      ],
+      "name": "Greenland",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-GRL-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            215.71844572750456,
+            5.2294983341242585
+          ],
+          [
+            276.5972721331313,
+            30.743425315107572
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-MEX",
+      "iso3": "MEX",
+      "iso2": "MX",
+      "naturalEarthCode": "MEX",
+      "naturalEarthId": 1159321055,
+      "sourceFeatures": [
+        {
+          "neId": 1159321055,
+          "name": "Mexico",
+          "isoA3": "MEX",
+          "isoA3EH": "MEX"
+        }
+      ],
+      "name": "Mexico",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-MEX-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            127.17512338196887,
+            95.93416940242028
+          ],
+          [
+            214.45993283838985,
+            153.86355739605725
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-URY",
+      "iso3": "URY",
+      "iso2": "UY",
+      "naturalEarthCode": "URY",
+      "naturalEarthId": 1159321353,
+      "sourceFeatures": [
+        {
+          "neId": 1159321353,
+          "name": "Uruguay",
+          "isoA3": "URY",
+          "isoA3EH": "URY"
+        }
+      ],
+      "name": "Uruguay",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-URY-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            291.0420357601993,
+            304.4732860654855
+          ],
+          [
+            304.9052433347686,
+            318.72846828482966
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-BRA",
+      "iso3": "BRA",
+      "iso2": "BR",
+      "naturalEarthCode": "BRA",
+      "naturalEarthId": 1159320441,
+      "sourceFeatures": [
+        {
+          "neId": 1159320441,
+          "name": "Brazil",
+          "isoA3": "BRA",
+          "isoA3EH": "BRA"
+        }
+      ],
+      "name": "Brazil",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-BRA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            258.8156410690783,
+            185.80469452034404
+          ],
+          [
+            367.19258559438464,
+            315.31438897323665
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-BOL",
+      "iso3": "BOL",
+      "iso2": "BO",
+      "naturalEarthCode": "BOL",
+      "naturalEarthId": 1159320439,
+      "sourceFeatures": [
+        {
+          "neId": 1159320439,
+          "name": "Bolivia",
+          "isoA3": "BOL",
+          "isoA3EH": "BOL"
+        }
+      ],
+      "name": "Bolivia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-BOL-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            270.61424013671865,
+            238.02165082169356
+          ],
+          [
+            306.2463149609407,
+            281.8689158621009
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-PER",
+      "iso3": "PER",
+      "iso2": "PE",
+      "naturalEarthCode": "PER",
+      "naturalEarthId": 1159321163,
+      "sourceFeatures": [
+        {
+          "neId": 1159321163,
+          "name": "Peru",
+          "isoA3": "PER",
+          "isoA3EH": "PER"
+        }
+      ],
+      "name": "Peru",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-PER-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            233.8758353455769,
+            204.294265613988
+          ],
+          [
+            275.1501590537904,
+            267.0816959460769
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-COL",
+      "iso3": "COL",
+      "iso2": "CO",
+      "naturalEarthCode": "COL",
+      "naturalEarthId": 1159320517,
+      "sourceFeatures": [
+        {
+          "neId": 1159320517,
+          "name": "Colombia",
+          "isoA3": "COL",
+          "isoA3EH": "COL"
+        }
+      ],
+      "name": "Colombia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-COL-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            242.28874427418384,
+            160.99990735234914
+          ],
+          [
+            282.65622327930976,
+            219.09100441957958
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-PAN",
+      "iso3": "PAN",
+      "iso2": "PA",
+      "naturalEarthCode": "PAN",
+      "naturalEarthId": 1159321161,
+      "sourceFeatures": [
+        {
+          "neId": 1159321161,
+          "name": "Panama",
+          "isoA3": "PAN",
+          "isoA3EH": "PAN"
+        }
+      ],
+      "name": "Panama",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-PAN-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            228.3464212320077,
+            170.6850039629827
+          ],
+          [
+            247.8570565387539,
+            178.94483074369057
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-CRI",
+      "iso3": "CRI",
+      "iso2": "CR",
+      "naturalEarthCode": "CRI",
+      "naturalEarthId": 1159320525,
+      "sourceFeatures": [
+        {
+          "neId": 1159320525,
+          "name": "Costa Rica",
+          "isoA3": "CRI",
+          "isoA3EH": "CRI"
+        }
+      ],
+      "name": "Costa Rica",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-CRI-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            218.00012514838957,
+            165.1706206066601
+          ],
+          [
+            229.69114562239963,
+            175.46871556174423
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-NIC",
+      "iso3": "NIC",
+      "iso2": "NI",
+      "naturalEarthCode": "NIC",
+      "naturalEarthId": 1159321091,
+      "sourceFeatures": [
+        {
+          "neId": 1159321091,
+          "name": "Nicaragua",
+          "isoA3": "NIC",
+          "isoA3EH": "NIC"
+        }
+      ],
+      "name": "Nicaragua",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-NIC-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            212.02882029122424,
+            152.25135227759966
+          ],
+          [
+            227.15641919300197,
+            166.851525547681
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-HND",
+      "iso3": "HND",
+      "iso2": "HN",
+      "naturalEarthCode": "HND",
+      "naturalEarthId": 1159320827,
+      "sourceFeatures": [
+        {
+          "neId": 1159320827,
+          "name": "Honduras",
+          "isoA3": "HND",
+          "isoA3EH": "HND"
+        }
+      ],
+      "name": "Honduras",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-HND-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            206.2816382401028,
+            148.92282473798934
+          ],
+          [
+            227.15641919300197,
+            159.13513418906294
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-SLV",
+      "iso3": "SLV",
+      "iso2": "SV",
+      "naturalEarthCode": "SLV",
+      "naturalEarthId": 1159321253,
+      "sourceFeatures": [
+        {
+          "neId": 1159321253,
+          "name": "El Salvador",
+          "isoA3": "SLV",
+          "isoA3EH": "SLV"
+        }
+      ],
+      "name": "El Salvador",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-SLV-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            203.77032396149485,
+            154.25138486210312
+          ],
+          [
+            211.81369017165915,
+            158.576099860894
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-GTM",
+      "iso3": "GTM",
+      "iso2": "GT",
+      "naturalEarthCode": "GTM",
+      "naturalEarthId": 1159320815,
+      "sourceFeatures": [
+        {
+          "neId": 1159320815,
+          "name": "Guatemala",
+          "isoA3": "GTM",
+          "isoA3EH": "GTM"
+        }
+      ],
+      "name": "Guatemala",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-GTM-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            196.56553004115025,
+            142.8622846432943
+          ],
+          [
+            210.06022216976436,
+            156.58458957863112
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-BLZ",
+      "iso3": "BLZ",
+      "iso2": "BZ",
+      "naturalEarthCode": "BLZ",
+      "naturalEarthId": 1159320431,
+      "sourceFeatures": [
+        {
+          "neId": 1159320431,
+          "name": "Belize",
+          "isoA3": "BLZ",
+          "isoA3EH": "BLZ"
+        }
+      ],
+      "name": "Belize",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-BLZ-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            206.6837233967713,
+            140.60363497870654
+          ],
+          [
+            210.36879380449872,
+            149.32063125809952
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-VEN",
+      "iso3": "VEN",
+      "iso2": "VE",
+      "naturalEarthCode": "VEN",
+      "naturalEarthId": 1159321411,
+      "sourceFeatures": [
+        {
+          "neId": 1159321411,
+          "name": "Venezuela",
+          "isoA3": "VEN",
+          "isoA3EH": "VEN"
+        }
+      ],
+      "name": "Venezuela",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-VEN-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            260.84541693933767,
+            161.93823302197285
+          ],
+          [
+            303.79923650792426,
+            201.56454635155953
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-GUY",
+      "iso3": "GUY",
+      "iso2": "GY",
+      "naturalEarthCode": "GUY",
+      "naturalEarthId": 1159320817,
+      "sourceFeatures": [
+        {
+          "neId": 1159320817,
+          "name": "Guyana",
+          "isoA3": "GUY",
+          "isoA3EH": "GUY"
+        }
+      ],
+      "name": "Guyana",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-GUY-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            299.3290844806071,
+            174.97797309746107
+          ],
+          [
+            314.358686961749,
+            199.66629632364544
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-SUR",
+      "iso3": "SUR",
+      "iso2": "SR",
+      "naturalEarthCode": "SUR",
+      "naturalEarthId": 1159321281,
+      "sourceFeatures": [
+        {
+          "neId": 1159321281,
+          "name": "Suriname",
+          "isoA3": "SUR",
+          "isoA3EH": "SUR"
+        }
+      ],
+      "name": "Suriname",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-SUR-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            309.73013437349573,
+            183.09108076622405
+          ],
+          [
+            321.4528617290814,
+            197.7477005729412
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-FRA",
+      "iso3": "FRA",
+      "iso2": "FR",
+      "naturalEarthCode": "FRA",
+      "naturalEarthId": 1159320637,
+      "sourceFeatures": [
+        {
+          "neId": 1159320637,
+          "name": "France",
+          "isoA3": "-99",
+          "isoA3EH": "FRA"
+        }
+      ],
+      "name": "France",
+      "sourcePartCount": 3,
+      "visiblePartCount": 2,
+      "partIds": [
+        "hemisphere-west--country-FRA-part-0001",
+        "hemisphere-west--country-FRA-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            319.92637029766496,
+            184.0246568367056
+          ],
+          [
+            327.89804219170543,
+            196.92495708540244
+          ]
+        ],
+        [
+          [
+            333.2365412570948,
+            51.31645415416335
+          ],
+          [
+            351.2280027460569,
+            68.48647552862587
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-ECU",
+      "iso3": "ECU",
+      "iso2": "EC",
+      "naturalEarthCode": "ECU",
+      "naturalEarthId": 1159320567,
+      "sourceFeatures": [
+        {
+          "neId": 1159320567,
+          "name": "Ecuador",
+          "isoA3": "ECU",
+          "isoA3EH": "ECU"
+        }
+      ],
+      "name": "Ecuador",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-ECU-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            235.4831935845457,
+            199.27234364979964
+          ],
+          [
+            255.08745138458792,
+            221.39167654294357
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-PRI",
+      "iso3": "PRI",
+      "iso2": "PR",
+      "naturalEarthCode": "PRI",
+      "naturalEarthId": 1159321363,
+      "sourceFeatures": [
+        {
+          "neId": 1159321363,
+          "name": "Puerto Rico",
+          "isoA3": "PRI",
+          "isoA3EH": "PRI"
+        }
+      ],
+      "name": "Puerto Rico",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-PRI-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            277.5513333627239,
+            140.53535229772936
+          ],
+          [
+            282.63363351634507,
+            142.43943563447766
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-JAM",
+      "iso3": "JAM",
+      "iso2": "JM",
+      "naturalEarthCode": "JAM",
+      "naturalEarthId": 1159320931,
+      "sourceFeatures": [
+        {
+          "neId": 1159320931,
+          "name": "Jamaica",
+          "isoA3": "JAM",
+          "isoA3EH": "JAM"
+        }
+      ],
+      "name": "Jamaica",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-JAM-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            242.5128688343932,
+            140.52337494845884
+          ],
+          [
+            249.51781841756022,
+            143.2554355646515
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-CUB",
+      "iso3": "CUB",
+      "iso2": "CU",
+      "naturalEarthCode": "CUB",
+      "naturalEarthId": 1159320527,
+      "sourceFeatures": [
+        {
+          "neId": 1159320527,
+          "name": "Cuba",
+          "isoA3": "CUB",
+          "isoA3EH": "CUB"
+        }
+      ],
+      "name": "Cuba",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-CUB-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            220.3568185360594,
+            125.3054425596031
+          ],
+          [
+            255.26667352240705,
+            136.1326272411813
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-SEN",
+      "iso3": "SEN",
+      "iso2": "SN",
+      "naturalEarthCode": "SEN",
+      "naturalEarthId": 1159321243,
+      "sourceFeatures": [
+        {
+          "neId": 1159321243,
+          "name": "Senegal",
+          "isoA3": "SEN",
+          "isoA3EH": "SEN"
+        }
+      ],
+      "name": "Senegal",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-SEN-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            388.42688834187254,
+            146.93563052834554
+          ],
+          [
+            395.55684845796713,
+            161.35879307799445
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-MLI",
+      "iso3": "MLI",
+      "iso2": "ML",
+      "naturalEarthCode": "MLI",
+      "naturalEarthId": 1159321063,
+      "sourceFeatures": [
+        {
+          "neId": 1159321063,
+          "name": "Mali",
+          "isoA3": "MLI",
+          "isoA3EH": "MLI"
+        }
+      ],
+      "name": "Mali",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-MLI-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            384.3560647377342,
+            119.61138770562022
+          ],
+          [
+            400.04521731084424,
+            169.01708452301585
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-MRT",
+      "iso3": "MRT",
+      "iso2": "MR",
+      "naturalEarthCode": "MRT",
+      "naturalEarthId": 1159321075,
+      "sourceFeatures": [
+        {
+          "neId": 1159321075,
+          "name": "Mauritania",
+          "isoA3": "MRT",
+          "isoA3EH": "MRT"
+        }
+      ],
+      "name": "Mauritania",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-MRT-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            379.7114980614848,
+            112.02424387405351
+          ],
+          [
+            396.01015275061434,
+            153.599909996224
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-TGO",
+      "iso3": "TGO",
+      "iso2": "TG",
+      "naturalEarthCode": "TGO",
+      "naturalEarthId": 1159321303,
+      "sourceFeatures": [
+        {
+          "neId": 1159321303,
+          "name": "Togo",
+          "isoA3": "TGO",
+          "isoA3EH": "TGO"
+        }
+      ],
+      "name": "Togo",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-TGO-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            400.567176491307,
+            166.19611151050037
+          ],
+          [
+            400.74512794137746,
+            167.13058568153295
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-GHA",
+      "iso3": "GHA",
+      "iso2": "GH",
+      "naturalEarthCode": "GHA",
+      "naturalEarthId": 1159320793,
+      "sourceFeatures": [
+        {
+          "neId": 1159320793,
+          "name": "Ghana",
+          "isoA3": "GHA",
+          "isoA3EH": "GHA"
+        }
+      ],
+      "name": "Ghana",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-GHA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            400.2788658977608,
+            165.57758920094187
+          ],
+          [
+            403.3959076521174,
+            187.66263085093166
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-CIV",
+      "iso3": "CIV",
+      "iso2": "CI",
+      "naturalEarthCode": "CIV",
+      "naturalEarthId": 1159320507,
+      "sourceFeatures": [
+        {
+          "neId": 1159320507,
+          "name": "Côte d'Ivoire",
+          "isoA3": "CIV",
+          "isoA3EH": "CIV"
+        }
+      ],
+      "name": "Ivory Coast",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-CIV-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            399.04210357691517,
+            167.54754585307307
+          ],
+          [
+            403.18162456452654,
+            188.95832449024593
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-GIN",
+      "iso3": "GIN",
+      "iso2": "GN",
+      "naturalEarthCode": "GIN",
+      "naturalEarthId": 1159320795,
+      "sourceFeatures": [
+        {
+          "neId": 1159320795,
+          "name": "Guinea",
+          "isoA3": "GIN",
+          "isoA3EH": "GIN"
+        }
+      ],
+      "name": "Guinea",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-GIN-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            393.67773531538376,
+            160.49232033951668
+          ],
+          [
+            400.3233909265475,
+            178.6382565075127
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-GNB",
+      "iso3": "GNB",
+      "iso2": "GW",
+      "naturalEarthCode": "GNB",
+      "naturalEarthId": 1159320799,
+      "sourceFeatures": [
+        {
+          "neId": 1159320799,
+          "name": "Guinea-Bissau",
+          "isoA3": "GNB",
+          "isoA3EH": "GNB"
+        }
+      ],
+      "name": "Guinea-Bissau",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-GNB-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            391.31157667805996,
+            160.34922419147597
+          ],
+          [
+            394.34507844376725,
+            165.77613126595486
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-LBR",
+      "iso3": "LBR",
+      "iso2": "LR",
+      "naturalEarthCode": "LBR",
+      "naturalEarthId": 1159321015,
+      "sourceFeatures": [
+        {
+          "neId": 1159321015,
+          "name": "Liberia",
+          "isoA3": "LBR",
+          "isoA3EH": "LBR"
+        }
+      ],
+      "name": "Liberia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-LBR-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            398.7806128032313,
+            174.3768455035182
+          ],
+          [
+            401.804046655374,
+            188.8974998343189
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-SLE",
+      "iso3": "SLE",
+      "iso2": "SL",
+      "naturalEarthCode": "SLE",
+      "naturalEarthId": 1159321251,
+      "sourceFeatures": [
+        {
+          "neId": 1159321251,
+          "name": "Sierra Leone",
+          "isoA3": "SLE",
+          "isoA3EH": "SLE"
+        }
+      ],
+      "name": "Sierra Leone",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-SLE-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            396.51840608294657,
+            169.18686685545381
+          ],
+          [
+            398.89242718161404,
+            180.4513436631721
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-BFA",
+      "iso3": "BFA",
+      "iso2": "BF",
+      "naturalEarthCode": "BFA",
+      "naturalEarthId": 1159320405,
+      "sourceFeatures": [
+        {
+          "neId": 1159320405,
+          "name": "Burkina Faso",
+          "isoA3": "BFA",
+          "isoA3EH": "BFA"
+        }
+      ],
+      "name": "Burkina Faso",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-BFA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            397.2577033099557,
+            151.91449356273014
+          ],
+          [
+            401.1219191922825,
+            170.68767251067533
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-GMB",
+      "iso3": "GMB",
+      "iso2": "GM",
+      "naturalEarthCode": "GMB",
+      "naturalEarthId": 1159320797,
+      "sourceFeatures": [
+        {
+          "neId": 1159320797,
+          "name": "Gambia",
+          "isoA3": "GMB",
+          "isoA3EH": "GMB"
+        }
+      ],
+      "name": "The Gambia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-GMB-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            390.36624280174635,
+            156.1058780984431
+          ],
+          [
+            393.0035952770324,
+            158.63980845429472
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-DZA",
+      "iso3": "DZA",
+      "iso2": "DZ",
+      "naturalEarthCode": "DZA",
+      "naturalEarthId": 1159320565,
+      "sourceFeatures": [
+        {
+          "neId": 1159320565,
+          "name": "Algeria",
+          "isoA3": "DZA",
+          "isoA3EH": "DZA"
+        }
+      ],
+      "name": "Algeria",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-DZA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            366.0306030330155,
+            86.55939167382229
+          ],
+          [
+            389.87058616196106,
+            129.76383754242005
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-PRT",
+      "iso3": "PRT",
+      "iso2": "PT",
+      "naturalEarthCode": "PRT",
+      "naturalEarthId": 1159321187,
+      "sourceFeatures": [
+        {
+          "neId": 1159321187,
+          "name": "Portugal",
+          "isoA3": "PRT",
+          "isoA3EH": "PRT"
+        }
+      ],
+      "name": "Portugal",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-PRT-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            350.59931869513207,
+            69.47885052686675
+          ],
+          [
+            362.7335005137087,
+            84.12617913263757
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-ESP",
+      "iso3": "ESP",
+      "iso2": "ES",
+      "naturalEarthCode": "ESP",
+      "naturalEarthId": 1159320587,
+      "sourceFeatures": [
+        {
+          "neId": 1159320587,
+          "name": "Spain",
+          "isoA3": "ESP",
+          "isoA3EH": "ESP"
+        }
+      ],
+      "name": "Spain",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-ESP-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            347.24049370725186,
+            65.73073003039269
+          ],
+          [
+            365.37051417690003,
+            86.63211616935764
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-IRL",
+      "iso3": "IRL",
+      "iso2": "IE",
+      "naturalEarthCode": "IRL",
+      "naturalEarthId": 1159320877,
+      "sourceFeatures": [
+        {
+          "neId": 1159320877,
+          "name": "Ireland",
+          "isoA3": "IRL",
+          "isoA3EH": "IRL"
+        }
+      ],
+      "name": "Ireland",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-IRL-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            317.4895921950381,
+            39.92345913032531
+          ],
+          [
+            326.81006265143253,
+            47.13153124938958
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-GBR",
+      "iso3": "GBR",
+      "iso2": "GB",
+      "naturalEarthCode": "GBR",
+      "naturalEarthId": 1159320713,
+      "sourceFeatures": [
+        {
+          "neId": 1159320713,
+          "name": "United Kingdom",
+          "isoA3": "GBR",
+          "isoA3EH": "GBR"
+        }
+      ],
+      "name": "United Kingdom",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "hemisphere-west--country-GBR-part-0001",
+        "hemisphere-west--country-GBR-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            317.4895921950381,
+            39.84116882525851
+          ],
+          [
+            321.3912996032732,
+            42.48693184843248
+          ]
+        ],
+        [
+          [
+            307.8582123956072,
+            33.24002672766028
+          ],
+          [
+            332.28073609567844,
+            50.903047242549434
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-ISL",
+      "iso3": "ISL",
+      "iso2": "IS",
+      "naturalEarthCode": "ISL",
+      "naturalEarthId": 1159320917,
+      "sourceFeatures": [
+        {
+          "neId": 1159320917,
+          "name": "Iceland",
+          "isoA3": "ISL",
+          "isoA3EH": "ISL"
+        }
+      ],
+      "name": "Iceland",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-ISL-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            277.87663959723335,
+            20.558532711455968
+          ],
+          [
+            288.69559899534113,
+            25.02869172483105
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-PRY",
+      "iso3": "PRY",
+      "iso2": "PY",
+      "naturalEarthCode": "PRY",
+      "naturalEarthId": 1159321195,
+      "sourceFeatures": [
+        {
+          "neId": 1159321195,
+          "name": "Paraguay",
+          "isoA3": "PRY",
+          "isoA3EH": "PRY"
+        }
+      ],
+      "name": "Paraguay",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-PRY-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            289.0778526502213,
+            270.3694739804445
+          ],
+          [
+            310.7639539878788,
+            296.63804357347567
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-ATA",
+      "iso3": "ATA",
+      "iso2": "AQ",
+      "naturalEarthCode": "ATA",
+      "naturalEarthId": 1159320335,
+      "sourceFeatures": [
+        {
+          "neId": 1159320335,
+          "name": "Antarctica",
+          "isoA3": "ATA",
+          "isoA3EH": "ATA"
+        }
+      ],
+      "name": "Antarctica",
+      "sourcePartCount": 8,
+      "visiblePartCount": 8,
+      "partIds": [
+        "hemisphere-west--country-ATA-part-0001",
+        "hemisphere-west--country-ATA-part-0002",
+        "hemisphere-west--country-ATA-part-0003",
+        "hemisphere-west--country-ATA-part-0004",
+        "hemisphere-west--country-ATA-part-0005",
+        "hemisphere-west--country-ATA-part-0006",
+        "hemisphere-west--country-ATA-part-0007",
+        "hemisphere-west--country-ATA-part-0008"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            223.06621243937528,
+            399.693221431305
+          ],
+          [
+            233.31857039814327,
+            401.7393611100846
+          ]
+        ],
+        [
+          [
+            217.53718663518427,
+            400.9197736393108
+          ],
+          [
+            221.772462460797,
+            401.7256598331106
+          ]
+        ],
+        [
+          [
+            220.0832517848758,
+            390.7466069045903
+          ],
+          [
+            228.65981818396062,
+            394.9320276008603
+          ]
+        ],
+        [
+          [
+            190.81482481481765,
+            394.08879401592696
+          ],
+          [
+            197.60347619745795,
+            394.9502488387384
+          ]
+        ],
+        [
+          [
+            173.32369088281197,
+            395.7741788081903
+          ],
+          [
+            176.83756522153365,
+            396.52291359233163
+          ]
+        ],
+        [
+          [
+            169.591998254418,
+            395.6954407001004
+          ],
+          [
+            172.98957059760986,
+            396.3151912909044
+          ]
+        ],
+        [
+          [
+            165.01821722808708,
+            399.97710823821393
+          ],
+          [
+            170.02660926841972,
+            400.9232494831931
+          ]
+        ],
+        [
+          [
+            161.9036076091968,
+            382.80711630422024
+          ],
+          [
+            268.9932582551859,
+            404.183336965147
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-MAR",
+      "iso3": "MAR",
+      "iso2": "MA",
+      "naturalEarthCode": "MAR",
+      "naturalEarthId": 1159321035,
+      "sourceFeatures": [
+        {
+          "neId": 1159321035,
+          "name": "Morocco",
+          "isoA3": "MAR",
+          "isoA3EH": "MAR"
+        }
+      ],
+      "name": "Morocco",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-MAR-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            365.5967180269292,
+            87.16104349617753
+          ],
+          [
+            384.1292779394492,
+            131.01724226472595
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hemisphere-west--country-TTO",
+      "iso3": "TTO",
+      "iso2": "TT",
+      "naturalEarthCode": "TTO",
+      "naturalEarthId": 1159321321,
+      "sourceFeatures": [
+        {
+          "neId": 1159321321,
+          "name": "Trinidad and Tobago",
+          "isoA3": "TTO",
+          "isoA3EH": "TTO"
+        }
+      ],
+      "name": "Trinidad and Tobago",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "hemisphere-west--country-TTO-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            296.73203983778666,
+            166.29182590024814
+          ],
+          [
+            299.79133342317095,
+            169.34844495376353
+          ]
+        ]
+      ]
+    }
+  ],
+  "roles": {
+    "lakes": 15,
+    "rivers": 4,
+    "coastline": 69,
+    "national-boundaries": 70,
+    "admin-boundaries": 0
+  },
+  "svgGroupIds": {
+    "sea": "hemisphere-west--sea",
+    "country-fills": "hemisphere-west--country-fills",
+    "highlights": "hemisphere-west--highlights",
+    "lakes": "hemisphere-west--lakes",
+    "rivers": "hemisphere-west--rivers",
+    "coastline": "hemisphere-west--coastline",
+    "national-boundaries": "hemisphere-west--national-boundaries",
+    "admin-boundaries": "hemisphere-west--admin-boundaries",
+    "graticule": "hemisphere-west--graticule",
+    "frame": "hemisphere-west--frame"
+  },
+  "style": {
+    "countryFill": "#FFFFFF",
+    "sea": "#EEEEEE",
+    "highlight": "#AAAAAA",
+    "stroke": "#000000",
+    "coastWidthPx": 0.4,
+    "nationalDashPx": [
+      1.4,
+      1.1
+    ]
+  },
+  "highlightEdit": "Set fill on country-ISO group (including every child part). Keep coastline/national boundaries above country-fills; a separate overlay can be placed in highlights below line layers.",
+  "controlPoints": [
+    {
+      "lonlat": [
+        -90,
+        0
+      ],
+      "xy": [
+        204.09448818897638,
+        204.09448818897638
+      ],
+      "expectedXY": [
+        204.09448818897638,
+        204.09448818897638
+      ],
+      "errorPx": 0
+    },
+    {
+      "lonlat": [
+        -60,
+        0
+      ],
+      "xy": [
+        304.1417322834646,
+        204.09448818897638
+      ],
+      "expectedXY": [
+        304.1417322834646,
+        204.09448818897638
+      ],
+      "errorPx": 0
+    },
+    {
+      "lonlat": [
+        -90,
+        30
+      ],
+      "xy": [
+        204.09448818897638,
+        104.0472440944882
+      ],
+      "expectedXY": [
+        204.09448818897638,
+        104.0472440944882
+      ],
+      "errorPx": 0
+    },
+    {
+      "lonlat": [
+        -120,
+        -30
+      ],
+      "xy": [
+        117.45103322452698,
+        304.14173228346453
+      ],
+      "expectedXY": [
+        117.45103322452698,
+        304.14173228346453
+      ],
+      "errorPx": 0
+    }
+  ],
+  "gaps": [
+    "Natural Earth is generalized cartography, not survey-grade or current local coastal/hydrological mapping.",
+    "Boundary policy follows pinned Natural Earth de facto country dataset; disputed territories are not independently adjudicated.",
+    "Country direct-fill is supported by standard SVG; no installed map core API is claimed.",
+    "Small countries/islands omitted at 110m; choose a 50m/10m regional template when needed."
+  ],
+  "nativeValidation": {
+    "status": "nativeVerified",
+    "appVersion": "1.1.8",
+    "verifiedAt": "2026-10-03T15:40:43.997803+00:00",
+    "sourceSha256": "3ad4eeda7c9fe8687fc7b51e3053529593dff71bfb4bd3c1252282ca2ef0a1c4",
+    "saveReopenExportVerified": true,
+    "visualReview": "passed",
+    "outputs": {
+      "vectora": {
+        "sha256": "693fd20b2b56c39ab59810c000441600cc0324e86a6b468ec1ff876bedbb703b",
+        "bytes": 1628945
+      },
+      "jpeg": {
+        "sha256": "f4302eaa48c5a804e25f0ee90aa177c7c4f72d926be965fb57f547ec1dad2f76",
+        "bytes": 193012,
+        "scale": 4
+      }
+    },
+    "preservationSummary": {
+      "primitiveIds": {
+        "sourceCount": 268,
+        "exactMatchesAfterReopen": 268
+      },
+      "groupNames": {
+        "sourceCount": 63,
+        "preservedAfterReopen": 63
+      },
+      "hiddenPaths": {
+        "sourceCount": 5,
+        "missingOrVisible": 0
+      },
+      "strokeColors": "preserved",
+      "objectCount": "preserved",
+      "artboardWidthMm": 108,
+      "widthPreserved": true,
+      "structuralIssueCount": 0
+    },
+    "evidence": {
+      "nativeSummarySha256": "68a755e35729ab7a962fd30605a31a3dea81c3d3647a335f0a3878878d262140",
+      "visualReviewSha256": "bb58c495c5d9a7738ba24aff07111a506312d65719b99c9991d5c05592787db2",
+      "runtimeFileDependency": false,
+      "summary": "Source-hash matched native save/reopen/JPEG and parent visual review; structural issues 0."
+    },
+    "nativeArtifactsIncludedInLibrary": false
+  },
+  "approvedOriginal": {
+    "file": "../world_continents.vectora",
+    "sha256": "3d968c1772c1b25f37a36af0681b15b7696a5bef4938dca9dbf5306ea6064e0b",
+    "modified": false
+  }
+}

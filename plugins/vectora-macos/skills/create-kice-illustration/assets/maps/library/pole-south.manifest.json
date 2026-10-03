@@ -1,0 +1,1988 @@
+{
+  "schema": "vectora-map-template/v1",
+  "id": "pole-south",
+  "title": "남극 중심",
+  "svg": "pole-south.svg",
+  "sourceKind": "reprojected-geographic-data",
+  "originalDownloadedSvg": false,
+  "status": "nativeVerified",
+  "sha256": "2d691579312375b9e5badb8f1ff94edb17761a794c11d64e0dfc7ee94a333a7c",
+  "bytes": 142650,
+  "source": {
+    "repository": "https://github.com/nvkelso/natural-earth-vector",
+    "commit": "ca96624a56bd078437bca8184e78163e5039ad19",
+    "resolution": "110m",
+    "license": "public-domain",
+    "rightsURL": "https://www.naturalearthdata.com/about/terms-of-use/",
+    "datasets": [
+      {
+        "file": "ne_110m_lakes.geojson",
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_110m_lakes.geojson",
+        "sha256": "eb02ecc86c82004fccbf979058bfabbbd6c2d07968c7844d38eb1c9152d2ffc9",
+        "bytes": 36648,
+        "revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "kind": "geographic-data"
+      },
+      {
+        "file": "ne_110m_coastline.geojson",
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_110m_coastline.geojson",
+        "sha256": "851f581ff5ffb844deed8ae1a9ce22e3c4bb3d74fa342cadb5d8e39b41ae7c3c",
+        "bytes": 139907,
+        "revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "kind": "geographic-data"
+      },
+      {
+        "file": "ne_110m_admin_0_boundary_lines_land.geojson",
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_110m_admin_0_boundary_lines_land.geojson",
+        "sha256": "d42479fd79552cca4eec7f85fcdca717a790d29ff06be7676f1af0568c6d3f7c",
+        "bytes": 340010,
+        "revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "kind": "geographic-data"
+      },
+      {
+        "file": "ne_110m_admin_0_countries.geojson",
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_110m_admin_0_countries.geojson",
+        "sha256": "6866c877d39cba9c357620878839b336d569f8c662d3cfab4cb1dbe2d39c977f",
+        "bytes": 838726,
+        "revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "kind": "geographic-data"
+      },
+      {
+        "file": "ne_110m_rivers_lake_centerlines.geojson",
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_110m_rivers_lake_centerlines.geojson",
+        "sha256": "55aa4497405afc07cdc931b7fbe062c4d6693ba2a550c0d24899953f5d507c8d",
+        "bytes": 38087,
+        "revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "kind": "geographic-data"
+      }
+    ]
+  },
+  "projection": {
+    "name": "Stereographic",
+    "implementation": "d3-geo@3.1.1",
+    "inputCRS": "WGS84 geographic longitude/latitude degrees",
+    "centralMeridian": 0,
+    "rotation": [
+      0,
+      90,
+      0
+    ],
+    "center": [
+      0,
+      0
+    ],
+    "scale": 200.09448818897638,
+    "translate": [
+      204.09448818897638,
+      204.09448818897638
+    ],
+    "clipAngle": 90,
+    "clipExtent": null,
+    "extentLonLat": null,
+    "units": "SVG viewBox px at 96px/in",
+    "antimeridian": "d3 spherical antimeridian preclip after rotation",
+    "latitudeOrientation": "north-up; pole north/south use registered rotation"
+  },
+  "widthMm": 108,
+  "heightMm": 108,
+  "viewBox": [
+    0,
+    0,
+    408.18897637795277,
+    408.18897637795277
+  ],
+  "targetISO": null,
+  "countries": [
+    {
+      "id": "pole-south--country-FJI",
+      "iso3": "FJI",
+      "iso2": "FJ",
+      "naturalEarthCode": "FJI",
+      "naturalEarthId": 1159320625,
+      "sourceFeatures": [
+        {
+          "neId": 1159320625,
+          "name": "Fiji",
+          "isoA3": "FJI",
+          "isoA3EH": "FJI"
+        }
+      ],
+      "name": "Fiji",
+      "sourcePartCount": 3,
+      "visiblePartCount": 3,
+      "partIds": [
+        "pole-south--country-FJI-part-0001",
+        "pole-south--country-FJI-part-0002",
+        "pole-south--country-FJI-part-0003"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            204.0944881889764,
+            352.0874360908782
+          ],
+          [
+            207.7440683009317,
+            354.692791483396
+          ]
+        ],
+        [
+          [
+            207.36912437650278,
+            348.61059382052247
+          ],
+          [
+            211.01546279386423,
+            351.18080351445104
+          ]
+        ],
+        [
+          [
+            203.55078767625605,
+            353.3620023974602
+          ],
+          [
+            204.09448818897636,
+            354.81835881019526
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-TZA",
+      "iso3": "TZA",
+      "iso2": "TZ",
+      "naturalEarthCode": "TZA",
+      "naturalEarthId": 1159321337,
+      "sourceFeatures": [
+        {
+          "neId": 1159321337,
+          "name": "Tanzania",
+          "isoA3": "TZA",
+          "isoA3EH": "TZA"
+        }
+      ],
+      "name": "Tanzania",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "pole-south--country-TZA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            292.331395157271,
+            34.92774438287148
+          ],
+          [
+            320.6423307968595,
+            76.7922982200123
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-PNG",
+      "iso3": "PNG",
+      "iso2": "PG",
+      "naturalEarthCode": "PNG",
+      "naturalEarthId": 1159321173,
+      "sourceFeatures": [
+        {
+          "neId": 1159321173,
+          "name": "Papua New Guinea",
+          "isoA3": "PNG",
+          "isoA3EH": "PNG"
+        }
+      ],
+      "name": "Papua New Guinea",
+      "sourcePartCount": 4,
+      "visiblePartCount": 4,
+      "partIds": [
+        "pole-south--country-PNG-part-0001",
+        "pole-south--country-PNG-part-0002",
+        "pole-south--country-PNG-part-0003",
+        "pole-south--country-PNG-part-0004"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            285.4403003285505,
+            336.6932230130461
+          ],
+          [
+            324.42877614521484,
+            356.5289760059625
+          ]
+        ],
+        [
+          [
+            287.66401133680836,
+            367.8801445530487
+          ],
+          [
+            297.5505939245878,
+            371.5776018215075
+          ]
+        ],
+        [
+          [
+            289.4693171728168,
+            358.0946160098022
+          ],
+          [
+            299.4295693027034,
+            368.62444257864513
+          ]
+        ],
+        [
+          [
+            276.6261992839293,
+            365.5385325788649
+          ],
+          [
+            282.79706210892846,
+            369.6724199502895
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-IDN",
+      "iso3": "IDN",
+      "iso2": "ID",
+      "naturalEarthCode": "IDN",
+      "naturalEarthId": 1159320845,
+      "sourceFeatures": [
+        {
+          "neId": 1159320845,
+          "name": "Indonesia",
+          "isoA3": "IDN",
+          "isoA3EH": "IDN"
+        }
+      ],
+      "name": "Indonesia",
+      "sourcePartCount": 13,
+      "visiblePartCount": 13,
+      "partIds": [
+        "pole-south--country-IDN-part-0001",
+        "pole-south--country-IDN-part-0002",
+        "pole-south--country-IDN-part-0003",
+        "pole-south--country-IDN-part-0004",
+        "pole-south--country-IDN-part-0005",
+        "pole-south--country-IDN-part-0006",
+        "pole-south--country-IDN-part-0007",
+        "pole-south--country-IDN-part-0008",
+        "pole-south--country-IDN-part-0009",
+        "pole-south--country-IDN-part-0010",
+        "pole-south--country-IDN-part-0011",
+        "pole-south--country-IDN-part-0012",
+        "pole-south--country-IDN-part-0013"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            311.34117178890966,
+            331.05987987501743
+          ],
+          [
+            353.733858019008,
+            352.6960718587571
+          ]
+        ],
+        [
+          [
+            342.2276164032172,
+            296.27343046547134
+          ],
+          [
+            345.0830035797225,
+            302.2260596337297
+          ]
+        ],
+        [
+          [
+            331.2203194549735,
+            327.7627131580777
+          ],
+          [
+            333.85573318287913,
+            331.60883907864087
+          ]
+        ],
+        [
+          [
+            371.55222806425024,
+            269.01937837611
+          ],
+          [
+            393.26620982884106,
+            296.4359058102591
+          ]
+        ],
+        [
+          [
+            345.6188687209794,
+            319.93421625983876
+          ],
+          [
+            353.8549848173185,
+            327.1393168454257
+          ]
+        ],
+        [
+          [
+            353.90434851155214,
+            315.012840927291
+          ],
+          [
+            357.2587648683883,
+            318.11239870994063
+          ]
+        ],
+        [
+          [
+            358.82962876896187,
+            325.6357003890334
+          ],
+          [
+            362.55364611873256,
+            327.37041040140946
+          ]
+        ],
+        [
+          [
+            356.67011111045883,
+            293.4141708844869
+          ],
+          [
+            377.77368119958794,
+            312.89387275464685
+          ]
+        ],
+        [
+          [
+            347.8278338148913,
+            286.05021978343825
+          ],
+          [
+            352.1426531297998,
+            290.05059110728604
+          ]
+        ],
+        [
+          [
+            348.70582183193346,
+            289.6335351619927
+          ],
+          [
+            353.6723391523183,
+            298.4261678035019
+          ]
+        ],
+        [
+          [
+            354.1586769282644,
+            280.9438844921771
+          ],
+          [
+            357.7166324840617,
+            287.7100999553063
+          ]
+        ],
+        [
+          [
+            359.7986883282955,
+            251.12541069503527
+          ],
+          [
+            377.5527328726905,
+            279.048358845458
+          ]
+        ],
+        [
+          [
+            377.88788911397603,
+            236.97047203193898
+          ],
+          [
+            401.46969911974566,
+            256.72221614378543
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-ARG",
+      "iso3": "ARG",
+      "iso2": "AR",
+      "naturalEarthCode": "ARG",
+      "naturalEarthId": 1159320331,
+      "sourceFeatures": [
+        {
+          "neId": 1159320331,
+          "name": "Argentina",
+          "isoA3": "ARG",
+          "isoA3EH": "ARG"
+        }
+      ],
+      "name": "Argentina",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "pole-south--country-ARG-part-0001",
+        "pole-south--country-ARG-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            141.0869632265836,
+            177.2384587434372
+          ],
+          [
+            147.03462816165666,
+            181.01746219103825
+          ]
+        ],
+        [
+          [
+            80.14653671502505,
+            130.127061415065
+          ],
+          [
+            140.7797812318756,
+            183.4152597412105
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-CHL",
+      "iso3": "CHL",
+      "iso2": "CL",
+      "naturalEarthCode": "CHL",
+      "naturalEarthId": 1159320493,
+      "sourceFeatures": [
+        {
+          "neId": 1159320493,
+          "name": "Chile",
+          "isoA3": "CHL",
+          "isoA3EH": "CHL"
+        }
+      ],
+      "name": "Chile",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "pole-south--country-CHL-part-0001",
+        "pole-south--country-CHL-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            139.2238380392036,
+            179.32526586983727
+          ],
+          [
+            146.62611177146113,
+            186.30227956619083
+          ]
+        ],
+        [
+          [
+            66.79062117158122,
+            152.0424909158579
+          ],
+          [
+            142.3150743675285,
+            186.38016855475996
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-COD",
+      "iso3": "COD",
+      "iso2": "CD",
+      "naturalEarthCode": "COD",
+      "naturalEarthId": 1159320513,
+      "sourceFeatures": [
+        {
+          "neId": 1159320513,
+          "name": "Dem. Rep. Congo",
+          "isoA3": "COD",
+          "isoA3EH": "COD"
+        }
+      ],
+      "name": "Democratic Republic of the Congo",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "pole-south--country-COD-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            242.2541121655123,
+            13.462447384744394
+          ],
+          [
+            303.63894550595637,
+            66.47640780969513
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-SOM",
+      "iso3": "SOM",
+      "iso2": "SO",
+      "naturalEarthCode": "SOM",
+      "naturalEarthId": 1159321261,
+      "sourceFeatures": [
+        {
+          "neId": 1159321261,
+          "name": "Somalia",
+          "isoA3": "SOM",
+          "isoA3EH": "SOM"
+        }
+      ],
+      "name": "Somalia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "pole-south--country-SOM-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            333.05813546619873,
+            53.05877770547994
+          ],
+          [
+            340.23134572034616,
+            58.76328375513543
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-KEN",
+      "iso3": "KEN",
+      "iso2": "KE",
+      "naturalEarthCode": "KEN",
+      "naturalEarthId": 1159320971,
+      "sourceFeatures": [
+        {
+          "neId": 1159320971,
+          "name": "Kenya",
+          "isoA3": "KEN",
+          "isoA3EH": "KEN"
+        }
+      ],
+      "name": "Kenya",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "pole-south--country-KEN-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            313.8715362648809,
+            38.00312587979877
+          ],
+          [
+            335.3424152672882,
+            61.2040188103644
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-FLK",
+      "iso3": "FLK",
+      "iso2": "FK",
+      "naturalEarthCode": "FLK",
+      "naturalEarthId": 1159320711,
+      "sourceFeatures": [
+        {
+          "neId": 1159320711,
+          "name": "Falkland Is.",
+          "isoA3": "FLK",
+          "isoA3EH": "FLK"
+        }
+      ],
+      "name": "Falkland Islands",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "pole-south--country-FLK-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            143.15550850965155,
+            166.85983665676403
+          ],
+          [
+            145.46800335345915,
+            170.76138932164042
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-ATF",
+      "iso3": "ATF",
+      "iso2": "TF",
+      "naturalEarthCode": "ATF",
+      "naturalEarthId": 1159320631,
+      "sourceFeatures": [
+        {
+          "neId": 1159320631,
+          "name": "Fr. S. Antarctic Lands",
+          "isoA3": "ATF",
+          "isoA3EH": "ATF"
+        }
+      ],
+      "name": "French Southern and Antarctic Lands",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "pole-south--country-ATF-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            272.3838244374068,
+            176.93636797345482
+          ],
+          [
+            274.60461596031627,
+            179.36427490442304
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-TLS",
+      "iso3": "TLS",
+      "iso2": "TL",
+      "naturalEarthCode": "TLS",
+      "naturalEarthId": 1159321313,
+      "sourceFeatures": [
+        {
+          "neId": 1159321313,
+          "name": "Timor-Leste",
+          "isoA3": "TLS",
+          "isoA3EH": "TLS"
+        }
+      ],
+      "name": "East Timor",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "pole-south--country-TLS-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            341.42706731193914,
+            301.65251013539444
+          ],
+          [
+            344.78732967950685,
+            308.85003473682656
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-ZAF",
+      "iso3": "ZAF",
+      "iso2": "ZA",
+      "naturalEarthCode": "ZAF",
+      "naturalEarthId": 1159321431,
+      "sourceFeatures": [
+        {
+          "neId": 1159321431,
+          "name": "South Africa",
+          "isoA3": "ZAF",
+          "isoA3EH": "ZAF"
+        }
+      ],
+      "name": "South Africa",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "pole-south--country-ZAF-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            237.49574308299898,
+            83.69205255826787
+          ],
+          [
+            273.66247906221963,
+            108.18033792137561
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-LSO",
+      "iso3": "LSO",
+      "iso2": "LS",
+      "naturalEarthCode": "LSO",
+      "naturalEarthId": 1159321027,
+      "sourceFeatures": [
+        {
+          "neId": 1159321027,
+          "name": "Lesotho",
+          "isoA3": "LSO",
+          "isoA3EH": "LSO"
+        }
+      ],
+      "name": "Lesotho",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "pole-south--country-LSO-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            256.67142948479125,
+            99.78957079493898
+          ],
+          [
+            261.52442303869293,
+            103.31164166259539
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-URY",
+      "iso3": "URY",
+      "iso2": "UY",
+      "naturalEarthCode": "URY",
+      "naturalEarthId": 1159321353,
+      "sourceFeatures": [
+        {
+          "neId": 1159321353,
+          "name": "Uruguay",
+          "isoA3": "URY",
+          "isoA3EH": "URY"
+        }
+      ],
+      "name": "Uruguay",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "pole-south--country-URY-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            106.95153470894304,
+            138.6328171677976
+          ],
+          [
+            118.94918201395971,
+            148.28310810282917
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-BRA",
+      "iso3": "BRA",
+      "iso2": "BR",
+      "naturalEarthCode": "BRA",
+      "naturalEarthId": 1159320441,
+      "sourceFeatures": [
+        {
+          "neId": 1159320441,
+          "name": "Brazil",
+          "isoA3": "BRA",
+          "isoA3EH": "BRA"
+        }
+      ],
+      "name": "Brazil",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "pole-south--country-BRA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            16.04406186126377,
+            55.396109156258944
+          ],
+          [
+            118.2933974539153,
+            155.70887641489574
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-BOL",
+      "iso3": "BOL",
+      "iso2": "BO",
+      "naturalEarthCode": "BOL",
+      "naturalEarthId": 1159320439,
+      "sourceFeatures": [
+        {
+          "neId": 1159320439,
+          "name": "Bolivia",
+          "isoA3": "BOL",
+          "isoA3EH": "BOL"
+        }
+      ],
+      "name": "Bolivia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "pole-south--country-BOL-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            49.43237874846275,
+            125.16207504086162
+          ],
+          [
+            85.45156994084125,
+            153.99318272423807
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-PER",
+      "iso3": "PER",
+      "iso2": "PE",
+      "naturalEarthCode": "PER",
+      "naturalEarthId": 1159321163,
+      "sourceFeatures": [
+        {
+          "neId": 1159321163,
+          "name": "Peru",
+          "isoA3": "PER",
+          "isoA3EH": "PER"
+        }
+      ],
+      "name": "Peru",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "pole-south--country-PER-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            10.91498310835172,
+            138.98746492954552
+          ],
+          [
+            68.0367111290488,
+            176.75277552203937
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-COL",
+      "iso3": "COL",
+      "iso2": "CO",
+      "naturalEarthCode": "COL",
+      "naturalEarthId": 1159320517,
+      "sourceFeatures": [
+        {
+          "neId": 1159320517,
+          "name": "Colombia",
+          "isoA3": "COL",
+          "isoA3EH": "COL"
+        }
+      ],
+      "name": "Colombia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "pole-south--country-COL-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            10.244604832438085,
+            134.93911666070318
+          ],
+          [
+            29.786875056212068,
+            154.49582967622112
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-ECU",
+      "iso3": "ECU",
+      "iso2": "EC",
+      "naturalEarthCode": "ECU",
+      "naturalEarthId": 1159320567,
+      "sourceFeatures": [
+        {
+          "neId": 1159320567,
+          "name": "Ecuador",
+          "isoA3": "ECU",
+          "isoA3EH": "ECU"
+        }
+      ],
+      "name": "Ecuador",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "pole-south--country-ECU-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            6.900436639797192,
+            153.70020746193222
+          ],
+          [
+            23.85717243677729,
+            173.88999530766807
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-ZWE",
+      "iso3": "ZWE",
+      "iso2": "ZW",
+      "naturalEarthCode": "ZWE",
+      "naturalEarthId": 1159321441,
+      "sourceFeatures": [
+        {
+          "neId": 1159321441,
+          "name": "Zimbabwe",
+          "isoA3": "ZWE",
+          "isoA3EH": "ZWE"
+        }
+      ],
+      "name": "Zimbabwe",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "pole-south--country-ZWE-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            266.4054371524599,
+            71.98605873277094
+          ],
+          [
+            284.82527056324363,
+            89.18520125423042
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-BWA",
+      "iso3": "BWA",
+      "iso2": "BW",
+      "naturalEarthCode": "BWA",
+      "naturalEarthId": 1159320461,
+      "sourceFeatures": [
+        {
+          "neId": 1159320461,
+          "name": "Botswana",
+          "isoA3": "BWA",
+          "isoA3EH": "BWA"
+        }
+      ],
+      "name": "Botswana",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "pole-south--country-BWA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            247.6695031265976,
+            68.91970439767215
+          ],
+          [
+            270.3016376742274,
+            90.27056112185006
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-NAM",
+      "iso3": "NAM",
+      "iso2": "NA",
+      "naturalEarthCode": "NAM",
+      "naturalEarthId": 1159321085,
+      "sourceFeatures": [
+        {
+          "neId": 1159321085,
+          "name": "Namibia",
+          "isoA3": "NAM",
+          "isoA3EH": "NAM"
+        }
+      ],
+      "name": "Namibia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "pole-south--country-NAM-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            233.7732403964891,
+            59.56524452510678
+          ],
+          [
+            266.18794684128744,
+            92.59139491030768
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-COG",
+      "iso3": "COG",
+      "iso2": "CG",
+      "naturalEarthCode": "COG",
+      "naturalEarthId": 1159320515,
+      "sourceFeatures": [
+        {
+          "neId": 1159320515,
+          "name": "Congo",
+          "isoA3": "COG",
+          "isoA3EH": "COG"
+        }
+      ],
+      "name": "Republic of the Congo",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "pole-south--country-COG-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            240.01078161120023,
+            9.837950504211165
+          ],
+          [
+            264.8993335750312,
+            26.555716634299586
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-GAB",
+      "iso3": "GAB",
+      "iso2": "GA",
+      "naturalEarthCode": "GAB",
+      "naturalEarthId": 1159320693,
+      "sourceFeatures": [
+        {
+          "neId": 1159320693,
+          "name": "Gabon",
+          "isoA3": "GAB",
+          "isoA3EH": "GAB"
+        }
+      ],
+      "name": "Gabon",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "pole-south--country-GAB-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            234.11127312761914,
+            6.574912332357883
+          ],
+          [
+            253.09824412979418,
+            20.92223810733347
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-ZMB",
+      "iso3": "ZMB",
+      "iso2": "ZM",
+      "naturalEarthCode": "ZMB",
+      "naturalEarthId": 1159321439,
+      "sourceFeatures": [
+        {
+          "neId": 1159321439,
+          "name": "Zambia",
+          "isoA3": "ZMB",
+          "isoA3EH": "ZMB"
+        }
+      ],
+      "name": "Zambia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "pole-south--country-ZMB-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            260.2227308764466,
+            52.98483249732641
+          ],
+          [
+            296.6352920755855,
+            74.46639113988374
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-MWI",
+      "iso3": "MWI",
+      "iso2": "MW",
+      "naturalEarthCode": "MWI",
+      "naturalEarthId": 1159321081,
+      "sourceFeatures": [
+        {
+          "neId": 1159321081,
+          "name": "Malawi",
+          "isoA3": "MWI",
+          "isoA3EH": "MWI"
+        }
+      ],
+      "name": "Malawi",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "pole-south--country-MWI-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            288.9572860672645,
+            60.96333029883516
+          ],
+          [
+            298.39380411310674,
+            82.41900848321501
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-MOZ",
+      "iso3": "MOZ",
+      "iso2": "MZ",
+      "naturalEarthCode": "MOZ",
+      "naturalEarthId": 1159321073,
+      "sourceFeatures": [
+        {
+          "neId": 1159321073,
+          "name": "Mozambique",
+          "isoA3": "MOZ",
+          "isoA3EH": "MOZ"
+        }
+      ],
+      "name": "Mozambique",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "pole-south--country-MOZ-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            269.5421308676172,
+            69.50802286376671
+          ],
+          [
+            312.11797236205865,
+            100.53973310739488
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-SWZ",
+      "iso3": "SWZ",
+      "iso2": "SZ",
+      "naturalEarthCode": "SWZ",
+      "naturalEarthId": 1159321289,
+      "sourceFeatures": [
+        {
+          "neId": 1159321289,
+          "name": "eSwatini",
+          "isoA3": "SWZ",
+          "isoA3EH": "SWZ"
+        }
+      ],
+      "name": "Eswatini",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "pole-south--country-SWZ-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            266.984850987331,
+            96.41048302062312
+          ],
+          [
+            270.25218784087104,
+            100.32171861976839
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-AGO",
+      "iso3": "AGO",
+      "iso2": "AO",
+      "naturalEarthCode": "AGO",
+      "naturalEarthId": 1159320323,
+      "sourceFeatures": [
+        {
+          "neId": 1159320323,
+          "name": "Angola",
+          "isoA3": "AGO",
+          "isoA3EH": "AGO"
+        }
+      ],
+      "name": "Angola",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "pole-south--country-AGO-part-0001",
+        "pole-south--country-AGO-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            241.92427341899162,
+            23.402299165567882
+          ],
+          [
+            245.48432198202806,
+            27.335443313715274
+          ]
+        ],
+        [
+          [
+            234.04055820912424,
+            28.254923150216996
+          ],
+          [
+            271.03981370077906,
+            69.31544180697725
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-BDI",
+      "iso3": "BDI",
+      "iso2": "BI",
+      "naturalEarthCode": "BDI",
+      "naturalEarthId": 1159320387,
+      "sourceFeatures": [
+        {
+          "neId": 1159320387,
+          "name": "Burundi",
+          "isoA3": "BDI",
+          "isoA3EH": "BDI"
+        }
+      ],
+      "name": "Burundi",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "pole-south--country-BDI-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            294.7259396290625,
+            37.59243788250632
+          ],
+          [
+            301.37176588196485,
+            43.37943470853449
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-MDG",
+      "iso3": "MDG",
+      "iso2": "MG",
+      "naturalEarthCode": "MDG",
+      "naturalEarthId": 1159321051,
+      "sourceFeatures": [
+        {
+          "neId": 1159321051,
+          "name": "Madagascar",
+          "isoA3": "MDG",
+          "isoA3EH": "MDG"
+        }
+      ],
+      "name": "Madagascar",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "pole-south--country-MDG-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            292.72897939212464,
+            96.8725360721231
+          ],
+          [
+            326.65429540030976,
+            117.21561954407406
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-VUT",
+      "iso3": "VUT",
+      "iso2": "VU",
+      "naturalEarthCode": "VUT",
+      "naturalEarthId": 1159321421,
+      "sourceFeatures": [
+        {
+          "neId": 1159321421,
+          "name": "Vanuatu",
+          "isoA3": "VUT",
+          "isoA3EH": "VUT"
+        }
+      ],
+      "name": "Vanuatu",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "pole-south--country-VUT-part-0001",
+        "pole-south--country-VUT-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            235.57502745666534,
+            349.7192213851687
+          ],
+          [
+            237.5224603945945,
+            351.42821861262786
+          ]
+        ],
+        [
+          [
+            237.47738869865287,
+            351.77320473334044
+          ],
+          [
+            239.84084229515435,
+            354.4811729769309
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-NCL",
+      "iso3": "NCL",
+      "iso2": "NC",
+      "naturalEarthCode": "NCL",
+      "naturalEarthId": 1159320641,
+      "sourceFeatures": [
+        {
+          "neId": 1159320641,
+          "name": "New Caledonia",
+          "isoA3": "NCL",
+          "isoA3EH": "NCL"
+        }
+      ],
+      "name": "New Caledonia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "pole-south--country-NCL-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            234.08906652669518,
+            334.47489969551293
+          ],
+          [
+            242.56820531995328,
+            338.7796433970176
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-SLB",
+      "iso3": "SLB",
+      "iso2": "SB",
+      "naturalEarthCode": "SLB",
+      "naturalEarthId": 1159321249,
+      "sourceFeatures": [
+        {
+          "neId": 1159321249,
+          "name": "Solomon Is.",
+          "isoA3": "SLB",
+          "isoA3EH": "SLB"
+        }
+      ],
+      "name": "Solomon Islands",
+      "sourcePartCount": 5,
+      "visiblePartCount": 5,
+      "partIds": [
+        "pole-south--country-SLB-part-0001",
+        "pole-south--country-SLB-part-0002",
+        "pole-south--country-SLB-part-0003",
+        "pole-south--country-SLB-part-0004",
+        "pole-south--country-SLB-part-0005"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            254.12683181789117,
+            361.1994724863587
+          ],
+          [
+            257.6753582823878,
+            362.5726383186231
+          ]
+        ],
+        [
+          [
+            257.2445032295923,
+            363.9542984559251
+          ],
+          [
+            261.6023024630932,
+            367.5534022203394
+          ]
+        ],
+        [
+          [
+            259.2905083558436,
+            362.292949444996
+          ],
+          [
+            263.12240959403755,
+            363.9168445123456
+          ]
+        ],
+        [
+          [
+            263.25652452178144,
+            365.91462377518184
+          ],
+          [
+            269.3193612865166,
+            367.72229891102256
+          ]
+        ],
+        [
+          [
+            271.3181458049419,
+            366.2979959881573
+          ],
+          [
+            275.0611469383367,
+            367.64083021096195
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-NZL",
+      "iso3": "NZL",
+      "iso2": "NZ",
+      "naturalEarthCode": "NZL",
+      "naturalEarthId": 1159321135,
+      "sourceFeatures": [
+        {
+          "neId": 1159321135,
+          "name": "New Zealand",
+          "isoA3": "NZL",
+          "isoA3EH": "NZL"
+        }
+      ],
+      "name": "New Zealand",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "pole-south--country-NZL-part-0001",
+        "pole-south--country-NZL-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            206.63712044666255,
+            293.5256679220852
+          ],
+          [
+            217.57949573813625,
+            308.6953704792835
+          ]
+        ],
+        [
+          [
+            213.07058416693675,
+            282.059043087812
+          ],
+          [
+            223.02429725811547,
+            295.6243296561832
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-AUS",
+      "iso3": "AUS",
+      "iso2": "AU",
+      "naturalEarthCode": "AUS",
+      "naturalEarthId": 1159320355,
+      "sourceFeatures": [
+        {
+          "neId": 1159320355,
+          "name": "Australia",
+          "isoA3": "AUS",
+          "isoA3EH": "AUS"
+        }
+      ],
+      "name": "Australia",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "pole-south--country-AUS-part-0001",
+        "pole-south--country-AUS-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            250.0768774519338,
+            275.31990082688264
+          ],
+          [
+            257.0922695550071,
+            281.8929461594071
+          ]
+        ],
+        [
+          [
+            253.51753449041155,
+            248.91681840078127
+          ],
+          [
+            330.54489494120963,
+            335.7550596327484
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-PRY",
+      "iso3": "PRY",
+      "iso2": "PY",
+      "naturalEarthCode": "PRY",
+      "naturalEarthId": 1159321195,
+      "sourceFeatures": [
+        {
+          "neId": 1159321195,
+          "name": "Paraguay",
+          "isoA3": "PRY",
+          "isoA3EH": "PRY"
+        }
+      ],
+      "name": "Paraguay",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "pole-south--country-PRY-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            79.79115520362268,
+            128.28494130508176
+          ],
+          [
+            103.57284128262089,
+            142.4512744755979
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-ATA",
+      "iso3": "ATA",
+      "iso2": "AQ",
+      "naturalEarthCode": "ATA",
+      "naturalEarthId": 1159320335,
+      "sourceFeatures": [
+        {
+          "neId": 1159320335,
+          "name": "Antarctica",
+          "isoA3": "ATA",
+          "isoA3EH": "ATA"
+        }
+      ],
+      "name": "Antarctica",
+      "sourcePartCount": 8,
+      "visiblePartCount": 8,
+      "partIds": [
+        "pole-south--country-ATA-part-0001",
+        "pole-south--country-ATA-part-0002",
+        "pole-south--country-ATA-part-0003",
+        "pole-south--country-ATA-part-0004",
+        "pole-south--country-ATA-part-0005",
+        "pole-south--country-ATA-part-0006",
+        "pole-south--country-ATA-part-0007",
+        "pole-south--country-ATA-part-0008"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            188.36668528321934,
+            189.32230237635122
+          ],
+          [
+            192.16329804353435,
+            194.54943342707807
+          ]
+        ],
+        [
+          [
+            188.2720777351424,
+            195.18269933626928
+          ],
+          [
+            190.43512316673707,
+            197.32759879282236
+          ]
+        ],
+        [
+          [
+            168.98378849712526,
+            191.4001554914542
+          ],
+          [
+            174.96813332345965,
+            195.9012069275501
+          ]
+        ],
+        [
+          [
+            172.54118614489335,
+            207.4166902495438
+          ],
+          [
+            173.84368850178944,
+            210.90288180608746
+          ]
+        ],
+        [
+          [
+            178.62316126564346,
+            217.99782174283496
+          ],
+          [
+            180.16444005952957,
+            219.8103451065354
+          ]
+        ],
+        [
+          [
+            180.42681632280105,
+            219.95908559374448
+          ],
+          [
+            180.95654667980028,
+            221.71011224961458
+          ]
+        ],
+        [
+          [
+            197.37015470412956,
+            221.26857613965325
+          ],
+          [
+            198.4911604668044,
+            223.84044389091343
+          ]
+        ],
+        [
+          [
+            163.70506138569857,
+            168.9445588425352
+          ],
+          [
+            246.34136880637976,
+            238.22128653663765
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-UGA",
+      "iso3": "UGA",
+      "iso2": "UG",
+      "naturalEarthCode": "UGA",
+      "naturalEarthId": 1159321343,
+      "sourceFeatures": [
+        {
+          "neId": 1159321343,
+          "name": "Uganda",
+          "isoA3": "UGA",
+          "isoA3EH": "UGA"
+        }
+      ],
+      "name": "Uganda",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "pole-south--country-UGA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            300.58152298300683,
+            30.51826510218274
+          ],
+          [
+            315.68061443184723,
+            40.75186047907843
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pole-south--country-RWA",
+      "iso3": "RWA",
+      "iso2": "RW",
+      "naturalEarthCode": "RWA",
+      "naturalEarthId": 1159321219,
+      "sourceFeatures": [
+        {
+          "neId": 1159321219,
+          "name": "Rwanda",
+          "isoA3": "RWA",
+          "isoA3EH": "RWA"
+        }
+      ],
+      "name": "Rwanda",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "pole-south--country-RWA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            296.4827961119717,
+            34.10476913653915
+          ],
+          [
+            303.6045757960017,
+            38.87754680037841
+          ]
+        ]
+      ]
+    }
+  ],
+  "roles": {
+    "lakes": 4,
+    "rivers": 3,
+    "coastline": 46,
+    "national-boundaries": 60,
+    "admin-boundaries": 0
+  },
+  "svgGroupIds": {
+    "sea": "pole-south--sea",
+    "country-fills": "pole-south--country-fills",
+    "highlights": "pole-south--highlights",
+    "lakes": "pole-south--lakes",
+    "rivers": "pole-south--rivers",
+    "coastline": "pole-south--coastline",
+    "national-boundaries": "pole-south--national-boundaries",
+    "admin-boundaries": "pole-south--admin-boundaries",
+    "graticule": "pole-south--graticule",
+    "frame": "pole-south--frame"
+  },
+  "style": {
+    "countryFill": "#FFFFFF",
+    "sea": "#EEEEEE",
+    "highlight": "#AAAAAA",
+    "stroke": "#000000",
+    "coastWidthPx": 0.4,
+    "nationalDashPx": [
+      1.4,
+      1.1
+    ]
+  },
+  "highlightEdit": "Set fill on country-ISO group (including every child part). Keep coastline/national boundaries above country-fills; a separate overlay can be placed in highlights below line layers.",
+  "controlPoints": [
+    {
+      "lonlat": [
+        0,
+        -90
+      ],
+      "xy": [
+        204.09448818897638,
+        204.09448818897638
+      ],
+      "expectedXY": [
+        204.09448818897638,
+        204.09448818897638
+      ],
+      "errorPx": 0
+    },
+    {
+      "lonlat": [
+        0,
+        -60
+      ],
+      "xy": [
+        204.09448818897638,
+        150.47933166882132
+      ],
+      "expectedXY": [
+        204.09448818897638,
+        150.47933166882132
+      ],
+      "errorPx": 0
+    },
+    {
+      "lonlat": [
+        90,
+        -60
+      ],
+      "xy": [
+        257.70964470913145,
+        204.09448818897638
+      ],
+      "expectedXY": [
+        257.70964470913145,
+        204.09448818897638
+      ],
+      "errorPx": 0
+    },
+    {
+      "lonlat": [
+        0,
+        0
+      ],
+      "xy": [
+        204.09448818897638,
+        4
+      ],
+      "expectedXY": [
+        204.09448818897638,
+        4
+      ],
+      "errorPx": 0
+    },
+    {
+      "lonlat": [
+        180,
+        -60
+      ],
+      "xy": [
+        204.09448818897638,
+        257.70964470913145
+      ],
+      "expectedXY": [
+        204.09448818897638,
+        257.70964470913145
+      ],
+      "errorPx": 0
+    }
+  ],
+  "gaps": [
+    "Natural Earth is generalized cartography, not survey-grade or current local coastal/hydrological mapping.",
+    "Boundary policy follows pinned Natural Earth de facto country dataset; disputed territories are not independently adjudicated.",
+    "Country direct-fill is supported by standard SVG; no installed map core API is claimed.",
+    "Small countries/islands omitted at 110m; choose a 50m/10m regional template when needed."
+  ],
+  "nativeValidation": {
+    "status": "nativeVerified",
+    "appVersion": "1.1.8",
+    "verifiedAt": "2026-10-03T15:40:43.997803+00:00",
+    "sourceSha256": "2d691579312375b9e5badb8f1ff94edb17761a794c11d64e0dfc7ee94a333a7c",
+    "saveReopenExportVerified": true,
+    "visualReview": "passed",
+    "outputs": {
+      "vectora": {
+        "sha256": "ea306bd3050bbee026eaebd129770b9e3353b36e2bcf33a736becc1bf33657f7",
+        "bytes": 1078937
+      },
+      "jpeg": {
+        "sha256": "57c1182a6b649db7f6395a7a36534b8951109c5e858f5baf49380e86c6533ca4",
+        "bytes": 167666,
+        "scale": 4
+      }
+    },
+    "preservationSummary": {
+      "primitiveIds": {
+        "sourceCount": 191,
+        "exactMatchesAfterReopen": 191
+      },
+      "groupNames": {
+        "sourceCount": 49,
+        "preservedAfterReopen": 49
+      },
+      "hiddenPaths": {
+        "sourceCount": 4,
+        "missingOrVisible": 0
+      },
+      "strokeColors": "preserved",
+      "objectCount": "preserved",
+      "artboardWidthMm": 108,
+      "widthPreserved": true,
+      "structuralIssueCount": 0
+    },
+    "evidence": {
+      "nativeSummarySha256": "68a755e35729ab7a962fd30605a31a3dea81c3d3647a335f0a3878878d262140",
+      "visualReviewSha256": "bb58c495c5d9a7738ba24aff07111a506312d65719b99c9991d5c05592787db2",
+      "runtimeFileDependency": false,
+      "summary": "Source-hash matched native save/reopen/JPEG and parent visual review; structural issues 0."
+    },
+    "nativeArtifactsIncludedInLibrary": false
+  },
+  "approvedOriginal": {
+    "file": "../world_continents.vectora",
+    "sha256": "3d968c1772c1b25f37a36af0681b15b7696a5bef4938dca9dbf5306ea6064e0b",
+    "modified": false
+  }
+}

@@ -1,0 +1,4014 @@
+{
+  "schema": "vectora-map-template/v1",
+  "id": "continent-africa",
+  "title": "아프리카",
+  "svg": "continent-africa.svg",
+  "sourceKind": "reprojected-geographic-data",
+  "originalDownloadedSvg": false,
+  "status": "nativeVerified",
+  "sha256": "e1b11f3a2df1e9d74a47e7308ecfc55398b87ac8eed85e666086258290fc017e",
+  "bytes": 621699,
+  "source": {
+    "repository": "https://github.com/nvkelso/natural-earth-vector",
+    "commit": "ca96624a56bd078437bca8184e78163e5039ad19",
+    "resolution": "50m",
+    "license": "public-domain",
+    "rightsURL": "https://www.naturalearthdata.com/about/terms-of-use/",
+    "datasets": [
+      {
+        "file": "ne_50m_coastline.geojson",
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_50m_coastline.geojson",
+        "sha256": "271f1c4c1908312bac6b29d158ea1356544beafc129f260005300913aa5ea283",
+        "bytes": 1640858,
+        "revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "kind": "geographic-data"
+      },
+      {
+        "file": "ne_50m_rivers_lake_centerlines.geojson",
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_50m_rivers_lake_centerlines.geojson",
+        "sha256": "f286e0ce978fde999ca2d7a78c764be08542e19b63cded52b05c12d5173ccc51",
+        "bytes": 827318,
+        "revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "kind": "geographic-data"
+      },
+      {
+        "file": "ne_50m_admin_0_boundary_lines_land.geojson",
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_50m_admin_0_boundary_lines_land.geojson",
+        "sha256": "2faac4f6b34386f3d21b6e018cf151f241f00e5c936d44dd17d7d9bfb147fa48",
+        "bytes": 760189,
+        "revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "kind": "geographic-data"
+      },
+      {
+        "file": "ne_50m_lakes.geojson",
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_50m_lakes.geojson",
+        "sha256": "d350b75978b26fe839b797c2c529b2fb8f47fb3983c03f4964e36d5df9378a52",
+        "bytes": 876018,
+        "revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "kind": "geographic-data"
+      },
+      {
+        "file": "ne_50m_admin_0_countries.geojson",
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_50m_admin_0_countries.geojson",
+        "sha256": "3e458fc036ad0a66411f2c1e6cac49c5d7bfb81cb1123bc513b22511a2b7fdeb",
+        "bytes": 3083490,
+        "revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "kind": "geographic-data"
+      }
+    ]
+  },
+  "projection": {
+    "name": "Equirectangular",
+    "implementation": "d3-geo@3.1.1",
+    "inputCRS": "WGS84 geographic longitude/latitude degrees",
+    "centralMeridian": 16.5,
+    "rotation": [
+      -16.5,
+      0,
+      0
+    ],
+    "center": [
+      0,
+      1
+    ],
+    "scale": 297.7810305729518,
+    "translate": [
+      204.09448818897638,
+      206.6931179057163
+    ],
+    "clipAngle": 0,
+    "clipExtent": [
+      [
+        4,
+        4
+      ],
+      [
+        404.18897637795277,
+        409.3862358114326
+      ]
+    ],
+    "extentLonLat": [
+      -22,
+      -38,
+      55,
+      40
+    ],
+    "units": "SVG viewBox px at 96px/in",
+    "antimeridian": "d3 spherical antimeridian preclip after rotation",
+    "latitudeOrientation": "north-up; pole north/south use registered rotation"
+  },
+  "widthMm": 108,
+  "heightMm": 109.37510822510819,
+  "viewBox": [
+    0,
+    0,
+    408.18897637795277,
+    413.3862358114326
+  ],
+  "targetISO": null,
+  "countries": [
+    {
+      "id": "continent-africa--country-ZWE",
+      "iso3": "ZWE",
+      "iso2": "ZW",
+      "naturalEarthCode": "ZWE",
+      "naturalEarthId": 1159321441,
+      "sourceFeatures": [
+        {
+          "neId": 1159321441,
+          "name": "Zimbabwe",
+          "isoA3": "ZWE",
+          "isoA3EH": "ZWE"
+        }
+      ],
+      "name": "Zimbabwe",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-ZWE-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            249.43549902362204,
+            293.19144967624493
+          ],
+          [
+            289.8842879754576,
+            328.31964822824415
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-ZMB",
+      "iso3": "ZMB",
+      "iso2": "ZM",
+      "naturalEarthCode": "ZMB",
+      "naturalEarthId": 1159321439,
+      "sourceFeatures": [
+        {
+          "neId": 1159321439,
+          "name": "Zambia",
+          "isoA3": "ZMB",
+          "isoA3EH": "ZMB"
+        }
+      ],
+      "name": "Zambia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-ZMB-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            232.56978408262603,
+            254.4749124908477
+          ],
+          [
+            293.28737549360875,
+            305.65675419736164
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-YEM",
+      "iso3": "YEM",
+      "iso2": "YE",
+      "naturalEarthCode": "YEM",
+      "naturalEarthId": 1159321425,
+      "sourceFeatures": [
+        {
+          "neId": 1159321425,
+          "name": "Yemen",
+          "isoA3": "YEM",
+          "isoA3EH": "YEM"
+        }
+      ],
+      "name": "Yemen",
+      "sourcePartCount": 5,
+      "visiblePartCount": 5,
+      "partIds": [
+        "continent-africa--country-YEM-part-0001",
+        "continent-africa--country-YEM-part-0002",
+        "continent-africa--country-YEM-part-0003",
+        "continent-africa--country-YEM-part-0004",
+        "continent-africa--country-YEM-part-0005"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            340.04342856242965,
+            113.1624939327129
+          ],
+          [
+            394.2395767951733,
+            146.36506628653234
+          ]
+        ],
+        [
+          [
+            339.47801870866135,
+            131.6835671868289
+          ],
+          [
+            339.8703546260354,
+            132.47001128704363
+          ]
+        ],
+        [
+          [
+            340.209392647919,
+            140.32782058615396
+          ],
+          [
+            340.75196054647716,
+            140.82495924000403
+          ]
+        ],
+        [
+          [
+            340.2317252717047,
+            138.7780342039063
+          ],
+          [
+            340.7737838388383,
+            139.38734011084972
+          ]
+        ],
+        [
+          [
+            395.43585598527454,
+            145.80321655547596
+          ],
+          [
+            401.64820775048577,
+            147.86536956171383
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-SHN",
+      "iso3": "SHN",
+      "iso2": "SH",
+      "naturalEarthCode": "SHN",
+      "naturalEarthId": 1159320733,
+      "sourceFeatures": [
+        {
+          "neId": 1159320733,
+          "name": "Saint Helena",
+          "isoA3": "SHN",
+          "isoA3EH": "SHN"
+        }
+      ],
+      "name": "Saint Helena",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "continent-africa--country-SHN-part-0001",
+        "continent-africa--country-SHN-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            88.28645091727172,
+            294.55877587156147
+          ],
+          [
+            88.92468996748134,
+            295.0673381016463
+          ]
+        ],
+        [
+          [
+            43.42151944125166,
+            252.85838290295527
+          ],
+          [
+            44.00570179609369,
+            253.342580380816
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-ARE",
+      "iso3": "ARE",
+      "iso2": "AE",
+      "naturalEarthCode": "ARE",
+      "naturalEarthId": 1159320329,
+      "sourceFeatures": [
+        {
+          "neId": 1159320329,
+          "name": "United Arab Emirates",
+          "isoA3": "ARE",
+          "isoA3EH": "ARE"
+        }
+      ],
+      "name": "United Arab Emirates",
+      "sourcePartCount": 5,
+      "visiblePartCount": 5,
+      "partIds": [
+        "continent-africa--country-ARE-part-0001",
+        "continent-africa--country-ARE-part-0002",
+        "continent-africa--country-ARE-part-0003",
+        "continent-africa--country-ARE-part-0004",
+        "continent-africa--country-ARE-part-0005"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            386.3538478183864,
+            82.07824262358284
+          ],
+          [
+            404.18897637795277,
+            94.2547588745509
+          ]
+        ],
+        [
+          [
+            394.786707887514,
+            85.01989540443806
+          ],
+          [
+            396.10885950383476,
+            85.84160810716838
+          ]
+        ],
+        [
+          [
+            391.62318284568977,
+            85.19804186603945
+          ],
+          [
+            392.01500423437983,
+            85.6941670543
+          ]
+        ],
+        [
+          [
+            397.09197829553125,
+            85.81039336701092
+          ],
+          [
+            398.61816392269145,
+            86.45167801124856
+          ]
+        ],
+        [
+          [
+            400.73158269598116,
+            84.52452901605479
+          ],
+          [
+            401.4106774025974,
+            84.95594312710908
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-UGA",
+      "iso3": "UGA",
+      "iso2": "UG",
+      "naturalEarthCode": "UGA",
+      "naturalEarthId": 1159321343,
+      "sourceFeatures": [
+        {
+          "neId": 1159321343,
+          "name": "Uganda",
+          "isoA3": "UGA",
+          "isoA3EH": "UGA"
+        }
+      ],
+      "name": "Uganda",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-UGA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            271.9806439447797,
+            189.9568251191328
+          ],
+          [
+            300.1306069896717,
+            219.52994332017585
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-TKM",
+      "iso3": "TKM",
+      "iso2": "TM",
+      "naturalEarthCode": "TKM",
+      "naturalEarthId": 1159321309,
+      "sourceFeatures": [
+        {
+          "neId": 1159321309,
+          "name": "Turkmenistan",
+          "isoA3": "TKM",
+          "isoA3EH": "TKM"
+        }
+      ],
+      "name": "Turkmenistan",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "continent-africa--country-TKM-part-0001",
+        "continent-africa--country-TKM-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            393.8908926597812,
+            8.695297722875523
+          ],
+          [
+            394.36392122711925,
+            10.464600751815084
+          ]
+        ],
+        [
+          [
+            392.9649344806156,
+            4
+          ],
+          [
+            404.18897637795277,
+            17.863840259331198
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-TUR",
+      "iso3": "TUR",
+      "iso2": "TR",
+      "naturalEarthCode": "TUR",
+      "naturalEarthId": 1159321331,
+      "sourceFeatures": [
+        {
+          "neId": 1159321331,
+          "name": "Turkey",
+          "isoA3": "TUR",
+          "isoA3EH": "TUR"
+        }
+      ],
+      "name": "Turkey",
+      "sourcePartCount": 3,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-TUR-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            253.96736892361182,
+            4
+          ],
+          [
+            351.2662606516004,
+            25.665061797729777
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-TUN",
+      "iso3": "TUN",
+      "iso2": "TN",
+      "naturalEarthCode": "TUN",
+      "naturalEarthId": 1159321327,
+      "sourceFeatures": [
+        {
+          "neId": 1159321327,
+          "name": "Tunisia",
+          "isoA3": "TUN",
+          "isoA3EH": "TUN"
+        }
+      ],
+      "name": "Tunisia",
+      "sourcePartCount": 3,
+      "visiblePartCount": 3,
+      "partIds": [
+        "continent-africa--country-TUN-part-0001",
+        "continent-africa--country-TUN-part-0002",
+        "continent-africa--country-TUN-part-0003"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            157.2963113324471,
+            17.82272993721233
+          ],
+          [
+            178.29497013109724,
+            54.780369007055896
+          ]
+        ],
+        [
+          [
+            176.15211408037632,
+            30.92018232048261
+          ],
+          [
+            176.9702770549136,
+            31.640642014929938
+          ]
+        ],
+        [
+          [
+            174.06508699048985,
+            35.7390656754269
+          ],
+          [
+            175.70496786501687,
+            36.80947763656812
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-TGO",
+      "iso3": "TGO",
+      "iso2": "TG",
+      "naturalEarthCode": "TGO",
+      "naturalEarthId": 1159321303,
+      "sourceFeatures": [
+        {
+          "neId": 1159321303,
+          "name": "Togo",
+          "isoA3": "TGO",
+          "isoA3EH": "TGO"
+        }
+      ],
+      "name": "Togo",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-TGO-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            117.87098749729012,
+            154.11959044892112
+          ],
+          [
+            127.58007100112486,
+            180.24216495592592
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-TZA",
+      "iso3": "TZA",
+      "iso2": "TZ",
+      "naturalEarthCode": "TZA",
+      "naturalEarthId": 1159321337,
+      "sourceFeatures": [
+        {
+          "neId": 1159321337,
+          "name": "Tanzania",
+          "isoA3": "TZA",
+          "isoA3EH": "TZA"
+        }
+      ],
+      "name": "Tanzania",
+      "sourcePartCount": 4,
+      "visiblePartCount": 4,
+      "partIds": [
+        "continent-africa--country-TZA-part-0001",
+        "continent-africa--country-TZA-part-0002",
+        "continent-africa--country-TZA-part-0003",
+        "continent-africa--country-TZA-part-0004"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            321.98041057122407,
+            241.62895549156352
+          ],
+          [
+            324.0110993688516,
+            245.43198771489924
+          ]
+        ],
+        [
+          [
+            324.3942933068821,
+            237.38892210328248
+          ],
+          [
+            325.5596176197975,
+            240.18346771162692
+          ]
+        ],
+        [
+          [
+            270.7412223041211,
+            217.0612450892729
+          ],
+          [
+            328.63939922037014,
+            272.78256548358723
+          ]
+        ],
+        [
+          [
+            324.1664090725023,
+            251.64535294569993
+          ],
+          [
+            325.74741019490745,
+            253.41921916842207
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-SYR",
+      "iso3": "SYR",
+      "iso2": "SY",
+      "naturalEarthCode": "SYR",
+      "naturalEarthId": 1159321295,
+      "sourceFeatures": [
+        {
+          "neId": 1159321295,
+          "name": "Syria",
+          "isoA3": "SYR",
+          "isoA3EH": "SYR"
+        }
+      ],
+      "name": "Syria",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-SYR-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            304.21684827405664,
+            18.04680977768686
+          ],
+          [
+            338.4908460546068,
+            43.92906300848756
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-SWZ",
+      "iso3": "SWZ",
+      "iso2": "SZ",
+      "naturalEarthCode": "SWZ",
+      "naturalEarthId": 1159321289,
+      "sourceFeatures": [
+        {
+          "neId": 1159321289,
+          "name": "eSwatini",
+          "isoA3": "SWZ",
+          "isoA3EH": "SWZ"
+        }
+      ],
+      "name": "Eswatini",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-SWZ-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            278.3503323448205,
+            345.68326582022695
+          ],
+          [
+            285.2387332226199,
+            353.8273297744145
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-SSD",
+      "iso3": "SSD",
+      "iso2": "SS",
+      "naturalEarthCode": "SDS",
+      "naturalEarthId": 1159321235,
+      "sourceFeatures": [
+        {
+          "neId": 1159321235,
+          "name": "S. Sudan",
+          "isoA3": "SSD",
+          "isoA3EH": "SSD"
+        }
+      ],
+      "name": "South Sudan",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-SSD-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            243.83981768197157,
+            148.3637763468657
+          ],
+          [
+            301.6385190526638,
+            193.7481842977809
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-SDN",
+      "iso3": "SDN",
+      "iso2": "SD",
+      "naturalEarthCode": "SDN",
+      "naturalEarthId": 1159321229,
+      "sourceFeatures": [
+        {
+          "neId": 1159321229,
+          "name": "Sudan",
+          "isoA3": "SDN",
+          "isoA3EH": "SDN"
+        }
+      ],
+      "name": "Sudan",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-SDN-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            231.7714174692709,
+            96.49853140566516
+          ],
+          [
+            319.00315530749566,
+            166.85287606094687
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-ESP",
+      "iso3": "ESP",
+      "iso2": "ES",
+      "naturalEarthCode": "ESP",
+      "naturalEarthId": 1159320587,
+      "sourceFeatures": [
+        {
+          "neId": 1159320587,
+          "name": "Spain",
+          "isoA3": "ESP",
+          "isoA3EH": "ESP"
+        }
+      ],
+      "name": "Spain",
+      "sourcePartCount": 12,
+      "visiblePartCount": 12,
+      "partIds": [
+        "continent-africa--country-ESP-part-0001",
+        "continent-africa--country-ESP-part-0002",
+        "continent-africa--country-ESP-part-0003",
+        "continent-africa--country-ESP-part-0004",
+        "continent-africa--country-ESP-part-0005",
+        "continent-africa--country-ESP-part-0006",
+        "continent-africa--country-ESP-part-0007",
+        "continent-africa--country-ESP-part-0008",
+        "continent-africa--country-ESP-part-0009",
+        "continent-africa--country-ESP-part-0010",
+        "continent-africa--country-ESP-part-0011",
+        "continent-africa--country-ESP-part-0012"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            125.62602099110339,
+            10.401916605787875
+          ],
+          [
+            126.62385322425607,
+            10.970366856324716
+          ]
+        ],
+        [
+          [
+            130.657316339094,
+            4.153277575212144
+          ],
+          [
+            136.33166339952962,
+            7.631481083955379
+          ]
+        ],
+        [
+          [
+            138.31109162736476,
+            4
+          ],
+          [
+            140.80262661621845,
+            4.8821152518662245
+          ]
+        ],
+        [
+          [
+            124.69772289191125,
+            8.568157165354307
+          ],
+          [
+            126.77814946231722,
+            9.939038286123292
+          ]
+        ],
+        [
+          [
+            79.17475600449944,
+            4
+          ],
+          [
+            119.38728273974846,
+            24.654283191328318
+          ]
+        ],
+        [
+          [
+            30.478363296042545,
+            63.37361130504138
+          ],
+          [
+            34.56434991471522,
+            66.32980727354533
+          ]
+        ],
+        [
+          [
+            46.30614914735659,
+            59.93702744984148
+          ],
+          [
+            48.57715922118825,
+            61.973043438388345
+          ]
+        ],
+        [
+          [
+            43.02207887023215,
+            62.4968284413539
+          ],
+          [
+            46.476432155435106,
+            66.07603548992736
+          ]
+        ],
+        [
+          [
+            36.17377484896207,
+            65.53905464526022
+          ],
+          [
+            38.38946529338378,
+            67.68216016443395
+          ]
+        ],
+        [
+          [
+            28.29769718294304,
+            65.311165213621
+          ],
+          [
+            29.460989367419984,
+            66.29682026792102
+          ]
+        ],
+        [
+          [
+            23.9546333236527,
+            67.14594331690353
+          ],
+          [
+            25.37144782329483,
+            68.20493170180995
+          ]
+        ],
+        [
+          [
+            24.784978674302096,
+            61.96619345045505
+          ],
+          [
+            26.21016595889151,
+            63.84284067573367
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-ZAF",
+      "iso3": "ZAF",
+      "iso2": "ZA",
+      "naturalEarthCode": "ZAF",
+      "naturalEarthId": 1159321431,
+      "sourceFeatures": [
+        {
+          "neId": 1159321431,
+          "name": "South Africa",
+          "isoA3": "ZAF",
+          "isoA3EH": "ZAF"
+        }
+      ],
+      "name": "South Africa",
+      "sourcePartCount": 2,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-ZAF-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            203.82193870702525,
+            326.99038676101844
+          ],
+          [
+            289.25747250148277,
+            392.68090309929437
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-SOM",
+      "iso3": "SOM",
+      "iso2": "SO",
+      "naturalEarthCode": "SOM",
+      "naturalEarthId": 1159321261,
+      "sourceFeatures": [
+        {
+          "neId": 1159321261,
+          "name": "Somalia",
+          "isoA3": "SOM",
+          "isoA3EH": "SOM"
+        }
+      ],
+      "name": "Somalia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-SOM-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            331.24259732815216,
+            149.60802624153794
+          ],
+          [
+            385.4280859817977,
+            220.70135362388788
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-NE-SOL-1159321259",
+      "iso3": null,
+      "iso2": null,
+      "naturalEarthCode": "SOL",
+      "naturalEarthId": 1159321259,
+      "sourceFeatures": [
+        {
+          "neId": 1159321259,
+          "name": "Somaliland",
+          "isoA3": "-99",
+          "isoA3EH": "-99"
+        }
+      ],
+      "name": "Somaliland",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-NE-SOL-1159321259-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            340.0363187115247,
+            152.1229073197668
+          ],
+          [
+            372.6861729191124,
+            170.32752984149704
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-SLE",
+      "iso3": "SLE",
+      "iso2": "SL",
+      "naturalEarthCode": "SLE",
+      "naturalEarthId": 1159321251,
+      "sourceFeatures": [
+        {
+          "neId": 1159321251,
+          "name": "Sierra Leone",
+          "isoA3": "SLE",
+          "isoA3EH": "SLE"
+        }
+      ],
+      "name": "Sierra Leone",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "continent-africa--country-SLE-part-0001",
+        "continent-africa--country-SLE-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            49.25422179936601,
+            159.93580190285303
+          ],
+          [
+            64.89523373841908,
+            175.9952815797116
+          ]
+        ],
+        [
+          [
+            51.026825088045825,
+            172.19783121300742
+          ],
+          [
+            53.37066435831886,
+            173.377364833214
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-SEN",
+      "iso3": "SEN",
+      "iso2": "SN",
+      "naturalEarthCode": "SEN",
+      "naturalEarthId": 1159321243,
+      "sourceFeatures": [
+        {
+          "neId": 1159321243,
+          "name": "Senegal",
+          "isoA3": "SEN",
+          "isoA3EH": "SEN"
+        }
+      ],
+      "name": "Senegal",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-SEN-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            27.202411138153195,
+            125.20577579057158
+          ],
+          [
+            59.18230742120875,
+            147.81842271725122
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-SAU",
+      "iso3": "SAU",
+      "iso2": "SA",
+      "naturalEarthCode": "SAU",
+      "naturalEarthId": 1159321225,
+      "sourceFeatures": [
+        {
+          "neId": 1159321225,
+          "name": "Saudi Arabia",
+          "isoA3": "SAU",
+          "isoA3EH": "SAU"
+        }
+      ],
+      "name": "Saudi Arabia",
+      "sourcePartCount": 4,
+      "visiblePartCount": 4,
+      "partIds": [
+        "continent-africa--country-SAU-part-0001",
+        "continent-africa--country-SAU-part-0002",
+        "continent-africa--country-SAU-part-0003",
+        "continent-africa--country-SAU-part-0004"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            308.06200948236017,
+            78.37942978791284
+          ],
+          [
+            310.40331249002963,
+            79.96804489538803
+          ]
+        ],
+        [
+          [
+            335.4608022268126,
+            123.5237711283362
+          ],
+          [
+            337.5102687227733,
+            125.7681348530524
+          ]
+        ],
+        [
+          [
+            298.24913670763885,
+            44.93095430125774
+          ],
+          [
+            404.18897637795277,
+            126.80200488311684
+          ]
+        ],
+        [
+          [
+            308.2680704243788,
+            77.51254250618669
+          ],
+          [
+            308.53656084671235,
+            78.32486895838016
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-STP",
+      "iso3": "STP",
+      "iso2": "ST",
+      "naturalEarthCode": "STP",
+      "naturalEarthId": 1159321273,
+      "sourceFeatures": [
+        {
+          "neId": 1159321273,
+          "name": "São Tomé and Principe",
+          "isoA3": "STP",
+          "isoA3EH": "STP"
+        }
+      ],
+      "name": "São Tomé and Príncipe",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "continent-africa--country-STP-part-0001",
+        "continent-africa--country-STP-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            156.43907016422946,
+            203.05960469332237
+          ],
+          [
+            157.0714726920953,
+            203.87852646773695
+          ]
+        ],
+        [
+          [
+            151.95643390285306,
+            209.78863161059408
+          ],
+          [
+            153.4212087125473,
+            211.6442195406483
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-RWA",
+      "iso3": "RWA",
+      "iso2": "RW",
+      "naturalEarthCode": "RWA",
+      "naturalEarthId": 1159321219,
+      "sourceFeatures": [
+        {
+          "neId": 1159321219,
+          "name": "Rwanda",
+          "isoA3": "RWA",
+          "isoA3EH": "RWA"
+        }
+      ],
+      "name": "Rwanda",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-RWA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            268.32022971755805,
+            217.41551108129661
+          ],
+          [
+            278.81321586174454,
+            226.48736900051125
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-QAT",
+      "iso3": "QAT",
+      "iso2": "QA",
+      "naturalEarthCode": "QAT",
+      "naturalEarthId": 1159321197,
+      "sourceFeatures": [
+        {
+          "neId": 1159321197,
+          "name": "Qatar",
+          "isoA3": "QAT",
+          "isoA3EH": "QAT"
+        }
+      ],
+      "name": "Qatar",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-QAT-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            382.12447920646287,
+            75.96504291808975
+          ],
+          [
+            386.5644823487064,
+            84.2215287910829
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-PRT",
+      "iso3": "PRT",
+      "iso2": "PT",
+      "naturalEarthCode": "PRT",
+      "naturalEarthId": 1159321187,
+      "sourceFeatures": [
+        {
+          "neId": 1159321187,
+          "name": "Portugal",
+          "isoA3": "PRT",
+          "isoA3EH": "PRT"
+        }
+      ],
+      "name": "Portugal",
+      "sourcePartCount": 9,
+      "visiblePartCount": 2,
+      "partIds": [
+        "continent-africa--country-PRT-part-0001",
+        "continent-africa--country-PRT-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            28.73367448777998,
+            41.06371513488085
+          ],
+          [
+            31.5804941315063,
+            42.208738952449096
+          ]
+        ],
+        [
+          [
+            69.07106018365886,
+            4
+          ],
+          [
+            82.4787152297525,
+            19.563609154310228
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-OMN",
+      "iso3": "OMN",
+      "iso2": "OM",
+      "naturalEarthCode": "OMN",
+      "naturalEarthId": 1159321151,
+      "sourceFeatures": [
+        {
+          "neId": 1159321151,
+          "name": "Oman",
+          "isoA3": "OMN",
+          "isoA3EH": "OMN"
+        }
+      ],
+      "name": "Oman",
+      "sourcePartCount": 4,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-OMN-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            388.4809717648021,
+            107.61065565244344
+          ],
+          [
+            404.18897637795277,
+            125.3643805567031
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-NGA",
+      "iso3": "NGA",
+      "iso2": "NG",
+      "naturalEarthCode": "NGA",
+      "naturalEarthId": 1159321089,
+      "sourceFeatures": [
+        {
+          "neId": 1159321089,
+          "name": "Nigeria",
+          "isoA3": "NGA",
+          "isoA3EH": "NGA"
+        }
+      ],
+      "name": "Nigeria",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "continent-africa--country-NGA-part-0001",
+        "continent-africa--country-NGA-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            155.45037471316087,
+            188.36059602658753
+          ],
+          [
+            156.42486085693835,
+            189.08664277492582
+          ]
+        ],
+        [
+          [
+            132.29972827896512,
+            139.7895664129256
+          ],
+          [
+            194.36079046446469,
+            189.65965621924528
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-NER",
+      "iso3": "NER",
+      "iso2": "NE",
+      "naturalEarthCode": "NER",
+      "naturalEarthId": 1159321087,
+      "sourceFeatures": [
+        {
+          "neId": 1159321087,
+          "name": "Niger",
+          "isoA3": "NER",
+          "isoA3EH": "NER"
+        }
+      ],
+      "name": "Niger",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-NER-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            119.191366848144,
+            89.66190042908269
+          ],
+          [
+            201.30451616893345,
+            151.10172899723892
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-NAM",
+      "iso3": "NAM",
+      "iso2": "NA",
+      "naturalEarthCode": "NAM",
+      "naturalEarthId": 1159321085,
+      "sourceFeatures": [
+        {
+          "neId": 1159321085,
+          "name": "Namibia",
+          "isoA3": "NAM",
+          "isoA3EH": "NAM"
+        }
+      ],
+      "name": "Namibia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-NAM-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            179.26031949279067,
+            300.07579149442677
+          ],
+          [
+            249.6161869450864,
+            362.29267271500146
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-MOZ",
+      "iso3": "MOZ",
+      "iso2": "MZ",
+      "naturalEarthCode": "MOZ",
+      "naturalEarthId": 1159321073,
+      "sourceFeatures": [
+        {
+          "neId": 1159321073,
+          "name": "Mozambique",
+          "isoA3": "MOZ",
+          "isoA3EH": "MOZ"
+        }
+      ],
+      "name": "Mozambique",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-MOZ-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            275.41012314633394,
+            266.2763450782288
+          ],
+          [
+            330.6193315823704,
+            351.49719048000816
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-MAR",
+      "iso3": "MAR",
+      "iso2": "MA",
+      "naturalEarthCode": "MAR",
+      "naturalEarthId": 1159321035,
+      "sourceFeatures": [
+        {
+          "neId": 1159321035,
+          "name": "Morocco",
+          "isoA3": "MAR",
+          "isoA3EH": "MAR"
+        }
+      ],
+      "name": "Morocco",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-MAR-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            29.97031039738215,
+            25.153453973616905
+          ],
+          [
+            112.8018872841804,
+            100.56142660067488
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-ESH",
+      "iso3": "ESH",
+      "iso2": "EH",
+      "naturalEarthCode": "SAH",
+      "naturalEarthId": 1159321223,
+      "sourceFeatures": [
+        {
+          "neId": 1159321223,
+          "name": "W. Sahara",
+          "isoA3": "ESH",
+          "isoA3EH": "ESH"
+        }
+      ],
+      "name": "Western Sahara",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-ESH-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            29.47291707781983,
+            68.15265766642801
+          ],
+          [
+            73.21643068861849,
+            103.75540758277938
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-MRT",
+      "iso3": "MRT",
+      "iso2": "MR",
+      "naturalEarthCode": "MRT",
+      "naturalEarthId": 1159321075,
+      "sourceFeatures": [
+        {
+          "neId": 1159321075,
+          "name": "Mauritania",
+          "isoA3": "MRT",
+          "isoA3EH": "MRT"
+        }
+      ],
+      "name": "Mauritania",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "continent-africa--country-MRT-part-0001",
+        "continent-africa--country-MRT-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            32.70445345659067,
+            108.64052481194392
+          ],
+          [
+            33.397508002045214,
+            109.97587746722566
+          ]
+        ],
+        [
+          [
+            29.653854467737006,
+            70.07828386460778
+          ],
+          [
+            93.27536781184172,
+            135.2549107818795
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-MLT",
+      "iso3": "MLT",
+      "iso2": "MT",
+      "naturalEarthCode": "MLT",
+      "naturalEarthId": 1159321065,
+      "sourceFeatures": [
+        {
+          "neId": 1159321065,
+          "name": "Malta",
+          "isoA3": "MLT",
+          "isoA3EH": "MLT"
+        }
+      ],
+      "name": "Malta",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "continent-africa--country-MLT-part-0001",
+        "continent-africa--country-MLT-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            192.9269809264751,
+            24.90120498701296
+          ],
+          [
+            194.0440850663667,
+            25.723427021167794
+          ]
+        ],
+        [
+          [
+            192.03877448655282,
+            24.39518421679105
+          ],
+          [
+            192.76912976296146,
+            24.725849453727335
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-MLI",
+      "iso3": "MLI",
+      "iso2": "ML",
+      "naturalEarthCode": "MLI",
+      "naturalEarthId": 1159321063,
+      "sourceFeatures": [
+        {
+          "neId": 1159321063,
+          "name": "Mali",
+          "isoA3": "MLI",
+          "isoA3EH": "MLI"
+        }
+      ],
+      "name": "Mali",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-MLI-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            54.514165378873116,
+            81.9817334574087
+          ],
+          [
+            140.34837574721342,
+            159.17321322343793
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-MWI",
+      "iso3": "MWI",
+      "iso2": "MW",
+      "naturalEarthCode": "MWI",
+      "naturalEarthId": 1159321081,
+      "sourceFeatures": [
+        {
+          "neId": 1159321081,
+          "name": "Malawi",
+          "isoA3": "MWI",
+          "isoA3EH": "MWI"
+        }
+      ],
+      "name": "Malawi",
+      "sourcePartCount": 3,
+      "visiblePartCount": 3,
+      "partIds": [
+        "continent-africa--country-MWI-part-0001",
+        "continent-africa--country-MWI-part-0002",
+        "continent-africa--country-MWI-part-0003"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            298.48768052111666,
+            274.2716998482462
+          ],
+          [
+            298.9769557214439,
+            274.8741557672563
+          ]
+        ],
+        [
+          [
+            297.8613743785663,
+            274.1072585597709
+          ],
+          [
+            298.3811003219143,
+            274.6036384137437
+          ]
+        ],
+        [
+          [
+            288.13630410471416,
+            260.7187336619286
+          ],
+          [
+            304.8837606045608,
+            300.9249145434093
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-MDG",
+      "iso3": "MDG",
+      "iso2": "MG",
+      "naturalEarthCode": "MDG",
+      "naturalEarthId": 1159321051,
+      "sourceFeatures": [
+        {
+          "neId": 1159321051,
+          "name": "Madagascar",
+          "isoA3": "MDG",
+          "isoA3EH": "MDG"
+        }
+      ],
+      "name": "Madagascar",
+      "sourcePartCount": 3,
+      "visiblePartCount": 3,
+      "partIds": [
+        "continent-africa--country-MDG-part-0001",
+        "continent-africa--country-MDG-part-0002",
+        "continent-africa--country-MDG-part-0003"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            343.15822929706513,
+            274.6711404192657
+          ],
+          [
+            380.71147429798543,
+            344.7869412610696
+          ]
+        ],
+        [
+          [
+            368.80193351712853,
+            280.4850650790469
+          ],
+          [
+            369.6327830019429,
+            281.5356858762654
+          ]
+        ],
+        [
+          [
+            377.2880810872277,
+            298.66024512608647
+          ],
+          [
+            378.32246044871664,
+            300.69347018631754
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-LBY",
+      "iso3": "LBY",
+      "iso2": "LY",
+      "naturalEarthCode": "LBY",
+      "naturalEarthId": 1159321017,
+      "sourceFeatures": [
+        {
+          "neId": 1159321017,
+          "name": "Libya",
+          "isoA3": "LBY",
+          "isoA3EH": "LBY"
+        }
+      ],
+      "name": "Libya",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-LBY-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            166.72751296615198,
+            39.43525783658859
+          ],
+          [
+            249.0533185511811,
+            110.56132795336943
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-LBR",
+      "iso3": "LBR",
+      "iso2": "LR",
+      "naturalEarthCode": "LBR",
+      "naturalEarthId": 1159321015,
+      "sourceFeatures": [
+        {
+          "neId": 1159321015,
+          "name": "Liberia",
+          "isoA3": "LBR",
+          "isoA3EH": "LBR"
+        }
+      ],
+      "name": "Liberia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-LBR-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            58.532140660599254,
+            167.51776146027197
+          ],
+          [
+            79.88049706023111,
+            189.27544881562528
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-LSO",
+      "iso3": "LSO",
+      "iso2": "LS",
+      "naturalEarthCode": "LSO",
+      "naturalEarthId": 1159321027,
+      "sourceFeatures": [
+        {
+          "neId": 1159321027,
+          "name": "Lesotho",
+          "isoA3": "LSO",
+          "isoA3EH": "LSO"
+        }
+      ],
+      "name": "Lesotho",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-LSO-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            258.93471199427347,
+            360.4370847849473
+          ],
+          [
+            271.09091990510274,
+            371.146282118826
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-LBN",
+      "iso3": "LBN",
+      "iso2": "LB",
+      "naturalEarthCode": "LBN",
+      "naturalEarthId": 1159321013,
+      "sourceFeatures": [
+        {
+          "neId": 1159321013,
+          "name": "Lebanon",
+          "isoA3": "LBN",
+          "isoA3EH": "LBN"
+        }
+      ],
+      "name": "Lebanon",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-LBN-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            300.8081788992739,
+            31.656119453522848
+          ],
+          [
+            308.48124121730234,
+            39.987466651395806
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-KWT",
+      "iso3": "KWT",
+      "iso2": "KW",
+      "naturalEarthCode": "KWT",
+      "naturalEarthId": 1159321009,
+      "sourceFeatures": [
+        {
+          "neId": 1159321009,
+          "name": "Kuwait",
+          "isoA3": "KWT",
+          "isoA3EH": "KWT"
+        }
+      ],
+      "name": "Kuwait",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "continent-africa--country-KWT-part-0001",
+        "continent-africa--country-KWT-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            368.23145113815315,
+            56.082479991001094
+          ],
+          [
+            369.6180643632273,
+            58.04134786051739
+          ]
+        ],
+        [
+          [
+            360.17569901625933,
+            55.466828230289366
+          ],
+          [
+            370.10784369771966,
+            63.5961735457613
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-KEN",
+      "iso3": "KEN",
+      "iso2": "KE",
+      "naturalEarthCode": "KEN",
+      "naturalEarthId": 1159320971,
+      "sourceFeatures": [
+        {
+          "neId": 1159320971,
+          "name": "Kenya",
+          "isoA3": "KEN",
+          "isoA3EH": "KEN"
+        }
+      ],
+      "name": "Kenya",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "continent-africa--country-KEN-part-0001",
+        "continent-africa--country-KEN-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            331.2055460656509,
+            222.47471571244498
+          ],
+          [
+            332.1511042634216,
+            223.15431975048568
+          ]
+        ],
+        [
+          [
+            294.5268023315267,
+            183.34554731158602
+          ],
+          [
+            336.02163849227935,
+            236.27790915144692
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-JOR",
+      "iso3": "JOR",
+      "iso2": "JO",
+      "naturalEarthCode": "JOR",
+      "naturalEarthId": 1159320935,
+      "sourceFeatures": [
+        {
+          "neId": 1159320935,
+          "name": "Jordan",
+          "isoA3": "JOR",
+          "isoA3EH": "JOR"
+        }
+      ],
+      "name": "Jordan",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-JOR-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            299.9879837962982,
+            38.44630771980772
+          ],
+          [
+            322.55444267839243,
+            60.17988498864909
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-ITA",
+      "iso3": "ITA",
+      "iso2": "IT",
+      "naturalEarthCode": "ITA",
+      "naturalEarthId": 1159320919,
+      "sourceFeatures": [
+        {
+          "neId": 1159320919,
+          "name": "Italy",
+          "isoA3": "ITA",
+          "isoA3EH": "ITA"
+        }
+      ],
+      "name": "Italy",
+      "sourcePartCount": 8,
+      "visiblePartCount": 5,
+      "partIds": [
+        "continent-africa--country-ITA-part-0001",
+        "continent-africa--country-ITA-part-0004",
+        "continent-africa--country-ITA-part-0005",
+        "continent-africa--country-ITA-part-0006",
+        "continent-africa--country-ITA-part-0007"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            199.6407798736067,
+            4
+          ],
+          [
+            214.1231453772346,
+            14.710974796604972
+          ]
+        ],
+        [
+          [
+            180.37641016709276,
+            20.407405012373403
+          ],
+          [
+            180.97328422947132,
+            20.91190298558132
+          ]
+        ],
+        [
+          [
+            182.97047149279067,
+            12.856660195111914
+          ],
+          [
+            199.59713328888435,
+            21.214144410675885
+          ]
+        ],
+        [
+          [
+            161.9921183867471,
+            4
+          ],
+          [
+            168.76835820183123,
+            9.66673827262494
+          ]
+        ],
+        [
+          [
+            161.78148905368647,
+            8.59480351446976
+          ],
+          [
+            162.4067817306473,
+            9.360183122200596
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-ISR",
+      "iso3": "ISR",
+      "iso2": "IL",
+      "naturalEarthCode": "ISR",
+      "naturalEarthId": 1159320895,
+      "sourceFeatures": [
+        {
+          "neId": 1159320895,
+          "name": "Israel",
+          "isoA3": "ISR",
+          "isoA3EH": "ISR"
+        }
+      ],
+      "name": "Israel",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-ISR-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            296.32148357828,
+            38.22045041660698
+          ],
+          [
+            304.8588345483178,
+            58.6889731612639
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-PSE",
+      "iso3": "PSE",
+      "iso2": "PS",
+      "naturalEarthCode": "PSX",
+      "naturalEarthId": 1159320899,
+      "sourceFeatures": [
+        {
+          "neId": 1159320899,
+          "name": "Palestine",
+          "isoA3": "PSE",
+          "isoA3EH": "PSE"
+        }
+      ],
+      "name": "Palestine",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "continent-africa--country-PSE-part-0001",
+        "continent-africa--country-PSE-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            296.0763392453216,
+            47.73565015727576
+          ],
+          [
+            297.7781350714797,
+            49.69274056406584
+          ]
+        ],
+        [
+          [
+            299.58245723448204,
+            42.80053529236116
+          ],
+          [
+            303.2169839124655,
+            48.949444111667844
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-IRQ",
+      "iso3": "IRQ",
+      "iso2": "IQ",
+      "naturalEarthCode": "IRQ",
+      "naturalEarthId": 1159320887,
+      "sourceFeatures": [
+        {
+          "neId": 1159320887,
+          "name": "Iraq",
+          "isoA3": "IRQ",
+          "isoA3EH": "IRQ"
+        }
+      ],
+      "name": "Iraq",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-IRQ-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            319.8558280846712,
+            17.65904744861436
+          ],
+          [
+            370.6483794678392,
+            60.838933865630395
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-IRN",
+      "iso3": "IRN",
+      "iso2": "IR",
+      "naturalEarthCode": "IRN",
+      "naturalEarthId": 1159320881,
+      "sourceFeatures": [
+        {
+          "neId": 1159320881,
+          "name": "Iran",
+          "isoA3": "IRN",
+          "isoA3EH": "IRN"
+        }
+      ],
+      "name": "Iran",
+      "sourcePartCount": 2,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-IRN-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            347.13991731342674,
+            5.202879709581737
+          ],
+          [
+            404.18897637795277,
+            74.13661066857549
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-GNB",
+      "iso3": "GNB",
+      "iso2": "GW",
+      "naturalEarthCode": "GNB",
+      "naturalEarthId": 1159320799,
+      "sourceFeatures": [
+        {
+          "neId": 1159320799,
+          "name": "Guinea-Bissau",
+          "isoA3": "GNB",
+          "isoA3EH": "GNB"
+        }
+      ],
+      "name": "Guinea-Bissau",
+      "sourcePartCount": 7,
+      "visiblePartCount": 7,
+      "partIds": [
+        "continent-africa--country-GNB-part-0001",
+        "continent-africa--country-GNB-part-0002",
+        "continent-africa--country-GNB-part-0003",
+        "continent-africa--country-GNB-part-0004",
+        "continent-africa--country-GNB-part-0005",
+        "continent-africa--country-GNB-part-0006",
+        "continent-africa--country-GNB-part-0007"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            31.484064179977537,
+            145.98948113631246
+          ],
+          [
+            47.274798768790276,
+            155.03164711238364
+          ]
+        ],
+        [
+          [
+            33.95478934205954,
+            153.68741753798952
+          ],
+          [
+            34.90922965620206,
+            154.4888297453727
+          ]
+        ],
+        [
+          [
+            35.3708398445649,
+            153.718632278147
+          ],
+          [
+            35.72460170242357,
+            154.4360463785663
+          ]
+        ],
+        [
+          [
+            36.328071087023204,
+            153.1522089587892
+          ],
+          [
+            36.95920028632787,
+            153.8135394326618
+          ]
+        ],
+        [
+          [
+            37.160443368851645,
+            151.43417169690147
+          ],
+          [
+            37.87328907822888,
+            152.05032759177826
+          ]
+        ],
+        [
+          [
+            35.063016562838726,
+            151.6110500272011
+          ],
+          [
+            35.693891096431145,
+            152.46270933878716
+          ]
+        ],
+        [
+          [
+            34.39128117558036,
+            150.1122695490336
+          ],
+          [
+            35.25410420042948,
+            150.7720772258922
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-GIN",
+      "iso3": "GIN",
+      "iso2": "GN",
+      "naturalEarthCode": "GIN",
+      "naturalEarthId": 1159320795,
+      "sourceFeatures": [
+        {
+          "neId": 1159320795,
+          "name": "Guinea",
+          "isoA3": "GIN",
+          "isoA3EH": "GIN"
+        }
+      ],
+      "name": "Guinea",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-GIN-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            40.11460720891708,
+            146.02069587646994
+          ],
+          [
+            78.41851317885266,
+            174.38737944247873
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-GRC",
+      "iso3": "GRC",
+      "iso2": "GR",
+      "naturalEarthCode": "GRC",
+      "naturalEarthId": 1159320811,
+      "sourceFeatures": [
+        {
+          "neId": 1159320811,
+          "name": "Greece",
+          "isoA3": "GRC",
+          "isoA3EH": "GRC"
+        }
+      ],
+      "name": "Greece",
+      "sourcePartCount": 40,
+      "visiblePartCount": 38,
+      "partIds": [
+        "continent-africa--country-GRC-part-0001",
+        "continent-africa--country-GRC-part-0002",
+        "continent-africa--country-GRC-part-0003",
+        "continent-africa--country-GRC-part-0004",
+        "continent-africa--country-GRC-part-0005",
+        "continent-africa--country-GRC-part-0006",
+        "continent-africa--country-GRC-part-0007",
+        "continent-africa--country-GRC-part-0008",
+        "continent-africa--country-GRC-part-0009",
+        "continent-africa--country-GRC-part-0010",
+        "continent-africa--country-GRC-part-0012",
+        "continent-africa--country-GRC-part-0013",
+        "continent-africa--country-GRC-part-0014",
+        "continent-africa--country-GRC-part-0015",
+        "continent-africa--country-GRC-part-0016",
+        "continent-africa--country-GRC-part-0017",
+        "continent-africa--country-GRC-part-0018",
+        "continent-africa--country-GRC-part-0019",
+        "continent-africa--country-GRC-part-0020",
+        "continent-africa--country-GRC-part-0021",
+        "continent-africa--country-GRC-part-0022",
+        "continent-africa--country-GRC-part-0023",
+        "continent-africa--country-GRC-part-0024",
+        "continent-africa--country-GRC-part-0025",
+        "continent-africa--country-GRC-part-0026",
+        "continent-africa--country-GRC-part-0027",
+        "continent-africa--country-GRC-part-0028",
+        "continent-africa--country-GRC-part-0029",
+        "continent-africa--country-GRC-part-0030",
+        "continent-africa--country-GRC-part-0031",
+        "continent-africa--country-GRC-part-0032",
+        "continent-africa--country-GRC-part-0033",
+        "continent-africa--country-GRC-part-0035",
+        "continent-africa--country-GRC-part-0036",
+        "continent-africa--country-GRC-part-0037",
+        "continent-africa--country-GRC-part-0038",
+        "continent-africa--country-GRC-part-0039",
+        "continent-africa--country-GRC-part-0040"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            262.74941726229673,
+            21.456752481030748
+          ],
+          [
+            263.18641322998263,
+            21.992974525820614
+          ]
+        ],
+        [
+          [
+            224.1156100525616,
+            11.926075301769089
+          ],
+          [
+            226.38484266366703,
+            14.027815833111731
+          ]
+        ],
+        [
+          [
+            225.5047595402393,
+            14.760712569383344
+          ],
+          [
+            227.45068623376622,
+            16.13692088107166
+          ]
+        ],
+        [
+          [
+            225.16775364679415,
+            10.006794957357585
+          ],
+          [
+            226.02499481501178,
+            11.366761833316275
+          ]
+        ],
+        [
+          [
+            225.5260786984354,
+            11.87912845730645
+          ],
+          [
+            226.22801016300235,
+            12.738651222415342
+          ]
+        ],
+        [
+          [
+            220.44758184026998,
+            4.934898618672634
+          ],
+          [
+            222.80259002106555,
+            7.239914360977593
+          ]
+        ],
+        [
+          [
+            237.20265752244606,
+            9.015812712138256
+          ],
+          [
+            246.13189224828716,
+            14.55084203620001
+          ]
+        ],
+        [
+          [
+            240.963560760814,
+            8.113142299212598
+          ],
+          [
+            241.9294194539319,
+            8.778537029962138
+          ]
+        ],
+        [
+          [
+            242.24866631189283,
+            7.805823151651481
+          ],
+          [
+            242.92268329604252,
+            8.435434751201512
+          ]
+        ],
+        [
+          [
+            245.47005244299007,
+            9.29978577032415
+          ],
+          [
+            246.5805612606606,
+            10.315636901932692
+          ]
+        ],
+        [
+          [
+            240.0560724883935,
+            14.440706911545107
+          ],
+          [
+            240.74024491747622,
+            14.908153622251717
+          ]
+        ],
+        [
+          [
+            237.386385840679,
+            22.79362273606705
+          ],
+          [
+            238.38117247980364,
+            24.02822651723079
+          ]
+        ],
+        [
+          [
+            259.0331740742407,
+            25.722158889866023
+          ],
+          [
+            259.8797608606197,
+            27.86019188383267
+          ]
+        ],
+        [
+          [
+            258.08711174230496,
+            19.13828623131198
+          ],
+          [
+            258.874314642397,
+            19.876510158502896
+          ]
+        ],
+        [
+          [
+            258.24140278310665,
+            20.08485789467224
+          ],
+          [
+            260.49591675549647,
+            21.01620158789237
+          ]
+        ],
+        [
+          [
+            250.15215432416403,
+            18.571104112076853
+          ],
+          [
+            251.3266154191635,
+            19.957208005726528
+          ]
+        ],
+        [
+          [
+            248.81934312874526,
+            18.81980337048776
+          ],
+          [
+            249.7207402131097,
+            19.63694768217607
+          ]
+        ],
+        [
+          [
+            250.19681957173535,
+            22.326940022497126
+          ],
+          [
+            250.7784656639738,
+            23.021512167706277
+          ]
+        ],
+        [
+          [
+            249.62227813314246,
+            20.6875684793946
+          ],
+          [
+            250.3861349438593,
+            21.367421985888114
+          ]
+        ],
+        [
+          [
+            256.4883463871561,
+            15.374586867368834
+          ],
+          [
+            258.9519668955926,
+            16.240964817670488
+          ]
+        ],
+        [
+          [
+            253.37709538071377,
+            16.08718310829326
+          ],
+          [
+            255.294598262399,
+            16.86017150383475
+          ]
+        ],
+        [
+          [
+            252.13360948317825,
+            19.91711634645668
+          ],
+          [
+            253.80343176930157,
+            20.723601079046915
+          ]
+        ],
+        [
+          [
+            254.87079813641478,
+            21.470202988444584
+          ],
+          [
+            255.86254437877085,
+            22.131278796604903
+          ]
+        ],
+        [
+          [
+            244.51586679455977,
+            16.043531326311438
+          ],
+          [
+            245.15689677308518,
+            16.846216862255858
+          ]
+        ],
+        [
+          [
+            244.9955010786379,
+            17.122066603947218
+          ],
+          [
+            245.5761285080274,
+            17.959261942529906
+          ]
+        ],
+        [
+          [
+            244.76812097842316,
+            20.81952689641065
+          ],
+          [
+            245.86746088557112,
+            21.381636490438666
+          ]
+        ],
+        [
+          [
+            247.72710787524287,
+            16.9469605391144
+          ],
+          [
+            247.97427913938031,
+            17.56642189099088
+          ]
+        ],
+        [
+          [
+            246.71302900910115,
+            14.445779436752218
+          ],
+          [
+            248.22805092299825,
+            15.99328422210857
+          ]
+        ],
+        [
+          [
+            248.25291980938746,
+            16.054190905409513
+          ],
+          [
+            249.6009589749463,
+            16.81068839676854
+          ]
+        ],
+        [
+          [
+            246.56127423090294,
+            19.467938002658713
+          ],
+          [
+            247.0403991835566,
+            20.0226830800695
+          ]
+        ],
+        [
+          [
+            252.66856339666634,
+            11.267281090500035
+          ],
+          [
+            254.30184375171285,
+            13.555041931485789
+          ]
+        ],
+        [
+          [
+            252.65841314899274,
+            7.2066674923816265
+          ],
+          [
+            256.5639665119133,
+            9.338609298292226
+          ]
+        ],
+        [
+          [
+            248.54323872134165,
+            4
+          ],
+          [
+            250.56525835120473,
+            5.007727815113981
+          ]
+        ],
+        [
+          [
+            249.86742246610083,
+            16.94543774210038
+          ],
+          [
+            250.67746212414357,
+            17.445372521525712
+          ]
+        ],
+        [
+          [
+            245.2817557337151,
+            18.49928838122503
+          ],
+          [
+            245.85934276633603,
+            19.019773124450325
+          ]
+        ],
+        [
+          [
+            262.38449169117496,
+            22.535282561407087
+          ],
+          [
+            265.06788351201556,
+            25.265621226710238
+          ]
+        ],
+        [
+          [
+            240.7224806847326,
+            26.57940005808362
+          ],
+          [
+            255.13269323652725,
+            30.326857986297142
+          ]
+        ],
+        [
+          [
+            222.2914967256366,
+            4
+          ],
+          [
+            243.39774918907864,
+            22.466257758870995
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-GHA",
+      "iso3": "GHA",
+      "iso2": "GH",
+      "naturalEarthCode": "GHA",
+      "naturalEarthId": 1159320793,
+      "sourceFeatures": [
+        {
+          "neId": 1159320793,
+          "name": "Ghana",
+          "isoA3": "GHA",
+          "isoA3EH": "GHA"
+        }
+      ],
+      "name": "Ghana",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-GHA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            101.4803384493302,
+            153.85312695776662
+          ],
+          [
+            124.50993031680132,
+            187.13868395296038
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-GMB",
+      "iso3": "GMB",
+      "iso2": "GM",
+      "naturalEarthCode": "GMB",
+      "naturalEarthId": 1159320797,
+      "sourceFeatures": [
+        {
+          "neId": 1159320797,
+          "name": "Gambia",
+          "isoA3": "GMB",
+          "isoA3EH": "GMB"
+        }
+      ],
+      "name": "The Gambia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-GMB-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            30.89683103384803,
+            140.10526354269348
+          ],
+          [
+            46.478713752326456,
+            143.99254853870536
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-GAB",
+      "iso3": "GAB",
+      "iso2": "GA",
+      "naturalEarthCode": "GAB",
+      "naturalEarthId": 1159320693,
+      "sourceFeatures": [
+        {
+          "neId": 1159320693,
+          "name": "Gabon",
+          "isoA3": "GAB",
+          "isoA3EH": "GAB"
+        }
+      ],
+      "name": "Gabon",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-GAB-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            163.57210604356274,
+            199.92526226321706
+          ],
+          [
+            193.59896578218633,
+            232.24445123386846
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-FRA",
+      "iso3": "FRA",
+      "iso2": "FR",
+      "naturalEarthCode": "FRA",
+      "naturalEarthId": 1159320637,
+      "sourceFeatures": [
+        {
+          "neId": 1159320637,
+          "name": "France",
+          "isoA3": "-99",
+          "isoA3EH": "FRA"
+        }
+      ],
+      "name": "France",
+      "sourcePartCount": 10,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-FRA-part-0004"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            352.4376709553124,
+            277.6514412770222
+          ],
+          [
+            353.37612449943754,
+            279.37658838981486
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-ETH",
+      "iso3": "ETH",
+      "iso2": "ET",
+      "naturalEarthCode": "ETH",
+      "naturalEarthId": 1159320617,
+      "sourceFeatures": [
+        {
+          "neId": 1159320617,
+          "name": "Ethiopia",
+          "isoA3": "ETH",
+          "isoA3EH": "ETH"
+        }
+      ],
+      "name": "Ethiopia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-ETH-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            289.8436869847633,
+            134.69914704161977
+          ],
+          [
+            367.6949796249105,
+            193.92810822210856
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-ERI",
+      "iso3": "ERI",
+      "iso2": "ER",
+      "naturalEarthCode": "ERI",
+      "naturalEarthId": 1159320581,
+      "sourceFeatures": [
+        {
+          "neId": 1159320581,
+          "name": "Eritrea",
+          "isoA3": "ERI",
+          "isoA3EH": "ERI"
+        }
+      ],
+      "name": "Eritrea",
+      "sourcePartCount": 3,
+      "visiblePartCount": 3,
+      "partIds": [
+        "continent-africa--country-ERI-part-0001",
+        "continent-africa--country-ERI-part-0002",
+        "continent-africa--country-ERI-part-0003"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            307.6590191831475,
+            118.31331585315466
+          ],
+          [
+            342.42837815482153,
+            147.56617373064728
+          ]
+        ],
+        [
+          [
+            326.209784380407,
+            128.1911543707945
+          ],
+          [
+            326.80209005174356,
+            128.80832892852027
+          ]
+        ],
+        [
+          [
+            325.91794267143877,
+            129.30902250782285
+          ],
+          [
+            328.35162176827896,
+            130.9308792866346
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-GNQ",
+      "iso3": "GNQ",
+      "iso2": "GQ",
+      "naturalEarthCode": "GNQ",
+      "naturalEarthId": 1159320801,
+      "sourceFeatures": [
+        {
+          "neId": 1159320801,
+          "name": "Eq. Guinea",
+          "isoA3": "GNQ",
+          "isoA3EH": "GNQ"
+        }
+      ],
+      "name": "Equatorial Guinea",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "continent-africa--country-GNQ-part-0001",
+        "continent-africa--country-GNQ-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            162.17483323939052,
+            192.35751201308923
+          ],
+          [
+            164.85873439165562,
+            195.1703259883423
+          ]
+        ],
+        [
+          [
+            167.12086234911544,
+            199.91358921852947
+          ],
+          [
+            177.25247265037325,
+            206.9004521762961
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-EGY",
+      "iso3": "EGY",
+      "iso2": "EG",
+      "naturalEarthCode": "EGY",
+      "naturalEarthId": 1159320575,
+      "sourceFeatures": [
+        {
+          "neId": 1159320575,
+          "name": "Egypt",
+          "isoA3": "EGY",
+          "isoA3EH": "EGY"
+        }
+      ],
+      "name": "Egypt",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-EGY-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            246.72876631066572,
+            47.37123391757845
+          ],
+          [
+            309.96987144779627,
+            97.57731615175372
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-DJI",
+      "iso3": "DJI",
+      "iso2": "DJ",
+      "naturalEarthCode": "DJI",
+      "naturalEarthId": 1159320541,
+      "sourceFeatures": [
+        {
+          "neId": 1159320541,
+          "name": "Djibouti",
+          "isoA3": "DJI",
+          "isoA3EH": "DJI"
+        }
+      ],
+      "name": "Djibouti",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-DJI-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            335.4014183405256,
+            145.84051728643007
+          ],
+          [
+            343.9515233852132,
+            155.0270787213416
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-NE-CYN-1159320531",
+      "iso3": null,
+      "iso2": null,
+      "naturalEarthCode": "CYN",
+      "naturalEarthId": 1159320531,
+      "sourceFeatures": [
+        {
+          "neId": 1159320531,
+          "name": "N. Cyprus",
+          "isoA3": "-99",
+          "isoA3EH": "-99"
+        }
+      ],
+      "name": "Turkish Republic of Northern Cyprus",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-NE-CYN-1159320531-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            288.35607021985885,
+            26.54539438961035
+          ],
+          [
+            297.9364903691584,
+            29.984519704673232
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-CYP",
+      "iso3": "CYP",
+      "iso2": "CY",
+      "naturalEarthCode": "CYP",
+      "naturalEarthId": 1159320533,
+      "sourceFeatures": [
+        {
+          "neId": 1159320533,
+          "name": "Cyprus",
+          "isoA3": "CYP",
+          "isoA3EH": "CYP"
+        }
+      ],
+      "name": "Cyprus",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-CYP-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            286.2162649604254,
+            29.03693457572345
+          ],
+          [
+            295.30740471213824,
+            32.22330157275789
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-CIV",
+      "iso3": "CIV",
+      "iso2": "CI",
+      "naturalEarthCode": "CIV",
+      "naturalEarthId": 1159320507,
+      "sourceFeatures": [
+        {
+          "neId": 1159320507,
+          "name": "Côte d'Ivoire",
+          "isoA3": "CIV",
+          "isoA3EH": "CIV"
+        }
+      ],
+      "name": "Ivory Coast",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "continent-africa--country-CIV-part-0001",
+        "continent-africa--country-CIV-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            101.46739207608141,
+            185.13895522977805
+          ],
+          [
+            102.29722809530628,
+            185.44322878331113
+          ]
+        ],
+        [
+          [
+            73.62475337600983,
+            156.15459297187846
+          ],
+          [
+            105.31610820983742,
+            189.27544881562528
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-COD",
+      "iso3": "COD",
+      "iso2": "CD",
+      "naturalEarthCode": "COD",
+      "naturalEarthId": 1159320513,
+      "sourceFeatures": [
+        {
+          "neId": 1159320513,
+          "name": "Dem. Rep. Congo",
+          "isoA3": "COD",
+          "isoA3EH": "COD"
+        }
+      ],
+      "name": "Democratic Republic of the Congo",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-COD-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            181.81732955598733,
+            184.28196872727267
+          ],
+          [
+            280.8789185961755,
+            281.81331308068303
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-COG",
+      "iso3": "COG",
+      "iso2": "CG",
+      "naturalEarthCode": "COG",
+      "naturalEarthId": 1159320515,
+      "sourceFeatures": [
+        {
+          "neId": 1159320515,
+          "name": "Congo",
+          "isoA3": "COG",
+          "isoA3EH": "COG"
+        }
+      ],
+      "name": "Republic of the Congo",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-COG-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            176.1861197488496,
+            192.72649664382857
+          ],
+          [
+            215.12394584640558,
+            237.8990071303814
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-COM",
+      "iso3": "COM",
+      "iso2": "KM",
+      "naturalEarthCode": "COM",
+      "naturalEarthId": 1159320521,
+      "sourceFeatures": [
+        {
+          "neId": 1159320521,
+          "name": "Comoros",
+          "isoA3": "COM",
+          "isoA3EH": "COM"
+        }
+      ],
+      "name": "Comoros",
+      "sourcePartCount": 3,
+      "visiblePartCount": 3,
+      "partIds": [
+        "continent-africa--country-COM-part-0001",
+        "continent-africa--country-COM-part-0002",
+        "continent-africa--country-COM-part-0003"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            348.1631277643931,
+            274.62850730013287
+          ],
+          [
+            349.75682059433484,
+            276.1105370111463
+          ]
+        ],
+        [
+          [
+            345.10314252500257,
+            275.54157742918494
+          ],
+          [
+            346.28622587340215,
+            276.17144369444725
+          ]
+        ],
+        [
+          [
+            342.9998739993864,
+            270.97519772655687
+          ],
+          [
+            344.376336976787,
+            273.81338991962366
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-TCD",
+      "iso3": "TCD",
+      "iso2": "TD",
+      "naturalEarthCode": "TCD",
+      "naturalEarthId": 1159321301,
+      "sourceFeatures": [
+        {
+          "neId": 1159321301,
+          "name": "Chad",
+          "isoA3": "TCD",
+          "isoA3EH": "TCD"
+        }
+      ],
+      "name": "Chad",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-TCD-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            188.23371013477862,
+            90.0395125104816
+          ],
+          [
+            242.98764903896105,
+            173.0393402769199
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-CAF",
+      "iso3": "CAF",
+      "iso2": "CF",
+      "naturalEarthCode": "CAF",
+      "naturalEarthId": 1159320463,
+      "sourceFeatures": [
+        {
+          "neId": 1159320463,
+          "name": "Central African Rep.",
+          "isoA3": "CAF",
+          "isoA3EH": "CAF"
+        }
+      ],
+      "name": "Central African Republic",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-CAF-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            193.34214840454035,
+            154.74006526638712
+          ],
+          [
+            260.7618709152265,
+            200.09224501155532
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-CMR",
+      "iso3": "CMR",
+      "iso2": "CM",
+      "naturalEarthCode": "CMR",
+      "naturalEarthId": 1159320509,
+      "sourceFeatures": [
+        {
+          "neId": 1159320509,
+          "name": "Cameroon",
+          "isoA3": "CMR",
+          "isoA3EH": "CMR"
+        }
+      ],
+      "name": "Cameroon",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-CMR-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            162.68695039492792,
+            143.9179366822783
+          ],
+          [
+            202.44902545781778,
+            203.17862193434908
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-BDI",
+      "iso3": "BDI",
+      "iso2": "BI",
+      "naturalEarthCode": "BDI",
+      "naturalEarthId": 1159320387,
+      "sourceFeatures": [
+        {
+          "neId": 1159320387,
+          "name": "Burundi",
+          "isoA3": "BDI",
+          "isoA3EH": "BDI"
+        }
+      ],
+      "name": "Burundi",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-BDI-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            269.13382430105327,
+            223.91157604172201
+          ],
+          [
+            278.474681974026,
+            235.04863256120254
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-BFA",
+      "iso3": "BFA",
+      "iso2": "BF",
+      "naturalEarthCode": "BFA",
+      "naturalEarthId": 1159320405,
+      "sourceFeatures": [
+        {
+          "neId": 1159320405,
+          "name": "Burkina Faso",
+          "isoA3": "BFA",
+          "isoA3EH": "BFA"
+        }
+      ],
+      "name": "Burkina Faso",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-BFA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            89.63246315165152,
+            133.52671807505877
+          ],
+          [
+            130.7567918846508,
+            162.9077299756621
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-BWA",
+      "iso3": "BWA",
+      "iso2": "BW",
+      "naturalEarthCode": "BWA",
+      "naturalEarthId": 1159320461,
+      "sourceFeatures": [
+        {
+          "neId": 1159320461,
+          "name": "Botswana",
+          "isoA3": "BWA",
+          "isoA3EH": "BWA"
+        }
+      ],
+      "name": "Botswana",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-BWA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            222.1671470964311,
+            304.3371388436445
+          ],
+          [
+            270.95642002822376,
+            351.45861642049283
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-BEN",
+      "iso3": "BEN",
+      "iso2": "BJ",
+      "naturalEarthCode": "BEN",
+      "naturalEarthId": 1159320399,
+      "sourceFeatures": [
+        {
+          "neId": 1159320399,
+          "name": "Benin",
+          "isoA3": "BEN",
+          "isoA3EH": "BEN"
+        }
+      ],
+      "name": "Benin",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-BEN-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            122.3071862456284,
+            147.52835847100926
+          ],
+          [
+            138.26845850823193,
+            179.58007048491663
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-BHR",
+      "iso3": "BHR",
+      "iso2": "BH",
+      "naturalEarthCode": "BHR",
+      "naturalEarthId": 1159320413,
+      "sourceFeatures": [
+        {
+          "neId": 1159320413,
+          "name": "Bahrain",
+          "isoA3": "BHR",
+          "isoA3EH": "BHR"
+        }
+      ],
+      "name": "Bahrain",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-BHR-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            380.55413246589626,
+            75.4808402429696
+          ],
+          [
+            381.4118829655384,
+            77.7658101556396
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-AZE",
+      "iso3": "AZE",
+      "iso2": "AZ",
+      "naturalEarthCode": "AZE",
+      "naturalEarthId": 1159320381,
+      "sourceFeatures": [
+        {
+          "neId": 1159320381,
+          "name": "Azerbaijan",
+          "isoA3": "AZE",
+          "isoA3EH": "AZE"
+        }
+      ],
+      "name": "Azerbaijan",
+      "sourcePartCount": 3,
+      "visiblePartCount": 2,
+      "partIds": [
+        "continent-africa--country-AZE-part-0001",
+        "continent-africa--country-AZE-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            351.0119795365579,
+            5.220643942325353
+          ],
+          [
+            358.0084834105737,
+            9.83245288966151
+          ]
+        ],
+        [
+          [
+            355.22967510379385,
+            4
+          ],
+          [
+            375.3722785050193,
+            12.322215613048343
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-ARM",
+      "iso3": "ARM",
+      "iso2": "AM",
+      "naturalEarthCode": "ARM",
+      "naturalEarthId": 1159320333,
+      "sourceFeatures": [
+        {
+          "neId": 1159320333,
+          "name": "Armenia",
+          "isoA3": "ARM",
+          "isoA3EH": "ARM"
+        }
+      ],
+      "name": "Armenia",
+      "sourcePartCount": 2,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-ARM-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            349.04140363526864,
+            4
+          ],
+          [
+            360.4528220865119,
+            9.877876937110102
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-AGO",
+      "iso3": "AGO",
+      "iso2": "AO",
+      "naturalEarthCode": "AGO",
+      "naturalEarthId": 1159320323,
+      "sourceFeatures": [
+        {
+          "neId": 1159320323,
+          "name": "Angola",
+          "isoA3": "AGO",
+          "isoA3EH": "AGO"
+        }
+      ],
+      "name": "Angola",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "continent-africa--country-AGO-part-0001",
+        "continent-africa--country-AGO-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            180.80223722425606,
+            234.90855082769195
+          ],
+          [
+            186.2822015846201,
+            241.81978846344202
+          ]
+        ],
+        [
+          [
+            179.3714680830351,
+            242.32124603988132
+          ],
+          [
+            243.3165420104305,
+            305.54357347867875
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-DZA",
+      "iso3": "DZA",
+      "iso2": "DZ",
+      "naturalEarthCode": "DZA",
+      "naturalEarthId": 1159320565,
+      "sourceFeatures": [
+        {
+          "neId": 1159320565,
+          "name": "Algeria",
+          "isoA3": "DZA",
+          "isoA3EH": "DZA"
+        }
+      ],
+      "name": "Algeria",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-DZA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            73.21008483485019,
+            19.111639882196528
+          ],
+          [
+            180.53983798997854,
+            113.21198223703851
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-africa--country-ALB",
+      "iso3": "ALB",
+      "iso2": "AL",
+      "naturalEarthCode": "ALB",
+      "naturalEarthId": 1159320325,
+      "sourceFeatures": [
+        {
+          "neId": 1159320325,
+          "name": "Albania",
+          "isoA3": "ALB",
+          "isoA3EH": "ALB"
+        }
+      ],
+      "name": "Albania",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-africa--country-ALB-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            221.66426859386257,
+            4
+          ],
+          [
+            224.27244255322628,
+            5.800767237549792
+          ]
+        ]
+      ]
+    }
+  ],
+  "roles": {
+    "lakes": 33,
+    "rivers": 91,
+    "coastline": 100,
+    "national-boundaries": 155,
+    "admin-boundaries": 0
+  },
+  "svgGroupIds": {
+    "sea": "continent-africa--sea",
+    "country-fills": "continent-africa--country-fills",
+    "highlights": "continent-africa--highlights",
+    "lakes": "continent-africa--lakes",
+    "rivers": "continent-africa--rivers",
+    "coastline": "continent-africa--coastline",
+    "national-boundaries": "continent-africa--national-boundaries",
+    "admin-boundaries": "continent-africa--admin-boundaries",
+    "graticule": "continent-africa--graticule",
+    "frame": "continent-africa--frame"
+  },
+  "style": {
+    "countryFill": "#FFFFFF",
+    "sea": "#EEEEEE",
+    "highlight": "#AAAAAA",
+    "stroke": "#000000",
+    "coastWidthPx": 0.4,
+    "nationalDashPx": [
+      1.4,
+      1.1
+    ]
+  },
+  "highlightEdit": "Set fill on country-ISO group (including every child part). Keep coastline/national boundaries above country-fills; a separate overlay can be placed in highlights below line layers.",
+  "controlPoints": [
+    {
+      "lonlat": [
+        16.5,
+        1
+      ],
+      "xy": [
+        204.09448818897638,
+        206.6931179057163
+      ],
+      "expectedXY": [
+        204.09448818897638,
+        206.6931179057163
+      ],
+      "errorPx": 0
+    },
+    {
+      "lonlat": [
+        35.75,
+        1
+      ],
+      "xy": [
+        304.1417322834646,
+        206.6931179057163
+      ],
+      "expectedXY": [
+        304.14173228346453,
+        206.6931179057163
+      ],
+      "errorPx": 5.684341886080802e-14
+    },
+    {
+      "lonlat": [
+        16.5,
+        20.5
+      ],
+      "xy": [
+        204.09448818897638,
+        105.34655895285813
+      ],
+      "expectedXY": [
+        204.09448818897638,
+        105.34655895285815
+      ],
+      "errorPx": 1.4210854715202004e-14
+    },
+    {
+      "lonlat": [
+        -22,
+        -38
+      ],
+      "xy": [
+        4.000000000000028,
+        409.3862358114326
+      ],
+      "expectedXY": [
+        4.000000000000028,
+        409.3862358114326
+      ],
+      "errorPx": 0
+    },
+    {
+      "lonlat": [
+        55,
+        40
+      ],
+      "xy": [
+        404.1889763779527,
+        3.9999999999999716
+      ],
+      "expectedXY": [
+        404.1889763779527,
+        4
+      ],
+      "errorPx": 2.842170943040401e-14
+    }
+  ],
+  "gaps": [
+    "Natural Earth is generalized cartography, not survey-grade or current local coastal/hydrological mapping.",
+    "Boundary policy follows pinned Natural Earth de facto country dataset; disputed territories are not independently adjudicated.",
+    "Country direct-fill is supported by standard SVG; no installed map core API is claimed."
+  ],
+  "nativeValidation": {
+    "status": "nativeVerified",
+    "appVersion": "1.1.8",
+    "verifiedAt": "2026-10-03T15:40:43.997803+00:00",
+    "sourceSha256": "e1b11f3a2df1e9d74a47e7308ecfc55398b87ac8eed85e666086258290fc017e",
+    "saveReopenExportVerified": true,
+    "visualReview": "passed",
+    "outputs": {
+      "vectora": {
+        "sha256": "ad4630edf129776021360b149dc64e5e816e17a9ebb25d3950dac6b2f44970cd",
+        "bytes": 4662619
+      },
+      "jpeg": {
+        "sha256": "20f3f6d659bd322f1106f1a9d0b035a9819f3ed14a4dc848ec1418e08cc3fea8",
+        "bytes": 260968,
+        "scale": 4
+      }
+    },
+    "preservationSummary": {
+      "primitiveIds": {
+        "sourceCount": 560,
+        "exactMatchesAfterReopen": 560
+      },
+      "groupNames": {
+        "sourceCount": 89,
+        "preservedAfterReopen": 89
+      },
+      "hiddenPaths": {
+        "sourceCount": 92,
+        "missingOrVisible": 0
+      },
+      "strokeColors": "preserved",
+      "objectCount": "preserved",
+      "artboardWidthMm": 108,
+      "widthPreserved": true,
+      "structuralIssueCount": 0
+    },
+    "evidence": {
+      "nativeSummarySha256": "68a755e35729ab7a962fd30605a31a3dea81c3d3647a335f0a3878878d262140",
+      "visualReviewSha256": "bb58c495c5d9a7738ba24aff07111a506312d65719b99c9991d5c05592787db2",
+      "runtimeFileDependency": false,
+      "summary": "Source-hash matched native save/reopen/JPEG and parent visual review; structural issues 0."
+    },
+    "nativeArtifactsIncludedInLibrary": false
+  },
+  "approvedOriginal": {
+    "file": "../world_continents.vectora",
+    "sha256": "3d968c1772c1b25f37a36af0681b15b7696a5bef4938dca9dbf5306ea6064e0b",
+    "modified": false
+  }
+}

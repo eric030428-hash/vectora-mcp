@@ -1,0 +1,4476 @@
+{
+  "schema": "vectora-map-template/v1",
+  "id": "continent-europe",
+  "title": "유럽",
+  "svg": "continent-europe.svg",
+  "sourceKind": "reprojected-geographic-data",
+  "originalDownloadedSvg": false,
+  "status": "nativeVerified",
+  "sha256": "c08f69e0cab2839485719718cbdc043005f201a26cdf3c98f282f7b531620db6",
+  "bytes": 676076,
+  "source": {
+    "repository": "https://github.com/nvkelso/natural-earth-vector",
+    "commit": "ca96624a56bd078437bca8184e78163e5039ad19",
+    "resolution": "50m",
+    "license": "public-domain",
+    "rightsURL": "https://www.naturalearthdata.com/about/terms-of-use/",
+    "datasets": [
+      {
+        "file": "ne_50m_coastline.geojson",
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_50m_coastline.geojson",
+        "sha256": "271f1c4c1908312bac6b29d158ea1356544beafc129f260005300913aa5ea283",
+        "bytes": 1640858,
+        "revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "kind": "geographic-data"
+      },
+      {
+        "file": "ne_50m_rivers_lake_centerlines.geojson",
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_50m_rivers_lake_centerlines.geojson",
+        "sha256": "f286e0ce978fde999ca2d7a78c764be08542e19b63cded52b05c12d5173ccc51",
+        "bytes": 827318,
+        "revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "kind": "geographic-data"
+      },
+      {
+        "file": "ne_50m_admin_0_boundary_lines_land.geojson",
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_50m_admin_0_boundary_lines_land.geojson",
+        "sha256": "2faac4f6b34386f3d21b6e018cf151f241f00e5c936d44dd17d7d9bfb147fa48",
+        "bytes": 760189,
+        "revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "kind": "geographic-data"
+      },
+      {
+        "file": "ne_50m_lakes.geojson",
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_50m_lakes.geojson",
+        "sha256": "d350b75978b26fe839b797c2c529b2fb8f47fb3983c03f4964e36d5df9378a52",
+        "bytes": 876018,
+        "revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "kind": "geographic-data"
+      },
+      {
+        "file": "ne_50m_admin_0_countries.geojson",
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_50m_admin_0_countries.geojson",
+        "sha256": "3e458fc036ad0a66411f2c1e6cac49c5d7bfb81cb1123bc513b22511a2b7fdeb",
+        "bytes": 3083490,
+        "revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "kind": "geographic-data"
+      }
+    ]
+  },
+  "projection": {
+    "name": "Equirectangular",
+    "implementation": "d3-geo@3.1.1",
+    "inputCRS": "WGS84 geographic longitude/latitude degrees",
+    "centralMeridian": 12.5,
+    "rotation": [
+      -12.5,
+      0,
+      0
+    ],
+    "center": [
+      0,
+      52.50000000000001
+    ],
+    "scale": 305.7218580548972,
+    "translate": [
+      204.09448818897638,
+      113.38498687664043
+    ],
+    "clipAngle": 0,
+    "clipExtent": [
+      [
+        4,
+        4
+      ],
+      [
+        404.18897637795277,
+        222.76997375328085
+      ]
+    ],
+    "extentLonLat": [
+      -25,
+      32,
+      50,
+      73
+    ],
+    "units": "SVG viewBox px at 96px/in",
+    "antimeridian": "d3 spherical antimeridian preclip after rotation",
+    "latitudeOrientation": "north-up; pole north/south use registered rotation"
+  },
+  "widthMm": 108,
+  "heightMm": 59.99955555555556,
+  "viewBox": [
+    0,
+    0,
+    408.18897637795277,
+    226.76997375328085
+  ],
+  "targetISO": null,
+  "countries": [
+    {
+      "id": "continent-europe--country-VAT",
+      "iso3": "VAT",
+      "iso2": "VA",
+      "naturalEarthCode": "VAT",
+      "naturalEarthId": 1159321407,
+      "sourceFeatures": [
+        {
+          "neId": 1159321407,
+          "name": "Vatican",
+          "isoA3": "VAT",
+          "isoA3EH": "VAT"
+        }
+      ],
+      "name": "Vatican City",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-VAT-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            203.70784694341208,
+            169.91194124682417
+          ],
+          [
+            203.76985489133858,
+            169.95805368860897
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-JEY",
+      "iso3": "JEY",
+      "iso2": "JE",
+      "naturalEarthCode": "JEY",
+      "naturalEarthId": 1159320725,
+      "sourceFeatures": [
+        {
+          "neId": 1159320725,
+          "name": "Jersey",
+          "isoA3": "JEY",
+          "isoA3EH": "JEY"
+        }
+      ],
+      "name": "Jersey",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-JEY-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            125.46621184671916,
+            130.63923063853025
+          ],
+          [
+            126.67173044745408,
+            131.1543165379528
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-GGY",
+      "iso3": "GGY",
+      "iso2": "GG",
+      "naturalEarthCode": "GGY",
+      "naturalEarthId": 1159320715,
+      "sourceFeatures": [
+        {
+          "neId": 1159320715,
+          "name": "Guernsey",
+          "isoA3": "GGY",
+          "isoA3EH": "GGY"
+        }
+      ],
+      "name": "Guernsey",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-GGY-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            123.2768953457218,
+            129.3573719886615
+          ],
+          [
+            123.99103524199477,
+            129.77293355758536
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-IMN",
+      "iso3": "IMN",
+      "iso2": "IM",
+      "naturalEarthCode": "IMN",
+      "naturalEarthId": 1159320721,
+      "sourceFeatures": [
+        {
+          "neId": 1159320721,
+          "name": "Isle of Man",
+          "isoA3": "IMN",
+          "isoA3EH": "IMN"
+        }
+      ],
+      "name": "Isle of Man",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-IMN-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            111.86239054614175,
+            103.20856538876643
+          ],
+          [
+            114.24945909585303,
+            105.0680407995801
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-GBR",
+      "iso3": "GBR",
+      "iso2": "GB",
+      "naturalEarthCode": "GBR",
+      "naturalEarthId": 1159320713,
+      "sourceFeatures": [
+        {
+          "neId": 1159320713,
+          "name": "United Kingdom",
+          "isoA3": "GBR",
+          "isoA3EH": "GBR"
+        }
+      ],
+      "name": "United Kingdom",
+      "sourcePartCount": 23,
+      "visiblePartCount": 23,
+      "partIds": [
+        "continent-europe--country-GBR-part-0001",
+        "continent-europe--country-GBR-part-0002",
+        "continent-europe--country-GBR-part-0003",
+        "continent-europe--country-GBR-part-0004",
+        "continent-europe--country-GBR-part-0005",
+        "continent-europe--country-GBR-part-0006",
+        "continent-europe--country-GBR-part-0007",
+        "continent-europe--country-GBR-part-0008",
+        "continent-europe--country-GBR-part-0009",
+        "continent-europe--country-GBR-part-0010",
+        "continent-europe--country-GBR-part-0011",
+        "continent-europe--country-GBR-part-0012",
+        "continent-europe--country-GBR-part-0013",
+        "continent-europe--country-GBR-part-0014",
+        "continent-europe--country-GBR-part-0015",
+        "continent-europe--country-GBR-part-0016",
+        "continent-europe--country-GBR-part-0017",
+        "continent-europe--country-GBR-part-0018",
+        "continent-europe--country-GBR-part-0019",
+        "continent-europe--country-GBR-part-0020",
+        "continent-europe--country-GBR-part-0021",
+        "continent-europe--country-GBR-part-0022",
+        "continent-europe--country-GBR-part-0023"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            104.6678518232021,
+            80.56949081364831
+          ],
+          [
+            146.71583029585304,
+            126.6105015340683
+          ]
+        ],
+        [
+          [
+            113.02283719643044,
+            108.4798065629397
+          ],
+          [
+            115.78950900157481,
+            110.00109560944884
+          ]
+        ],
+        [
+          [
+            123.19195923737534,
+            77.07904256167984
+          ],
+          [
+            124.55302328944882,
+            77.47375695286092
+          ]
+        ],
+        [
+          [
+            131.1772446983727,
+            69.5231278572179
+          ],
+          [
+            132.1050268136483,
+            70.6859169469817
+          ]
+        ],
+        [
+          [
+            128.51869328293964,
+            70.11351331443575
+          ],
+          [
+            131.7806549728084,
+            74.01353097238848
+          ]
+        ],
+        [
+          [
+            132.3908364447244,
+            68.92727315065616
+          ],
+          [
+            133.2649452144882,
+            69.7167072688714
+          ]
+        ],
+        [
+          [
+            119.24999643884516,
+            79.13417836682419
+          ],
+          [
+            120.54279358740159,
+            79.87072350992128
+          ]
+        ],
+        [
+          [
+            121.19961575055119,
+            79.57866025910766
+          ],
+          [
+            121.94136868619424,
+            80.09661151160111
+          ]
+        ],
+        [
+          [
+            119.50141649721785,
+            77.93387289448822
+          ],
+          [
+            122.6562929528609,
+            79.28607409469822
+          ]
+        ],
+        [
+          [
+            121.11102991874017,
+            76.84976629333335
+          ],
+          [
+            122.88322144587927,
+            77.83799295160105
+          ]
+        ],
+        [
+          [
+            101.81389613438321,
+            91.12187116934388
+          ],
+          [
+            102.80030326677165,
+            91.61767863181109
+          ]
+        ],
+        [
+          [
+            108.62179894761155,
+            96.21985186015752
+          ],
+          [
+            110.21161101858267,
+            97.65437993658799
+          ]
+        ],
+        [
+          [
+            103.642626360105,
+            91.24197588493445
+          ],
+          [
+            106.65732995695538,
+            93.16892849301843
+          ]
+        ],
+        [
+          [
+            102.73647045711287,
+            95.07999093081372
+          ],
+          [
+            105.08601728839895,
+            96.80684371485569
+          ]
+        ],
+        [
+          [
+            104.99716999979005,
+            94.06753416398954
+          ],
+          [
+            106.84778789459318,
+            95.75634765186356
+          ]
+        ],
+        [
+          [
+            99.53522010288715,
+            81.3547576306562
+          ],
+          [
+            104.3447819304987,
+            85.3717585301838
+          ]
+        ],
+        [
+          [
+            103.07282662383203,
+            89.10399028997381
+          ],
+          [
+            103.99096685270342,
+            89.63079905847775
+          ]
+        ],
+        [
+          [
+            101.3199135336483,
+            85.7880991336483
+          ],
+          [
+            107.14923157501313,
+            89.1365550009449
+          ]
+        ],
+        [
+          [
+            97.29405511811025,
+            85.72947945238855
+          ],
+          [
+            99.55033123863518,
+            86.52803254341205
+          ]
+        ],
+        [
+          [
+            97.79168744230972,
+            87.32632951349086
+          ],
+          [
+            98.72441589333334,
+            88.78795305154858
+          ]
+        ],
+        [
+          [
+            97.14815155317586,
+            89.27256055853019
+          ],
+          [
+            97.91674382950133,
+            89.63158342887147
+          ]
+        ],
+        [
+          [
+            93.93674173480316,
+            98.75516107842526
+          ],
+          [
+            108.20702174908136,
+            105.10763816482944
+          ]
+        ],
+        [
+          [
+            129.0541034465092,
+            122.5974118148032
+          ],
+          [
+            131.71056854341208,
+            123.58433652493443
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-UKR",
+      "iso3": "UKR",
+      "iso2": "UA",
+      "naturalEarthCode": "UKR",
+      "naturalEarthId": 1159321345,
+      "sourceFeatures": [
+        {
+          "neId": 1159321345,
+          "name": "Ukraine",
+          "isoA3": "UKR",
+          "isoA3EH": "UKR"
+        }
+      ],
+      "name": "Ukraine",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "continent-europe--country-UKR-part-0001",
+        "continent-europe--country-UKR-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            255.48854938204724,
+            114.16634784923889
+          ],
+          [
+            351.51514285354335,
+            152.15459591139114
+          ]
+        ],
+        [
+          [
+            305.5225923502362,
+            146.07698462152234
+          ],
+          [
+            308.94452291359585,
+            147.24264440021003
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-TUR",
+      "iso3": "TUR",
+      "iso2": "TR",
+      "naturalEarthCode": "TUR",
+      "naturalEarthId": 1159321331,
+      "sourceFeatures": [
+        {
+          "neId": 1159321331,
+          "name": "Turkey",
+          "isoA3": "TUR",
+          "isoA3EH": "TUR"
+        }
+      ],
+      "name": "Turkey",
+      "sourcePartCount": 3,
+      "visiblePartCount": 3,
+      "partIds": [
+        "continent-europe--country-TUR-part-0001",
+        "continent-europe--country-TUR-part-0002",
+        "continent-europe--country-TUR-part-0003"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            274.3620431160105,
+            178.8132806181628
+          ],
+          [
+            276.00605144608926,
+            179.5203825243045
+          ]
+        ],
+        [
+          [
+            276.6407244833596,
+            169.07378545469817
+          ],
+          [
+            376.5342533240945,
+            202.32594638530185
+          ]
+        ],
+        [
+          [
+            276.33641544986875,
+            168.91381124535434
+          ],
+          [
+            292.4414178528084,
+            179.6808743113911
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-TUN",
+      "iso3": "TUN",
+      "iso2": "TN",
+      "naturalEarthCode": "TUN",
+      "naturalEarthId": 1159321327,
+      "sourceFeatures": [
+        {
+          "neId": 1159321327,
+          "name": "Tunisia",
+          "isoA3": "TUN",
+          "isoA3EH": "TUN"
+        }
+      ],
+      "name": "Tunisia",
+      "sourcePartCount": 3,
+      "visiblePartCount": 3,
+      "partIds": [
+        "continent-europe--country-TUN-part-0001",
+        "continent-europe--country-TUN-part-0002",
+        "continent-europe--country-TUN-part-0003"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            177.39177202309713,
+            194.27448567517064
+          ],
+          [
+            198.95039505637797,
+            222.76997375328085
+          ]
+        ],
+        [
+          [
+            196.7503961776378,
+            207.72120345532812
+          ],
+          [
+            197.59037683149606,
+            208.46087540829402
+          ]
+        ],
+        [
+          [
+            194.60771503202102,
+            212.66859036640426
+          ],
+          [
+            196.2913260632021,
+            213.76754664650923
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-SYR",
+      "iso3": "SYR",
+      "iso2": "SY",
+      "naturalEarthCode": "SYR",
+      "naturalEarthId": 1159321295,
+      "sourceFeatures": [
+        {
+          "neId": 1159321295,
+          "name": "Syria",
+          "isoA3": "SYR",
+          "isoA3EH": "SYR"
+        }
+      ],
+      "name": "Syria",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-SYR-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            328.2301899498163,
+            194.5045409780578
+          ],
+          [
+            363.41816100451445,
+            221.07698762834653
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-CHE",
+      "iso3": "CHE",
+      "iso2": "CH",
+      "naturalEarthCode": "CHE",
+      "naturalEarthId": 1159320491,
+      "sourceFeatures": [
+        {
+          "neId": 1159320491,
+          "name": "Switzerland",
+          "isoA3": "CHE",
+          "isoA3EH": "CHE"
+        }
+      ],
+      "name": "Switzerland",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-CHE-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            169.25147469606299,
+            138.5935041217848
+          ],
+          [
+            193.18048106666666,
+            148.97497176944884
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-SWE",
+      "iso3": "SWE",
+      "iso2": "SE",
+      "naturalEarthCode": "SWE",
+      "naturalEarthId": 1159321287,
+      "sourceFeatures": [
+        {
+          "neId": 1159321287,
+          "name": "Sweden",
+          "isoA3": "SWE",
+          "isoA3EH": "SWE"
+        }
+      ],
+      "name": "Sweden",
+      "sourcePartCount": 6,
+      "visiblePartCount": 6,
+      "partIds": [
+        "continent-europe--country-SWE-part-0001",
+        "continent-europe--country-SWE-part-0002",
+        "continent-europe--country-SWE-part-0003",
+        "continent-europe--country-SWE-part-0004",
+        "continent-europe--country-SWE-part-0005",
+        "continent-europe--country-SWE-part-0006"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            234.0023605534908,
+            84.4887869085565
+          ],
+          [
+            239.18553880944881,
+            89.79780592209977
+          ]
+        ],
+        [
+          [
+            224.8730521977953,
+            87.53241616461946
+          ],
+          [
+            228.73372861144358,
+            93.42790411926512
+          ]
+        ],
+        [
+          [
+            196.8759754784252,
+            25.146705851968534
+          ],
+          [
+            266.28635763317584,
+            98.19708421123363
+          ]
+        ],
+        [
+          [
+            238.98700772619424,
+            84.1373196060893
+          ],
+          [
+            240.54607461207348,
+            84.78345939149608
+          ]
+        ],
+        [
+          [
+            235.3087054328609,
+            78.12641181480319
+          ],
+          [
+            236.03248721553808,
+            78.59746625511815
+          ]
+        ],
+        [
+          [
+            236.35034397984253,
+            75.77894596619427
+          ],
+          [
+            237.16844230047244,
+            76.36880850981635
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-ESP",
+      "iso3": "ESP",
+      "iso2": "ES",
+      "naturalEarthCode": "ESP",
+      "naturalEarthId": 1159320587,
+      "sourceFeatures": [
+        {
+          "neId": 1159320587,
+          "name": "Spain",
+          "isoA3": "ESP",
+          "isoA3EH": "ESP"
+        }
+      ],
+      "name": "Spain",
+      "sourcePartCount": 12,
+      "visiblePartCount": 5,
+      "partIds": [
+        "continent-europe--country-ESP-part-0001",
+        "continent-europe--country-ESP-part-0002",
+        "continent-europe--country-ESP-part-0003",
+        "continent-europe--country-ESP-part-0004",
+        "continent-europe--country-ESP-part-0005"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            144.87694060598426,
+            186.65578398824152
+          ],
+          [
+            145.90138169868766,
+            187.23939291212602
+          ]
+        ],
+        [
+          [
+            150.04240382992128,
+            180.24051458351707
+          ],
+          [
+            155.8680668119685,
+            183.8114701858268
+          ]
+        ],
+        [
+          [
+            157.90027979254594,
+            179.6824377163255
+          ],
+          [
+            160.45825571443572,
+            180.9887879315486
+          ]
+        ],
+        [
+          [
+            143.92388789081366,
+            184.77312429606303
+          ],
+          [
+            146.05979250309713,
+            186.1805622467192
+          ]
+        ],
+        [
+          [
+            88.11628120944881,
+            159.9960587901313
+          ],
+          [
+            155.04059339758533,
+            201.2882136827297
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-SVK",
+      "iso3": "SVK",
+      "iso2": "SK",
+      "naturalEarthCode": "SVK",
+      "naturalEarthId": 1159321283,
+      "sourceFeatures": [
+        {
+          "neId": 1159321283,
+          "name": "Slovakia",
+          "isoA3": "SVK",
+          "isoA3EH": "SVK"
+        }
+      ],
+      "name": "Slovakia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-SVK-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            227.37318747296587,
+            128.8712064125985
+          ],
+          [
+            257.6593664806299,
+            138.6586388795801
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-SVN",
+      "iso3": "SVN",
+      "iso2": "SI",
+      "naturalEarthCode": "SVN",
+      "naturalEarthId": 1159321285,
+      "sourceFeatures": [
+        {
+          "neId": 1159321285,
+          "name": "Slovenia",
+          "isoA3": "SVN",
+          "isoA3EH": "SVN"
+        }
+      ],
+      "name": "Slovenia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-SVN-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            208.7805570343307,
+            143.46169096650922
+          ],
+          [
+            225.52439977574804,
+            151.11817049280842
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-SRB",
+      "iso3": "SRB",
+      "iso2": "RS",
+      "naturalEarthCode": "SRB",
+      "naturalEarthId": 1159321267,
+      "sourceFeatures": [
+        {
+          "neId": 1159321267,
+          "name": "Serbia",
+          "isoA3": "SRB",
+          "isoA3EH": "SRB"
+        }
+      ],
+      "name": "Serbia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-SRB-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            237.9187966311811,
+            147.16526385973756
+          ],
+          [
+            259.99744656377953,
+            168.11942545553808
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-SAU",
+      "iso3": "SAU",
+      "iso2": "SA",
+      "naturalEarthCode": "SAU",
+      "naturalEarthId": 1159321225,
+      "sourceFeatures": [
+        {
+          "neId": 1159321225,
+          "name": "Saudi Arabia",
+          "isoA3": "SAU",
+          "isoA3EH": "SAU"
+        }
+      ],
+      "name": "Saudi Arabia",
+      "sourcePartCount": 4,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-SAU-part-0003"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            345.3685218447018,
+            222.10559602225726
+          ],
+          [
+            350.7978862582191,
+            222.76997375328085
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-SMR",
+      "iso3": "SMR",
+      "iso2": "SM",
+      "naturalEarthCode": "SMR",
+      "naturalEarthId": 1159321255,
+      "sourceFeatures": [
+        {
+          "neId": 1159321255,
+          "name": "San Marino",
+          "isoA3": "SMR",
+          "isoA3EH": "SMR"
+        }
+      ],
+      "name": "San Marino",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-SMR-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            203.5442283464567,
+            158.79445136965884
+          ],
+          [
+            204.1726477639895,
+            159.30484705427824
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-RUS",
+      "iso3": "RUS",
+      "iso2": "RU",
+      "naturalEarthCode": "RUS",
+      "naturalEarthId": 1159321201,
+      "sourceFeatures": [
+        {
+          "neId": 1159321201,
+          "name": "Russia",
+          "isoA3": "RUS",
+          "isoA3EH": "RUS"
+        }
+      ],
+      "name": "Russia",
+      "sourcePartCount": 101,
+      "visiblePartCount": 7,
+      "partIds": [
+        "continent-europe--country-RUS-part-0019",
+        "continent-europe--country-RUS-part-0032",
+        "continent-europe--country-RUS-part-0033",
+        "continent-europe--country-RUS-part-0059",
+        "continent-europe--country-RUS-part-0060",
+        "continent-europe--country-RUS-part-0100",
+        "continent-europe--country-RUS-part-0101"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            283.34232643275595,
+            20.254811812283492
+          ],
+          [
+            404.18897637795277,
+            173.6840318286615
+          ]
+        ],
+        [
+          [
+            326.9733457788976,
+            45.632678360525006
+          ],
+          [
+            328.73146666162734,
+            46.81136295643057
+          ]
+        ],
+        [
+          [
+            363.9569594347507,
+            37.10625736566931
+          ],
+          [
+            365.31020112629926,
+            37.67944536860898
+          ]
+        ],
+        [
+          [
+            393.07747866372705,
+            149.9512141018373
+          ],
+          [
+            393.4484858599475,
+            150.89618833553808
+          ]
+        ],
+        [
+          [
+            395.00495418540686,
+            22.61556393490821
+          ],
+          [
+            404.18897637795277,
+            26.767263108031557
+          ]
+        ],
+        [
+          [
+            242.00249569343833,
+            98.5157253459318
+          ],
+          [
+            259.2205196850394,
+            103.51313587905514
+          ]
+        ],
+        [
+          [
+            310.8542780674016,
+            146.8964222412599
+          ],
+          [
+            332.5551496062992,
+            156.67157157459323
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-ROU",
+      "iso3": "ROU",
+      "iso2": "RO",
+      "naturalEarthCode": "ROU",
+      "naturalEarthId": 1159321199,
+      "sourceFeatures": [
+        {
+          "neId": 1159321199,
+          "name": "Romania",
+          "isoA3": "ROU",
+          "isoA3EH": "ROU"
+        }
+      ],
+      "name": "Romania",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-ROU-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            245.4035790790551,
+            135.99045091359585
+          ],
+          [
+            295.90242286782154,
+            160.49629501060372
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-PRT",
+      "iso3": "PRT",
+      "iso2": "PT",
+      "naturalEarthCode": "PRT",
+      "naturalEarthId": 1159321187,
+      "sourceFeatures": [
+        {
+          "neId": 1159321187,
+          "name": "Portugal",
+          "isoA3": "PRT",
+          "isoA3EH": "PRT"
+        }
+      ],
+      "name": "Portugal",
+      "sourcePartCount": 9,
+      "visiblePartCount": 2,
+      "partIds": [
+        "continent-europe--country-PRT-part-0001",
+        "continent-europe--country-PRT-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            45.40079819590554,
+            218.1352304781103
+          ],
+          [
+            48.323533030131244,
+            219.31078826414702
+          ]
+        ],
+        [
+          [
+            86.81384751034122,
+            168.6782866931234
+          ],
+          [
+            104.24733858267717,
+            196.0617883380578
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-POL",
+      "iso3": "POL",
+      "iso2": "PL",
+      "naturalEarthCode": "POL",
+      "naturalEarthId": 1159321179,
+      "sourceFeatures": [
+        {
+          "neId": 1159321179,
+          "name": "Poland",
+          "isoA3": "POL",
+          "isoA3EH": "POL"
+        }
+      ],
+      "name": "Poland",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-POL-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            212.7845277807874,
+            100.90878072272972
+          ],
+          [
+            266.0211283871916,
+            131.94974281910766
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-NOR",
+      "iso3": "NOR",
+      "iso2": "NO",
+      "naturalEarthCode": "NOR",
+      "naturalEarthId": 1159321109,
+      "sourceFeatures": [
+        {
+          "neId": 1159321109,
+          "name": "Norway",
+          "isoA3": "-99",
+          "isoA3EH": "NOR"
+        }
+      ],
+      "name": "Norway",
+      "sourcePartCount": 32,
+      "visiblePartCount": 23,
+      "partIds": [
+        "continent-europe--country-NOR-part-0001",
+        "continent-europe--country-NOR-part-0002",
+        "continent-europe--country-NOR-part-0003",
+        "continent-europe--country-NOR-part-0004",
+        "continent-europe--country-NOR-part-0005",
+        "continent-europe--country-NOR-part-0006",
+        "continent-europe--country-NOR-part-0007",
+        "continent-europe--country-NOR-part-0008",
+        "continent-europe--country-NOR-part-0009",
+        "continent-europe--country-NOR-part-0010",
+        "continent-europe--country-NOR-part-0011",
+        "continent-europe--country-NOR-part-0012",
+        "continent-europe--country-NOR-part-0013",
+        "continent-europe--country-NOR-part-0014",
+        "continent-europe--country-NOR-part-0015",
+        "continent-europe--country-NOR-part-0016",
+        "continent-europe--country-NOR-part-0017",
+        "continent-europe--country-NOR-part-0018",
+        "continent-europe--country-NOR-part-0019",
+        "continent-europe--country-NOR-part-0020",
+        "continent-europe--country-NOR-part-0021",
+        "continent-europe--country-NOR-part-0022",
+        "continent-europe--country-NOR-part-0023"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            163.59724199979004,
+            14.184494633490885
+          ],
+          [
+            302.59777653333333,
+            83.92602516241476
+          ]
+        ],
+        [
+          [
+            163.00320681910762,
+            66.96645388346457
+          ],
+          [
+            163.93281379611548,
+            67.64646032797901
+          ]
+        ],
+        [
+          [
+            163.70249703643046,
+            70.95401154603678
+          ],
+          [
+            164.55081762855644,
+            72.358840264567
+          ]
+        ],
+        [
+          [
+            296.10720757081367,
+            20.511444999055243
+          ],
+          [
+            297.7663270366404,
+            21.247990142152275
+          ]
+        ],
+        [
+          [
+            200.17336723233595,
+            42.92020281448822
+          ],
+          [
+            201.44375913406824,
+            43.508240496377994
+          ]
+        ],
+        [
+          [
+            181.6151210305512,
+            53.065094746876696
+          ],
+          [
+            184.4310374232021,
+            53.811281776377996
+          ]
+        ],
+        [
+          [
+            179.03734375811024,
+            54.84640524682413
+          ],
+          [
+            180.83506734194225,
+            55.560806599895045
+          ]
+        ],
+        [
+          [
+            254.7559100833596,
+            15.51168669060371
+          ],
+          [
+            262.47153220451446,
+            17.29064941522313
+          ]
+        ],
+        [
+          [
+            272.47312980409447,
+            13.913534681364922
+          ],
+          [
+            276.91220734908137,
+            14.91817442351703
+          ]
+        ],
+        [
+          [
+            259.682193695748,
+            16.71485751601051
+          ],
+          [
+            263.541312040315,
+            18.499556282624667
+          ]
+        ],
+        [
+          [
+            263.66011480776905,
+            16.01973993574802
+          ],
+          [
+            265.87470190866145,
+            17.192949946456736
+          ]
+        ],
+        [
+          [
+            207.8269814055643,
+            29.205913348871434
+          ],
+          [
+            212.732423176063,
+            30.704018114015753
+          ]
+        ],
+        [
+          [
+            205.82342729154857,
+            30.298616009238913
+          ],
+          [
+            207.41793491317586,
+            31.633102177427816
+          ]
+        ],
+        [
+          [
+            214.0908779960105,
+            25.300682562519683
+          ],
+          [
+            219.55022399664043,
+            27.443881285879343
+          ]
+        ],
+        [
+          [
+            241.97383149102365,
+            18.547755042939684
+          ],
+          [
+            244.58548609427822,
+            19.64228256503941
+          ]
+        ],
+        [
+          [
+            246.27482249574803,
+            18.775729363149708
+          ],
+          [
+            248.4857652090289,
+            19.703250021627355
+          ]
+        ],
+        [
+          [
+            233.7699574752756,
+            18.68714353133862
+          ],
+          [
+            242.02073363905515,
+            22.48607345385824
+          ]
+        ],
+        [
+          [
+            203.71826786435696,
+            41.29026512881893
+          ],
+          [
+            205.58217203317588,
+            41.88950810204727
+          ]
+        ],
+        [
+          [
+            203.17322115023623,
+            40.22752328314965
+          ],
+          [
+            204.7489625767979,
+            41.15556685522313
+          ]
+        ],
+        [
+          [
+            194.70255448356957,
+            46.800419121889774
+          ],
+          [
+            197.40434765186353,
+            47.55103490939638
+          ]
+        ],
+        [
+          [
+            227.09441049616797,
+            22.161963069816295
+          ],
+          [
+            233.8512491960105,
+            25.27046029102371
+          ]
+        ],
+        [
+          [
+            213.4707931808924,
+            23.731712333438338
+          ],
+          [
+            225.69062226897637,
+            29.728037238425316
+          ]
+        ],
+        [
+          [
+            88.84605515506563,
+            13.723599657322893
+          ],
+          [
+            94.82257337364831,
+            15.564575665721804
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-NLD",
+      "iso3": "NLD",
+      "iso2": "NL",
+      "naturalEarthCode": "NLD",
+      "naturalEarthId": 1159321101,
+      "sourceFeatures": [
+        {
+          "neId": 1159321101,
+          "name": "Netherlands",
+          "isoA3": "NLD",
+          "isoA3EH": "NLD"
+        }
+      ],
+      "name": "Netherlands",
+      "sourcePartCount": 12,
+      "visiblePartCount": 9,
+      "partIds": [
+        "continent-europe--country-NLD-part-0001",
+        "continent-europe--country-NLD-part-0002",
+        "continent-europe--country-NLD-part-0003",
+        "continent-europe--country-NLD-part-0004",
+        "continent-europe--country-NLD-part-0005",
+        "continent-europe--country-NLD-part-0006",
+        "continent-europe--country-NLD-part-0007",
+        "continent-europe--country-NLD-part-0008",
+        "continent-europe--country-NLD-part-0009"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            155.79928766656167,
+            108.36308477816277
+          ],
+          [
+            175.79987896944883,
+            122.72038721931762
+          ]
+        ],
+        [
+          [
+            155.27195598446195,
+            119.25755200671921
+          ],
+          [
+            159.9465580816798,
+            120.28069115128613
+          ]
+        ],
+        [
+          [
+            170.26132223076115,
+            107.96914942152239
+          ],
+          [
+            171.19040629417324,
+            108.17288829732286
+          ]
+        ],
+        [
+          [
+            167.5668231735433,
+            108.18200727013124
+          ],
+          [
+            169.03418275359581,
+            108.35526775349086
+          ]
+        ],
+        [
+          [
+            163.58421184671917,
+            109.06185208188975
+          ],
+          [
+            164.65503217385827,
+            109.4654293249344
+          ]
+        ],
+        [
+          [
+            165.0906512142782,
+            108.35031608188979
+          ],
+          [
+            167.18434922918635,
+            108.70126580661423
+          ]
+        ],
+        [
+          [
+            162.52381777637797,
+            109.73899317333337
+          ],
+          [
+            163.46957638047246,
+            110.7181008587927
+          ]
+        ],
+        [
+          [
+            157.13116460262466,
+            117.40589362057744
+          ],
+          [
+            159.14044942278215,
+            118.0429144331759
+          ]
+        ],
+        [
+          [
+            172.83754143412074,
+            107.3795483346982
+          ],
+          [
+            173.68481619905512,
+            107.62653963506568
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-MAR",
+      "iso3": "MAR",
+      "iso2": "MA",
+      "naturalEarthCode": "MAR",
+      "naturalEarthId": 1159321035,
+      "sourceFeatures": [
+        {
+          "neId": 1159321035,
+          "name": "Morocco",
+          "isoA3": "MAR",
+          "isoA3EH": "MAR"
+        }
+      ],
+      "name": "Morocco",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-MAR-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            87.11756405200126,
+            201.8006956858793
+          ],
+          [
+            131.71083000020997,
+            222.76997375328085
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-MNE",
+      "iso3": "MNE",
+      "iso2": "ME",
+      "naturalEarthCode": "MNE",
+      "naturalEarthId": 1159321069,
+      "sourceFeatures": [
+        {
+          "neId": 1159321069,
+          "name": "Montenegro",
+          "isoA3": "MNE",
+          "isoA3EH": "MNE"
+        }
+      ],
+      "name": "Montenegro",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-MNE-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            235.76986186582678,
+            161.18177604031501
+          ],
+          [
+            245.96842714372704,
+            170.10994941648298
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-MDA",
+      "iso3": "MDA",
+      "iso2": "MD",
+      "naturalEarthCode": "MDA",
+      "naturalEarthId": 1159321045,
+      "sourceFeatures": [
+        {
+          "neId": 1159321045,
+          "name": "Moldova",
+          "isoA3": "MDA",
+          "isoA3EH": "MDA"
+        }
+      ],
+      "name": "Moldova",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-MDA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            279.43110348346454,
+            134.8472070534384
+          ],
+          [
+            298.17120622782153,
+            151.00040821669293
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-MCO",
+      "iso3": "MCO",
+      "iso2": "MC",
+      "naturalEarthCode": "MCO",
+      "naturalEarthId": 1159321043,
+      "sourceFeatures": [
+        {
+          "neId": 1159321043,
+          "name": "Monaco",
+          "isoA3": "MCO",
+          "isoA3EH": "MCO"
+        }
+      ],
+      "name": "Monaco",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-MCO-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            176.7628296919685,
+            159.96219213102367
+          ],
+          [
+            177.0879859032021,
+            160.17114413522316
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-MLT",
+      "iso3": "MLT",
+      "iso2": "MT",
+      "naturalEarthCode": "MLT",
+      "naturalEarthId": 1159321065,
+      "sourceFeatures": [
+        {
+          "neId": 1159321065,
+          "name": "Malta",
+          "isoA3": "MLT",
+          "isoA3EH": "MLT"
+        }
+      ],
+      "name": "Malta",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "continent-europe--country-MLT-part-0001",
+        "continent-europe--country-MLT-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            213.97259280629922,
+            201.5417200596326
+          ],
+          [
+            215.11948638992126,
+            202.38586801469822
+          ]
+        ],
+        [
+          [
+            213.06070086131234,
+            201.02220540220478
+          ],
+          [
+            213.8105322784252,
+            201.36168837879268
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-MKD",
+      "iso3": "MKD",
+      "iso2": "MK",
+      "naturalEarthCode": "MKD",
+      "naturalEarthId": 1159321061,
+      "sourceFeatures": [
+        {
+          "neId": 1159321061,
+          "name": "North Macedonia",
+          "isoA3": "MKD",
+          "isoA3EH": "MKD"
+        }
+      ],
+      "name": "North Macedonia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-MKD-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            246.50722557396327,
+            167.50038646761158
+          ],
+          [
+            260.1511671533858,
+            175.54819745427824
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-LUX",
+      "iso3": "LUX",
+      "iso2": "LU",
+      "naturalEarthCode": "LUX",
+      "naturalEarthId": 1159321031,
+      "sourceFeatures": [
+        {
+          "neId": 1159321031,
+          "name": "Luxembourg",
+          "isoA3": "LUX",
+          "isoA3EH": "LUX"
+        }
+      ],
+      "name": "Luxembourg",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-LUX-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            167.94408398950134,
+            125.83253416398958
+          ],
+          [
+            172.04602099737534,
+            129.68356869123363
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-LTU",
+      "iso3": "LTU",
+      "iso2": "LT",
+      "naturalEarthCode": "LTU",
+      "naturalEarthId": 1159321029,
+      "sourceFeatures": [
+        {
+          "neId": 1159321029,
+          "name": "Lithuania",
+          "isoA3": "LTU",
+          "isoA3EH": "LTU"
+        }
+      ],
+      "name": "Lithuania",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "continent-europe--country-LTU-part-0001",
+        "continent-europe--country-LTU-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            248.9146130519685,
+            96.75577960146984
+          ],
+          [
+            250.0667197639895,
+            98.55715290876645
+          ]
+        ],
+        [
+          [
+            249.69518965417325,
+            92.51549459653546
+          ],
+          [
+            280.2674397497113,
+            105.95230903349085
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-LIE",
+      "iso3": "LIE",
+      "iso2": "LI",
+      "naturalEarthCode": "LIE",
+      "naturalEarthId": 1159321021,
+      "sourceFeatures": [
+        {
+          "neId": 1159321021,
+          "name": "Liechtenstein",
+          "isoA3": "LIE",
+          "isoA3EH": "LIE"
+        }
+      ],
+      "name": "Liechtenstein",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-LIE-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            187.9775014601575,
+            141.28748560125987
+          ],
+          [
+            188.6767916774803,
+            142.42604458246726
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-LBY",
+      "iso3": "LBY",
+      "iso2": "LY",
+      "naturalEarthCode": "LBY",
+      "naturalEarthId": 1159321017,
+      "sourceFeatures": [
+        {
+          "neId": 1159321017,
+          "name": "Libya",
+          "isoA3": "LBY",
+          "isoA3EH": "LBY"
+        }
+      ],
+      "name": "Libya",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-LBY-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            194.6532303203201,
+            216.4633476518636
+          ],
+          [
+            269.6291723391713,
+            222.76997375328085
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-LBN",
+      "iso3": "LBN",
+      "iso2": "LB",
+      "naturalEarthCode": "LBN",
+      "naturalEarthId": 1159321013,
+      "sourceFeatures": [
+        {
+          "neId": 1159321013,
+          "name": "Lebanon",
+          "isoA3": "LBN",
+          "isoA3EH": "LBN"
+        }
+      ],
+      "name": "Lebanon",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-LBN-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            324.7306227250394,
+            208.47676557858273
+          ],
+          [
+            332.60830003821525,
+            217.03028203506562
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-LVA",
+      "iso3": "LVA",
+      "iso2": "LV",
+      "naturalEarthCode": "LVA",
+      "naturalEarthId": 1159321033,
+      "sourceFeatures": [
+        {
+          "neId": 1159321033,
+          "name": "Latvia",
+          "isoA3": "LVA",
+          "isoA3EH": "LVA"
+        }
+      ],
+      "name": "Latvia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-LVA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            249.52896182509187,
+            83.69935279034121
+          ],
+          [
+            287.8783244119685,
+            96.48351770120735
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-NE-KOS-1159321007",
+      "iso3": null,
+      "iso2": "XK",
+      "naturalEarthCode": "KOS",
+      "naturalEarthId": 1159321007,
+      "sourceFeatures": [
+        {
+          "neId": 1159321007,
+          "name": "Kosovo",
+          "isoA3": "-99",
+          "isoA3EH": "-99"
+        }
+      ],
+      "name": "Kosovo",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-NE-KOS-1159321007-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            244.27075080398953,
+            162.68248470173233
+          ],
+          [
+            253.46676265826773,
+            170.1914972581628
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-KAZ",
+      "iso3": "KAZ",
+      "iso2": "KZ",
+      "naturalEarthCode": "KAZ",
+      "naturalEarthId": 1159320967,
+      "sourceFeatures": [
+        {
+          "neId": 1159320967,
+          "name": "Kazakhstan",
+          "isoA3": "KAZ",
+          "isoA3EH": "KAZ"
+        }
+      ],
+      "name": "Kazakhstan",
+      "sourcePartCount": 4,
+      "visiblePartCount": 2,
+      "partIds": [
+        "continent-europe--country-KAZ-part-0001",
+        "continent-europe--country-KAZ-part-0004"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            404.16292140766404,
+            153.6397112211408
+          ],
+          [
+            404.18897637795277,
+            153.767895417674
+          ]
+        ],
+        [
+          [
+            386.0960592461943,
+            120.21654159083538
+          ],
+          [
+            404.18897637795277,
+            146.26900596409453
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-JOR",
+      "iso3": "JOR",
+      "iso2": "JO",
+      "naturalEarthCode": "JOR",
+      "naturalEarthId": 1159320935,
+      "sourceFeatures": [
+        {
+          "neId": 1159320935,
+          "name": "Jordan",
+          "isoA3": "JOR",
+          "isoA3EH": "JOR"
+        }
+      ],
+      "name": "Jordan",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-JOR-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            326.98915710798826,
+            215.44802553196857
+          ],
+          [
+            347.05678687160105,
+            222.76997375328085
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-ITA",
+      "iso3": "ITA",
+      "iso2": "IT",
+      "naturalEarthCode": "ITA",
+      "naturalEarthId": 1159320919,
+      "sourceFeatures": [
+        {
+          "neId": 1159320919,
+          "name": "Italy",
+          "isoA3": "ITA",
+          "isoA3EH": "ITA"
+        }
+      ],
+      "name": "Italy",
+      "sourcePartCount": 8,
+      "visiblePartCount": 8,
+      "partIds": [
+        "continent-europe--country-ITA-part-0001",
+        "continent-europe--country-ITA-part-0002",
+        "continent-europe--country-ITA-part-0003",
+        "continent-europe--country-ITA-part-0004",
+        "continent-europe--country-ITA-part-0005",
+        "continent-europe--country-ITA-part-0006",
+        "continent-europe--country-ITA-part-0007",
+        "continent-europe--country-ITA-part-0008"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            172.76093992818898,
+            142.2939502051444
+          ],
+          [
+            236.03405062047244,
+            191.07975039748038
+          ]
+        ],
+        [
+          [
+            191.34055088545932,
+            164.83245995842523
+          ],
+          [
+            193.0611553856168,
+            165.60599857049874
+          ]
+        ],
+        [
+          [
+            211.31665062299214,
+            176.01821140325464
+          ],
+          [
+            211.8960869098163,
+            176.36420412052496
+          ]
+        ],
+        [
+          [
+            201.08734016000002,
+            196.92808541900266
+          ],
+          [
+            201.700130864042,
+            197.4460366714961
+          ]
+        ],
+        [
+          [
+            203.7505764543832,
+            189.17598740661418
+          ],
+          [
+            220.8206158983727,
+            197.75633786792653
+          ]
+        ],
+        [
+          [
+            181.0481866473491,
+            173.37555549396328
+          ],
+          [
+            189.71582099233598,
+            185.90100089952756
+          ]
+        ],
+        [
+          [
+            181.99655448356955,
+            184.80048121448823
+          ],
+          [
+            182.63852163191603,
+            185.5862709450919
+          ]
+        ],
+        [
+          [
+            181.18054248146981,
+            174.09698950131238
+          ],
+          [
+            181.91734908136482,
+            174.77855935076118
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-ISR",
+      "iso3": "ISR",
+      "iso2": "IL",
+      "naturalEarthCode": "ISR",
+      "naturalEarthId": 1159320895,
+      "sourceFeatures": [
+        {
+          "neId": 1159320895,
+          "name": "Israel",
+          "isoA3": "ISR",
+          "isoA3EH": "ISR"
+        }
+      ],
+      "name": "Israel",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-ISR-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            322.6673814395432,
+            215.21614536734913
+          ],
+          [
+            328.8892958580577,
+            222.76997375328085
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-PSE",
+      "iso3": "PSE",
+      "iso2": "PS",
+      "naturalEarthCode": "PSX",
+      "naturalEarthId": 1159320899,
+      "sourceFeatures": [
+        {
+          "neId": 1159320899,
+          "name": "Palestine",
+          "isoA3": "PSE",
+          "isoA3EH": "PSE"
+        }
+      ],
+      "name": "Palestine",
+      "sourcePartCount": 2,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-PSE-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            323.916174127874,
+            219.91836583979008
+          ],
+          [
+            327.2036625385827,
+            222.76997375328085
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-IRL",
+      "iso3": "IRL",
+      "iso2": "IE",
+      "naturalEarthCode": "IRL",
+      "naturalEarthId": 1159320877,
+      "sourceFeatures": [
+        {
+          "neId": 1159320877,
+          "name": "Ireland",
+          "isoA3": "IRL",
+          "isoA3EH": "IRL"
+        }
+      ],
+      "name": "Ireland",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "continent-europe--country-IRL-part-0001",
+        "continent-europe--country-IRL-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            82.61993640398951,
+            105.29131956913392
+          ],
+          [
+            84.31422981291338,
+            105.99712486299217
+          ]
+        ],
+        [
+          [
+            81.95556400881893,
+            98.09339257952757
+          ],
+          [
+            105.23504232734908,
+            118.86101275380582
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-IRQ",
+      "iso3": "IRQ",
+      "iso2": "IQ",
+      "naturalEarthCode": "IRQ",
+      "naturalEarthId": 1159320887,
+      "sourceFeatures": [
+        {
+          "neId": 1159320887,
+          "name": "Iraq",
+          "isoA3": "IRQ",
+          "isoA3EH": "IRQ"
+        }
+      ],
+      "name": "Iraq",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-IRQ-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            344.28620922204726,
+            194.10643832021003
+          ],
+          [
+            391.7187563303966,
+            222.76997375328085
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-IRN",
+      "iso3": "IRN",
+      "iso2": "IR",
+      "naturalEarthCode": "IRN",
+      "naturalEarthId": 1159320881,
+      "sourceFeatures": [
+        {
+          "neId": 1159320881,
+          "name": "Iran",
+          "isoA3": "IRN",
+          "isoA3EH": "IRN"
+        }
+      ],
+      "name": "Iran",
+      "sourcePartCount": 2,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-IRN-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            372.2978741635696,
+            181.31810610813653
+          ],
+          [
+            404.18897637795277,
+            222.76997375328085
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-ISL",
+      "iso3": "ISL",
+      "iso2": "IS",
+      "naturalEarthCode": "ISL",
+      "naturalEarthId": 1159320917,
+      "sourceFeatures": [
+        {
+          "neId": 1159320917,
+          "name": "Iceland",
+          "isoA3": "ISL",
+          "isoA3EH": "ISL"
+        }
+      ],
+      "name": "Iceland",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-ISL-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            6.797673111181098,
+            38.543917587821625
+          ],
+          [
+            65.06294701354332,
+            55.188497455538084
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-HUN",
+      "iso3": "HUN",
+      "iso2": "HU",
+      "naturalEarthCode": "HUN",
+      "naturalEarthId": 1159320841,
+      "sourceFeatures": [
+        {
+          "neId": 1159320841,
+          "name": "Hungary",
+          "isoA3": "HUN",
+          "isoA3EH": "HUN"
+        }
+      ],
+      "name": "Hungary",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-HUN-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            223.2665602502887,
+            134.44310689679799
+          ],
+          [
+            259.4628207706037,
+            149.3858431235696
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-GRC",
+      "iso3": "GRC",
+      "iso2": "GR",
+      "naturalEarthCode": "GRC",
+      "naturalEarthId": 1159320811,
+      "sourceFeatures": [
+        {
+          "neId": 1159320811,
+          "name": "Greece",
+          "isoA3": "GRC",
+          "isoA3EH": "GRC"
+        }
+      ],
+      "name": "Greece",
+      "sourcePartCount": 40,
+      "visiblePartCount": 40,
+      "partIds": [
+        "continent-europe--country-GRC-part-0001",
+        "continent-europe--country-GRC-part-0002",
+        "continent-europe--country-GRC-part-0003",
+        "continent-europe--country-GRC-part-0004",
+        "continent-europe--country-GRC-part-0005",
+        "continent-europe--country-GRC-part-0006",
+        "continent-europe--country-GRC-part-0007",
+        "continent-europe--country-GRC-part-0008",
+        "continent-europe--country-GRC-part-0009",
+        "continent-europe--country-GRC-part-0010",
+        "continent-europe--country-GRC-part-0011",
+        "continent-europe--country-GRC-part-0012",
+        "continent-europe--country-GRC-part-0013",
+        "continent-europe--country-GRC-part-0014",
+        "continent-europe--country-GRC-part-0015",
+        "continent-europe--country-GRC-part-0016",
+        "continent-europe--country-GRC-part-0017",
+        "continent-europe--country-GRC-part-0018",
+        "continent-europe--country-GRC-part-0019",
+        "continent-europe--country-GRC-part-0020",
+        "continent-europe--country-GRC-part-0021",
+        "continent-europe--country-GRC-part-0022",
+        "continent-europe--country-GRC-part-0023",
+        "continent-europe--country-GRC-part-0024",
+        "continent-europe--country-GRC-part-0025",
+        "continent-europe--country-GRC-part-0026",
+        "continent-europe--country-GRC-part-0027",
+        "continent-europe--country-GRC-part-0028",
+        "continent-europe--country-GRC-part-0029",
+        "continent-europe--country-GRC-part-0030",
+        "continent-europe--country-GRC-part-0031",
+        "continent-europe--country-GRC-part-0032",
+        "continent-europe--country-GRC-part-0033",
+        "continent-europe--country-GRC-part-0034",
+        "continent-europe--country-GRC-part-0035",
+        "continent-europe--country-GRC-part-0036",
+        "continent-europe--country-GRC-part-0037",
+        "continent-europe--country-GRC-part-0038",
+        "continent-europe--country-GRC-part-0039",
+        "continent-europe--country-GRC-part-0040"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            285.65696077774277,
+            198.0054154868242
+          ],
+          [
+            286.1056099712336,
+            198.55593678614179
+          ]
+        ],
+        [
+          [
+            245.99291870908138,
+            188.22058691611556
+          ],
+          [
+            248.3226641898163,
+            190.37837386162735
+          ]
+        ],
+        [
+          [
+            247.41911218309713,
+            191.1308145108662
+          ],
+          [
+            249.4169302551181,
+            192.5437217108662
+          ]
+        ],
+        [
+          [
+            247.07311946582678,
+            186.25012576251976
+          ],
+          [
+            247.9532203985302,
+            187.6463584218373
+          ]
+        ],
+        [
+          [
+            247.4409998521785,
+            188.17238815580058
+          ],
+          [
+            248.16164948913385,
+            189.05483152797902
+          ]
+        ],
+        [
+          [
+            242.22707641112862,
+            181.04297885480318
+          ],
+          [
+            244.64488481007876,
+            183.40946168356962
+          ]
+        ],
+        [
+          [
+            259.42895411149607,
+            185.23271732409455
+          ],
+          [
+            268.5963017633596,
+            190.9153474301313
+          ]
+        ],
+        [
+          [
+            263.29014810288714,
+            184.30597570015755
+          ],
+          [
+            264.2817630278215,
+            184.98911429039376
+          ]
+        ],
+        [
+          [
+            264.6095231353281,
+            183.99046137532812
+          ],
+          [
+            265.3015139057218,
+            184.63686261753284
+          ]
+        ],
+        [
+          [
+            267.91681289658794,
+            185.5242629971654
+          ],
+          [
+            269.0569352827297,
+            186.5672034922835
+          ]
+        ],
+        [
+          [
+            268.2075741992651,
+            175.85224503097118
+          ],
+          [
+            269.6525285324934,
+            176.99132692577433
+          ]
+        ],
+        [
+          [
+            262.35846014320214,
+            190.80227536881893
+          ],
+          [
+            263.0608771703937,
+            191.28218732514438
+          ]
+        ],
+        [
+          [
+            259.61758185154855,
+            199.37793561532814
+          ],
+          [
+            260.63889613438323,
+            200.64546216398955
+          ]
+        ],
+        [
+          [
+            281.84161777133863,
+            202.38456606656172
+          ],
+          [
+            282.71078020535435,
+            204.57961327370083
+          ]
+        ],
+        [
+          [
+            280.8703271105512,
+            195.62512347044625
+          ],
+          [
+            281.678522087979,
+            196.38303336902894
+          ]
+        ],
+        [
+          [
+            281.0287325791076,
+            196.59693704482945
+          ],
+          [
+            283.3433669240945,
+            197.5531165698688
+          ]
+        ],
+        [
+          [
+            272.7237708279265,
+            195.0428164946982
+          ],
+          [
+            273.9295508854593,
+            196.4658831588452
+          ]
+        ],
+        [
+          [
+            271.3554180006299,
+            195.29814773333337
+          ],
+          [
+            272.28085234057744,
+            196.13708256000004
+          ]
+        ],
+        [
+          [
+            272.7696271487664,
+            198.89880802939635
+          ],
+          [
+            273.36678380346456,
+            199.6119020984777
+          ]
+        ],
+        [
+          [
+            272.1797646051444,
+            197.21571991181108
+          ],
+          [
+            272.9639909308137,
+            197.9137028451444
+          ]
+        ],
+        [
+          [
+            279.22892801259843,
+            191.7610587901313
+          ],
+          [
+            281.7582450679265,
+            192.65054015244098
+          ]
+        ],
+        [
+          [
+            276.03471031265093,
+            192.4926575974804
+          ],
+          [
+            278.00334660451443,
+            193.28625901690296
+          ]
+        ],
+        [
+          [
+            274.75806479118114,
+            196.42472238866148
+          ],
+          [
+            276.4724156716011,
+            197.25271338078747
+          ]
+        ],
+        [
+          [
+            277.5682451418373,
+            198.01922467443572
+          ],
+          [
+            278.5864379506562,
+            198.69792917081367
+          ]
+        ],
+        [
+          [
+            266.9371822975328,
+            192.44784176797904
+          ],
+          [
+            267.5953064088189,
+            193.27193225154863
+          ]
+        ],
+        [
+          [
+            267.42960682918635,
+            193.55513798635175
+          ],
+          [
+            268.0257176566929,
+            194.41465853396332
+          ]
+        ],
+        [
+          [
+            267.19616325963256,
+            197.35119721994755
+          ],
+          [
+            268.3248188976378,
+            197.92829640314966
+          ]
+        ],
+        [
+          [
+            270.2340564737008,
+            193.37536242645672
+          ],
+          [
+            270.48781897154856,
+            194.01134274771658
+          ]
+        ],
+        [
+          [
+            269.19293550446196,
+            190.8074831613649
+          ],
+          [
+            270.7483580027297,
+            192.39625474099742
+          ]
+        ],
+        [
+          [
+            270.77389005942257,
+            192.45878560251973
+          ],
+          [
+            272.15787693606296,
+            193.235456360315
+          ]
+        ],
+        [
+          [
+            269.03713393217845,
+            195.96356595569557
+          ],
+          [
+            269.52903555023624,
+            196.53310423517064
+          ]
+        ],
+        [
+          [
+            275.3072841423622,
+            187.54422485921265
+          ],
+          [
+            276.98411864021,
+            189.89299265595804
+          ]
+        ],
+        [
+          [
+            275.2968632214173,
+            183.37532823181107
+          ],
+          [
+            279.30656467401576,
+            185.56412181921263
+          ]
+        ],
+        [
+          [
+            273.18336385595796,
+            177.33054844556435
+          ],
+          [
+            274.4516694391601,
+            177.94646595947512
+          ]
+        ],
+        [
+          [
+            271.07195080902886,
+            179.89738721931764
+          ],
+          [
+            273.18909456209974,
+            181.11775016314965
+          ]
+        ],
+        [
+          [
+            272.43144612031494,
+            193.37379902152233
+          ],
+          [
+            273.2630868359055,
+            193.8870653950657
+          ]
+        ],
+        [
+          [
+            267.72349494173227,
+            194.96908567769032
+          ],
+          [
+            268.3164842952231,
+            195.5034500140683
+          ]
+        ],
+        [
+          [
+            285.2823038580578,
+            199.1127063693439
+          ],
+          [
+            288.0372527941208,
+            201.91585406572182
+          ]
+        ],
+        [
+          [
+            263.0426392247769,
+            203.26466699926513
+          ],
+          [
+            277.83712411128613,
+            207.11205713889768
+          ]
+        ],
+        [
+          [
+            244.120162360105,
+            170.77849444871396
+          ],
+          [
+            279.462889159895,
+            199.04184090540684
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-DEU",
+      "iso3": "DEU",
+      "iso2": "DE",
+      "naturalEarthCode": "DEU",
+      "naturalEarthId": 1159320539,
+      "sourceFeatures": [
+        {
+          "neId": 1159320539,
+          "name": "Germany",
+          "isoA3": "DEU",
+          "isoA3EH": "DEU"
+        }
+      ],
+      "name": "Germany",
+      "sourcePartCount": 6,
+      "visiblePartCount": 6,
+      "partIds": [
+        "continent-europe--country-DEU-part-0001",
+        "continent-europe--country-DEU-part-0002",
+        "continent-europe--country-DEU-part-0003",
+        "continent-europe--country-DEU-part-0004",
+        "continent-europe--country-DEU-part-0005",
+        "continent-europe--country-DEU-part-0006"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            168.65119123149606,
+            100.56070168692918
+          ],
+          [
+            217.52270656671917,
+            141.24449463349086
+          ]
+        ],
+        [
+          [
+            207.59666464587926,
+            101.64975995968507
+          ],
+          [
+            210.6798912671916,
+            104.06938788451447
+          ]
+        ],
+        [
+          [
+            211.14000187296588,
+            104.70224139590556
+          ],
+          [
+            213.2383901026772,
+            106.11176032923885
+          ]
+        ],
+        [
+          [
+            196.15323952293963,
+            102.53507402078748
+          ],
+          [
+            197.59975726110238,
+            103.16140711979006
+          ]
+        ],
+        [
+          [
+            181.60209621333334,
+            99.73192632440947
+          ],
+          [
+            183.44254930813648,
+            101.28812785721789
+          ]
+        ],
+        [
+          [
+            182.2195771321785,
+            101.32434229165358
+          ],
+          [
+            183.22004957312336,
+            101.70915867548558
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-GEO",
+      "iso3": "GEO",
+      "iso2": "GE",
+      "naturalEarthCode": "GEO",
+      "naturalEarthId": 1159320779,
+      "sourceFeatures": [
+        {
+          "neId": 1159320779,
+          "name": "Georgia",
+          "isoA3": "GEO",
+          "isoA3EH": "GEO"
+        }
+      ],
+      "name": "Georgia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-GEO-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            350.7147649007874,
+            161.03535489763783
+          ],
+          [
+            386.43424027464573,
+            174.3726396682415
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-FRA",
+      "iso3": "FRA",
+      "iso2": "FR",
+      "naturalEarthCode": "FRA",
+      "naturalEarthId": 1159320637,
+      "sourceFeatures": [
+        {
+          "neId": 1159320637,
+          "name": "France",
+          "isoA3": "-99",
+          "isoA3EH": "FRA"
+        }
+      ],
+      "name": "France",
+      "sourcePartCount": 10,
+      "visiblePartCount": 3,
+      "partIds": [
+        "continent-europe--country-FRA-part-0001",
+        "continent-europe--country-FRA-part-0002",
+        "continent-europe--country-FRA-part-0003"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            183.10124146981627,
+            163.96095508493443
+          ],
+          [
+            188.3881113574803,
+            172.6934627309187
+          ]
+        ],
+        [
+          [
+            111.98432545931759,
+            120.87055369490815
+          ],
+          [
+            180.8319405320735,
+            167.5946976697113
+          ]
+        ],
+        [
+          [
+            129.98553528524934,
+            147.79915252661422
+          ],
+          [
+            131.10898313070868,
+            149.04661626792654
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-ALA",
+      "iso3": "ALA",
+      "iso2": "AX",
+      "naturalEarthCode": "ALD",
+      "naturalEarthId": 1159320621,
+      "sourceFeatures": [
+        {
+          "neId": 1159320621,
+          "name": "Åland",
+          "isoA3": "ALA",
+          "isoA3EH": "ALA"
+        }
+      ],
+      "name": "Åland",
+      "sourcePartCount": 3,
+      "visiblePartCount": 3,
+      "partIds": [
+        "continent-europe--country-ALA-part-0001",
+        "continent-europe--country-ALA-part-0002",
+        "continent-europe--country-ALA-part-0003"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            242.3646453736483,
+            71.20074138960638
+          ],
+          [
+            245.4947688071391,
+            72.92994728482944
+          ]
+        ],
+        [
+          [
+            241.54706996661417,
+            72.05296782614175
+          ],
+          [
+            242.33910798110236,
+            72.64543426603677
+          ]
+        ],
+        [
+          [
+            246.23678319958006,
+            72.96642317606307
+          ],
+          [
+            247.3753421807874,
+            73.30381983412076
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-FIN",
+      "iso3": "FIN",
+      "iso2": "FI",
+      "naturalEarthCode": "FIN",
+      "naturalEarthId": 1159320623,
+      "sourceFeatures": [
+        {
+          "neId": 1159320623,
+          "name": "Finland",
+          "isoA3": "FIN",
+          "isoA3EH": "FIN"
+        }
+      ],
+      "name": "Finland",
+      "sourcePartCount": 8,
+      "visiblePartCount": 8,
+      "partIds": [
+        "continent-europe--country-FIN-part-0001",
+        "continent-europe--country-FIN-part-0002",
+        "continent-europe--country-FIN-part-0003",
+        "continent-europe--country-FIN-part-0004",
+        "continent-europe--country-FIN-part-0005",
+        "continent-europe--country-FIN-part-0006",
+        "continent-europe--country-FIN-part-0007",
+        "continent-europe--country-FIN-part-0008"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            247.43318282750656,
+            19.661561001994812
+          ],
+          [
+            305.6705768978478,
+            74.34780082057745
+          ]
+        ],
+        [
+          [
+            253.7481435313386,
+            70.85865451674545
+          ],
+          [
+            254.75434667842518,
+            71.59311867716542
+          ]
+        ],
+        [
+          [
+            249.8968475472966,
+            55.876582381522326
+          ],
+          [
+            251.70082475086616,
+            56.547469853228336
+          ]
+        ],
+        [
+          [
+            255.1967422521785,
+            71.38781106057746
+          ],
+          [
+            257.00228286068244,
+            72.48260003947513
+          ]
+        ],
+        [
+          [
+            250.59405144608925,
+            69.96031563842524
+          ],
+          [
+            251.85506291821522,
+            70.80602699842524
+          ]
+        ],
+        [
+          [
+            253.15776340997377,
+            72.28927674876644
+          ],
+          [
+            254.06131008083992,
+            72.79967776923888
+          ]
+        ],
+        [
+          [
+            252.04265016692915,
+            72.44664706183733
+          ],
+          [
+            252.90764529973754,
+            72.84370922834648
+          ]
+        ],
+        [
+          [
+            268.5332533240945,
+            46.2256677140158
+          ],
+          [
+            270.7796261014173,
+            46.91192777826774
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-EST",
+      "iso3": "EST",
+      "iso2": "EE",
+      "naturalEarthCode": "EST",
+      "naturalEarthId": 1159320615,
+      "sourceFeatures": [
+        {
+          "neId": 1159320615,
+          "name": "Estonia",
+          "isoA3": "EST",
+          "isoA3EH": "EST"
+        }
+      ],
+      "name": "Estonia",
+      "sourcePartCount": 4,
+      "visiblePartCount": 4,
+      "partIds": [
+        "continent-europe--country-EST-part-0001",
+        "continent-europe--country-EST-part-0002",
+        "continent-europe--country-EST-part-0003",
+        "continent-europe--country-EST-part-0004"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            262.42619879727033,
+            75.2922574765355
+          ],
+          [
+            287.6063186326509,
+            86.56972156304465
+          ]
+        ],
+        [
+          [
+            254.00868256251968,
+            80.69011844283466
+          ],
+          [
+            261.8457166832546,
+            84.40411225700797
+          ]
+        ],
+        [
+          [
+            255.08523359580053,
+            78.23714143664051
+          ],
+          [
+            260.16731878047244,
+            80.35611005144364
+          ]
+        ],
+        [
+          [
+            260.459648823937,
+            80.41941994750658
+          ],
+          [
+            262.0228830110236,
+            81.1564880041995
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-GRL",
+      "iso3": "GRL",
+      "iso2": "GL",
+      "naturalEarthCode": "GRL",
+      "naturalEarthId": 1159320551,
+      "sourceFeatures": [
+        {
+          "neId": 1159320551,
+          "name": "Greenland",
+          "isoA3": "GRL",
+          "isoA3EH": "GRL"
+        }
+      ],
+      "name": "Greenland",
+      "sourcePartCount": 17,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-GRL-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            4,
+            4
+          ],
+          [
+            22.554596478320207,
+            23.83572454898391
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-FRO",
+      "iso3": "FRO",
+      "iso2": "FO",
+      "naturalEarthCode": "FRO",
+      "naturalEarthId": 1159320549,
+      "sourceFeatures": [
+        {
+          "neId": 1159320549,
+          "name": "Faeroe Is.",
+          "isoA3": "FRO",
+          "isoA3EH": "FRO"
+        }
+      ],
+      "name": "Faroe Islands",
+      "sourcePartCount": 5,
+      "visiblePartCount": 5,
+      "partIds": [
+        "continent-europe--country-FRO-part-0001",
+        "continent-europe--country-FRO-part-0002",
+        "continent-europe--country-FRO-part-0003",
+        "continent-europe--country-FRO-part-0004",
+        "continent-europe--country-FRO-part-0005"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            100.66022601742783,
+            63.20816715338589
+          ],
+          [
+            102.05594109900264,
+            63.93064165207352
+          ]
+        ],
+        [
+          [
+            100.39291578876642,
+            64.6455659187402
+          ],
+          [
+            101.75449208272967,
+            65.8195549639895
+          ]
+        ],
+        [
+          [
+            97.79038549417325,
+            61.8874901728085
+          ],
+          [
+            99.69753141585302,
+            62.48074098309718
+          ]
+        ],
+        [
+          [
+            99.12669118824147,
+            61.006866326509225
+          ],
+          [
+            102.0139906225722,
+            62.953358828346495
+          ]
+        ],
+        [
+          [
+            102.39594165333334,
+            60.79661237417332
+          ],
+          [
+            103.21455755170605,
+            61.699123889553846
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-DNK",
+      "iso3": "DNK",
+      "iso2": "DK",
+      "naturalEarthCode": "DNK",
+      "naturalEarthId": 1159320547,
+      "sourceFeatures": [
+        {
+          "neId": 1159320547,
+          "name": "Denmark",
+          "isoA3": "DNK",
+          "isoA3EH": "DNK"
+        }
+      ],
+      "name": "Denmark",
+      "sourcePartCount": 12,
+      "visiblePartCount": 12,
+      "partIds": [
+        "continent-europe--country-DNK-part-0001",
+        "continent-europe--country-DNK-part-0002",
+        "continent-europe--country-DNK-part-0003",
+        "continent-europe--country-DNK-part-0004",
+        "continent-europe--country-DNK-part-0005",
+        "continent-europe--country-DNK-part-0006",
+        "continent-europe--country-DNK-part-0007",
+        "continent-europe--country-DNK-part-0008",
+        "continent-europe--country-DNK-part-0009",
+        "continent-europe--country-DNK-part-0010",
+        "continent-europe--country-DNK-part-0011",
+        "continent-europe--country-DNK-part-0012"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            195.97815417784778,
+            94.05789227758538
+          ],
+          [
+            204.67288398446195,
+            101.25868995611552
+          ]
+        ],
+        [
+          [
+            180.7313703743832,
+            85.44158350278224
+          ],
+          [
+            195.6967733047769,
+            101.07891439622051
+          ]
+        ],
+        [
+          [
+            190.0024149938058,
+            96.77531949522313
+          ],
+          [
+            195.12618919811024,
+            99.78507675632551
+          ]
+        ],
+        [
+          [
+            196.2803822286614,
+            100.30250509522313
+          ],
+          [
+            200.1775345335433,
+            102.02571882750658
+          ]
+        ],
+        [
+          [
+            194.07204874750656,
+            99.2030312373754
+          ],
+          [
+            195.82964671664044,
+            101.40563401238848
+          ]
+        ],
+        [
+          [
+            202.06071713931757,
+            99.7032674578478
+          ],
+          [
+            204.35711353868768,
+            100.61906524724412
+          ]
+        ],
+        [
+          [
+            204.2028753713386,
+            96.41577371128614
+          ],
+          [
+            204.97876175874018,
+            97.08927041511816
+          ]
+        ],
+        [
+          [
+            191.82150333312336,
+            100.2441468707612
+          ],
+          [
+            193.4488371225197,
+            100.91425530792657
+          ]
+        ],
+        [
+          [
+            189.5339644497638,
+            99.67695103076119
+          ],
+          [
+            191.08156992335958,
+            100.72588368881895
+          ]
+        ],
+        [
+          [
+            193.50875875191602,
+            94.752492280105
+          ],
+          [
+            194.2856909665092,
+            95.96295721658794
+          ]
+        ],
+        [
+          [
+            195.4174734143832,
+            87.61317963590557
+          ],
+          [
+            197.0218790433596,
+            88.15119369574808
+          ]
+        ],
+        [
+          [
+            215.7489516346457,
+            98.46205200041999
+          ],
+          [
+            218.1657142064042,
+            100.01903790362212
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-CZE",
+      "iso3": "CZE",
+      "iso2": "CZ",
+      "naturalEarthCode": "CZE",
+      "naturalEarthId": 1159320535,
+      "sourceFeatures": [
+        {
+          "neId": 1159320535,
+          "name": "Czechia",
+          "isoA3": "CZE",
+          "isoA3EH": "CZE"
+        }
+      ],
+      "name": "Czech Republic",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-CZE-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            201.9054331447769,
+            121.18710851107613
+          ],
+          [
+            237.88232073994752,
+            134.32169489721792
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-NE-CYN-1159320531",
+      "iso3": null,
+      "iso2": null,
+      "naturalEarthCode": "CYN",
+      "naturalEarthId": 1159320531,
+      "sourceFeatures": [
+        {
+          "neId": 1159320531,
+          "name": "N. Cyprus",
+          "isoA3": "-99",
+          "isoA3EH": "-99"
+        }
+      ],
+      "name": "Turkish Republic of Northern Cyprus",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-NE-CYN-1159320531-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            311.9464578141732,
+            203.2297545129659
+          ],
+          [
+            321.7823558341207,
+            206.76058983643048
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-CYP",
+      "iso3": "CYP",
+      "iso2": "CY",
+      "naturalEarthCode": "CYP",
+      "naturalEarthId": 1159320533,
+      "sourceFeatures": [
+        {
+          "neId": 1159320533,
+          "name": "Cyprus",
+          "isoA3": "CYP",
+          "isoA3EH": "CYP"
+        }
+      ],
+      "name": "Cyprus",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-CYP-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            309.7495910811549,
+            205.7877357707087
+          ],
+          [
+            319.0831612262467,
+            209.05907255433073
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-HRV",
+      "iso3": "HRV",
+      "iso2": "HR",
+      "naturalEarthCode": "HRV",
+      "naturalEarthId": 1159320833,
+      "sourceFeatures": [
+        {
+          "neId": 1159320833,
+          "name": "Croatia",
+          "isoA3": "HRV",
+          "isoA3EH": "HRV"
+        }
+      ],
+      "name": "Croatia",
+      "sourcePartCount": 13,
+      "visiblePartCount": 13,
+      "partIds": [
+        "continent-europe--country-HRV-part-0001",
+        "continent-europe--country-HRV-part-0002",
+        "continent-europe--country-HRV-part-0003",
+        "continent-europe--country-HRV-part-0004",
+        "continent-europe--country-HRV-part-0005",
+        "continent-europe--country-HRV-part-0006",
+        "continent-europe--country-HRV-part-0007",
+        "continent-europe--country-HRV-part-0008",
+        "continent-europe--country-HRV-part-0009",
+        "continent-europe--country-HRV-part-0010",
+        "continent-europe--country-HRV-part-0011",
+        "continent-europe--country-HRV-part-0012",
+        "continent-europe--country-HRV-part-0013"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            209.52205384902888,
+            145.21538309123363
+          ],
+          [
+            240.917087144147,
+            164.4043911500263
+          ]
+        ],
+        [
+          [
+            226.24192793868767,
+            164.09382849679795
+          ],
+          [
+            229.11046651380576,
+            164.63314450477694
+          ]
+        ],
+        [
+          [
+            224.77873565984254,
+            162.85235691842524
+          ],
+          [
+            229.14121169889765,
+            163.45967303727036
+          ]
+        ],
+        [
+          [
+            225.02781327874018,
+            162.01028994603675
+          ],
+          [
+            227.5258675712336,
+            162.64522977595806
+          ]
+        ],
+        [
+          [
+            217.78532658057742,
+            157.89845493081367
+          ],
+          [
+            218.75036895748033,
+            158.59539737280843
+          ]
+        ],
+        [
+          [
+            214.43478973060368,
+            152.20461953343838
+          ],
+          [
+            216.421663968084,
+            153.6407163506562
+          ]
+        ],
+        [
+          [
+            215.62180892892388,
+            154.2141604745407
+          ],
+          [
+            216.66917818204723,
+            154.92543501774284
+          ]
+        ],
+        [
+          [
+            216.05691039160104,
+            155.01871106435698
+          ],
+          [
+            218.7144106439895,
+            157.08999849658798
+          ]
+        ],
+        [
+          [
+            216.71398867569553,
+            157.84347963716542
+          ],
+          [
+            218.5174429656693,
+            159.285307160525
+          ]
+        ],
+        [
+          [
+            218.87490776692914,
+            158.68241979968508
+          ],
+          [
+            219.76699302551182,
+            159.27592673091866
+          ]
+        ],
+        [
+          [
+            213.6234679433071,
+            152.51049197186356
+          ],
+          [
+            214.7026228728609,
+            155.42489220367457
+          ]
+        ],
+        [
+          [
+            229.94211256524935,
+            165.14067483632553
+          ],
+          [
+            232.0769713503412,
+            165.67452159496068
+          ]
+        ],
+        [
+          [
+            228.34812785721786,
+            163.93750401091867
+          ],
+          [
+            236.20287700997375,
+            167.10149943937012
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-BGR",
+      "iso3": "BGR",
+      "iso2": "BG",
+      "naturalEarthCode": "BGR",
+      "naturalEarthId": 1159320409,
+      "sourceFeatures": [
+        {
+          "neId": 1159320409,
+          "name": "Bulgaria",
+          "isoA3": "BGR",
+          "isoA3EH": "BGR"
+        }
+      ],
+      "name": "Bulgaria",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-BGR-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            256.62085474351704,
+            157.47090903601054
+          ],
+          [
+            289.9235622097638,
+            173.44772290603677
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-BIH",
+      "iso3": "BIH",
+      "iso2": "BA",
+      "naturalEarthCode": "BIH",
+      "naturalEarthId": 1159320417,
+      "sourceFeatures": [
+        {
+          "neId": 1159320417,
+          "name": "Bosnia and Herz.",
+          "isoA3": "BIH",
+          "isoA3EH": "BIH"
+        }
+      ],
+      "name": "Bosnia and Herzegovina",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-BIH-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            221.36462212115487,
+            151.92819033196855
+          ],
+          [
+            241.89254510614174,
+            166.42487592566934
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-BEL",
+      "iso3": "BEL",
+      "iso2": "BE",
+      "naturalEarthCode": "BEL",
+      "naturalEarthId": 1159320389,
+      "sourceFeatures": [
+        {
+          "neId": 1159320389,
+          "name": "Belgium",
+          "isoA3": "BEL",
+          "isoA3EH": "BEL"
+        }
+      ],
+      "name": "Belgium",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-BEL-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            150.86883141711286,
+            118.76825962078743
+          ],
+          [
+            171.3561112096588,
+            129.33444382824155
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-BLR",
+      "iso3": "BLR",
+      "iso2": "BY",
+      "naturalEarthCode": "BLR",
+      "naturalEarthId": 1159320427,
+      "sourceFeatures": [
+        {
+          "neId": 1159320427,
+          "name": "Belarus",
+          "isoA3": "BLR",
+          "isoA3EH": "BLR"
+        }
+      ],
+      "name": "Belarus",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-BLR-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            261.0552420737008,
+            93.93152860640424
+          ],
+          [
+            311.9334329969554,
+            119.97455725606306
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-AZE",
+      "iso3": "AZE",
+      "iso2": "AZ",
+      "naturalEarthCode": "AZE",
+      "naturalEarthId": 1159320381,
+      "sourceFeatures": [
+        {
+          "neId": 1159320381,
+          "name": "Azerbaijan",
+          "isoA3": "AZE",
+          "isoA3EH": "AZE"
+        }
+      ],
+      "name": "Azerbaijan",
+      "sourcePartCount": 3,
+      "visiblePartCount": 3,
+      "partIds": [
+        "continent-europe--country-AZE-part-0001",
+        "continent-europe--country-AZE-part-0002",
+        "continent-europe--country-AZE-part-0003"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            376.2731913793176,
+            181.33634405375332
+          ],
+          [
+            383.45626868997374,
+            186.07113457301844
+          ]
+        ],
+        [
+          [
+            377.51700539716535,
+            169.99322763170608
+          ],
+          [
+            404.18897637795277,
+            188.6272909690289
+          ]
+        ],
+        [
+          [
+            377.2903383609449,
+            174.2905689129659
+          ],
+          [
+            377.6629089620998,
+            174.66288339317592
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-AUT",
+      "iso3": "AUT",
+      "iso2": "AT",
+      "naturalEarthCode": "AUT",
+      "naturalEarthId": 1159320379,
+      "sourceFeatures": [
+        {
+          "neId": 1159320379,
+          "name": "Austria",
+          "isoA3": "AUT",
+          "isoA3EH": "AUT"
+        }
+      ],
+      "name": "Austria",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-AUT-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            188.21511233091866,
+            132.05448027800531
+          ],
+          [
+            228.89213408,
+            145.93525369364835
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-ARM",
+      "iso3": "ARM",
+      "iso2": "AM",
+      "naturalEarthCode": "ARM",
+      "naturalEarthId": 1159320333,
+      "sourceFeatures": [
+        {
+          "neId": 1159320333,
+          "name": "Armenia",
+          "isoA3": "ARM",
+          "isoA3EH": "ARM"
+        }
+      ],
+      "name": "Armenia",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "continent-europe--country-ARM-part-0001",
+        "continent-europe--country-ARM-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            369.1828618658268,
+            173.19473944272968
+          ],
+          [
+            385.96578973060366,
+            186.11776992839899
+          ]
+        ],
+        [
+          [
+            380.06456573396326,
+            176.53563974215226
+          ],
+          [
+            380.5100881175853,
+            176.8839802347507
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-AND",
+      "iso3": "AND",
+      "iso2": "AD",
+      "naturalEarthCode": "AND",
+      "naturalEarthId": 1159320327,
+      "sourceFeatures": [
+        {
+          "neId": 1159320327,
+          "name": "Andorra",
+          "isoA3": "AND",
+          "isoA3EH": "AND"
+        }
+      ],
+      "name": "Andorra",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-AND-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            144.9457250872441,
+            165.98195743832025
+          ],
+          [
+            146.6819583008924,
+            167.09315950110243
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-DZA",
+      "iso3": "DZA",
+      "iso2": "DZ",
+      "naturalEarthCode": "DZA",
+      "naturalEarthId": 1159320565,
+      "sourceFeatures": [
+        {
+          "neId": 1159320565,
+          "name": "Algeria",
+          "isoA3": "DZA",
+          "isoA3EH": "DZA"
+        }
+      ],
+      "name": "Algeria",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-DZA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            121.67024756405868,
+            195.59776655202106
+          ],
+          [
+            185.75351930153874,
+            222.76997375328085
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-europe--country-ALB",
+      "iso3": "ALB",
+      "iso2": "AL",
+      "naturalEarthCode": "ALB",
+      "naturalEarthId": 1159320325,
+      "sourceFeatures": [
+        {
+          "neId": 1159320325,
+          "name": "Albania",
+          "isoA3": "ALB",
+          "isoA3EH": "ALB"
+        }
+      ],
+      "name": "Albania",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-europe--country-ALB-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            240.27511465994752,
+            165.95408294215227
+          ],
+          [
+            249.6149437606299,
+            181.9319373035171
+          ]
+        ]
+      ]
+    }
+  ],
+  "roles": {
+    "lakes": 75,
+    "rivers": 76,
+    "coastline": 173,
+    "national-boundaries": 129,
+    "admin-boundaries": 0
+  },
+  "svgGroupIds": {
+    "sea": "continent-europe--sea",
+    "country-fills": "continent-europe--country-fills",
+    "highlights": "continent-europe--highlights",
+    "lakes": "continent-europe--lakes",
+    "rivers": "continent-europe--rivers",
+    "coastline": "continent-europe--coastline",
+    "national-boundaries": "continent-europe--national-boundaries",
+    "admin-boundaries": "continent-europe--admin-boundaries",
+    "graticule": "continent-europe--graticule",
+    "frame": "continent-europe--frame"
+  },
+  "style": {
+    "countryFill": "#FFFFFF",
+    "sea": "#EEEEEE",
+    "highlight": "#AAAAAA",
+    "stroke": "#000000",
+    "coastWidthPx": 0.4,
+    "nationalDashPx": [
+      1.4,
+      1.1
+    ]
+  },
+  "highlightEdit": "Set fill on country-ISO group (including every child part). Keep coastline/national boundaries above country-fills; a separate overlay can be placed in highlights below line layers.",
+  "controlPoints": [
+    {
+      "lonlat": [
+        12.5,
+        52.5
+      ],
+      "xy": [
+        204.09448818897638,
+        113.38498687664043
+      ],
+      "expectedXY": [
+        204.09448818897638,
+        113.38498687664043
+      ],
+      "errorPx": 0
+    },
+    {
+      "lonlat": [
+        31.25,
+        52.5
+      ],
+      "xy": [
+        304.1417322834646,
+        113.38498687664043
+      ],
+      "expectedXY": [
+        304.1417322834646,
+        113.38498687664043
+      ],
+      "errorPx": 0
+    },
+    {
+      "lonlat": [
+        12.5,
+        62.75
+      ],
+      "xy": [
+        204.09448818897638,
+        58.69249343832024
+      ],
+      "expectedXY": [
+        204.09448818897638,
+        58.69249343832021
+      ],
+      "errorPx": 2.842170943040401e-14
+    },
+    {
+      "lonlat": [
+        -25,
+        32
+      ],
+      "xy": [
+        4,
+        222.76997375328088
+      ],
+      "expectedXY": [
+        4,
+        222.76997375328085
+      ],
+      "errorPx": 2.842170943040401e-14
+    },
+    {
+      "lonlat": [
+        50,
+        73
+      ],
+      "xy": [
+        404.18897637795277,
+        4.000000000000057
+      ],
+      "expectedXY": [
+        404.18897637795277,
+        4
+      ],
+      "errorPx": 5.684341886080802e-14
+    }
+  ],
+  "gaps": [
+    "Natural Earth is generalized cartography, not survey-grade or current local coastal/hydrological mapping.",
+    "Boundary policy follows pinned Natural Earth de facto country dataset; disputed territories are not independently adjudicated.",
+    "Country direct-fill is supported by standard SVG; no installed map core API is claimed."
+  ],
+  "nativeValidation": {
+    "status": "nativeVerified",
+    "appVersion": "1.1.8",
+    "verifiedAt": "2026-10-03T15:40:43.997803+00:00",
+    "sourceSha256": "c08f69e0cab2839485719718cbdc043005f201a26cdf3c98f282f7b531620db6",
+    "saveReopenExportVerified": true,
+    "visualReview": "passed",
+    "outputs": {
+      "vectora": {
+        "sha256": "5b553d64f67b7d8ca9b5b6f3439db545be76b2aa83103db22b5d9acb104edc6f",
+        "bytes": 5082940
+      },
+      "jpeg": {
+        "sha256": "068857d16d8a4cf86ad72b895706e65edf7b150eb01df18c95d967438e76f770",
+        "bytes": 233560,
+        "scale": 4
+      }
+    },
+    "preservationSummary": {
+      "primitiveIds": {
+        "sourceCount": 698,
+        "exactMatchesAfterReopen": 698
+      },
+      "groupNames": {
+        "sourceCount": 78,
+        "preservedAfterReopen": 78
+      },
+      "hiddenPaths": {
+        "sourceCount": 77,
+        "missingOrVisible": 0
+      },
+      "strokeColors": "preserved",
+      "objectCount": "preserved",
+      "artboardWidthMm": 108,
+      "widthPreserved": true,
+      "structuralIssueCount": 0
+    },
+    "evidence": {
+      "nativeSummarySha256": "68a755e35729ab7a962fd30605a31a3dea81c3d3647a335f0a3878878d262140",
+      "visualReviewSha256": "bb58c495c5d9a7738ba24aff07111a506312d65719b99c9991d5c05592787db2",
+      "runtimeFileDependency": false,
+      "summary": "Source-hash matched native save/reopen/JPEG and parent visual review; structural issues 0."
+    },
+    "nativeArtifactsIncludedInLibrary": false
+  },
+  "approvedOriginal": {
+    "file": "../world_continents.vectora",
+    "sha256": "3d968c1772c1b25f37a36af0681b15b7696a5bef4938dca9dbf5306ea6064e0b",
+    "modified": false
+  }
+}

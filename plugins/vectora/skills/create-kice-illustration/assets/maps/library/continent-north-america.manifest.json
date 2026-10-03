@@ -1,0 +1,5411 @@
+{
+  "schema": "vectora-map-template/v1",
+  "id": "continent-north-america",
+  "title": "북아메리카",
+  "svg": "continent-north-america.svg",
+  "sourceKind": "reprojected-geographic-data",
+  "originalDownloadedSvg": false,
+  "status": "nativeVerified",
+  "sha256": "544b5971f7feb5f5ed46a9bd15dfa67e083fe904d8aa86d59d13e88363ea12b8",
+  "bytes": 1054918,
+  "source": {
+    "repository": "https://github.com/nvkelso/natural-earth-vector",
+    "commit": "ca96624a56bd078437bca8184e78163e5039ad19",
+    "resolution": "50m",
+    "license": "public-domain",
+    "rightsURL": "https://www.naturalearthdata.com/about/terms-of-use/",
+    "datasets": [
+      {
+        "file": "ne_50m_coastline.geojson",
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_50m_coastline.geojson",
+        "sha256": "271f1c4c1908312bac6b29d158ea1356544beafc129f260005300913aa5ea283",
+        "bytes": 1640858,
+        "revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "kind": "geographic-data"
+      },
+      {
+        "file": "ne_50m_rivers_lake_centerlines.geojson",
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_50m_rivers_lake_centerlines.geojson",
+        "sha256": "f286e0ce978fde999ca2d7a78c764be08542e19b63cded52b05c12d5173ccc51",
+        "bytes": 827318,
+        "revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "kind": "geographic-data"
+      },
+      {
+        "file": "ne_50m_admin_0_boundary_lines_land.geojson",
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_50m_admin_0_boundary_lines_land.geojson",
+        "sha256": "2faac4f6b34386f3d21b6e018cf151f241f00e5c936d44dd17d7d9bfb147fa48",
+        "bytes": 760189,
+        "revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "kind": "geographic-data"
+      },
+      {
+        "file": "ne_50m_lakes.geojson",
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_50m_lakes.geojson",
+        "sha256": "d350b75978b26fe839b797c2c529b2fb8f47fb3983c03f4964e36d5df9378a52",
+        "bytes": 876018,
+        "revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "kind": "geographic-data"
+      },
+      {
+        "file": "ne_50m_admin_0_countries.geojson",
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_50m_admin_0_countries.geojson",
+        "sha256": "3e458fc036ad0a66411f2c1e6cac49c5d7bfb81cb1123bc513b22511a2b7fdeb",
+        "bytes": 3083490,
+        "revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "kind": "geographic-data"
+      }
+    ]
+  },
+  "projection": {
+    "name": "Equirectangular",
+    "implementation": "d3-geo@3.1.1",
+    "inputCRS": "WGS84 geographic longitude/latitude degrees",
+    "centralMeridian": -108.5,
+    "rotation": [
+      108.5,
+      0,
+      0
+    ],
+    "center": [
+      0,
+      44.5
+    ],
+    "scale": 180.54440436312825,
+    "translate": [
+      204.09448818897638,
+      128.46822493644984
+    ],
+    "clipAngle": 0,
+    "clipExtent": [
+      [
+        4,
+        4
+      ],
+      [
+        404.18897637795277,
+        252.9364498728997
+      ]
+    ],
+    "extentLonLat": [
+      -172,
+      5,
+      -45,
+      84
+    ],
+    "units": "SVG viewBox px at 96px/in",
+    "antimeridian": "d3 spherical antimeridian preclip after rotation",
+    "latitudeOrientation": "north-up; pole north/south use registered rotation"
+  },
+  "widthMm": 108,
+  "heightMm": 67.98110236220471,
+  "viewBox": [
+    0,
+    0,
+    408.18897637795277,
+    256.9364498728997
+  ],
+  "targetISO": null,
+  "countries": [
+    {
+      "id": "continent-north-america--country-VEN",
+      "iso3": "VEN",
+      "iso2": "VE",
+      "naturalEarthCode": "VEN",
+      "naturalEarthId": 1159321411,
+      "sourceFeatures": [
+        {
+          "neId": 1159321411,
+          "name": "Venezuela",
+          "isoA3": "VEN",
+          "isoA3EH": "VEN"
+        }
+      ],
+      "name": "Venezuela",
+      "sourcePartCount": 5,
+      "visiblePartCount": 5,
+      "partIds": [
+        "continent-north-america--country-VEN-part-0001",
+        "continent-north-america--country-VEN-part-0002",
+        "continent-north-america--country-VEN-part-0003",
+        "continent-north-america--country-VEN-part-0004",
+        "continent-north-america--country-VEN-part-0005"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            353.95610276247754,
+            239.64400286341368
+          ],
+          [
+            354.6038606138012,
+            239.99942424304044
+          ]
+        ],
+        [
+          [
+            343.0503607504495,
+            233.50290765304726
+          ],
+          [
+            344.89393683179367,
+            234.40423091177377
+          ]
+        ],
+        [
+          [
+            339.8604953839668,
+            234.11235449984497
+          ],
+          [
+            340.4974827949656,
+            234.3954614163308
+          ]
+        ],
+        [
+          [
+            353.55344647926097,
+            240.1105129215698
+          ],
+          [
+            354.24674709653414,
+            240.8141239193998
+          ]
+        ],
+        [
+          [
+            314.80437052117304,
+            230.31826995201186
+          ],
+          [
+            357.4616951736623,
+            252.9364498728997
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-VIR",
+      "iso3": "VIR",
+      "iso2": "VI",
+      "naturalEarthCode": "VIR",
+      "naturalEarthId": 1159321371,
+      "sourceFeatures": [
+        {
+          "neId": 1159321371,
+          "name": "U.S. Virgin Is.",
+          "isoA3": "VIR",
+          "isoA3EH": "VIR"
+        }
+      ],
+      "name": "United States Virgin Islands",
+      "sourcePartCount": 3,
+      "visiblePartCount": 3,
+      "partIds": [
+        "continent-north-america--country-VIR-part-0001",
+        "continent-north-america--country-VIR-part-0002",
+        "continent-north-america--country-VIR-part-0003"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            341.092620522537,
+            210.7584066637733
+          ],
+          [
+            341.65544692913386,
+            210.95981200719197
+          ]
+        ],
+        [
+          [
+            341.83608341000684,
+            210.80010194357985
+          ],
+          [
+            342.239048500465,
+            210.93903999355194
+          ]
+        ],
+        [
+          [
+            341.5165120302561,
+            212.62029060301316
+          ],
+          [
+            342.48907207787215,
+            212.91216701494199
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-PRI",
+      "iso3": "PRI",
+      "iso2": "PR",
+      "naturalEarthCode": "PRI",
+      "naturalEarthId": 1159321363,
+      "sourceFeatures": [
+        {
+          "neId": 1159321363,
+          "name": "Puerto Rico",
+          "isoA3": "PRI",
+          "isoA3EH": "PRI"
+        }
+      ],
+      "name": "Puerto Rico",
+      "sourcePartCount": 3,
+      "visiblePartCount": 3,
+      "partIds": [
+        "continent-north-america--country-PRI-part-0001",
+        "continent-north-america--country-PRI-part-0002",
+        "continent-north-america--country-PRI-part-0003"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            334.0328174661789,
+            210.32682333486264
+          ],
+          [
+            339.2107334366668,
+            212.13839375137945
+          ]
+        ],
+        [
+          [
+            339.3639806058652,
+            211.45217049190893
+          ],
+          [
+            340.23791770401147,
+            211.65865224824847
+          ]
+        ],
+        [
+          [
+            331.9121341519003,
+            211.5860289778659
+          ],
+          [
+            332.20739799020396,
+            211.78651105065407
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-USA",
+      "iso3": "USA",
+      "iso2": "US",
+      "naturalEarthCode": "USA",
+      "naturalEarthId": 1159321369,
+      "sourceFeatures": [
+        {
+          "neId": 1159321369,
+          "name": "United States of America",
+          "isoA3": "USA",
+          "isoA3EH": "USA"
+        }
+      ],
+      "name": "United States of America",
+      "sourcePartCount": 127,
+      "visiblePartCount": 111,
+      "partIds": [
+        "continent-north-america--country-USA-part-0001",
+        "continent-north-america--country-USA-part-0002",
+        "continent-north-america--country-USA-part-0003",
+        "continent-north-america--country-USA-part-0004",
+        "continent-north-america--country-USA-part-0005",
+        "continent-north-america--country-USA-part-0006",
+        "continent-north-america--country-USA-part-0007",
+        "continent-north-america--country-USA-part-0008",
+        "continent-north-america--country-USA-part-0009",
+        "continent-north-america--country-USA-part-0010",
+        "continent-north-america--country-USA-part-0011",
+        "continent-north-america--country-USA-part-0013",
+        "continent-north-america--country-USA-part-0014",
+        "continent-north-america--country-USA-part-0015",
+        "continent-north-america--country-USA-part-0016",
+        "continent-north-america--country-USA-part-0017",
+        "continent-north-america--country-USA-part-0018",
+        "continent-north-america--country-USA-part-0019",
+        "continent-north-america--country-USA-part-0020",
+        "continent-north-america--country-USA-part-0021",
+        "continent-north-america--country-USA-part-0022",
+        "continent-north-america--country-USA-part-0023",
+        "continent-north-america--country-USA-part-0024",
+        "continent-north-america--country-USA-part-0025",
+        "continent-north-america--country-USA-part-0026",
+        "continent-north-america--country-USA-part-0027",
+        "continent-north-america--country-USA-part-0028",
+        "continent-north-america--country-USA-part-0029",
+        "continent-north-america--country-USA-part-0030",
+        "continent-north-america--country-USA-part-0031",
+        "continent-north-america--country-USA-part-0032",
+        "continent-north-america--country-USA-part-0033",
+        "continent-north-america--country-USA-part-0034",
+        "continent-north-america--country-USA-part-0035",
+        "continent-north-america--country-USA-part-0036",
+        "continent-north-america--country-USA-part-0037",
+        "continent-north-america--country-USA-part-0038",
+        "continent-north-america--country-USA-part-0039",
+        "continent-north-america--country-USA-part-0040",
+        "continent-north-america--country-USA-part-0041",
+        "continent-north-america--country-USA-part-0043",
+        "continent-north-america--country-USA-part-0044",
+        "continent-north-america--country-USA-part-0045",
+        "continent-north-america--country-USA-part-0047",
+        "continent-north-america--country-USA-part-0054",
+        "continent-north-america--country-USA-part-0055",
+        "continent-north-america--country-USA-part-0056",
+        "continent-north-america--country-USA-part-0057",
+        "continent-north-america--country-USA-part-0058",
+        "continent-north-america--country-USA-part-0059",
+        "continent-north-america--country-USA-part-0060",
+        "continent-north-america--country-USA-part-0061",
+        "continent-north-america--country-USA-part-0069",
+        "continent-north-america--country-USA-part-0070",
+        "continent-north-america--country-USA-part-0071",
+        "continent-north-america--country-USA-part-0072",
+        "continent-north-america--country-USA-part-0073",
+        "continent-north-america--country-USA-part-0074",
+        "continent-north-america--country-USA-part-0075",
+        "continent-north-america--country-USA-part-0076",
+        "continent-north-america--country-USA-part-0077",
+        "continent-north-america--country-USA-part-0078",
+        "continent-north-america--country-USA-part-0079",
+        "continent-north-america--country-USA-part-0080",
+        "continent-north-america--country-USA-part-0081",
+        "continent-north-america--country-USA-part-0082",
+        "continent-north-america--country-USA-part-0083",
+        "continent-north-america--country-USA-part-0084",
+        "continent-north-america--country-USA-part-0085",
+        "continent-north-america--country-USA-part-0086",
+        "continent-north-america--country-USA-part-0087",
+        "continent-north-america--country-USA-part-0088",
+        "continent-north-america--country-USA-part-0089",
+        "continent-north-america--country-USA-part-0090",
+        "continent-north-america--country-USA-part-0091",
+        "continent-north-america--country-USA-part-0092",
+        "continent-north-america--country-USA-part-0093",
+        "continent-north-america--country-USA-part-0094",
+        "continent-north-america--country-USA-part-0095",
+        "continent-north-america--country-USA-part-0096",
+        "continent-north-america--country-USA-part-0097",
+        "continent-north-america--country-USA-part-0098",
+        "continent-north-america--country-USA-part-0099",
+        "continent-north-america--country-USA-part-0100",
+        "continent-north-america--country-USA-part-0101",
+        "continent-north-america--country-USA-part-0102",
+        "continent-north-america--country-USA-part-0103",
+        "continent-north-america--country-USA-part-0104",
+        "continent-north-america--country-USA-part-0105",
+        "continent-north-america--country-USA-part-0106",
+        "continent-north-america--country-USA-part-0107",
+        "continent-north-america--country-USA-part-0108",
+        "continent-north-america--country-USA-part-0109",
+        "continent-north-america--country-USA-part-0110",
+        "continent-north-america--country-USA-part-0111",
+        "continent-north-america--country-USA-part-0112",
+        "continent-north-america--country-USA-part-0113",
+        "continent-north-america--country-USA-part-0114",
+        "continent-north-america--country-USA-part-0115",
+        "continent-north-america--country-USA-part-0116",
+        "continent-north-america--country-USA-part-0117",
+        "continent-north-america--country-USA-part-0118",
+        "continent-north-america--country-USA-part-0119",
+        "continent-north-america--country-USA-part-0120",
+        "continent-north-america--country-USA-part-0121",
+        "continent-north-america--country-USA-part-0122",
+        "continent-north-america--country-USA-part-0123",
+        "continent-north-america--country-USA-part-0124",
+        "continent-north-america--country-USA-part-0125",
+        "continent-north-america--country-USA-part-0126",
+        "continent-north-america--country-USA-part-0127"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            127.05638658763718,
+            89.72622948725893
+          ],
+          [
+            128.25404820782444,
+            90.62032098456197
+          ]
+        ],
+        [
+          [
+            126.77405168925542,
+            90.8007999107198
+          ],
+          [
+            128.06141235984882,
+            91.46132914725027
+          ]
+        ],
+        [
+          [
+            121.65690772347948,
+            84.88064997953995
+          ],
+          [
+            122.75609764672333,
+            85.2853072076384
+          ]
+        ],
+        [
+          [
+            88.18376252414906,
+            78.36228685274969
+          ],
+          [
+            88.75674490768189,
+            78.64108622332441
+          ]
+        ],
+        [
+          [
+            90.29721092590991,
+            79.57841073445343
+          ],
+          [
+            91.48779518829444,
+            80.21663337441873
+          ]
+        ],
+        [
+          [
+            78.76955948911903,
+            79.14836829065658
+          ],
+          [
+            79.89659878380557,
+            79.51686671163739
+          ]
+        ],
+        [
+          [
+            66.80432503986617,
+            78.03886798685596
+          ],
+          [
+            67.3769986161573,
+            78.49799187996774
+          ]
+        ],
+        [
+          [
+            40.18250334676674,
+            94.2568508172856
+          ],
+          [
+            40.77548572583552,
+            94.56626622010043
+          ]
+        ],
+        [
+          [
+            43.50869135495071,
+            95.19648508053814
+          ],
+          [
+            43.823491977928,
+            95.48466840994479
+          ]
+        ],
+        [
+          [
+            42.92078538880287,
+            94.66965992634383
+          ],
+          [
+            43.34098066290534,
+            95.20110143369084
+          ]
+        ],
+        [
+          [
+            22.116485636555296,
+            99.02734289887778
+          ],
+          [
+            22.58299254361711,
+            99.41384352160702
+          ]
+        ],
+        [
+          [
+            22.438209213714515,
+            59.68589902511005
+          ],
+          [
+            23.466776811457663,
+            60.02070279471758
+          ]
+        ],
+        [
+          [
+            4.56913489738983,
+            67.88212848608097
+          ],
+          [
+            14.348143270878552,
+            70.31130078144955
+          ]
+        ],
+        [
+          [
+            18.380252029016077,
+            78.37598150858699
+          ],
+          [
+            24.192851960567936,
+            80.36957173637543
+          ]
+        ],
+        [
+          [
+            58.47546601971604,
+            86.01676757691115
+          ],
+          [
+            66.34350900911409,
+            89.79100338173473
+          ]
+        ],
+        [
+          [
+            16.32588664542132,
+            43.679631918655815
+          ],
+          [
+            136.30165000384403,
+            96.1075011053382
+          ]
+        ],
+        [
+          [
+            26.36030696757402,
+            95.22156464008927
+          ],
+          [
+            32.097513816851716,
+            97.25869668894538
+          ]
+        ],
+        [
+          [
+            124.56997781536369,
+            93.62001465881329
+          ],
+          [
+            126.00504918246644,
+            94.53318603211605
+          ]
+        ],
+        [
+          [
+            131.31959660189727,
+            94.54949609622417
+          ],
+          [
+            132.4637148277016,
+            95.73546400545598
+          ]
+        ],
+        [
+          [
+            127.84108469514537,
+            90.65894079632957
+          ],
+          [
+            129.83297963419932,
+            92.45312347448694
+          ]
+        ],
+        [
+          [
+            130.5287444072169,
+            92.37127064889327
+          ],
+          [
+            133.30503179763164,
+            94.8592203062806
+          ]
+        ],
+        [
+          [
+            123.8063605287371,
+            88.86306282943767
+          ],
+          [
+            127.04838595920396,
+            90.80710840151278
+          ]
+        ],
+        [
+          [
+            125.46268283117365,
+            94.35532251422902
+          ],
+          [
+            128.0988032448386,
+            96.37691336598672
+          ]
+        ],
+        [
+          [
+            83.71360754268713,
+            78.11195446810092
+          ],
+          [
+            85.60626506888211,
+            78.78032992944387
+          ]
+        ],
+        [
+          [
+            80.02815066873339,
+            78.48214502672204
+          ],
+          [
+            82.91014151751506,
+            80.26017519548637
+          ]
+        ],
+        [
+          [
+            79.96829878355757,
+            78.07779660586519
+          ],
+          [
+            80.70314342811086,
+            79.06558904333806
+          ]
+        ],
+        [
+          [
+            79.23622395089593,
+            76.71427083489365
+          ],
+          [
+            79.84459312344228,
+            77.04892020088039
+          ]
+        ],
+        [
+          [
+            62.690363456134946,
+            88.49640779862358
+          ],
+          [
+            64.16143607564021,
+            89.07816282869362
+          ]
+        ],
+        [
+          [
+            65.01583323801853,
+            83.97671131254259
+          ],
+          [
+            65.89746215735639,
+            84.42029715965029
+          ]
+        ],
+        [
+          [
+            62.23200843003289,
+            86.0196917924236
+          ],
+          [
+            63.11255967511943,
+            86.48820279546155
+          ]
+        ],
+        [
+          [
+            55.245131149110335,
+            92.46912788244774
+          ],
+          [
+            55.79165064269333,
+            92.89378510608219
+          ]
+        ],
+        [
+          [
+            58.270830804637626,
+            90.33829174232747
+          ],
+          [
+            59.31786066389739,
+            90.93189173587945
+          ]
+        ],
+        [
+          [
+            59.67312763990327,
+            90.31244331576661
+          ],
+          [
+            60.397510651373324,
+            90.61509016802032
+          ]
+        ],
+        [
+          [
+            39.145626313348686,
+            94.1066791161262
+          ],
+          [
+            40.292205543803135,
+            94.9241486043772
+          ]
+        ],
+        [
+          [
+            34.143724168392396,
+            95.43374042383283
+          ],
+          [
+            34.774406239692496,
+            95.87840079409756
+          ]
+        ],
+        [
+          [
+            32.92529053456508,
+            96.97451524930247
+          ],
+          [
+            33.763992096224285,
+            97.33685958311113
+          ]
+        ],
+        [
+          [
+            41.09767251385708,
+            94.52149232116062
+          ],
+          [
+            42.31918476681753,
+            95.62529859755716
+          ]
+        ],
+        [
+          [
+            22.573145373922813,
+            97.86783787959573
+          ],
+          [
+            23.874358255068557,
+            98.38419824961247
+          ]
+        ],
+        [
+          [
+            23.9963717775436,
+            97.63627656370511
+          ],
+          [
+            24.77245164213531,
+            98.12586523653044
+          ]
+        ],
+        [
+          [
+            38.2476873299027,
+            83.42265440138877
+          ],
+          [
+            39.55966750027903,
+            84.16057766507535
+          ]
+        ],
+        [
+          [
+            9.083909374170844,
+            88.317621010106
+          ],
+          [
+            9.93615118804638,
+            88.64857729357058
+          ]
+        ],
+        [
+          [
+            10.32788262731728,
+            102.05057524756646
+          ],
+          [
+            11.272905261826565,
+            102.33829851720503
+          ]
+        ],
+        [
+          [
+            7.696072910657875,
+            102.63694347969493
+          ],
+          [
+            8.459999004526082,
+            103.10268467084131
+          ]
+        ],
+        [
+          [
+            11.039034193812398,
+            90.2295096648273
+          ],
+          [
+            11.958668461529015,
+            90.52138607675613
+          ]
+        ],
+        [
+          [
+            117.99791373947552,
+            87.39568014136029
+          ],
+          [
+            121.81769231024866,
+            91.54949361473123
+          ]
+        ],
+        [
+          [
+            120.80128163432326,
+            84.81095092466984
+          ],
+          [
+            124.30010234385274,
+            88.94537886589373
+          ]
+        ],
+        [
+          [
+            115.64767005418813,
+            85.08236413020026
+          ],
+          [
+            120.99037565230331,
+            87.75633233752865
+          ]
+        ],
+        [
+          [
+            124.513046994606,
+            91.16176091412981
+          ],
+          [
+            130.118087495567,
+            96.2875199717279
+          ]
+        ],
+        [
+          [
+            122.51068727137454,
+            89.29279961708721
+          ],
+          [
+            124.56597592559987,
+            91.98815430144458
+          ]
+        ],
+        [
+          [
+            62.66912823163247,
+            84.50861287965773
+          ],
+          [
+            67.10266434620868,
+            85.94830059991318
+          ]
+        ],
+        [
+          [
+            13.173100205592448,
+            99.92497307508214
+          ],
+          [
+            17.219823739103504,
+            102.21320952669103
+          ]
+        ],
+        [
+          [
+            17.206901101370278,
+            98.51405799689996
+          ],
+          [
+            22.17910733362271,
+            100.86645387959572
+          ]
+        ],
+        [
+          [
+            54.26410726219851,
+            204.80086899869795
+          ],
+          [
+            58.18559055266914,
+            208.93483372905942
+          ]
+        ],
+        [
+          [
+            50.35155102188608,
+            201.79486683365366
+          ],
+          [
+            52.173431818959756,
+            202.3413831761423
+          ]
+        ],
+        [
+          [
+            52.21882018128841,
+            202.4107765748651
+          ],
+          [
+            54.44951134875072,
+            203.78322624490045
+          ]
+        ],
+        [
+          [
+            47.254614577469226,
+            200.30886748043895
+          ],
+          [
+            49.26420921321849,
+            201.672544503937
+          ]
+        ],
+        [
+          [
+            42.47750834893668,
+            198.66469579763157
+          ],
+          [
+            44.01674228929264,
+            199.75819484456565
+          ]
+        ],
+        [
+          [
+            41.04597566073534,
+            199.3198429650939
+          ],
+          [
+            41.659578800917615,
+            200.0079127658255
+          ]
+        ],
+        [
+          [
+            51.10701327645859,
+            202.73942625730047
+          ],
+          [
+            51.86709188418385,
+            203.32410235178867
+          ]
+        ],
+        [
+          [
+            153.01537244317691,
+            113.12341033715666
+          ],
+          [
+            334.9058281426003,
+            189.4946742111724
+          ]
+        ],
+        [
+          [
+            312.7063089128898,
+            139.01485248632895
+          ],
+          [
+            319.41438367214334,
+            140.85042478814555
+          ]
+        ],
+        [
+          [
+            330.41644203261205,
+            128.60531644516087
+          ],
+          [
+            331.1237461129642,
+            129.25692178262753
+          ]
+        ],
+        [
+          [
+            312.06393313063427,
+            140.5733207063054
+          ],
+          [
+            312.59491142711886,
+            141.01367353065905
+          ]
+        ],
+        [
+          [
+            322.7987345789571,
+            138.05628959960316
+          ],
+          [
+            323.80483802542005,
+            138.46525752470703
+          ]
+        ],
+        [
+          [
+            321.1694896298593,
+            137.43530344547088
+          ],
+          [
+            321.5293729590179,
+            138.03305658131313
+          ]
+        ],
+        [
+          [
+            324.67723423845246,
+            138.2446179016678
+          ],
+          [
+            325.48116347448695,
+            138.7109735562031
+          ]
+        ],
+        [
+          [
+            307.3962234429909,
+            155.42223499088595
+          ],
+          [
+            307.65301872205345,
+            155.77057901271002
+          ]
+        ],
+        [
+          [
+            307.4816149474859,
+            155.97998498456195
+          ],
+          [
+            308.21784607353214,
+            157.73293559377515
+          ]
+        ],
+        [
+          [
+            306.55490332196666,
+            157.80432678628557
+          ],
+          [
+            307.19219954020707,
+            158.02911955161505
+          ]
+        ],
+        [
+          [
+            304.839498001364,
+            158.5961022515965
+          ],
+          [
+            305.8516011313783,
+            159.56481796416386
+          ]
+        ],
+        [
+          [
+            286.96396079062555,
+            185.03652174790747
+          ],
+          [
+            287.4812444312729,
+            185.4162538200756
+          ]
+        ],
+        [
+          [
+            287.0655079556079,
+            184.5553969143778
+          ],
+          [
+            287.3344601564884,
+            185.20807677500153
+          ]
+        ],
+        [
+          [
+            292.07125758670713,
+            188.81922139202675
+          ],
+          [
+            293.09059247814497,
+            190.05873269564137
+          ]
+        ],
+        [
+          [
+            256.06661775782754,
+            175.28105519995034
+          ],
+          [
+            256.86177749841903,
+            175.77725801971602
+          ]
+        ],
+        [
+          [
+            240.218522980966,
+            180.04246897885793
+          ],
+          [
+            240.83704813044827,
+            180.7790057610515
+          ]
+        ],
+        [
+          [
+            240.9587528456817,
+            179.25884854560104
+          ],
+          [
+            242.2114987453655,
+            179.99353878653355
+          ]
+        ],
+        [
+          [
+            239.1194874613429,
+            181.02210953537104
+          ],
+          [
+            240.14128335743072,
+            182.8481434747349
+          ]
+        ],
+        [
+          [
+            246.35177196651998,
+            176.23468977518752
+          ],
+          [
+            247.36649050480503,
+            176.88060423634445
+          ]
+        ],
+        [
+          [
+            239.04901638836878,
+            182.9932356118792
+          ],
+          [
+            239.79417141347884,
+            186.40758808754413
+          ]
+        ],
+        [
+          [
+            166.46552857139318,
+            161.3237682569285
+          ],
+          [
+            166.89080340951082,
+            161.48455284369766
+          ]
+        ],
+        [
+          [
+            169.1955043288487,
+            163.8171031344782
+          ],
+          [
+            169.62770212114827,
+            164.02727797333995
+          ]
+        ],
+        [
+          [
+            172.2993605763532,
+            164.6028757651435
+          ],
+          [
+            173.05497723454647,
+            165.2777141209002
+          ]
+        ],
+        [
+          [
+            167.06313045470895,
+            161.47116699510195
+          ],
+          [
+            167.90752289267778,
+            161.85443774617147
+          ]
+        ],
+        [
+          [
+            168.11508547436296,
+            161.30361385777167
+          ],
+          [
+            169.27720275082154,
+            161.65626542550683
+          ]
+        ],
+        [
+          [
+            172.36475208531218,
+            163.2024223200446
+          ],
+          [
+            173.22176465596132,
+            163.72232452005701
+          ]
+        ],
+        [
+          [
+            158.39469690817782,
+            115.20100873904144
+          ],
+          [
+            159.13200255738116,
+            115.56612603583605
+          ]
+        ],
+        [
+          [
+            157.86925823547654,
+            115.50688861404922
+          ],
+          [
+            158.44531608704818,
+            115.96462602566803
+          ]
+        ],
+        [
+          [
+            159.1953962725526,
+            116.22865306615412
+          ],
+          [
+            160.39951763605933,
+            117.69865116250233
+          ]
+        ],
+        [
+          [
+            320.9893163598487,
+            137.69517734366664
+          ],
+          [
+            321.14348679967765,
+            138.02628803075203
+          ]
+        ],
+        [
+          [
+            312.0094664656209,
+            143.4471533719387
+          ],
+          [
+            312.4709001108562,
+            144.13107003038004
+          ]
+        ],
+        [
+          [
+            308.4634077014074,
+            148.01100929357057
+          ],
+          [
+            309.34765518011034,
+            149.35345739475474
+          ]
+        ],
+        [
+          [
+            304.3814486314093,
+            159.34848903813005
+          ],
+          [
+            304.78379925847855,
+            159.49850318457436
+          ]
+        ],
+        [
+          [
+            289.42082805381614,
+            190.70233740467478
+          ],
+          [
+            289.74178591505984,
+            191.08068299534995
+          ]
+        ],
+        [
+          [
+            291.22747646103295,
+            190.39892168541132
+          ],
+          [
+            291.4264207998016,
+            190.53324338223075
+          ]
+        ],
+        [
+          [
+            291.8047663904768,
+            190.1001223193006
+          ],
+          [
+            291.96401324322653,
+            190.2345952686465
+          ]
+        ],
+        [
+          [
+            290.3167660923802,
+            190.67248708835015
+          ],
+          [
+            290.9686802370885,
+            190.88158740405478
+          ]
+        ],
+        [
+          [
+            289.2225013295307,
+            171.09800587364373
+          ],
+          [
+            289.4292918931118,
+            171.8657794536549
+          ]
+        ],
+        [
+          [
+            288.7596843538967,
+            190.8940499820199
+          ],
+          [
+            289.0743305732532,
+            191.20638960034717
+          ]
+        ],
+        [
+          [
+            292.52391858540517,
+            180.93225293024983
+          ],
+          [
+            293.3633890140741,
+            182.96707837807674
+          ]
+        ],
+        [
+          [
+            288.1927016539153,
+            191.24839368739535
+          ],
+          [
+            288.42195636877676,
+            191.35671255403307
+          ]
+        ],
+        [
+          [
+            265.7185361959204,
+            174.93747878380555
+          ],
+          [
+            265.94210003447205,
+            175.229664002976
+          ]
+        ],
+        [
+          [
+            266.41414656531714,
+            173.32639044007684
+          ],
+          [
+            266.9332798983198,
+            173.51379547151092
+          ]
+        ],
+        [
+          [
+            267.6953562998326,
+            173.2965432748465
+          ],
+          [
+            268.46712861851324,
+            173.43147943505483
+          ]
+        ],
+        [
+          [
+            264.4631780390601,
+            173.6276539619319
+          ],
+          [
+            264.9589207990576,
+            174.0406174746109
+          ]
+        ],
+        [
+          [
+            265.96025348874696,
+            173.98030552966702
+          ],
+          [
+            266.13134845607294,
+            174.86531872428543
+          ]
+        ],
+        [
+          [
+            277.77732033281666,
+            175.00225582937563
+          ],
+          [
+            278.97344421898447,
+            175.39860362179923
+          ]
+        ],
+        [
+          [
+            158.68118809994422,
+            119.72486151850703
+          ],
+          [
+            158.8789003608408,
+            120.0073508205096
+          ]
+        ],
+        [
+          [
+            159.94793431161267,
+            119.04648448384893
+          ],
+          [
+            160.3127396500713,
+            119.47252818897636
+          ]
+        ],
+        [
+          [
+            159.73991167015933,
+            118.37226059148117
+          ],
+          [
+            159.98778305015816,
+            118.77722662682123
+          ]
+        ],
+        [
+          [
+            158.61702866885736,
+            115.70121659966517
+          ],
+          [
+            158.98783369086743,
+            116.11110464430527
+          ]
+        ],
+        [
+          [
+            329.4985030536301,
+            129.23645857622913
+          ],
+          [
+            329.75006751615103,
+            129.48832869489735
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-AIA",
+      "iso3": "AIA",
+      "iso2": "AI",
+      "naturalEarthCode": "AIA",
+      "naturalEarthId": 1159320703,
+      "sourceFeatures": [
+        {
+          "neId": 1159320703,
+          "name": "Anguilla",
+          "isoA3": "AIA",
+          "isoA3EH": "AIA"
+        }
+      ],
+      "name": "Anguilla",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-north-america--country-AIA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            346.9650723392647,
+            211.12228873160143
+          ],
+          [
+            347.5335927732655,
+            211.43216734527866
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-CYM",
+      "iso3": "CYM",
+      "iso2": "KY",
+      "naturalEarthCode": "CYM",
+      "naturalEarthId": 1159320707,
+      "sourceFeatures": [
+        {
+          "neId": 1159320707,
+          "name": "Cayman Is.",
+          "isoA3": "CYM",
+          "isoA3EH": "CYM"
+        }
+      ],
+      "name": "Cayman Islands",
+      "sourcePartCount": 3,
+      "visiblePartCount": 3,
+      "partIds": [
+        "continent-north-america--country-CYM-part-0001",
+        "continent-north-america--country-CYM-part-0002",
+        "continent-north-america--country-CYM-part-0003"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            289.4289830858702,
+            207.6082356322152
+          ],
+          [
+            290.41200791766386,
+            207.96442587885173
+          ]
+        ],
+        [
+          [
+            293.50401920168645,
+            206.5545884749209
+          ],
+          [
+            293.9791443516647,
+            206.7227592267344
+          ]
+        ],
+        [
+          [
+            294.1962452958026,
+            206.40826425990448
+          ],
+          [
+            294.71276006944015,
+            206.6258252638105
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-BMU",
+      "iso3": "BMU",
+      "iso2": "BM",
+      "naturalEarthCode": "BMU",
+      "naturalEarthId": 1159320705,
+      "sourceFeatures": [
+        {
+          "neId": 1159320705,
+          "name": "Bermuda",
+          "isoA3": "BMU",
+          "isoA3EH": "BMU"
+        }
+      ],
+      "name": "Bermuda",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-north-america--country-BMU-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            341.59928812648025,
+            166.6377012129704
+          ],
+          [
+            342.2122736521793,
+            167.03881976216752
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-VGB",
+      "iso3": "VGB",
+      "iso2": "VG",
+      "naturalEarthCode": "VGB",
+      "naturalEarthId": 1159320739,
+      "sourceFeatures": [
+        {
+          "neId": 1159320739,
+          "name": "British Virgin Is.",
+          "isoA3": "VGB",
+          "isoA3EH": "VGB"
+        }
+      ],
+      "name": "British Virgin Islands",
+      "sourcePartCount": 3,
+      "visiblePartCount": 3,
+      "partIds": [
+        "continent-north-america--country-VGB-part-0001",
+        "continent-north-america--country-VGB-part-0002",
+        "continent-north-america--country-VGB-part-0003"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            342.9198865397731,
+            210.34159566495129
+          ],
+          [
+            343.29515666240934,
+            210.53084408655212
+          ]
+        ],
+        [
+          [
+            342.12780541831484,
+            210.5659252194184
+          ],
+          [
+            342.6003151600223,
+            210.71455603546403
+          ]
+        ],
+        [
+          [
+            343.021742511997,
+            209.6004393785107
+          ],
+          [
+            343.4560956527993,
+            209.74399378163554
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-TCA",
+      "iso3": "TCA",
+      "iso2": "TC",
+      "naturalEarthCode": "TCA",
+      "naturalEarthId": 1159320737,
+      "sourceFeatures": [
+        {
+          "neId": 1159320737,
+          "name": "Turks and Caicos Is.",
+          "isoA3": "TCA",
+          "isoA3EH": "TCA"
+        }
+      ],
+      "name": "Turks and Caicos Islands",
+      "sourcePartCount": 3,
+      "visiblePartCount": 3,
+      "partIds": [
+        "continent-north-america--country-TCA-part-0001",
+        "continent-north-america--country-TCA-part-0002",
+        "continent-north-america--country-TCA-part-0003"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            319.5894805292331,
+            199.83389358298712
+          ],
+          [
+            320.2535484446649,
+            200.15023509107814
+          ]
+        ],
+        [
+          [
+            319.0494239300639,
+            199.5194017672515
+          ],
+          [
+            319.48777580953566,
+            199.90390144509888
+          ]
+        ],
+        [
+          [
+            318.0305490983942,
+            199.83620333511064
+          ],
+          [
+            318.65461387165976,
+            200.13915584351165
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-MSR",
+      "iso3": "MSR",
+      "iso2": "MS",
+      "naturalEarthCode": "MSR",
+      "naturalEarthId": 1159320727,
+      "sourceFeatures": [
+        {
+          "neId": 1159320727,
+          "name": "Montserrat",
+          "isoA3": "MSR",
+          "isoA3EH": "MSR"
+        }
+      ],
+      "name": "Montserrat",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-north-america--country-MSR-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            349.91753110992624,
+            215.72338113460222
+          ],
+          [
+            350.15263110471824,
+            216.12788395907987
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-TTO",
+      "iso3": "TTO",
+      "iso2": "TT",
+      "naturalEarthCode": "TTO",
+      "naturalEarthId": 1159321321,
+      "sourceFeatures": [
+        {
+          "neId": 1159321321,
+          "name": "Trinidad and Tobago",
+          "isoA3": "TTO",
+          "isoA3EH": "TTO"
+        }
+      ],
+      "name": "Trinidad and Tobago",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "continent-north-america--country-TTO-part-0001",
+        "continent-north-america--country-TTO-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            354.368143004526,
+            233.00454633368463
+          ],
+          [
+            355.2666996024552,
+            233.49859695604187
+          ]
+        ],
+        [
+          [
+            350.91624839134477,
+            234.53332179205154
+          ],
+          [
+            354.03103263388925,
+            236.9772664175088
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-SUR",
+      "iso3": "SUR",
+      "iso2": "SR",
+      "naturalEarthCode": "SUR",
+      "naturalEarthId": 1159321281,
+      "sourceFeatures": [
+        {
+          "neId": 1159321281,
+          "name": "Suriname",
+          "isoA3": "SUR",
+          "isoA3EH": "SUR"
+        }
+      ],
+      "name": "Suriname",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-north-america--country-SUR-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            364.3173781618658,
+            249.80597318073032
+          ],
+          [
+            375.71127042916487,
+            252.9364498728997
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-VCT",
+      "iso3": "VCT",
+      "iso2": "VC",
+      "naturalEarthCode": "VCT",
+      "naturalEarthId": 1159321409,
+      "sourceFeatures": [
+        {
+          "neId": 1159321409,
+          "name": "St. Vin. and Gren.",
+          "isoA3": "VCT",
+          "isoA3EH": "VCT"
+        }
+      ],
+      "name": "Saint Vincent and the Grenadines",
+      "sourcePartCount": 3,
+      "visiblePartCount": 3,
+      "partIds": [
+        "continent-north-america--country-VCT-part-0001",
+        "continent-north-america--country-VCT-part-0002",
+        "continent-north-america--country-VCT-part-0003"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            352.89768484840965,
+            226.59727188542374
+          ],
+          [
+            353.38065937429474,
+            227.27934200260398
+          ]
+        ],
+        [
+          [
+            352.89876252266106,
+            227.56214011184818
+          ],
+          [
+            353.16094302188606,
+            227.8024709231818
+          ]
+        ],
+        [
+          [
+            352.65750528960257,
+            228.56132060412918
+          ],
+          [
+            352.77936440845684,
+            228.68963946630288
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-LCA",
+      "iso3": "LCA",
+      "iso2": "LC",
+      "naturalEarthCode": "LCA",
+      "naturalEarthId": 1159321019,
+      "sourceFeatures": [
+        {
+          "neId": 1159321019,
+          "name": "Saint Lucia",
+          "isoA3": "LCA",
+          "isoA3EH": "LCA"
+        }
+      ],
+      "name": "Saint Lucia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-north-america--country-LCA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            353.54098075020147,
+            224.28241814024426
+          ],
+          [
+            354.1282722529605,
+            225.46653950821496
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-KNA",
+      "iso3": "KNA",
+      "iso2": "KN",
+      "naturalEarthCode": "KNA",
+      "naturalEarthId": 1159320983,
+      "sourceFeatures": [
+        {
+          "neId": 1159320983,
+          "name": "St. Kitts and Nevis",
+          "isoA3": "KNA",
+          "isoA3EH": "KNA"
+        }
+      ],
+      "name": "Saint Kitts and Nevis",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "continent-north-america--country-KNA-part-0001",
+        "continent-north-america--country-KNA-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            348.6512481091202,
+            214.48986951453898
+          ],
+          [
+            348.9432757735756,
+            214.80636227515652
+          ]
+        ],
+        [
+          [
+            347.9719446527373,
+            213.85472549370695
+          ],
+          [
+            348.633091503751,
+            214.4161685699051
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-RUS",
+      "iso3": "RUS",
+      "iso2": "RU",
+      "naturalEarthCode": "RUS",
+      "naturalEarthId": 1159321201,
+      "sourceFeatures": [
+        {
+          "neId": 1159321201,
+          "name": "Russia",
+          "isoA3": "RUS",
+          "isoA3EH": "RUS"
+        }
+      ],
+      "name": "Russia",
+      "sourcePartCount": 101,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-north-america--country-RUS-part-0018"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            4,
+            57.67024386864216
+          ],
+          [
+            11.155662496125046,
+            62.30801597569592
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-PAN",
+      "iso3": "PAN",
+      "iso2": "PA",
+      "naturalEarthCode": "PAN",
+      "naturalEarthId": 1159321161,
+      "sourceFeatures": [
+        {
+          "neId": 1159321161,
+          "name": "Panama",
+          "isoA3": "PAN",
+          "isoA3EH": "PAN"
+        }
+      ],
+      "name": "Panama",
+      "sourcePartCount": 5,
+      "visiblePartCount": 5,
+      "partIds": [
+        "continent-north-america--country-PAN-part-0001",
+        "continent-north-america--country-PAN-part-0002",
+        "continent-north-america--country-PAN-part-0003",
+        "continent-north-america--country-PAN-part-0004",
+        "continent-north-america--country-PAN-part-0005"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            284.3612293721868,
+            238.44818463339323
+          ],
+          [
+            302.7363568290657,
+            245.94080624762844
+          ]
+        ],
+        [
+          [
+            297.1622443186807,
+            242.03286320937437
+          ],
+          [
+            297.5585921111042,
+            242.75232106045007
+          ]
+        ],
+        [
+          [
+            288.0440708378697,
+            244.6754433663587
+          ],
+          [
+            288.8486176883874,
+            245.60215499187794
+          ]
+        ],
+        [
+          [
+            286.58468877822554,
+            238.97116230144456
+          ],
+          [
+            286.86271928179053,
+            239.27934877748152
+          ]
+        ],
+        [
+          [
+            296.6498826873334,
+            242.55107012065218
+          ],
+          [
+            296.84559400334797,
+            242.8220232664145
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-NIC",
+      "iso3": "NIC",
+      "iso2": "NI",
+      "naturalEarthCode": "NIC",
+      "naturalEarthId": 1159321091,
+      "sourceFeatures": [
+        {
+          "neId": 1159321091,
+          "name": "Nicaragua",
+          "isoA3": "NIC",
+          "isoA3EH": "NIC"
+        }
+      ],
+      "name": "Nicaragua",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-north-america--country-NIC-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            269.73125942191086,
+            221.40011848422094
+          ],
+          [
+            283.95103252030503,
+            234.8638148646537
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-NLD",
+      "iso3": "NLD",
+      "iso2": "NL",
+      "naturalEarthCode": "NLD",
+      "naturalEarthId": 1159321101,
+      "sourceFeatures": [
+        {
+          "neId": 1159321101,
+          "name": "Netherlands",
+          "isoA3": "NLD",
+          "isoA3EH": "NLD"
+        }
+      ],
+      "name": "Netherlands",
+      "sourcePartCount": 12,
+      "visiblePartCount": 3,
+      "partIds": [
+        "continent-north-america--country-NLD-part-0010",
+        "continent-north-america--country-NLD-part-0011",
+        "continent-north-america--country-NLD-part-0012"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            330.5444552386385,
+            229.92730737975072
+          ],
+          [
+            331.0652775581872,
+            230.77770265236526
+          ]
+        ],
+        [
+          [
+            347.47051101643,
+            213.45206921049038
+          ],
+          [
+            347.66622233244465,
+            213.62639404947606
+          ]
+        ],
+        [
+          [
+            346.6673506474053,
+            213.06941292280982
+          ],
+          [
+            346.7542830370141,
+            213.17096323888643
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-ABW",
+      "iso3": "ABW",
+      "iso2": "AW",
+      "naturalEarthCode": "ABW",
+      "naturalEarthId": 1159321097,
+      "sourceFeatures": [
+        {
+          "neId": 1159321097,
+          "name": "Aruba",
+          "isoA3": "ABW",
+          "isoA3EH": "ABW"
+        }
+      ],
+      "name": "Aruba",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-north-america--country-ABW-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            325.20329052563704,
+            228.94366808456812
+          ],
+          [
+            325.74026850567304,
+            229.5458831699423
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-CUW",
+      "iso3": "CUW",
+      "iso2": "CW",
+      "naturalEarthCode": "CUW",
+      "naturalEarthId": 1159321099,
+      "sourceFeatures": [
+        {
+          "neId": 1159321099,
+          "name": "Curaçao",
+          "isoA3": "CUW",
+          "isoA3EH": "CUW"
+        }
+      ],
+      "name": "Curaçao",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-north-america--country-CUW-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            328.06204520503445,
+            229.6805136740033
+          ],
+          [
+            329.3471024256928,
+            230.73554416169628
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-MEX",
+      "iso3": "MEX",
+      "iso2": "MX",
+      "naturalEarthCode": "MEX",
+      "naturalEarthId": 1159321055,
+      "sourceFeatures": [
+        {
+          "neId": 1159321055,
+          "name": "Mexico",
+          "isoA3": "MEX",
+          "isoA3EH": "MEX"
+        }
+      ],
+      "name": "Mexico",
+      "sourcePartCount": 16,
+      "visiblePartCount": 16,
+      "partIds": [
+        "continent-north-america--country-MEX-part-0001",
+        "continent-north-america--country-MEX-part-0002",
+        "continent-north-america--country-MEX-part-0003",
+        "continent-north-america--country-MEX-part-0004",
+        "continent-north-america--country-MEX-part-0005",
+        "continent-north-america--country-MEX-part-0006",
+        "continent-north-america--country-MEX-part-0007",
+        "continent-north-america--country-MEX-part-0008",
+        "continent-north-america--country-MEX-part-0009",
+        "continent-north-america--country-MEX-part-0010",
+        "continent-north-america--country-MEX-part-0011",
+        "continent-north-america--country-MEX-part-0012",
+        "continent-north-america--country-MEX-part-0013",
+        "continent-north-america--country-MEX-part-0014",
+        "continent-north-america--country-MEX-part-0015",
+        "continent-north-america--country-MEX-part-0016"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            176.90599260313724,
+            165.60282512443422
+          ],
+          [
+            272.5621678809598,
+            222.8579628098456
+          ]
+        ],
+        [
+          [
+            271.7817773193626,
+            203.84538473110544
+          ],
+          [
+            272.6149424083328,
+            204.81240830603258
+          ]
+        ],
+        [
+          [
+            209.95755604687213,
+            200.27486402182402
+          ],
+          [
+            210.38959943555088,
+            200.85353728166655
+          ]
+        ],
+        [
+          [
+            196.01611595709593,
+            209.2524041639283
+          ],
+          [
+            196.48631909777424,
+            209.70229850182898
+          ]
+        ],
+        [
+          [
+            197.1513102838366,
+            189.6377654034348
+          ],
+          [
+            197.66982600235605,
+            190.25629055291708
+          ]
+        ],
+        [
+          [
+            188.0416006423213,
+            175.50446148378694
+          ],
+          [
+            189.4242062892926,
+            177.2006356758633
+          ]
+        ],
+        [
+          [
+            182.50025951267904,
+            179.3005469765019
+          ],
+          [
+            183.1443274325749,
+            180.34388375323948
+          ]
+        ],
+        [
+          [
+            191.3924081502883,
+            176.552569017298
+          ],
+          [
+            192.42574650480506,
+            178.03703063649323
+          ]
+        ],
+        [
+          [
+            172.89434705139814,
+            176.71904763147123
+          ],
+          [
+            173.39409170115945,
+            177.61344793601586
+          ]
+        ],
+        [
+          [
+            272.6217109588939,
+            201.63669765515527
+          ],
+          [
+            272.8000376876434,
+            201.91703160865518
+          ]
+        ],
+        [
+          [
+            256.66698945303494,
+            209.52058749779894
+          ],
+          [
+            257.5473862945006,
+            209.91078120305036
+          ]
+        ],
+        [
+          [
+            199.68141843189292,
+            191.97908518965835
+          ],
+          [
+            200.01760553189905,
+            192.6006858071796
+          ]
+        ],
+        [
+          [
+            184.2765975438031,
+            168.50573923938245
+          ],
+          [
+            184.59570886378572,
+            168.79792445855287
+          ]
+        ],
+        [
+          [
+            195.50883388976376,
+            186.52498210577218
+          ],
+          [
+            195.94026281505364,
+            187.2805987639655
+          ]
+        ],
+        [
+          [
+            193.02380844788888,
+            191.32901758621114
+          ],
+          [
+            194.01452510087424,
+            191.97416002926403
+          ]
+        ],
+        [
+          [
+            192.13048581759566,
+            189.01446949717896
+          ],
+          [
+            192.88517920515844,
+            191.38117765019527
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-JAM",
+      "iso3": "JAM",
+      "iso2": "JM",
+      "naturalEarthCode": "JAM",
+      "naturalEarthId": 1159320931,
+      "sourceFeatures": [
+        {
+          "neId": 1159320931,
+          "name": "Jamaica",
+          "isoA3": "JAM",
+          "isoA3EH": "JAM"
+        }
+      ],
+      "name": "Jamaica",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-north-america--country-JAM-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            299.13306158794717,
+            210.3266689312418
+          ],
+          [
+            305.8408306910534,
+            212.87047173513542
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-HND",
+      "iso3": "HND",
+      "iso2": "HN",
+      "naturalEarthCode": "HND",
+      "naturalEarthId": 1159320827,
+      "sourceFeatures": [
+        {
+          "neId": 1159320827,
+          "name": "Honduras",
+          "isoA3": "HND",
+          "isoA3EH": "HND"
+        }
+      ],
+      "name": "Honduras",
+      "sourcePartCount": 3,
+      "visiblePartCount": 3,
+      "partIds": [
+        "continent-north-america--country-HND-part-0001",
+        "continent-north-america--country-HND-part-0002",
+        "continent-north-america--country-HND-part-0003"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            264.3982465898692,
+            218.19825059954115
+          ],
+          [
+            283.95103252030503,
+            227.7930869643499
+          ]
+        ],
+        [
+          [
+            273.00759711823423,
+            216.8904235714551
+          ],
+          [
+            274.1889486743134,
+            217.32831539115875
+          ]
+        ],
+        [
+          [
+            275.1170467813256,
+            216.6548603658007
+          ],
+          [
+            275.51785652328107,
+            217.00258992423582
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-HTI",
+      "iso3": "HTI",
+      "iso2": "HT",
+      "naturalEarthCode": "HTI",
+      "naturalEarthId": 1159320839,
+      "sourceFeatures": [
+        {
+          "neId": 1159320839,
+          "name": "Haiti",
+          "isoA3": "HTI",
+          "isoA3EH": "HTI"
+        }
+      ],
+      "name": "Haiti",
+      "sourcePartCount": 3,
+      "visiblePartCount": 3,
+      "partIds": [
+        "continent-north-america--country-HTI-part-0001",
+        "continent-north-america--country-HTI-part-0002",
+        "continent-north-america--country-HTI-part-0003"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            311.30062465124934,
+            205.89667464666127
+          ],
+          [
+            320.2270855547151,
+            211.84882709157415
+          ]
+        ],
+        [
+          [
+            315.05947366259534,
+            208.92421769235534
+          ],
+          [
+            316.5740912542625,
+            209.74399378163554
+          ]
+        ],
+        [
+          [
+            316.083270503565,
+            205.37492905648207
+          ],
+          [
+            317.1447670367661,
+            205.71465483538964
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-GUY",
+      "iso3": "GUY",
+      "iso2": "GY",
+      "naturalEarthCode": "GUY",
+      "naturalEarthId": 1159320817,
+      "sourceFeatures": [
+        {
+          "neId": 1159320817,
+          "name": "Guyana",
+          "isoA3": "GUY",
+          "isoA3EH": "GUY"
+        }
+      ],
+      "name": "Guyana",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-north-america--country-GUY-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            352.53995686775374,
+            241.75222044863287
+          ],
+          [
+            365.84886834496865,
+            252.9364498728997
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-GTM",
+      "iso3": "GTM",
+      "iso2": "GT",
+      "naturalEarthCode": "GTM",
+      "naturalEarthId": 1159320815,
+      "sourceFeatures": [
+        {
+          "neId": 1159320815,
+          "name": "Guatemala",
+          "isoA3": "GTM",
+          "isoA3EH": "GTM"
+        }
+      ],
+      "name": "Guatemala",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-north-america--country-GTM-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            255.34654544336288,
+            212.55074595176387
+          ],
+          [
+            267.9724635327671,
+            225.40684202666
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-GRD",
+      "iso3": "GRD",
+      "iso2": "GD",
+      "naturalEarthCode": "GRD",
+      "naturalEarthId": 1159320813,
+      "sourceFeatures": [
+        {
+          "neId": 1159320813,
+          "name": "Grenada",
+          "isoA3": "GRD",
+          "isoA3EH": "GRD"
+        }
+      ],
+      "name": "Grenada",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-north-america--country-GRD-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            351.30675090383784,
+            230.13194259482916
+          ],
+          [
+            351.8586556175833,
+            230.8521724640089
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-FRA",
+      "iso3": "FRA",
+      "iso2": "FR",
+      "naturalEarthCode": "FRA",
+      "naturalEarthId": 1159320637,
+      "sourceFeatures": [
+        {
+          "neId": 1159320637,
+          "name": "France",
+          "isoA3": "-99",
+          "isoA3EH": "FRA"
+        }
+      ],
+      "name": "France",
+      "sourcePartCount": 10,
+      "visiblePartCount": 5,
+      "partIds": [
+        "continent-north-america--country-FRA-part-0006",
+        "continent-north-america--country-FRA-part-0007",
+        "continent-north-america--country-FRA-part-0008",
+        "continent-north-america--country-FRA-part-0009",
+        "continent-north-america--country-FRA-part-0010"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            353.0790870451981,
+            221.8184703681567
+          ],
+          [
+            354.3189071560543,
+            223.23338418500833
+          ]
+        ],
+        [
+          [
+            352.06990813069626,
+            216.67793898046995
+          ],
+          [
+            353.2275666087172,
+            217.58341853258102
+          ]
+        ],
+        [
+          [
+            351.2692087663215,
+            217.15491382280362
+          ],
+          [
+            352.03097951168706,
+            218.3939619155558
+          ]
+        ],
+        [
+          [
+            352.7681339083638,
+            218.25456380581556
+          ],
+          [
+            353.1304782421725,
+            218.63352701097398
+          ]
+        ],
+        [
+          [
+            374.40421226808854,
+            250.4715788301816
+          ],
+          [
+            380.83969183921664,
+            252.9364498728997
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-SPM",
+      "iso3": "SPM",
+      "iso2": "PM",
+      "naturalEarthCode": "SPM",
+      "naturalEarthId": 1159320647,
+      "sourceFeatures": [
+        {
+          "neId": 1159320647,
+          "name": "St. Pierre and Miquelon",
+          "isoA3": "SPM",
+          "isoA3EH": "SPM"
+        }
+      ],
+      "name": "Saint Pierre and Miquelon",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "continent-north-america--country-SPM-part-0001",
+        "continent-north-america--country-SPM-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            368.76039755173906,
+            121.1857813121706
+          ],
+          [
+            369.09412364709533,
+            121.36933885746168
+          ]
+        ],
+        [
+          [
+            368.3077365530411,
+            120.27860962241922
+          ],
+          [
+            368.7219321435923,
+            121.2354803715047
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-MAF",
+      "iso3": "MAF",
+      "iso2": "MF",
+      "naturalEarthCode": "MAF",
+      "naturalEarthId": 1159320639,
+      "sourceFeatures": [
+        {
+          "neId": 1159320639,
+          "name": "St-Martin",
+          "isoA3": "MAF",
+          "isoA3EH": "MAF"
+        }
+      ],
+      "name": "Saint Martin",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-north-america--country-MAF-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            347.08154623795645,
+            211.60880193638783
+          ],
+          [
+            347.43958302585406,
+            211.75497174778346
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-BLM",
+      "iso3": "BLM",
+      "iso2": "BL",
+      "naturalEarthCode": "BLM",
+      "naturalEarthId": 1159320633,
+      "sourceFeatures": [
+        {
+          "neId": 1159320633,
+          "name": "St-Barthélemy",
+          "isoA3": "BLM",
+          "isoA3EH": "BLM"
+        }
+      ],
+      "name": "Saint Barthélemy",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-north-america--country-BLM-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            347.8617823959328,
+            212.21717110893417
+          ],
+          [
+            348.1004210696261,
+            212.3654962688325
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-SLV",
+      "iso3": "SLV",
+      "iso2": "SV",
+      "naturalEarthCode": "SLV",
+      "naturalEarthId": 1159321253,
+      "sourceFeatures": [
+        {
+          "neId": 1159321253,
+          "name": "El Salvador",
+          "isoA3": "SLV",
+          "isoA3EH": "SLV"
+        }
+      ],
+      "name": "El Salvador",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-north-america--country-SLV-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            262.0560066841094,
+            223.21815179515156
+          ],
+          [
+            269.5889370966582,
+            227.21087187451172
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-DOM",
+      "iso3": "DOM",
+      "iso2": "DO",
+      "naturalEarthCode": "DOM",
+      "naturalEarthId": 1159320563,
+      "sourceFeatures": [
+        {
+          "neId": 1159320563,
+          "name": "Dominican Rep.",
+          "isoA3": "DOM",
+          "isoA3EH": "DOM"
+        }
+      ],
+      "name": "Dominican Republic",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-north-america--country-DOM-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            319.1081981409883,
+            205.94113973835942
+          ],
+          [
+            330.64508228408454,
+            213.12049531254257
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-DMA",
+      "iso3": "DMA",
+      "iso2": "DM",
+      "naturalEarthCode": "DMA",
+      "naturalEarthId": 1159320543,
+      "sourceFeatures": [
+        {
+          "neId": 1159320543,
+          "name": "Dominica",
+          "isoA3": "DMA",
+          "isoA3EH": "DMA"
+        }
+      ],
+      "name": "Dominica",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-north-america--country-DMA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            352.2553122172484,
+            219.43053329282654
+          ],
+          [
+            352.98030969210737,
+            220.7092788715977
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-GRL",
+      "iso3": "GRL",
+      "iso2": "GL",
+      "naturalEarthCode": "GRL",
+      "naturalEarthId": 1159320551,
+      "sourceFeatures": [
+        {
+          "neId": 1159320551,
+          "name": "Greenland",
+          "isoA3": "GRL",
+          "isoA3EH": "GRL"
+        }
+      ],
+      "name": "Greenland",
+      "sourcePartCount": 17,
+      "visiblePartCount": 9,
+      "partIds": [
+        "continent-north-america--country-GRL-part-0001",
+        "continent-north-america--country-GRL-part-0002",
+        "continent-north-america--country-GRL-part-0003",
+        "continent-north-america--country-GRL-part-0004",
+        "continent-north-america--country-GRL-part-0005",
+        "continent-north-america--country-GRL-part-0006",
+        "continent-north-america--country-GRL-part-0007",
+        "continent-north-america--country-GRL-part-0016",
+        "continent-north-america--country-GRL-part-0017"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            316.53162710744624,
+            6.861624835762984
+          ],
+          [
+            404.18897637795277,
+            79.30932016703453
+          ]
+        ],
+        [
+          [
+            372.93282769024734,
+            47.11552527497054
+          ],
+          [
+            382.4458112294625,
+            50.457714540021044
+          ]
+        ],
+        [
+          [
+            384.1786042884246,
+            48.3542677115754
+          ],
+          [
+            386.2938992314465,
+            49.636860776489556
+          ]
+        ],
+        [
+          [
+            375.96206602467606,
+            44.028130344100646
+          ],
+          [
+            377.61854273073345,
+            44.85621586905572
+          ]
+        ],
+        [
+          [
+            368.85009975323953,
+            39.161013106826175
+          ],
+          [
+            372.62479561783124,
+            40.03479580135155
+          ]
+        ],
+        [
+          [
+            317.54988432463267,
+            24.585815477710952
+          ],
+          [
+            320.8946921490483,
+            25.060480567921132
+          ]
+        ],
+        [
+          [
+            396.78005728166653,
+            8.121193345154722
+          ],
+          [
+            404.18897637795277,
+            10.09416596292391
+          ]
+        ],
+        [
+          [
+            398.54854908797813,
+            76.65318687184575
+          ],
+          [
+            400.3911987475975,
+            77.54558623150845
+          ]
+        ],
+        [
+          [
+            381.6648062044764,
+            45.038386932853854
+          ],
+          [
+            383.3699042956166,
+            45.4288894453469
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-CUB",
+      "iso3": "CUB",
+      "iso2": "CU",
+      "naturalEarthCode": "CUB",
+      "naturalEarthId": 1159320527,
+      "sourceFeatures": [
+        {
+          "neId": 1159320527,
+          "name": "Cuba",
+          "isoA3": "CUB",
+          "isoA3EH": "CUB"
+        }
+      ],
+      "name": "Cuba",
+      "sourcePartCount": 7,
+      "visiblePartCount": 7,
+      "partIds": [
+        "continent-north-america--country-CUB-part-0001",
+        "continent-north-america--country-CUB-part-0002",
+        "continent-north-america--country-CUB-part-0003",
+        "continent-north-america--country-CUB-part-0004",
+        "continent-north-america--country-CUB-part-0005",
+        "continent-north-america--country-CUB-part-0006",
+        "continent-north-america--country-CUB-part-0007"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            278.50062567003533,
+            195.61668954553906
+          ],
+          [
+            312.376121496435,
+            206.12546615066026
+          ]
+        ],
+        [
+          [
+            300.45950528117055,
+            199.0781256722673
+          ],
+          [
+            301.35713860846926,
+            199.6157181156922
+          ]
+        ],
+        [
+          [
+            299.34092982577965,
+            197.9887829187178
+          ],
+          [
+            300.1174697501395,
+            198.52175900899
+          ]
+        ],
+        [
+          [
+            298.0112531098022,
+            197.62766751168698
+          ],
+          [
+            299.30830969756346,
+            197.96524109318614
+          ]
+        ],
+        [
+          [
+            300.0716213280426,
+            198.41590114700227
+          ],
+          [
+            300.69922478020953,
+            198.97488321855042
+          ]
+        ],
+        [
+          [
+            283.8682564240808,
+            199.5483256618513
+          ],
+          [
+            285.8283032530225,
+            201.1283347624775
+          ]
+        ],
+        [
+          [
+            295.07233459135716,
+            196.82573922053442
+          ],
+          [
+            295.9555043958088,
+            197.35840965465928
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-CRI",
+      "iso3": "CRI",
+      "iso2": "CR",
+      "naturalEarthCode": "CRI",
+      "naturalEarthId": 1159320525,
+      "sourceFeatures": [
+        {
+          "neId": 1159320525,
+          "name": "Costa Rica",
+          "isoA3": "CRI",
+          "isoA3EH": "CRI"
+        }
+      ],
+      "name": "Costa Rica",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-north-america--country-CRI-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            275.28398545526693,
+            233.43289979093555
+          ],
+          [
+            285.82261237671275,
+            243.26052954950705
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-COL",
+      "iso3": "COL",
+      "iso2": "CO",
+      "naturalEarthCode": "COL",
+      "naturalEarthId": 1159320517,
+      "sourceFeatures": [
+        {
+          "neId": 1159320517,
+          "name": "Colombia",
+          "isoA3": "COL",
+          "isoA3EH": "COL"
+        }
+      ],
+      "name": "Colombia",
+      "sourcePartCount": 2,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-north-america--country-COL-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            300.5142807534255,
+            229.51003317006632
+          ],
+          [
+            333.4804526926654,
+            252.9364498728997
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-CAN",
+      "iso3": "CAN",
+      "iso2": "CA",
+      "naturalEarthCode": "CAN",
+      "naturalEarthId": 1159320467,
+      "sourceFeatures": [
+        {
+          "neId": 1159320467,
+          "name": "Canada",
+          "isoA3": "CAN",
+          "isoA3EH": "CAN"
+        }
+      ],
+      "name": "Canada",
+      "sourcePartCount": 141,
+      "visiblePartCount": 141,
+      "partIds": [
+        "continent-north-america--country-CAN-part-0001",
+        "continent-north-america--country-CAN-part-0002",
+        "continent-north-america--country-CAN-part-0003",
+        "continent-north-america--country-CAN-part-0004",
+        "continent-north-america--country-CAN-part-0005",
+        "continent-north-america--country-CAN-part-0006",
+        "continent-north-america--country-CAN-part-0007",
+        "continent-north-america--country-CAN-part-0008",
+        "continent-north-america--country-CAN-part-0009",
+        "continent-north-america--country-CAN-part-0010",
+        "continent-north-america--country-CAN-part-0011",
+        "continent-north-america--country-CAN-part-0012",
+        "continent-north-america--country-CAN-part-0013",
+        "continent-north-america--country-CAN-part-0014",
+        "continent-north-america--country-CAN-part-0015",
+        "continent-north-america--country-CAN-part-0016",
+        "continent-north-america--country-CAN-part-0017",
+        "continent-north-america--country-CAN-part-0018",
+        "continent-north-america--country-CAN-part-0019",
+        "continent-north-america--country-CAN-part-0020",
+        "continent-north-america--country-CAN-part-0021",
+        "continent-north-america--country-CAN-part-0022",
+        "continent-north-america--country-CAN-part-0023",
+        "continent-north-america--country-CAN-part-0024",
+        "continent-north-america--country-CAN-part-0025",
+        "continent-north-america--country-CAN-part-0026",
+        "continent-north-america--country-CAN-part-0027",
+        "continent-north-america--country-CAN-part-0028",
+        "continent-north-america--country-CAN-part-0029",
+        "continent-north-america--country-CAN-part-0030",
+        "continent-north-america--country-CAN-part-0031",
+        "continent-north-america--country-CAN-part-0032",
+        "continent-north-america--country-CAN-part-0033",
+        "continent-north-america--country-CAN-part-0034",
+        "continent-north-america--country-CAN-part-0035",
+        "continent-north-america--country-CAN-part-0036",
+        "continent-north-america--country-CAN-part-0037",
+        "continent-north-america--country-CAN-part-0038",
+        "continent-north-america--country-CAN-part-0039",
+        "continent-north-america--country-CAN-part-0040",
+        "continent-north-america--country-CAN-part-0041",
+        "continent-north-america--country-CAN-part-0042",
+        "continent-north-america--country-CAN-part-0043",
+        "continent-north-america--country-CAN-part-0044",
+        "continent-north-america--country-CAN-part-0045",
+        "continent-north-america--country-CAN-part-0046",
+        "continent-north-america--country-CAN-part-0047",
+        "continent-north-america--country-CAN-part-0048",
+        "continent-north-america--country-CAN-part-0049",
+        "continent-north-america--country-CAN-part-0050",
+        "continent-north-america--country-CAN-part-0051",
+        "continent-north-america--country-CAN-part-0052",
+        "continent-north-america--country-CAN-part-0053",
+        "continent-north-america--country-CAN-part-0054",
+        "continent-north-america--country-CAN-part-0055",
+        "continent-north-america--country-CAN-part-0056",
+        "continent-north-america--country-CAN-part-0057",
+        "continent-north-america--country-CAN-part-0058",
+        "continent-north-america--country-CAN-part-0059",
+        "continent-north-america--country-CAN-part-0060",
+        "continent-north-america--country-CAN-part-0061",
+        "continent-north-america--country-CAN-part-0062",
+        "continent-north-america--country-CAN-part-0063",
+        "continent-north-america--country-CAN-part-0064",
+        "continent-north-america--country-CAN-part-0065",
+        "continent-north-america--country-CAN-part-0066",
+        "continent-north-america--country-CAN-part-0067",
+        "continent-north-america--country-CAN-part-0068",
+        "continent-north-america--country-CAN-part-0069",
+        "continent-north-america--country-CAN-part-0070",
+        "continent-north-america--country-CAN-part-0071",
+        "continent-north-america--country-CAN-part-0072",
+        "continent-north-america--country-CAN-part-0073",
+        "continent-north-america--country-CAN-part-0074",
+        "continent-north-america--country-CAN-part-0075",
+        "continent-north-america--country-CAN-part-0076",
+        "continent-north-america--country-CAN-part-0077",
+        "continent-north-america--country-CAN-part-0078",
+        "continent-north-america--country-CAN-part-0079",
+        "continent-north-america--country-CAN-part-0080",
+        "continent-north-america--country-CAN-part-0081",
+        "continent-north-america--country-CAN-part-0082",
+        "continent-north-america--country-CAN-part-0083",
+        "continent-north-america--country-CAN-part-0084",
+        "continent-north-america--country-CAN-part-0085",
+        "continent-north-america--country-CAN-part-0086",
+        "continent-north-america--country-CAN-part-0087",
+        "continent-north-america--country-CAN-part-0088",
+        "continent-north-america--country-CAN-part-0089",
+        "continent-north-america--country-CAN-part-0090",
+        "continent-north-america--country-CAN-part-0091",
+        "continent-north-america--country-CAN-part-0092",
+        "continent-north-america--country-CAN-part-0093",
+        "continent-north-america--country-CAN-part-0094",
+        "continent-north-america--country-CAN-part-0095",
+        "continent-north-america--country-CAN-part-0096",
+        "continent-north-america--country-CAN-part-0097",
+        "continent-north-america--country-CAN-part-0098",
+        "continent-north-america--country-CAN-part-0099",
+        "continent-north-america--country-CAN-part-0100",
+        "continent-north-america--country-CAN-part-0101",
+        "continent-north-america--country-CAN-part-0102",
+        "continent-north-america--country-CAN-part-0103",
+        "continent-north-america--country-CAN-part-0104",
+        "continent-north-america--country-CAN-part-0105",
+        "continent-north-america--country-CAN-part-0106",
+        "continent-north-america--country-CAN-part-0107",
+        "continent-north-america--country-CAN-part-0108",
+        "continent-north-america--country-CAN-part-0109",
+        "continent-north-america--country-CAN-part-0110",
+        "continent-north-america--country-CAN-part-0111",
+        "continent-north-america--country-CAN-part-0112",
+        "continent-north-america--country-CAN-part-0113",
+        "continent-north-america--country-CAN-part-0114",
+        "continent-north-america--country-CAN-part-0115",
+        "continent-north-america--country-CAN-part-0116",
+        "continent-north-america--country-CAN-part-0117",
+        "continent-north-america--country-CAN-part-0118",
+        "continent-north-america--country-CAN-part-0119",
+        "continent-north-america--country-CAN-part-0120",
+        "continent-north-america--country-CAN-part-0121",
+        "continent-north-america--country-CAN-part-0122",
+        "continent-north-america--country-CAN-part-0123",
+        "continent-north-america--country-CAN-part-0124",
+        "continent-north-america--country-CAN-part-0125",
+        "continent-north-america--country-CAN-part-0126",
+        "continent-north-america--country-CAN-part-0127",
+        "continent-north-america--country-CAN-part-0128",
+        "continent-north-america--country-CAN-part-0129",
+        "continent-north-america--country-CAN-part-0130",
+        "continent-north-america--country-CAN-part-0131",
+        "continent-north-america--country-CAN-part-0132",
+        "continent-north-america--country-CAN-part-0133",
+        "continent-north-america--country-CAN-part-0134",
+        "continent-north-america--country-CAN-part-0135",
+        "continent-north-america--country-CAN-part-0136",
+        "continent-north-america--country-CAN-part-0137",
+        "continent-north-america--country-CAN-part-0138",
+        "continent-north-america--country-CAN-part-0139",
+        "continent-north-america--country-CAN-part-0140",
+        "continent-north-america--country-CAN-part-0141"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            126.58403124955055,
+            98.03200674164546
+          ],
+          [
+            131.09111075404553,
+            101.08770796602391
+          ]
+        ],
+        [
+          [
+            128.32082619827642,
+            100.95461834707666
+          ],
+          [
+            132.82882897340198,
+            104.35096862099323
+          ]
+        ],
+        [
+          [
+            141.54557509777425,
+            108.42554152594704
+          ],
+          [
+            157.50937490631782,
+            116.42221218476035
+          ]
+        ],
+        [
+          [
+            101.67715481728567,
+            41.8545212499225
+          ],
+          [
+            370.55796765627133,
+            137.37052639990077
+          ]
+        ],
+        [
+          [
+            188.99262296038194,
+            20.518628737801464
+          ],
+          [
+            201.46006306404615,
+            22.04093815066028
+          ]
+        ],
+        [
+          [
+            189.02139560245524,
+            22.581300405976805
+          ],
+          [
+            200.56827816777235,
+            24.974471448942865
+          ]
+        ],
+        [
+          [
+            158.70996074201753,
+            24.332098817781628
+          ],
+          [
+            182.13068341744685,
+            29.760964787401576
+          ]
+        ],
+        [
+          [
+            175.4192212318185,
+            26.621255388926755
+          ],
+          [
+            213.6079317879596,
+            34.244505617459225
+          ]
+        ],
+        [
+          [
+            171.02769235538477,
+            37.48776312579821
+          ],
+          [
+            228.02480268386137,
+            52.914121743443474
+          ]
+        ],
+        [
+          [
+            149.43777122499847,
+            33.79322794915984
+          ],
+          [
+            182.3745560587762,
+            44.68696744299086
+          ]
+        ],
+        [
+          [
+            257.08303158484716,
+            6.785211289478582
+          ],
+          [
+            353.11847572397545,
+            28.661774864157707
+          ]
+        ],
+        [
+          [
+            242.61153962031125,
+            23.56201863674127
+          ],
+          [
+            252.53086937417078,
+            24.632590321532632
+          ]
+        ],
+        [
+          [
+            241.59374246289295,
+            30.374567927583882
+          ],
+          [
+            251.4759901390043,
+            33.5045814088908
+          ]
+        ],
+        [
+          [
+            222.32775338037078,
+            35.68142352582302
+          ],
+          [
+            242.09625377345156,
+            44.01228033976068
+          ]
+        ],
+        [
+          [
+            271.2321823577407,
+            60.97603265868932
+          ],
+          [
+            293.07720662954927,
+            69.79586368206333
+          ]
+        ],
+        [
+          [
+            222.06357193626388,
+            27.022373938123877
+          ],
+          [
+            239.27319469030942,
+            32.411085513051034
+          ]
+        ],
+        [
+          [
+            213.29512895876996,
+            18.646125610763193
+          ],
+          [
+            234.03111613764028,
+            23.556324609337196
+          ]
+        ],
+        [
+          [
+            241.04660850592106,
+            12.305011538471092
+          ],
+          [
+            278.01242032760865,
+            22.434361727571428
+          ]
+        ],
+        [
+          [
+            240.6534905851572,
+            25.84902301047802
+          ],
+          [
+            295.7868704331329,
+            34.028791154814286
+          ]
+        ],
+        [
+          [
+            236.10702240188482,
+            20.369225903651824
+          ],
+          [
+            246.98983705177014,
+            23.51785920119039
+          ]
+        ],
+        [
+          [
+            244.59235846289295,
+            34.9476534044268
+          ],
+          [
+            261.27238625085255,
+            41.810516217992415
+          ]
+        ],
+        [
+          [
+            232.252471505487,
+            48.551365509082984
+          ],
+          [
+            245.7904832939426,
+            52.965358536797055
+          ]
+        ],
+        [
+          [
+            352.21069272192943,
+            120.55986999764397
+          ],
+          [
+            357.46446498555395,
+            125.08864478640953
+          ]
+        ],
+        [
+          [
+            310.5734718278876,
+            113.44959901494201
+          ],
+          [
+            353.67207257536114,
+            131.56239156897513
+          ]
+        ],
+        [
+          [
+            358.93169327001056,
+            106.10684029462456
+          ],
+          [
+            380.07156565887533,
+            121.7618423148366
+          ]
+        ],
+        [
+          [
+            262.310340958522,
+            35.96852918097832
+          ],
+          [
+            352.82706252290905,
+            73.73919350933099
+          ]
+        ],
+        [
+          [
+            342.7892579254759,
+            111.31245438402877
+          ],
+          [
+            351.57785530212664,
+            114.03904271510942
+          ]
+        ],
+        [
+          [
+            343.0478997457995,
+            120.39647000260399
+          ],
+          [
+            350.54559777295555,
+            123.8459004600409
+          ]
+        ],
+        [
+          [
+            281.5723281512803,
+            70.24329386421971
+          ],
+          [
+            287.76050386161575,
+            72.81909918184635
+          ]
+        ],
+        [
+          [
+            293.01889247839296,
+            72.02194164746726
+          ],
+          [
+            296.1946062803646,
+            74.60143689652179
+          ]
+        ],
+        [
+          [
+            302.39001375212354,
+            53.35616985653169
+          ],
+          [
+            309.45966397817597,
+            56.82544905697813
+          ]
+        ],
+        [
+          [
+            291.1883965894972,
+            36.24409552879902
+          ],
+          [
+            306.2214860338521,
+            39.431039830863654
+          ]
+        ],
+        [
+          [
+            287.4747815368591,
+            100.97723375088347
+          ],
+          [
+            291.66490822096847,
+            102.52216486973774
+          ]
+        ],
+        [
+          [
+            297.3233377126914,
+            90.84665148391096
+          ],
+          [
+            298.1320345544051,
+            91.81644487072973
+          ]
+        ],
+        [
+          [
+            293.87467297116996,
+            90.33860054956907
+          ],
+          [
+            297.34595311649826,
+            92.83947284468968
+          ]
+        ],
+        [
+          [
+            293.62064750399907,
+            90.76110557579511
+          ],
+          [
+            295.2249672971666,
+            91.60226814210426
+          ]
+        ],
+        [
+          [
+            258.6555001168083,
+            23.993756369272717
+          ],
+          [
+            263.3533720791122,
+            25.39466987413971
+          ]
+        ],
+        [
+          [
+            211.76389564684732,
+            23.680490329220646
+          ],
+          [
+            216.84472640188486,
+            25.667003199206363
+          ]
+        ],
+        [
+          [
+            230.48167309814622,
+            16.150329728563463
+          ],
+          [
+            234.75796015376034,
+            17.473852357368685
+          ]
+        ],
+        [
+          [
+            208.9797620316201,
+            36.24470999218798
+          ],
+          [
+            216.53392451757705,
+            38.930217506850994
+          ]
+        ],
+        [
+          [
+            216.99489495194996,
+            28.227267319734608
+          ],
+          [
+            224.5513671900304,
+            29.954215098766184
+          ]
+        ],
+        [
+          [
+            216.37421760505921,
+            27.10976953859506
+          ],
+          [
+            221.3198033926468,
+            28.180646879533782
+          ]
+        ],
+        [
+          [
+            169.7646392262385,
+            28.84610127645854
+          ],
+          [
+            175.73740928117059,
+            30.735680183520373
+          ]
+        ],
+        [
+          [
+            183.51990321135844,
+            22.662233112034215
+          ],
+          [
+            187.9674396379193,
+            23.786656998449956
+          ]
+        ],
+        [
+          [
+            133.3239572700105,
+            96.54200864976127
+          ],
+          [
+            133.97186952495503,
+            97.02728977667553
+          ]
+        ],
+        [
+          [
+            132.8251358908798,
+            104.36035257982513
+          ],
+          [
+            133.16132299088594,
+            104.96195320181039
+          ]
+        ],
+        [
+          [
+            134.11727046934098,
+            98.2523375574431
+          ],
+          [
+            135.60142328129456,
+            99.02457308698615
+          ]
+        ],
+        [
+          [
+            134.7150236051833,
+            99.69510389683177
+          ],
+          [
+            137.11850187761178,
+            101.1655620529481
+          ]
+        ],
+        [
+          [
+            134.53300379391163,
+            95.30018759402316
+          ],
+          [
+            135.70343365713939,
+            96.17351022878043
+          ]
+        ],
+        [
+          [
+            138.9162263857648,
+            100.80183123764644
+          ],
+          [
+            141.05198453518514,
+            103.922309507595
+          ]
+        ],
+        [
+          [
+            148.2210328799058,
+            113.09156222704445
+          ],
+          [
+            148.74862375001555,
+            113.45759964337526
+          ]
+        ],
+        [
+          [
+            153.20477526839852,
+            111.84589368516333
+          ],
+          [
+            154.81201927707855,
+            112.68013329729058
+          ]
+        ],
+        [
+          [
+            145.9527964238329,
+            111.53940249786098
+          ],
+          [
+            146.97844295715797,
+            112.39333644937687
+          ]
+        ],
+        [
+          [
+            150.97193190352783,
+            109.82060975088348
+          ],
+          [
+            151.8681787493335,
+            110.99749935743068
+          ]
+        ],
+        [
+          [
+            138.6532770195301,
+            102.27875543927087
+          ],
+          [
+            139.69599933287867,
+            103.37209693148984
+          ]
+        ],
+        [
+          [
+            142.1793326371133,
+            105.75388307074212
+          ],
+          [
+            142.91186752954312,
+            106.54550098133794
+          ]
+        ],
+        [
+          [
+            141.24462038316074,
+            102.36337807675613
+          ],
+          [
+            141.86899081257368,
+            103.61396862793723
+          ]
+        ],
+        [
+          [
+            137.87504180643566,
+            101.09047777791554
+          ],
+          [
+            138.50849053853318,
+            101.73361927608653
+          ]
+        ],
+        [
+          [
+            138.45325500651006,
+            100.64381646276891
+          ],
+          [
+            138.96853770227546,
+            101.33496488263373
+          ]
+        ],
+        [
+          [
+            156.56866296881395,
+            114.52217164461527
+          ],
+          [
+            157.12179660933725,
+            115.14300339512675
+          ]
+        ],
+        [
+          [
+            356.5523712865026,
+            130.03484818848034
+          ],
+          [
+            357.78234422766445,
+            130.34657334341867
+          ]
+        ],
+        [
+          [
+            353.5139033968628,
+            125.07341239655278
+          ],
+          [
+            354.0473426979974,
+            125.3746759184078
+          ]
+        ],
+        [
+          [
+            350.59421600694395,
+            118.55243386149172
+          ],
+          [
+            352.5251845376651,
+            119.90041843536483
+          ]
+        ],
+        [
+          [
+            342.16104000992004,
+            117.79635399243597
+          ],
+          [
+            342.71555698084194,
+            118.23470902300201
+          ]
+        ],
+        [
+          [
+            342.45491421563645,
+            117.3960043102486
+          ],
+          [
+            342.81803056754916,
+            117.73173135048668
+          ]
+        ],
+        [
+          [
+            336.9946601956724,
+            128.80841392621983
+          ],
+          [
+            337.3531570433381,
+            129.23291989732778
+          ]
+        ],
+        [
+          [
+            335.18924386632773,
+            127.5059721182962
+          ],
+          [
+            335.6671388281976,
+            128.06202997433192
+          ]
+        ],
+        [
+          [
+            312.93156173798747,
+            124.67198819120836
+          ],
+          [
+            314.45818184785173,
+            125.50176585380368
+          ]
+        ],
+        [
+          [
+            313.2555950672702,
+            124.70429951218298
+          ],
+          [
+            314.1547661285883,
+            125.11264667170931
+          ]
+        ],
+        [
+          [
+            321.8929493706987,
+            120.60279735532268
+          ],
+          [
+            322.809505019282,
+            121.01637848248495
+          ]
+        ],
+        [
+          [
+            370.68059564213524,
+            108.61248334651867
+          ],
+          [
+            371.19926576427554,
+            108.90405410230017
+          ]
+        ],
+        [
+          [
+            373.1079245473371,
+            112.29840343133483
+          ],
+          [
+            374.13480000744005,
+            112.72490719623039
+          ]
+        ],
+        [
+          [
+            371.3557428051336,
+            104.85025005989212
+          ],
+          [
+            371.8144066384773,
+            105.18536263674125
+          ]
+        ],
+        [
+          [
+            374.91918615661234,
+            111.92128676743752
+          ],
+          [
+            375.89005721768245,
+            112.43857040808479
+          ]
+        ],
+        [
+          [
+            374.80194339091076,
+            118.5522794578709
+          ],
+          [
+            375.4252392971666,
+            119.30943385008368
+          ]
+        ],
+        [
+          [
+            341.3041818428917,
+            71.5634322177444
+          ],
+          [
+            343.0008192458305,
+            72.11533378039556
+          ]
+        ],
+        [
+          [
+            330.5546112155744,
+            77.77391767573934
+          ],
+          [
+            332.28463446264493,
+            78.89234187860376
+          ]
+        ],
+        [
+          [
+            321.5669150965342,
+            70.55748002380801
+          ],
+          [
+            324.56445342228284,
+            71.60728284605369
+          ]
+        ],
+        [
+          [
+            339.8054111044702,
+            74.31448564498729
+          ],
+          [
+            342.20827491350985,
+            75.35828563258724
+          ]
+        ],
+        [
+          [
+            340.42547398797194,
+            73.50301584028767
+          ],
+          [
+            341.6539091951144,
+            74.16692935209866
+          ]
+        ],
+        [
+          [
+            327.4509062205964,
+            82.31684718011033
+          ],
+          [
+            328.07373891598985,
+            82.9010632148304
+          ]
+        ],
+        [
+          [
+            341.68252743356686,
+            78.00471012462023
+          ],
+          [
+            343.03559157145514,
+            78.68770351243103
+          ]
+        ],
+        [
+          [
+            353.15432572385146,
+            91.78690336164672
+          ],
+          [
+            353.91209773054743,
+            92.18294234682867
+          ]
+        ],
+        [
+          [
+            350.5849864517329,
+            87.25397227949654
+          ],
+          [
+            351.7626449252898,
+            87.7684892593465
+          ]
+        ],
+        [
+          [
+            331.01619611333626,
+            49.11788499820199
+          ],
+          [
+            332.48711748031496,
+            49.58101078107754
+          ]
+        ],
+        [
+          [
+            347.8737817630355,
+            56.96977232711265
+          ],
+          [
+            349.3714748272057,
+            57.47782326145452
+          ]
+        ],
+        [
+          [
+            294.85000598177203,
+            28.749016061008092
+          ],
+          [
+            297.5396666387253,
+            29.758194975509923
+          ]
+        ],
+        [
+          [
+            294.07177076867754,
+            89.50405213020025
+          ],
+          [
+            294.44688648769295,
+            89.84485558335913
+          ]
+        ],
+        [
+          [
+            294.41042202442804,
+            87.16381001822802
+          ],
+          [
+            294.8035367940976,
+            87.68540120478639
+          ]
+        ],
+        [
+          [
+            295.2129647789696,
+            89.71376690929381
+          ],
+          [
+            295.5323817550995,
+            90.20181469700537
+          ]
+        ],
+        [
+          [
+            293.6674223478207,
+            100.53549759613117
+          ],
+          [
+            294.0953125942092,
+            100.81967903577404
+          ]
+        ],
+        [
+          [
+            295.0232531465063,
+            104.52575351974701
+          ],
+          [
+            296.20029715667437,
+            105.00872804563207
+          ]
+        ],
+        [
+          [
+            156.2317038507037,
+            113.98857793985985
+          ],
+          [
+            157.23026987959574,
+            114.68157290098577
+          ]
+        ],
+        [
+          [
+            152.01957622617647,
+            110.45298080872959
+          ],
+          [
+            152.3929998075517,
+            111.0718147654535
+          ]
+        ],
+        [
+          [
+            310.446227488871,
+            54.123017014818004
+          ],
+          [
+            314.7035922232004,
+            55.1028088238576
+          ]
+        ],
+        [
+          [
+            298.51145781933167,
+            68.63035897922995
+          ],
+          [
+            301.6924024378449,
+            69.81248255341308
+          ]
+        ],
+        [
+          [
+            246.94552321259843,
+            29.219984917601806
+          ],
+          [
+            248.85172099100998,
+            30.00006667195734
+          ]
+        ],
+        [
+          [
+            292.8776478273917,
+            80.49404626350048
+          ],
+          [
+            293.3736993946308,
+            80.82038619381237
+          ]
+        ],
+        [
+          [
+            293.37415945439886,
+            80.01399595312787
+          ],
+          [
+            294.22009277748157,
+            80.37034060338522
+          ]
+        ],
+        [
+          [
+            240.02434939897083,
+            38.06705400012399
+          ],
+          [
+            241.5972811417943,
+            38.892984176576306
+          ]
+        ],
+        [
+          [
+            237.9687519375039,
+            33.536583922623805
+          ],
+          [
+            239.4141305340691,
+            34.04356033380864
+          ]
+        ],
+        [
+          [
+            232.7159029445099,
+            35.149676362328705
+          ],
+          [
+            238.25508872564944,
+            36.10315653394508
+          ]
+        ],
+        [
+          [
+            260.8392651879224,
+            49.892427128774244
+          ],
+          [
+            261.83075070791745,
+            50.47171800310002
+          ]
+        ],
+        [
+          [
+            259.9584051355943,
+            50.0873695777791
+          ],
+          [
+            260.8603428577097,
+            50.60649975968752
+          ]
+        ],
+        [
+          [
+            310.83319132246265,
+            71.01337404526006
+          ],
+          [
+            312.84447494475785,
+            71.40295328712259
+          ]
+        ],
+        [
+          [
+            308.3849391510943,
+            52.22405099782998
+          ],
+          [
+            310.2919057965156,
+            53.33909092541384
+          ]
+        ],
+        [
+          [
+            298.09449241688884,
+            77.04661359985118
+          ],
+          [
+            299.4412480639842,
+            77.367259502759
+          ]
+        ],
+        [
+          [
+            296.50109746766697,
+            53.30508746679894
+          ],
+          [
+            297.59213235885676,
+            53.84468085510571
+          ]
+        ],
+        [
+          [
+            302.20460966557135,
+            68.0238363479447
+          ],
+          [
+            304.4491498924918,
+            68.96285614780825
+          ]
+        ],
+        [
+          [
+            291.3962648273297,
+            48.71245890309382
+          ],
+          [
+            295.90165219418435,
+            49.66040260202115
+          ]
+        ],
+        [
+          [
+            297.5301282762726,
+            48.93617399417198
+          ],
+          [
+            300.3001040248001,
+            49.75472115667429
+          ]
+        ],
+        [
+          [
+            300.31010559811523,
+            66.90464327807055
+          ],
+          [
+            301.57792948403494,
+            67.19298101109803
+          ]
+        ],
+        [
+          [
+            283.69793032376464,
+            59.659432984066
+          ],
+          [
+            284.66372182081966,
+            60.09178517998632
+          ]
+        ],
+        [
+          [
+            295.7731757772956,
+            50.039056999938
+          ],
+          [
+            299.48140560977123,
+            51.774619870791696
+          ]
+        ],
+        [
+          [
+            302.15844928513854,
+            49.87965574356747
+          ],
+          [
+            304.3974498882758,
+            50.85006359377516
+          ]
+        ],
+        [
+          [
+            270.82444966160335,
+            47.65311771839541
+          ],
+          [
+            273.37055906652614,
+            48.18994444590487
+          ]
+        ],
+        [
+          [
+            279.82353068435737,
+            60.30688517924233
+          ],
+          [
+            283.7108561125923,
+            61.8856653530907
+          ]
+        ],
+        [
+          [
+            271.96964556165915,
+            53.45448714985429
+          ],
+          [
+            273.7890622029884,
+            55.25298052501702
+          ]
+        ],
+        [
+          [
+            277.5916074390229,
+            60.639382347820685
+          ],
+          [
+            279.39856465348134,
+            62.09445371045942
+          ]
+        ],
+        [
+          [
+            252.3166926455453,
+            73.5288642668485
+          ],
+          [
+            252.95845081331763,
+            73.82289602728005
+          ]
+        ],
+        [
+          [
+            225.79580365403936,
+            26.83758746605494
+          ],
+          [
+            230.03070108599417,
+            27.39687519375036
+          ]
+        ],
+        [
+          [
+            220.56341786744377,
+            22.051862994605955
+          ],
+          [
+            222.09265338557879,
+            22.508371479446964
+          ]
+        ],
+        [
+          [
+            223.07967695604194,
+            23.222907321222664
+          ],
+          [
+            227.72123256097717,
+            23.891742842333684
+          ]
+        ],
+        [
+          [
+            260.6172422344845,
+            26.571405077066174
+          ],
+          [
+            263.3526000610081,
+            27.67244154157106
+          ]
+        ],
+        [
+          [
+            240.26698996242794,
+            30.297019496806996
+          ],
+          [
+            243.6096424383409,
+            31.196650617893198
+          ]
+        ],
+        [
+          [
+            243.95352451063306,
+            33.50396694550187
+          ],
+          [
+            245.76940247306095,
+            33.934163792919605
+          ]
+        ],
+        [
+          [
+            163.94665407452416,
+            29.405697811395612
+          ],
+          [
+            165.08800248843698,
+            30.026069502138995
+          ]
+        ],
+        [
+          [
+            184.1315054066588,
+            26.388925206026386
+          ],
+          [
+            188.3780965495691,
+            26.969753814371586
+          ]
+        ],
+        [
+          [
+            215.47812516287436,
+            31.005092444168866
+          ],
+          [
+            219.40206630690062,
+            32.262300293384556
+          ]
+        ],
+        [
+          [
+            228.90812374083953,
+            51.15594031768859
+          ],
+          [
+            230.31642341075084,
+            52.136658548453084
+          ]
+        ],
+        [
+          [
+            230.09932561770725,
+            50.858373029450036
+          ],
+          [
+            230.8955598814558,
+            51.41135226635251
+          ]
+        ],
+        [
+          [
+            228.741339470519,
+            46.00310390675182
+          ],
+          [
+            230.0087001455763,
+            46.578547294934566
+          ]
+        ],
+        [
+          [
+            243.49963143406285,
+            49.29467399293196
+          ],
+          [
+            245.43398424006446,
+            50.20861423324445
+          ]
+        ],
+        [
+          [
+            226.60434924322652,
+            49.45115103379004
+          ],
+          [
+            227.72569451050902,
+            50.04228687159775
+          ]
+        ],
+        [
+          [
+            223.6055788396057,
+            51.81662395783991
+          ],
+          [
+            225.45376812300825,
+            52.574241560915084
+          ]
+        ],
+        [
+          [
+            214.961455985616,
+            52.58424313423026
+          ],
+          [
+            216.8864216816914,
+            53.15014815996028
+          ]
+        ],
+        [
+          [
+            205.1902938369397,
+            55.47346259334114
+          ],
+          [
+            206.01360860512125,
+            56.565883966023904
+          ]
+        ],
+        [
+          [
+            201.9404190305661,
+            54.47305317428234
+          ],
+          [
+            202.87805550003102,
+            54.7993931045942
+          ]
+        ],
+        [
+          [
+            205.37785012090026,
+            57.55229307309813
+          ],
+          [
+            206.28286646214892,
+            58.01665093384585
+          ]
+        ],
+        [
+          [
+            200.9498567812016,
+            54.10870789559175
+          ],
+          [
+            201.50068066960137,
+            54.45658870655339
+          ]
+        ],
+        [
+          [
+            107.06786418600042,
+            49.21943531427863
+          ],
+          [
+            108.36784498927395,
+            49.567007317998645
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-BRA",
+      "iso3": "BRA",
+      "iso2": "BR",
+      "naturalEarthCode": "BRA",
+      "naturalEarthId": 1159320441,
+      "sourceFeatures": [
+        {
+          "neId": 1159320441,
+          "name": "Brazil",
+          "isoA3": "BRA",
+          "isoA3EH": "BRA"
+        }
+      ],
+      "name": "Brazil",
+      "sourcePartCount": 17,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-north-america--country-BRA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            354.58401187079176,
+            252.12359673780145
+          ],
+          [
+            356.9519489505859,
+            252.9364498728997
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-BLZ",
+      "iso3": "BLZ",
+      "iso2": "BZ",
+      "naturalEarthCode": "BLZ",
+      "naturalEarthId": 1159320431,
+      "sourceFeatures": [
+        {
+          "neId": 1159320431,
+          "name": "Belize",
+          "isoA3": "BLZ",
+          "isoA3EH": "BLZ"
+        }
+      ],
+      "name": "Belize",
+      "sourcePartCount": 3,
+      "visiblePartCount": 3,
+      "partIds": [
+        "continent-north-america--country-BLZ-part-0001",
+        "continent-north-america--country-BLZ-part-0002",
+        "continent-north-america--country-BLZ-part-0003"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            264.7924421848844,
+            210.45237553623903
+          ],
+          [
+            268.423277990204,
+            218.6252175752991
+          ]
+        ],
+        [
+          [
+            268.69792106739413,
+            211.48401860202117
+          ],
+          [
+            269.16920188232376,
+            212.26733022803643
+          ]
+        ],
+        [
+          [
+            268.8971742134044,
+            213.40191009138815
+          ],
+          [
+            269.3579902441565,
+            214.23153335036267
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-BRB",
+      "iso3": "BRB",
+      "iso2": "BB",
+      "naturalEarthCode": "BRB",
+      "naturalEarthId": 1159320449,
+      "sourceFeatures": [
+        {
+          "neId": 1159320449,
+          "name": "Barbados",
+          "isoA3": "BRB",
+          "isoA3EH": "BRB"
+        }
+      ],
+      "name": "Barbados",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-north-america--country-BRB-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            358.03590648397295,
+            226.7266684218488
+          ],
+          [
+            358.7261316332073,
+            227.53167533213463
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-BHS",
+      "iso3": "BHS",
+      "iso2": "BS",
+      "naturalEarthCode": "BHS",
+      "naturalEarthId": 1159320415,
+      "sourceFeatures": [
+        {
+          "neId": 1159320415,
+          "name": "Bahamas",
+          "isoA3": "BHS",
+          "isoA3EH": "BHS"
+        }
+      ],
+      "name": "The Bahamas",
+      "sourcePartCount": 15,
+      "visiblePartCount": 15,
+      "partIds": [
+        "continent-north-america--country-BHS-part-0001",
+        "continent-north-america--country-BHS-part-0002",
+        "continent-north-america--country-BHS-part-0003",
+        "continent-north-america--country-BHS-part-0004",
+        "continent-north-america--country-BHS-part-0005",
+        "continent-north-america--country-BHS-part-0006",
+        "continent-north-america--country-BHS-part-0007",
+        "continent-north-america--country-BHS-part-0008",
+        "continent-north-america--country-BHS-part-0009",
+        "continent-north-america--country-BHS-part-0010",
+        "continent-north-america--country-BHS-part-0011",
+        "continent-north-america--country-BHS-part-0012",
+        "continent-north-america--country-BHS-part-0013",
+        "continent-north-america--country-BHS-part-0014",
+        "continent-north-america--country-BHS-part-0015"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            300.20317321297046,
+            192.15956411581618
+          ],
+          [
+            301.7193285386571,
+            193.8875895690991
+          ]
+        ],
+        [
+          [
+            300.38011346022694,
+            183.80116358658313
+          ],
+          [
+            303.2333316669353,
+            187.0928880763841
+          ]
+        ],
+        [
+          [
+            313.7941139324199,
+            201.53145425655646
+          ],
+          [
+            315.9215626461653,
+            202.71619323901047
+          ]
+        ],
+        [
+          [
+            298.83118360270316,
+            189.27695880364558
+          ],
+          [
+            301.03756722871844,
+            192.15987292305783
+          ]
+        ],
+        [
+          [
+            297.0970040622481,
+            184.24905697960193
+          ],
+          [
+            300.44719710682625,
+            185.18576702734202
+          ]
+        ],
+        [
+          [
+            301.5833147041974,
+            189.65299779329155
+          ],
+          [
+            302.5058700363321,
+            189.9362591133982
+          ]
+        ],
+        [
+          [
+            311.81790829189663,
+            196.72218795957588
+          ],
+          [
+            312.6976906699733,
+            197.27101405418807
+          ]
+        ],
+        [
+          [
+            311.0712155327671,
+            192.66654052700102
+          ],
+          [
+            311.4540262240684,
+            193.1925936630913
+          ]
+        ],
+        [
+          [
+            311.93469099783,
+            197.06422349060693
+          ],
+          [
+            313.32237305772213,
+            198.78901907223013
+          ]
+        ],
+        [
+          [
+            304.0451071277823,
+            188.13453271548138
+          ],
+          [
+            306.14286307991813,
+            191.01929337615474
+          ]
+        ],
+        [
+          [
+            306.38811905164613,
+            194.10114868324132
+          ],
+          [
+            307.5620844426809,
+            194.8169166028892
+          ]
+        ],
+        [
+          [
+            308.660505498915,
+            194.11069019678837
+          ],
+          [
+            310.15881302647404,
+            196.6304879642879
+          ]
+        ],
+        [
+          [
+            307.31175205803214,
+            190.86773834459666
+          ],
+          [
+            308.7052793978548,
+            192.62746065546528
+          ]
+        ],
+        [
+          [
+            315.4481296338273,
+            197.93308417583233
+          ],
+          [
+            316.7547245840412,
+            198.45205995411987
+          ]
+        ],
+        [
+          [
+            315.7607780593961,
+            200.74922030479257
+          ],
+          [
+            316.2226717643996,
+            201.0769467165974
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-ATG",
+      "iso3": "ATG",
+      "iso2": "AG",
+      "naturalEarthCode": "ATG",
+      "naturalEarthId": 1159320345,
+      "sourceFeatures": [
+        {
+          "neId": 1159320345,
+          "name": "Antigua and Barb.",
+          "isoA3": "ATG",
+          "isoA3EH": "ATG"
+        }
+      ],
+      "name": "Antigua and Barbuda",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "continent-north-america--country-ATG-part-0001",
+        "continent-north-america--country-ATG-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            350.9761034276149,
+            214.5909566197532
+          ],
+          [
+            351.60970656333313,
+            215.13224214570027
+          ]
+        ],
+        [
+          [
+            351.03395436790873,
+            212.87324154702708
+          ],
+          [
+            351.41722511897825,
+            213.39436952272303
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-north-america--country-SXM",
+      "iso3": "SXM",
+      "iso2": "SX",
+      "naturalEarthCode": "SXM",
+      "naturalEarthId": 1159321103,
+      "sourceFeatures": [
+        {
+          "neId": 1159321103,
+          "name": "Sint Maarten",
+          "isoA3": "SXM",
+          "isoA3EH": "SXM"
+        }
+      ],
+      "name": "Sint Maarten",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-north-america--country-SXM-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            347.07631542141485,
+            211.75497174778346
+          ],
+          [
+            347.4340434020708,
+            211.91175759588316
+          ]
+        ]
+      ]
+    }
+  ],
+  "roles": {
+    "lakes": 194,
+    "rivers": 126,
+    "coastline": 353,
+    "national-boundaries": 23,
+    "admin-boundaries": 0
+  },
+  "svgGroupIds": {
+    "sea": "continent-north-america--sea",
+    "country-fills": "continent-north-america--country-fills",
+    "highlights": "continent-north-america--highlights",
+    "lakes": "continent-north-america--lakes",
+    "rivers": "continent-north-america--rivers",
+    "coastline": "continent-north-america--coastline",
+    "national-boundaries": "continent-north-america--national-boundaries",
+    "admin-boundaries": "continent-north-america--admin-boundaries",
+    "graticule": "continent-north-america--graticule",
+    "frame": "continent-north-america--frame"
+  },
+  "style": {
+    "countryFill": "#FFFFFF",
+    "sea": "#EEEEEE",
+    "highlight": "#AAAAAA",
+    "stroke": "#000000",
+    "coastWidthPx": 0.4,
+    "nationalDashPx": [
+      1.4,
+      1.1
+    ]
+  },
+  "highlightEdit": "Set fill on country-ISO group (including every child part). Keep coastline/national boundaries above country-fills; a separate overlay can be placed in highlights below line layers.",
+  "controlPoints": [
+    {
+      "lonlat": [
+        -108.5,
+        44.5
+      ],
+      "xy": [
+        204.09448818897638,
+        128.46822493644984
+      ],
+      "expectedXY": [
+        204.09448818897638,
+        128.46822493644984
+      ],
+      "errorPx": 0
+    },
+    {
+      "lonlat": [
+        -76.75,
+        44.5
+      ],
+      "xy": [
+        304.1417322834646,
+        128.46822493644984
+      ],
+      "expectedXY": [
+        304.14173228346453,
+        128.46822493644984
+      ],
+      "errorPx": 5.684341886080802e-14
+    },
+    {
+      "lonlat": [
+        -108.5,
+        64.25
+      ],
+      "xy": [
+        204.09448818897638,
+        66.23411246822494
+      ],
+      "expectedXY": [
+        204.09448818897638,
+        66.23411246822491
+      ],
+      "errorPx": 2.842170943040401e-14
+    },
+    {
+      "lonlat": [
+        -172,
+        5
+      ],
+      "xy": [
+        4,
+        252.93644987289971
+      ],
+      "expectedXY": [
+        4.000000000000028,
+        252.9364498728997
+      ],
+      "errorPx": 4.0194366942304644e-14
+    },
+    {
+      "lonlat": [
+        -45,
+        84
+      ],
+      "xy": [
+        404.18897637795277,
+        4
+      ],
+      "expectedXY": [
+        404.1889763779527,
+        3.999999999999986
+      ],
+      "errorPx": 5.859285502108464e-14
+    }
+  ],
+  "gaps": [
+    "Natural Earth is generalized cartography, not survey-grade or current local coastal/hydrological mapping.",
+    "Boundary policy follows pinned Natural Earth de facto country dataset; disputed territories are not independently adjudicated.",
+    "Country direct-fill is supported by standard SVG; no installed map core API is claimed."
+  ],
+  "nativeValidation": {
+    "status": "nativeVerified",
+    "appVersion": "1.1.8",
+    "verifiedAt": "2026-10-03T15:40:43.997803+00:00",
+    "sourceSha256": "544b5971f7feb5f5ed46a9bd15dfa67e083fe904d8aa86d59d13e88363ea12b8",
+    "saveReopenExportVerified": true,
+    "visualReview": "passed",
+    "outputs": {
+      "vectora": {
+        "sha256": "2b06b01235b47c3d8896c11457f071a20ce377451d6adfa96cbd4f665d21d0f7",
+        "bytes": 7917713
+      },
+      "jpeg": {
+        "sha256": "219d360babe5d16e1fd482c3037fcdb439c67029820204264dc59d73a33120ae",
+        "bytes": 238519,
+        "scale": 4
+      }
+    },
+    "preservationSummary": {
+      "primitiveIds": {
+        "sourceCount": 1074,
+        "exactMatchesAfterReopen": 1074
+      },
+      "groupNames": {
+        "sourceCount": 54,
+        "preservedAfterReopen": 54
+      },
+      "hiddenPaths": {
+        "sourceCount": 127,
+        "missingOrVisible": 0
+      },
+      "strokeColors": "preserved",
+      "objectCount": "preserved",
+      "artboardWidthMm": 108,
+      "widthPreserved": true,
+      "structuralIssueCount": 0
+    },
+    "evidence": {
+      "nativeSummarySha256": "68a755e35729ab7a962fd30605a31a3dea81c3d3647a335f0a3878878d262140",
+      "visualReviewSha256": "bb58c495c5d9a7738ba24aff07111a506312d65719b99c9991d5c05592787db2",
+      "runtimeFileDependency": false,
+      "summary": "Source-hash matched native save/reopen/JPEG and parent visual review; structural issues 0."
+    },
+    "nativeArtifactsIncludedInLibrary": false
+  },
+  "approvedOriginal": {
+    "file": "../world_continents.vectora",
+    "sha256": "3d968c1772c1b25f37a36af0681b15b7696a5bef4938dca9dbf5306ea6064e0b",
+    "modified": false
+  }
+}

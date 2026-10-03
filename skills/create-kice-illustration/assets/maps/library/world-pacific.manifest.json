@@ -1,0 +1,7326 @@
+{
+  "schema": "vectora-map-template/v1",
+  "id": "world-pacific",
+  "title": "세계 태평양 중심",
+  "svg": "world-pacific.svg",
+  "sourceKind": "reprojected-geographic-data",
+  "originalDownloadedSvg": false,
+  "status": "nativeVerified",
+  "sha256": "b4ec463d23427455ab29b7e06224892dd5db826d7e9d4db62e2a25879c4b67a7",
+  "bytes": 489805,
+  "source": {
+    "repository": "https://github.com/nvkelso/natural-earth-vector",
+    "commit": "ca96624a56bd078437bca8184e78163e5039ad19",
+    "resolution": "110m",
+    "license": "public-domain",
+    "rightsURL": "https://www.naturalearthdata.com/about/terms-of-use/",
+    "datasets": [
+      {
+        "file": "ne_110m_lakes.geojson",
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_110m_lakes.geojson",
+        "sha256": "eb02ecc86c82004fccbf979058bfabbbd6c2d07968c7844d38eb1c9152d2ffc9",
+        "bytes": 36648,
+        "revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "kind": "geographic-data"
+      },
+      {
+        "file": "ne_110m_coastline.geojson",
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_110m_coastline.geojson",
+        "sha256": "851f581ff5ffb844deed8ae1a9ce22e3c4bb3d74fa342cadb5d8e39b41ae7c3c",
+        "bytes": 139907,
+        "revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "kind": "geographic-data"
+      },
+      {
+        "file": "ne_110m_admin_0_boundary_lines_land.geojson",
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_110m_admin_0_boundary_lines_land.geojson",
+        "sha256": "d42479fd79552cca4eec7f85fcdca717a790d29ff06be7676f1af0568c6d3f7c",
+        "bytes": 340010,
+        "revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "kind": "geographic-data"
+      },
+      {
+        "file": "ne_110m_admin_0_countries.geojson",
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_110m_admin_0_countries.geojson",
+        "sha256": "6866c877d39cba9c357620878839b336d569f8c662d3cfab4cb1dbe2d39c977f",
+        "bytes": 838726,
+        "revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "kind": "geographic-data"
+      },
+      {
+        "file": "ne_110m_rivers_lake_centerlines.geojson",
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_110m_rivers_lake_centerlines.geojson",
+        "sha256": "55aa4497405afc07cdc931b7fbe062c4d6693ba2a550c0d24899953f5d507c8d",
+        "bytes": 38087,
+        "revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "kind": "geographic-data"
+      }
+    ]
+  },
+  "projection": {
+    "name": "Equirectangular",
+    "implementation": "d3-geo@3.1.1",
+    "inputCRS": "WGS84 geographic longitude/latitude degrees",
+    "centralMeridian": 180,
+    "rotation": [
+      -180,
+      0,
+      0
+    ],
+    "center": [
+      0,
+      0
+    ],
+    "scale": 63.692053761436924,
+    "translate": [
+      204.09448818897638,
+      104.04724409448819
+    ],
+    "clipAngle": 0,
+    "clipExtent": [
+      [
+        4,
+        4
+      ],
+      [
+        404.18897637795277,
+        204.09448818897638
+      ]
+    ],
+    "extentLonLat": [
+      0,
+      -90,
+      360,
+      90
+    ],
+    "units": "SVG viewBox px at 96px/in",
+    "antimeridian": "d3 spherical antimeridian preclip after rotation",
+    "latitudeOrientation": "north-up; pole north/south use registered rotation"
+  },
+  "widthMm": 108,
+  "heightMm": 55.05833333333333,
+  "viewBox": [
+    0,
+    0,
+    408.18897637795277,
+    208.09448818897638
+  ],
+  "targetISO": null,
+  "countries": [
+    {
+      "id": "world-pacific--country-FJI",
+      "iso3": "FJI",
+      "iso2": "FJ",
+      "naturalEarthCode": "FJI",
+      "naturalEarthId": 1159320625,
+      "sourceFeatures": [
+        {
+          "neId": 1159320625,
+          "name": "Fiji",
+          "isoA3": "FJI",
+          "isoA3EH": "FJI"
+        }
+      ],
+      "name": "Fiji",
+      "sourcePartCount": 3,
+      "visiblePartCount": 3,
+      "partIds": [
+        "world-pacific--country-FJI-part-0001",
+        "world-pacific--country-FJI-part-0002",
+        "world-pacific--country-FJI-part-0003"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            202.53468384374452,
+            121.90804828503937
+          ],
+          [
+            204.09448818897638,
+            122.95844318915135
+          ]
+        ],
+        [
+          [
+            201.07644079090116,
+            123.32292419247594
+          ],
+          [
+            202.66943747681543,
+            124.37683297812774
+          ]
+        ],
+        [
+          [
+            204.09448818897638,
+            121.85663400629922
+          ],
+          [
+            204.3242411268592,
+            122.45062005266843
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-TZA",
+      "iso3": "TZA",
+      "iso2": "TZ",
+      "naturalEarthCode": "TZA",
+      "naturalEarthId": 1159321337,
+      "sourceFeatures": [
+        {
+          "neId": 1159321337,
+          "name": "Tanzania",
+          "isoA3": "TZA",
+          "isoA3EH": "TZA"
+        }
+      ],
+      "name": "Tanzania",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-TZA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            36.61539935153107,
+            105.10329833770778
+          ],
+          [
+            48.81737467541555,
+            117.07666126229222
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-ESH",
+      "iso3": "ESH",
+      "iso2": "EH",
+      "naturalEarthCode": "SAH",
+      "naturalEarthId": 1159321223,
+      "sourceFeatures": [
+        {
+          "neId": 1159321223,
+          "name": "W. Sahara",
+          "isoA3": "ESH",
+          "isoA3EH": "ESH"
+        }
+      ],
+      "name": "Western Sahara",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-ESH-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            385.22066031163604,
+            73.30336406334209
+          ],
+          [
+            394.5565122008749,
+            80.7031628248469
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-CAN",
+      "iso3": "CAN",
+      "iso2": "CA",
+      "naturalEarthCode": "CAN",
+      "naturalEarthId": 1159320467,
+      "sourceFeatures": [
+        {
+          "neId": 1159320467,
+          "name": "Canada",
+          "isoA3": "CAN",
+          "isoA3EH": "CAN"
+        }
+      ],
+      "name": "Canada",
+      "sourcePartCount": 30,
+      "visiblePartCount": 30,
+      "partIds": [
+        "world-pacific--country-CAN-part-0001",
+        "world-pacific--country-CAN-part-0002",
+        "world-pacific--country-CAN-part-0003",
+        "world-pacific--country-CAN-part-0004",
+        "world-pacific--country-CAN-part-0005",
+        "world-pacific--country-CAN-part-0006",
+        "world-pacific--country-CAN-part-0007",
+        "world-pacific--country-CAN-part-0008",
+        "world-pacific--country-CAN-part-0009",
+        "world-pacific--country-CAN-part-0010",
+        "world-pacific--country-CAN-part-0011",
+        "world-pacific--country-CAN-part-0012",
+        "world-pacific--country-CAN-part-0013",
+        "world-pacific--country-CAN-part-0014",
+        "world-pacific--country-CAN-part-0015",
+        "world-pacific--country-CAN-part-0016",
+        "world-pacific--country-CAN-part-0017",
+        "world-pacific--country-CAN-part-0018",
+        "world-pacific--country-CAN-part-0019",
+        "world-pacific--country-CAN-part-0020",
+        "world-pacific--country-CAN-part-0021",
+        "world-pacific--country-CAN-part-0022",
+        "world-pacific--country-CAN-part-0023",
+        "world-pacific--country-CAN-part-0024",
+        "world-pacific--country-CAN-part-0025",
+        "world-pacific--country-CAN-part-0026",
+        "world-pacific--country-CAN-part-0027",
+        "world-pacific--country-CAN-part-0028",
+        "world-pacific--country-CAN-part-0029",
+        "world-pacific--country-CAN-part-0030"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            247.45076179527558,
+            24.097790535433063
+          ],
+          [
+            342.2893240349956,
+            57.7196951767279
+          ]
+        ],
+        [
+          [
+            310.8185852125984,
+            34.10967388101487
+          ],
+          [
+            313.1715629973753,
+            34.94881458267717
+          ]
+        ],
+        [
+          [
+            314.28418951058615,
+            22.053280636920377
+          ],
+          [
+            319.4251671720035,
+            23.184389211023614
+          ]
+        ],
+        [
+          [
+            314.85551374453195,
+            34.69716241469817
+          ],
+          [
+            316.0742336902887,
+            35.53369077165354
+          ]
+        ],
+        [
+          [
+            296.55933840839896,
+            19.955069824321967
+          ],
+          [
+            300.1256624902887,
+            21.127702451268576
+          ]
+        ],
+        [
+          [
+            296.98690475730535,
+            17.523464910411192
+          ],
+          [
+            300.00571696097984,
+            17.905074001924746
+          ]
+        ],
+        [
+          [
+            294.54610772493436,
+            16.3703637287839
+          ],
+          [
+            297.96183847174103,
+            17.50571430603675
+          ]
+        ],
+        [
+          [
+            296.2253506934383,
+            18.271862761679785
+          ],
+          [
+            315.4426988015748,
+            21.35007412580927
+          ]
+        ],
+        [
+          [
+            277.9801794423447,
+            17.16960114295712
+          ],
+          [
+            282.070807776728,
+            17.996354884164475
+          ]
+        ],
+        [
+          [
+            279.08313138705165,
+            16.394748577077863
+          ],
+          [
+            282.2834704220473,
+            16.8872856062992
+          ]
+        ],
+        [
+          [
+            338.13612504251967,
+            46.65114729973753
+          ],
+          [
+            345.6634518027996,
+            52.22467032790902
+          ]
+        ],
+        [
+          [
+            307.22987611566055,
+            30.969648882939637
+          ],
+          [
+            315.14309287786523,
+            33.955946843919506
+          ]
+        ],
+        [
+          [
+            303.91366903237093,
+            22.00426193385826
+          ],
+          [
+            335.4320848131234,
+            35.202626659492566
+          ]
+        ],
+        [
+          [
+            297.4344038521435,
+            21.63620924391951
+          ],
+          [
+            303.57502800892394,
+            23.982107018722658
+          ]
+        ],
+        [
+          [
+            267.6190133814523,
+            17.733944302537182
+          ],
+          [
+            275.0184386332458,
+            19.674047120384955
+          ]
+        ],
+        [
+          [
+            256.07496318600175,
+            43.829947300962374
+          ],
+          [
+            258.3656237657043,
+            46.04159390218723
+          ]
+        ],
+        [
+          [
+            286.91994540384957,
+            15.892733738932634
+          ],
+          [
+            293.3911678972878,
+            17.44240885651793
+          ]
+        ],
+        [
+          [
+            261.40534695503067,
+            47.608761724584426
+          ],
+          [
+            266.89080617567805,
+            50.27646812983377
+          ]
+        ],
+        [
+          [
+            264.20181749833773,
+            21.287129958005238
+          ],
+          [
+            275.7829963377078,
+            25.230425385826763
+          ]
+        ],
+        [
+          [
+            273.33785280839896,
+            18.680076638670172
+          ],
+          [
+            286.6835104216973,
+            21.34789198425196
+          ]
+        ],
+        [
+          [
+            271.45742039020126,
+            22.54810318985126
+          ],
+          [
+            291.9351014278215,
+            27.860667433070873
+          ]
+        ],
+        [
+          [
+            290.2462817147857,
+            21.95971423097113
+          ],
+          [
+            296.8716325459318,
+            24.817774969378817
+          ]
+        ],
+        [
+          [
+            285.3106176727909,
+            22.186365704286956
+          ],
+          [
+            288.023009623797,
+            23.164605424321948
+          ]
+        ],
+        [
+          [
+            290.17344732108484,
+            18.762526684164484
+          ],
+          [
+            295.5772268600175,
+            20.788550075240593
+          ]
+        ],
+        [
+          [
+            296.68296567629045,
+            13.718600407699029
+          ],
+          [
+            308.79465169728786,
+            17.10026395625546
+          ]
+        ],
+        [
+          [
+            302.3775436465442,
+            11.5221743272091
+          ],
+          [
+            335.43428696412946,
+            19.364900024496933
+          ]
+        ],
+        [
+          [
+            318.3302101137358,
+            28.136720012248475
+          ],
+          [
+            320.70140761329833,
+            29.45787721959755
+          ]
+        ],
+        [
+          [
+            293.25058817970256,
+            26.07315667191601
+          ],
+          [
+            297.8635665104112,
+            27.614440048993856
+          ]
+        ],
+        [
+          [
+            332.4671969623797,
+            48.51304207524059
+          ],
+          [
+            335.4828599011374,
+            49.4801765511811
+          ]
+        ],
+        [
+          [
+            332.6078300384952,
+            51.76031994225722
+          ],
+          [
+            335.25411299387576,
+            52.947358260717415
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-USA",
+      "iso3": "USA",
+      "iso2": "US",
+      "naturalEarthCode": "USA",
+      "naturalEarthId": 1159321369,
+      "sourceFeatures": [
+        {
+          "neId": 1159321369,
+          "name": "United States of America",
+          "isoA3": "USA",
+          "isoA3EH": "USA"
+        }
+      ],
+      "name": "United States of America",
+      "sourcePartCount": 10,
+      "visiblePartCount": 10,
+      "partIds": [
+        "world-pacific--country-USA-part-0001",
+        "world-pacific--country-USA-part-0002",
+        "world-pacific--country-USA-part-0003",
+        "world-pacific--country-USA-part-0004",
+        "world-pacific--country-USA-part-0005",
+        "world-pacific--country-USA-part-0006",
+        "world-pacific--country-USA-part-0007",
+        "world-pacific--country-USA-part-0008",
+        "world-pacific--country-USA-part-0009",
+        "world-pacific--country-USA-part-0010"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            265.5821793298338,
+            49.144595861767286
+          ],
+          [
+            329.7486465476816,
+            76.16741207349082
+          ]
+        ],
+        [
+          [
+            230.69208138057743,
+            81.5174829168854
+          ],
+          [
+            232.099479312336,
+            83.01932544706912
+          ]
+        ],
+        [
+          [
+            229.98388028871392,
+            80.68900280489939
+          ],
+          [
+            230.77857778127733,
+            81.17821159580052
+          ]
+        ],
+        [
+          [
+            229.3006020769904,
+            80.45879409623797
+          ],
+          [
+            229.9308663657043,
+            80.62648439370079
+          ]
+        ],
+        [
+          [
+            228.22516090113734,
+            79.90588855993002
+          ],
+          [
+            228.93640787576552,
+            80.408948335958
+          ]
+        ],
+        [
+          [
+            226.5489693735783,
+            79.32870489238846
+          ],
+          [
+            227.05519731233596,
+            79.72132362729658
+          ]
+        ],
+        [
+          [
+            218.03965445651795,
+            36.922024145231845
+          ],
+          [
+            220.12520929273845,
+            37.622053600524936
+          ]
+        ],
+        [
+          [
+            232.25112536675414,
+            39.6068497455818
+          ],
+          [
+            235.0633933699038,
+            40.97893211181103
+          ]
+        ],
+        [
+          [
+            217.3112182537183,
+            24.723381506211723
+          ],
+          [
+            259.698523184602,
+            43.5696043623797
+          ]
+        ],
+        [
+          [
+            213.21978509483816,
+            33.14430134820648
+          ],
+          [
+            216.6677154913386,
+            34.03981756027996
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-KAZ",
+      "iso3": "KAZ",
+      "iso2": "KZ",
+      "naturalEarthCode": "KAZ",
+      "naturalEarthId": 1159320967,
+      "sourceFeatures": [
+        {
+          "neId": 1159320967,
+          "name": "Kazakhstan",
+          "isoA3": "KAZ",
+          "isoA3EH": "KAZ"
+        }
+      ],
+      "name": "Kazakhstan",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-KAZ-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            55.653776279615045,
+            42.479003805774276
+          ],
+          [
+            101.11249158530185,
+            58.84553793088364
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-UZB",
+      "iso3": "UZB",
+      "iso2": "UZ",
+      "naturalEarthCode": "UZB",
+      "naturalEarthId": 1159321405,
+      "sourceFeatures": [
+        {
+          "neId": 1159321405,
+          "name": "Uzbekistan",
+          "isoA3": "UZB",
+          "isoA3EH": "UZB"
+        }
+      ],
+      "name": "Uzbekistan",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-UZB-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            66.17260012265967,
+            53.371309569203845
+          ],
+          [
+            85.21103485581803,
+            62.7555298544182
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-PNG",
+      "iso3": "PNG",
+      "iso2": "PG",
+      "naturalEarthCode": "PNG",
+      "naturalEarthId": 1159321173,
+      "sourceFeatures": [
+        {
+          "neId": 1159321173,
+          "name": "Papua New Guinea",
+          "isoA3": "PNG",
+          "isoA3EH": "PNG"
+        }
+      ],
+      "name": "Papua New Guinea",
+      "sourcePartCount": 4,
+      "visiblePartCount": 4,
+      "partIds": [
+        "world-pacific--country-PNG-part-0001",
+        "world-pacific--country-PNG-part-0002",
+        "world-pacific--country-PNG-part-0003",
+        "world-pacific--country-PNG-part-0004"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            160.74091585826775,
+            106.93766566981628
+          ],
+          [
+            171.6365254040245,
+            115.88892038985128
+          ]
+        ],
+        [
+          [
+            171.4813654680665,
+            106.82633643149606
+          ],
+          [
+            174.2359862491689,
+            109.34577615590551
+          ]
+        ],
+        [
+          [
+            168.87667659860017,
+            108.65918860367455
+          ],
+          [
+            173.3452378440945,
+            111.07028716745407
+          ]
+        ],
+        [
+          [
+            175.76345866001753,
+            109.65259215100613
+          ],
+          [
+            177.43741691076116,
+            111.73975552458442
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-IDN",
+      "iso3": "IDN",
+      "iso2": "ID",
+      "naturalEarthCode": "IDN",
+      "naturalEarthId": 1159320845,
+      "sourceFeatures": [
+        {
+          "neId": 1159320845,
+          "name": "Indonesia",
+          "isoA3": "IDN",
+          "isoA3EH": "IDN"
+        }
+      ],
+      "name": "Indonesia",
+      "sourcePartCount": 13,
+      "visiblePartCount": 13,
+      "partIds": [
+        "world-pacific--country-IDN-part-0001",
+        "world-pacific--country-IDN-part-0002",
+        "world-pacific--country-IDN-part-0003",
+        "world-pacific--country-IDN-part-0004",
+        "world-pacific--country-IDN-part-0005",
+        "world-pacific--country-IDN-part-0006",
+        "world-pacific--country-IDN-part-0007",
+        "world-pacific--country-IDN-part-0008",
+        "world-pacific--country-IDN-part-0009",
+        "world-pacific--country-IDN-part-0010",
+        "world-pacific--country-IDN-part-0011",
+        "world-pacific--country-IDN-part-0012",
+        "world-pacific--country-IDN-part-0013"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            149.09024531478565,
+            104.45803585546807
+          ],
+          [
+            160.77831351811022,
+            114.18302261224848
+          ]
+        ],
+        [
+          [
+            141.2425739487314,
+            113.93279000349956
+          ],
+          [
+            143.05290770953633,
+            115.56377907454069
+          ]
+        ],
+        [
+          [
+            153.08459596290464,
+            110.10014905091865
+          ],
+          [
+            153.76739172458443,
+            111.7122391975503
+          ]
+        ],
+        [
+          [
+            125.11570188521436,
+            99.25991787804026
+          ],
+          [
+            136.2810732617673,
+            108.61271554715661
+          ]
+        ],
+        [
+          [
+            146.1770174143482,
+            107.16221948591426
+          ],
+          [
+            149.44071970393702,
+            108.33646065021873
+          ]
+        ],
+        [
+          [
+            144.0539515314086,
+            107.52590678110236
+          ],
+          [
+            145.45481415485565,
+            108.26143744514437
+          ]
+        ],
+        [
+          [
+            145.62186526159232,
+            101.62988479650043
+          ],
+          [
+            147.0544962199475,
+            105.04771208888889
+          ]
+        ],
+        [
+          [
+            136.02653306334207,
+            102.22053815800525
+          ],
+          [
+            143.22185526736658,
+            110.35400003499564
+          ]
+        ],
+        [
+          [
+            136.24890362624674,
+            114.45364707261592
+          ],
+          [
+            138.2584014358705,
+            115.45112921259843
+          ]
+        ],
+        [
+          [
+            137.30842728556433,
+            113.04508636955381
+          ],
+          [
+            140.62400184794402,
+            113.97822923849519
+          ]
+        ],
+        [
+          [
+            133.77254869168854,
+            113.04669490691164
+          ],
+          [
+            136.42531915503062,
+            114.0974288600175
+          ]
+        ],
+        [
+          [
+            121.12807218862643,
+            110.60136017620297
+          ],
+          [
+            132.62243447611547,
+            113.7760793352581
+          ]
+        ],
+        [
+          [
+            109.93116258582677,
+            97.9556775480315
+          ],
+          [
+            121.95413671548556,
+            110.57619940594927
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-ARG",
+      "iso3": "ARG",
+      "iso2": "AR",
+      "naturalEarthCode": "ARG",
+      "naturalEarthId": 1159320331,
+      "sourceFeatures": [
+        {
+          "neId": 1159320331,
+          "name": "Argentina",
+          "isoA3": "ARG",
+          "isoA3EH": "ARG"
+        }
+      ],
+      "name": "Argentina",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "world-pacific--country-ARG-part-0001",
+        "world-pacific--country-ARG-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            327.89293691513564,
+            162.5597302904637
+          ],
+          [
+            331.87705161854774,
+            165.465135608049
+          ]
+        ],
+        [
+          [
+            322.5777314246719,
+            128.31682684689414
+          ],
+          [
+            344.5737705692039,
+            162.24137217830273
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-CHL",
+      "iso3": "CHL",
+      "iso2": "CL",
+      "naturalEarthCode": "CHL",
+      "naturalEarthId": 1159320493,
+      "sourceFeatures": [
+        {
+          "neId": 1159320493,
+          "name": "Chile",
+          "isoA3": "CHL",
+          "isoA3EH": "CHL"
+        }
+      ],
+      "name": "Chile",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "world-pacific--country-CHL-part-0001",
+        "world-pacific--country-CHL-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            321.19141678215226,
+            162.4284794225722
+          ],
+          [
+            329.7539157025372,
+            165.8673588783902
+          ]
+        ],
+        [
+          [
+            320.099940256343,
+            123.58981911391076
+          ],
+          [
+            329.72577574768155,
+            163.91602075503062
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-COD",
+      "iso3": "COD",
+      "iso2": "CD",
+      "naturalEarthCode": "COD",
+      "naturalEarthId": 1159320513,
+      "sourceFeatures": [
+        {
+          "neId": 1159320513,
+          "name": "Dem. Rep. Congo",
+          "isoA3": "COD",
+          "isoA3EH": "COD"
+        }
+      ],
+      "name": "Democratic Republic of the Congo",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-COD-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            17.542324927559065,
+            98.20438721539807
+          ],
+          [
+            38.65430771601049,
+            118.78445549098863
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-SOM",
+      "iso3": "SOM",
+      "iso2": "SO",
+      "naturalEarthCode": "SOM",
+      "naturalEarthId": 1159321261,
+      "sourceFeatures": [
+        {
+          "neId": 1159321261,
+          "name": "Somalia",
+          "isoA3": "SOM",
+          "isoA3EH": "SOM"
+        }
+      ],
+      "name": "Somalia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-SOM-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            49.55601236220471,
+            90.68022083639545
+          ],
+          [
+            60.84225303762031,
+            105.9184054680665
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-KEN",
+      "iso3": "KEN",
+      "iso2": "KE",
+      "naturalEarthCode": "KEN",
+      "naturalEarthId": 1159320971,
+      "sourceFeatures": [
+        {
+          "neId": 1159320971,
+          "name": "Kenya",
+          "isoA3": "KEN",
+          "isoA3EH": "KEN"
+        }
+      ],
+      "name": "Kenya",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-KEN-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            41.67731301084862,
+            97.9265760279965
+          ],
+          [
+            50.52761894995626,
+            109.24611020297463
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-SDN",
+      "iso3": "SDN",
+      "iso2": "SD",
+      "naturalEarthCode": "SDN",
+      "naturalEarthId": 1159321229,
+      "sourceFeatures": [
+        {
+          "neId": 1159321229,
+          "name": "Sudan",
+          "isoA3": "SDN",
+          "isoA3EH": "SDN"
+        }
+      ],
+      "name": "Sudan",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-SDN-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            28.38574871916009,
+            79.5912510936133
+          ],
+          [
+            46.69804055468066,
+            94.89938208853894
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-TCD",
+      "iso3": "TCD",
+      "iso2": "TD",
+      "naturalEarthCode": "TCD",
+      "naturalEarthId": 1159321301,
+      "sourceFeatures": [
+        {
+          "neId": 1159321301,
+          "name": "Chad",
+          "isoA3": "TCD",
+          "isoA3EH": "TCD"
+        }
+      ],
+      "name": "Chad",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-TCD-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            19.051990040594916,
+            78.02415552755906
+          ],
+          [
+            30.553527938757668,
+            95.79676473753281
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-HTI",
+      "iso3": "HTI",
+      "iso2": "HT",
+      "naturalEarthCode": "HTI",
+      "naturalEarthId": 1159320839,
+      "sourceFeatures": [
+        {
+          "neId": 1159320839,
+          "name": "Haiti",
+          "isoA3": "HTI",
+          "isoA3EH": "HTI"
+        }
+      ],
+      "name": "Haiti",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-HTI-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            321.41874190691163,
+            81.90825188941383
+          ],
+          [
+            324.5681857972004,
+            84.00334233963255
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-DOM",
+      "iso3": "DOM",
+      "iso2": "DO",
+      "naturalEarthCode": "DOM",
+      "naturalEarthId": 1159320563,
+      "sourceFeatures": [
+        {
+          "neId": 1159320563,
+          "name": "Dominican Rep.",
+          "isoA3": "DOM",
+          "isoA3EH": "DOM"
+        }
+      ],
+      "name": "Dominican Republic",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-DOM-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            324.21219658162727,
+            81.94246026544182
+          ],
+          [
+            328.2442883851269,
+            84.48404600314961
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-RUS",
+      "iso3": "RUS",
+      "iso2": "RU",
+      "naturalEarthCode": "RUS",
+      "naturalEarthId": 1159321201,
+      "sourceFeatures": [
+        {
+          "neId": 1159321201,
+          "name": "Russia",
+          "isoA3": "RUS",
+          "isoA3EH": "RUS"
+        }
+      ],
+      "name": "Russia",
+      "sourcePartCount": 14,
+      "visiblePartCount": 14,
+      "partIds": [
+        "world-pacific--country-RUS-part-0001",
+        "world-pacific--country-RUS-part-0002",
+        "world-pacific--country-RUS-part-0003",
+        "world-pacific--country-RUS-part-0004",
+        "world-pacific--country-RUS-part-0005",
+        "world-pacific--country-RUS-part-0006",
+        "world-pacific--country-RUS-part-0007",
+        "world-pacific--country-RUS-part-0008",
+        "world-pacific--country-RUS-part-0009",
+        "world-pacific--country-RUS-part-0010",
+        "world-pacific--country-RUS-part-0011",
+        "world-pacific--country-RUS-part-0012",
+        "world-pacific--country-RUS-part-0013",
+        "world-pacific--country-RUS-part-0014"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            202.6774857217848,
+            24.5477985928259
+          ],
+          [
+            204.09448818897638,
+            25.36437752930884
+          ]
+        ],
+        [
+          [
+            34.33453006211724,
+            17.675435562554682
+          ],
+          [
+            204.09448818897638,
+            58.301846745756784
+          ]
+        ],
+        [
+          [
+            105.36016407874017,
+            13.726370743657043
+          ],
+          [
+            115.37109697550308,
+            16.499013368328946
+          ]
+        ],
+        [
+          [
+            114.5390207209099,
+            15.84291465791776
+          ],
+          [
+            121.13579138932634,
+            17.42745179352579
+          ]
+        ],
+        [
+          [
+            156.26566923359582,
+            19.41087729133858
+          ],
+          [
+            165.2831441128609,
+            21.10643351881015
+          ]
+        ],
+        [
+          [
+            166.4313585424322,
+            20.1222576622922
+          ],
+          [
+            171.55875756955382,
+            21.02034842344706
+          ]
+        ],
+        [
+          [
+            159.4768856272966,
+            21.944495933508307
+          ],
+          [
+            163.63521593175855,
+            22.66943826421698
+          ]
+        ],
+        [
+          [
+            53.85349504356955,
+            14.094894767279072
+          ],
+          [
+            61.27474949238845,
+            15.105042888363954
+          ]
+        ],
+        [
+          [
+            25.855476101487312,
+            42.69551493508311
+          ],
+          [
+            29.298350777252836,
+            43.67148358267716
+          ]
+        ],
+        [
+          [
+            61.20007089448819,
+            18.518303579877525
+          ],
+          [
+            80.53859955958005,
+            25.529340983552046
+          ]
+        ],
+        [
+          [
+            161.40107871006126,
+            43.61217112983377
+          ],
+          [
+            164.80276504706913,
+            52.94894234208224
+          ]
+        ],
+        [
+          [
+            204.09448818897638,
+            27.384780488538937
+          ],
+          [
+            215.32247913560806,
+            32.62163787051618
+          ]
+        ],
+        [
+          [
+            204.09448818897638,
+            24.5012143727034
+          ],
+          [
+            206.78693183114606,
+            25.307618504461942
+          ]
+        ],
+        [
+          [
+            40.07722964514437,
+            52.66790074033246
+          ],
+          [
+            44.608062518635194,
+            54.73342500664916
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-BHS",
+      "iso3": "BHS",
+      "iso2": "BS",
+      "naturalEarthCode": "BHS",
+      "naturalEarthId": 1159320415,
+      "sourceFeatures": [
+        {
+          "neId": 1159320415,
+          "name": "Bahamas",
+          "isoA3": "BHS",
+          "isoA3EH": "BHS"
+        }
+      ],
+      "name": "The Bahamas",
+      "sourcePartCount": 3,
+      "visiblePartCount": 3,
+      "partIds": [
+        "world-pacific--country-BHS-part-0001",
+        "world-pacific--country-BHS-part-0002",
+        "world-pacific--country-BHS-part-0003"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            316.3919615048119,
+            74.17758355205599
+          ],
+          [
+            317.68145931758534,
+            74.67781977252844
+          ]
+        ],
+        [
+          [
+            317.71480839895014,
+            73.98860542432196
+          ],
+          [
+            318.59300087489066,
+            75.27901477865267
+          ]
+        ],
+        [
+          [
+            317.0272837375328,
+            76.0225658967629
+          ],
+          [
+            317.9986535468066,
+            77.69035345581803
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-FLK",
+      "iso3": "FLK",
+      "iso2": "FK",
+      "naturalEarthCode": "FLK",
+      "naturalEarthId": 1159320711,
+      "sourceFeatures": [
+        {
+          "neId": 1159320711,
+          "name": "Falkland Is.",
+          "isoA3": "FLK",
+          "isoA3EH": "FLK"
+        }
+      ],
+      "name": "Falkland Islands",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-FLK-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            336.1568503937008,
+            160.8518460192476
+          ],
+          [
+            339.99199475065615,
+            162.1858092738408
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-NOR",
+      "iso3": "NOR",
+      "iso2": "NO",
+      "naturalEarthCode": "NOR",
+      "naturalEarthId": 1159321109,
+      "sourceFeatures": [
+        {
+          "neId": 1159321109,
+          "name": "Norway",
+          "isoA3": "-99",
+          "isoA3EH": "NOR"
+        }
+      ],
+      "name": "Norway",
+      "sourcePartCount": 4,
+      "visiblePartCount": 4,
+      "partIds": [
+        "world-pacific--country-NOR-part-0001",
+        "world-pacific--country-NOR-part-0002",
+        "world-pacific--country-NOR-part-0003",
+        "world-pacific--country-NOR-part-0004"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            15.610516026246728,
+            15.059822645669286
+          ],
+          [
+            27.948897986001754,
+            18.706444645669293
+          ]
+        ],
+        [
+          [
+            9.549373846719135,
+            24.914905280489933
+          ],
+          [
+            38.786891435520545,
+            39.48466315800525
+          ]
+        ],
+        [
+          [
+            23.3069115126859,
+            14.385855497462813
+          ],
+          [
+            34.46717158670168,
+            15.783328742607168
+          ]
+        ],
+        [
+          [
+            27.039779795275592,
+            16.833904843394578
+          ],
+          [
+            31.48422298512685,
+            17.95666836570429
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-GRL",
+      "iso3": "GRL",
+      "iso2": "GL",
+      "naturalEarthCode": "GRL",
+      "naturalEarthId": 1159320551,
+      "sourceFeatures": [
+        {
+          "neId": 1159320551,
+          "name": "Greenland",
+          "isoA3": "GRL",
+          "isoA3EH": "GRL"
+        }
+      ],
+      "name": "Greenland",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-GRL-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            322.70938915135605,
+            11.064302556430448
+          ],
+          [
+            390.61751213473315,
+            37.30821762379702
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-ATF",
+      "iso3": "ATF",
+      "iso2": "TF",
+      "naturalEarthCode": "ATF",
+      "naturalEarthId": 1159320631,
+      "sourceFeatures": [
+        {
+          "neId": 1159320631,
+          "name": "Fr. S. Antarctic Lands",
+          "isoA3": "ATF",
+          "isoA3EH": "ATF"
+        }
+      ],
+      "name": "French Southern and Antarctic Lands",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-ATF-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            80.3916290463692,
+            158.10054680664916
+          ],
+          [
+            82.43703937007874,
+            159.37892825896765
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-TLS",
+      "iso3": "TLS",
+      "iso2": "TL",
+      "naturalEarthCode": "TLS",
+      "naturalEarthId": 1159321313,
+      "sourceFeatures": [
+        {
+          "neId": 1159321313,
+          "name": "Timor-Leste",
+          "isoA3": "TLS",
+          "isoA3EH": "TLS"
+        }
+      ],
+      "name": "East Timor",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-TLS-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            142.91969146911634,
+            113.24419261329834
+          ],
+          [
+            145.5512074512686,
+            114.48903378285215
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-ZAF",
+      "iso3": "ZAF",
+      "iso2": "ZA",
+      "naturalEarthCode": "ZAF",
+      "naturalEarthId": 1159321431,
+      "sourceFeatures": [
+        {
+          "neId": 1159321431,
+          "name": "South Africa",
+          "isoA3": "ZAF",
+          "isoA3EH": "ZAF"
+        }
+      ],
+      "name": "South Africa",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-ZAF-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            22.169665595975516,
+            128.6047439175853
+          ],
+          [
+            40.49514476990376,
+            142.75348409413823
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-LSO",
+      "iso3": "LSO",
+      "iso2": "LS",
+      "naturalEarthCode": "LSO",
+      "naturalEarthId": 1159321027,
+      "sourceFeatures": [
+        {
+          "neId": 1159321027,
+          "name": "Lesotho",
+          "isoA3": "LSO",
+          "isoA3EH": "LSO"
+        }
+      ],
+      "name": "Lesotho",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-LSO-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            34.01335284094489,
+            135.89283993105863
+          ],
+          [
+            36.5989115657043,
+            138.11344854208224
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-MEX",
+      "iso3": "MEX",
+      "iso2": "MX",
+      "naturalEarthCode": "MEX",
+      "naturalEarthId": 1159321055,
+      "sourceFeatures": [
+        {
+          "neId": 1159321055,
+          "name": "Mexico",
+          "isoA3": "MEX",
+          "isoA3EH": "MEX"
+        }
+      ],
+      "name": "Mexico",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-MEX-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            273.98553643394575,
+            67.67359002799651
+          ],
+          [
+            307.68564800594925,
+            87.88535771881016
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-URY",
+      "iso3": "URY",
+      "iso2": "UY",
+      "naturalEarthCode": "URY",
+      "naturalEarthId": 1159321353,
+      "sourceFeatures": [
+        {
+          "neId": 1159321353,
+          "name": "Uruguay",
+          "isoA3": "URY",
+          "isoA3EH": "URY"
+        }
+      ],
+      "name": "Uruguay",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-URY-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            339.23933488678915,
+            137.5182563706037
+          ],
+          [
+            345.03927927961513,
+            142.90186638512688
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-BRA",
+      "iso3": "BRA",
+      "iso2": "BR",
+      "naturalEarthCode": "BRA",
+      "naturalEarthId": 1159320441,
+      "sourceFeatures": [
+        {
+          "neId": 1159320441,
+          "name": "Brazil",
+          "isoA3": "BRA",
+          "isoA3EH": "BRA"
+        }
+      ],
+      "name": "Brazil",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-BRA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            321.94209904549433,
+            98.21728441679791
+          ],
+          [
+            365.5818642993876,
+            141.58539027716535
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-BOL",
+      "iso3": "BOL",
+      "iso2": "BO",
+      "naturalEarthCode": "BOL",
+      "naturalEarthId": 1159320439,
+      "sourceFeatures": [
+        {
+          "neId": 1159320439,
+          "name": "Bolivia",
+          "isoA3": "BOL",
+          "isoA3EH": "BOL"
+        }
+      ],
+      "name": "Bolivia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-BOL-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            326.8297526383202,
+            114.89902183097114
+          ],
+          [
+            340.2717146171479,
+            129.47360532055993
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-PER",
+      "iso3": "PER",
+      "iso2": "PE",
+      "naturalEarthCode": "PER",
+      "naturalEarthId": 1159321163,
+      "sourceFeatures": [
+        {
+          "neId": 1159321163,
+          "name": "Peru",
+          "isoA3": "PER",
+          "isoA3EH": "PER"
+        }
+      ],
+      "name": "Peru",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-PER-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            313.6896376414698,
+            104.1108352344707
+          ],
+          [
+            327.85839838320214,
+            124.44351446631671
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-COL",
+      "iso3": "COL",
+      "iso2": "CO",
+      "naturalEarthCode": "COL",
+      "naturalEarthId": 1159320517,
+      "sourceFeatures": [
+        {
+          "neId": 1159320517,
+          "name": "Colombia",
+          "isoA3": "COL",
+          "isoA3EH": "COL"
+        }
+      ],
+      "name": "Colombia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-COL-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            316.37980576465446,
+            90.22148977095364
+          ],
+          [
+            329.84684180612425,
+            108.82526369396327
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-PAN",
+      "iso3": "PAN",
+      "iso2": "PA",
+      "naturalEarthCode": "PAN",
+      "naturalEarthId": 1159321161,
+      "sourceFeatures": [
+        {
+          "neId": 1159321161,
+          "name": "Panama",
+          "isoA3": "PAN",
+          "isoA3EH": "PAN"
+        }
+      ],
+      "name": "Panama",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-PAN-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            311.9612214524934,
+            93.3626319632546
+          ],
+          [
+            318.3233557658793,
+            96.02063045091865
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-CRI",
+      "iso3": "CRI",
+      "iso2": "CR",
+      "naturalEarthCode": "CRI",
+      "naturalEarthId": 1159320525,
+      "sourceFeatures": [
+        {
+          "neId": 1159320525,
+          "name": "Costa Rica",
+          "isoA3": "CRI",
+          "isoA3EH": "CRI"
+        }
+      ],
+      "name": "Costa Rica",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-CRI-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            308.653057055993,
+            91.57789028748907
+          ],
+          [
+            312.42764948591423,
+            94.90400649448819
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-NIC",
+      "iso3": "NIC",
+      "iso2": "NI",
+      "naturalEarthCode": "NIC",
+      "naturalEarthId": 1159321091,
+      "sourceFeatures": [
+        {
+          "neId": 1159321091,
+          "name": "Nicaragua",
+          "isoA3": "NIC",
+          "isoA3EH": "NIC"
+        }
+      ],
+      "name": "Nicaragua",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-NIC-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            306.7335195049869,
+            87.35462042852144
+          ],
+          [
+            311.75953065494315,
+            92.12290320787402
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-HND",
+      "iso3": "HND",
+      "iso2": "HN",
+      "naturalEarthCode": "HND",
+      "naturalEarthId": 1159320827,
+      "sourceFeatures": [
+        {
+          "neId": 1159320827,
+          "name": "Honduras",
+          "isoA3": "HND",
+          "isoA3EH": "HND"
+        }
+      ],
+      "name": "Honduras",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-HND-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            304.86059841154855,
+            86.25505786211724
+          ],
+          [
+            311.75953065494315,
+            89.61299909746282
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-SLV",
+      "iso3": "SLV",
+      "iso2": "SV",
+      "naturalEarthCode": "SLV",
+      "naturalEarthId": 1159321253,
+      "sourceFeatures": [
+        {
+          "neId": 1159321253,
+          "name": "El Salvador",
+          "isoA3": "SLV",
+          "isoA3EH": "SLV"
+        }
+      ],
+      "name": "El Salvador",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-SLV-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            304.0355099011374,
+            88.01285792668416
+          ],
+          [
+            306.6723684061243,
+            89.43032283447069
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-GTM",
+      "iso3": "GTM",
+      "iso2": "GT",
+      "naturalEarthCode": "GTM",
+      "naturalEarthId": 1159320815,
+      "sourceFeatures": [
+        {
+          "neId": 1159320815,
+          "name": "Guatemala",
+          "isoA3": "GTM",
+          "isoA3EH": "GTM"
+        }
+      ],
+      "name": "Guatemala",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-GTM-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            301.66361874068247,
+            84.23863900647419
+          ],
+          [
+            306.1148606965879,
+            88.77854727664042
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-BLZ",
+      "iso3": "BLZ",
+      "iso2": "BZ",
+      "naturalEarthCode": "BLZ",
+      "naturalEarthId": 1159320431,
+      "sourceFeatures": [
+        {
+          "neId": 1159320431,
+          "name": "Belize",
+          "isoA3": "BLZ",
+          "isoA3EH": "BLZ"
+        }
+      ],
+      "name": "Belize",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-BLZ-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            304.9986680549431,
+            83.48199726229223
+          ],
+          [
+            306.2462671935258,
+            86.38675116115485
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-VEN",
+      "iso3": "VEN",
+      "iso2": "VE",
+      "naturalEarthCode": "VEN",
+      "naturalEarthId": 1159321411,
+      "sourceFeatures": [
+        {
+          "neId": 1159321411,
+          "name": "Venezuela",
+          "isoA3": "VEN",
+          "isoA3EH": "VEN"
+        }
+      ],
+      "name": "Venezuela",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-VEN-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            322.7005494215223,
+            90.52718523692039
+          ],
+          [
+            337.75951275503064,
+            103.24191713805774
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-GUY",
+      "iso3": "GUY",
+      "iso2": "GY",
+      "naturalEarthCode": "GUY",
+      "naturalEarthId": 1159320817,
+      "sourceFeatures": [
+        {
+          "neId": 1159320817,
+          "name": "Guyana",
+          "isoA3": "GUY",
+          "isoA3EH": "GUY"
+        }
+      ],
+      "name": "Guyana",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-GUY-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            335.9230699984252,
+            94.74614639457567
+          ],
+          [
+            341.33775691023624,
+            102.6375917648294
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-SUR",
+      "iso3": "SUR",
+      "iso2": "SR",
+      "naturalEarthCode": "SUR",
+      "naturalEarthId": 1159321281,
+      "sourceFeatures": [
+        {
+          "neId": 1159321281,
+          "name": "Suriname",
+          "isoA3": "SUR",
+          "isoA3EH": "SUR"
+        }
+      ],
+      "name": "Suriname",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-SUR-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            339.6644022778653,
+            97.34931343429571
+          ],
+          [
+            344.20726861154856,
+            102.02665993858268
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-FRA",
+      "iso3": "FRA",
+      "iso2": "FR",
+      "naturalEarthCode": "FRA",
+      "naturalEarthId": 1159320637,
+      "sourceFeatures": [
+        {
+          "neId": 1159320637,
+          "name": "France",
+          "isoA3": "-99",
+          "isoA3EH": "FRA"
+        }
+      ],
+      "name": "France",
+      "sourcePartCount": 3,
+      "visiblePartCount": 3,
+      "partIds": [
+        "world-pacific--country-FRA-part-0001",
+        "world-pacific--country-FRA-part-0002",
+        "world-pacific--country-FRA-part-0003"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            343.57729445984256,
+            97.64805784007
+          ],
+          [
+            346.7643072019248,
+            101.76462286666667
+          ]
+        ],
+        [
+          [
+            4,
+            47.188721151706034
+          ],
+          [
+            404.18897637795277,
+            56.97681104024497
+          ]
+        ],
+        [
+          [
+            13.498055151181092,
+            56.23579445231846
+          ],
+          [
+            14.627258381102365,
+            58.04773675048119
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-ECU",
+      "iso3": "ECU",
+      "iso2": "EC",
+      "naturalEarthCode": "ECU",
+      "naturalEarthId": 1159320567,
+      "sourceFeatures": [
+        {
+          "neId": 1159320567,
+          "name": "Ecuador",
+          "isoA3": "ECU",
+          "isoA3EH": "ECU"
+        }
+      ],
+      "name": "Ecuador",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-ECU-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            314.18229028083994,
+            102.5121592
+          ],
+          [
+            320.5564580544182,
+            109.55999064514435
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-PRI",
+      "iso3": "PRI",
+      "iso2": "PR",
+      "naturalEarthCode": "PRI",
+      "naturalEarthId": 1159321363,
+      "sourceFeatures": [
+        {
+          "neId": 1159321363,
+          "name": "Puerto Rico",
+          "isoA3": "PRI",
+          "isoA3EH": "PRI"
+        }
+      ],
+      "name": "Puerto Rico",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-PRI-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            329.43986962659665,
+            83.45907643867017
+          ],
+          [
+            331.2756520713911,
+            84.09720888731408
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-JAM",
+      "iso3": "JAM",
+      "iso2": "JM",
+      "naturalEarthCode": "JAM",
+      "naturalEarthId": 1159320931,
+      "sourceFeatures": [
+        {
+          "neId": 1159320931,
+          "name": "Jamaica",
+          "isoA3": "JAM",
+          "isoA3EH": "JAM"
+        }
+      ],
+      "name": "Jamaica",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-JAM-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            317.105944215748,
+            83.45505565109362
+          ],
+          [
+            319.48268877917764,
+            84.37004550341207
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-CUB",
+      "iso3": "CUB",
+      "iso2": "CU",
+      "naturalEarthCode": "CUB",
+      "naturalEarthId": 1159320527,
+      "sourceFeatures": [
+        {
+          "neId": 1159320527,
+          "name": "Cuba",
+          "isoA3": "CUB",
+          "isoA3EH": "CUB"
+        }
+      ],
+      "name": "Cuba",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-CUB-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            309.7278023476815,
+            78.26994826194226
+          ],
+          [
+            321.73001000437444,
+            81.97517571426071
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-ZWE",
+      "iso3": "ZWE",
+      "iso2": "ZW",
+      "naturalEarthCode": "ZWE",
+      "naturalEarthId": 1159321441,
+      "sourceFeatures": [
+        {
+          "neId": 1159321441,
+          "name": "Zimbabwe",
+          "isoA3": "ZWE",
+          "isoA3EH": "ZWE"
+        }
+      ],
+      "name": "Zimbabwe",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-ZWE-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            32.08462428311461,
+            121.28625910953632
+          ],
+          [
+            40.517089577077854,
+            128.80517078495188
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-BWA",
+      "iso3": "BWA",
+      "iso2": "BW",
+      "naturalEarthCode": "BWA",
+      "naturalEarthId": 1159320461,
+      "sourceFeatures": [
+        {
+          "neId": 1159320461,
+          "name": "Botswana",
+          "isoA3": "BWA",
+          "isoA3EH": "BWA"
+        }
+      ],
+      "name": "Botswana",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-BWA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            26.116508254418193,
+            123.68075538897638
+          ],
+          [
+            36.71788107856517,
+            133.87081954138233
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-NAM",
+      "iso3": "NAM",
+      "iso2": "NA",
+      "naturalEarthCode": "NAM",
+      "naturalEarthId": 1159321085,
+      "sourceFeatures": [
+        {
+          "neId": 1159321085,
+          "name": "Namibia",
+          "isoA3": "NAM",
+          "isoA3EH": "NAM"
+        }
+      ],
+      "name": "Namibia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-NAM-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            17.04415857340331,
+            122.87985163237096
+          ],
+          [
+            31.884771019947493,
+            136.33522661172356
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-SEN",
+      "iso3": "SEN",
+      "iso2": "SN",
+      "naturalEarthCode": "SEN",
+      "naturalEarthId": 1159321243,
+      "sourceFeatures": [
+        {
+          "neId": 1159321243,
+          "name": "Senegal",
+          "isoA3": "SEN",
+          "isoA3EH": "SEN"
+        }
+      ],
+      "name": "Senegal",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-SEN-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            384.59634327576555,
+            85.59601553945757
+          ],
+          [
+            391.4408464834646,
+            90.33844833420822
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-MLI",
+      "iso3": "MLI",
+      "iso2": "ML",
+      "naturalEarthCode": "MLI",
+      "naturalEarthId": 1159321063,
+      "sourceFeatures": [
+        {
+          "neId": 1159321063,
+          "name": "Mali",
+          "isoA3": "MLI",
+          "isoA3EH": "MLI"
+        }
+      ],
+      "name": "Mali",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-MLI-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            4,
+            76.28460741522309
+          ],
+          [
+            404.18897637795277,
+            92.82376527856518
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-MRT",
+      "iso3": "MRT",
+      "iso2": "MR",
+      "naturalEarthCode": "MRT",
+      "naturalEarthId": 1159321075,
+      "sourceFeatures": [
+        {
+          "neId": 1159321075,
+          "name": "Mauritania",
+          "isoA3": "MRT",
+          "isoA3EH": "MRT"
+        }
+      ],
+      "name": "Mauritania",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-MRT-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            385.22066031163604,
+            73.59314757095363
+          ],
+          [
+            398.71601750463697,
+            87.79864454908136
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-BEN",
+      "iso3": "BEN",
+      "iso2": "BJ",
+      "naturalEarthCode": "BEN",
+      "naturalEarthId": 1159320399,
+      "sourceFeatures": [
+        {
+          "neId": 1159320399,
+          "name": "Benin",
+          "isoA3": "BEN",
+          "isoA3EH": "BEN"
+        }
+      ],
+      "name": "Benin",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-BEN-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            4.858556536832907,
+            90.44567007734034
+          ],
+          [
+            8.221006567979003,
+            97.21939986456692
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-NER",
+      "iso3": "NER",
+      "iso2": "NE",
+      "naturalEarthCode": "NER",
+      "naturalEarthId": 1159321087,
+      "sourceFeatures": [
+        {
+          "neId": 1159321087,
+          "name": "Niger",
+          "isoA3": "NER",
+          "isoA3EH": "NER"
+        }
+      ],
+      "name": "Niger",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-NER-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            4.3286507503061955,
+            77.95529189781277
+          ],
+          [
+            21.678622605599287,
+            91.0853821608049
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-NGA",
+      "iso3": "NGA",
+      "iso2": "NG",
+      "naturalEarthCode": "NGA",
+      "naturalEarthId": 1159321089,
+      "sourceFeatures": [
+        {
+          "neId": 1159321089,
+          "name": "Nigeria",
+          "isoA3": "NGA",
+          "isoA3EH": "NGA"
+        }
+      ],
+      "name": "Nigeria",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-NGA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            6.992192966929139,
+            88.6333831720035
+          ],
+          [
+            20.204516506386682,
+            99.33324694978128
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-CMR",
+      "iso3": "CMR",
+      "iso2": "CM",
+      "naturalEarthCode": "CMR",
+      "naturalEarthId": 1159320509,
+      "sourceFeatures": [
+        {
+          "neId": 1159320509,
+          "name": "Cameroon",
+          "isoA3": "CMR",
+          "isoA3EH": "CMR"
+        }
+      ],
+      "name": "Cameroon",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-CMR-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            13.436473849168863,
+            89.7522759776028
+          ],
+          [
+            21.8004634743657,
+            102.1267005128609
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-TGO",
+      "iso3": "TGO",
+      "iso2": "TG",
+      "naturalEarthCode": "TGO",
+      "naturalEarthId": 1159321303,
+      "sourceFeatures": [
+        {
+          "neId": 1159321303,
+          "name": "Togo",
+          "isoA3": "TGO",
+          "isoA3EH": "TGO"
+        }
+      ],
+      "name": "Togo",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-TGO-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            4,
+            91.79848000944882
+          ],
+          [
+            404.18897637795277,
+            97.45653517742782
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-GHA",
+      "iso3": "GHA",
+      "iso2": "GH",
+      "naturalEarthCode": "GHA",
+      "naturalEarthId": 1159320793,
+      "sourceFeatures": [
+        {
+          "neId": 1159320793,
+          "name": "Ghana",
+          "isoA3": "GHA",
+          "isoA3EH": "GHA"
+        }
+      ],
+      "name": "Ghana",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-GHA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            4,
+            91.70992819370079
+          ],
+          [
+            404.18897637795277,
+            98.81092474435695
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-CIV",
+      "iso3": "CIV",
+      "iso2": "CI",
+      "naturalEarthCode": "CIV",
+      "naturalEarthId": 1159320507,
+      "sourceFeatures": [
+        {
+          "neId": 1159320507,
+          "name": "Côte d'Ivoire",
+          "isoA3": "CIV",
+          "isoA3EH": "CIV"
+        }
+      ],
+      "name": "Ivory Coast",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-CIV-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            394.62570487489063,
+            92.34831854190726
+          ],
+          [
+            401.3407536185477,
+            99.22464677795276
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-GIN",
+      "iso3": "GIN",
+      "iso2": "GN",
+      "naturalEarthCode": "GIN",
+      "naturalEarthId": 1159320795,
+      "sourceFeatures": [
+        {
+          "neId": 1159320795,
+          "name": "Guinea",
+          "isoA3": "GIN",
+          "isoA3EH": "GIN"
+        }
+      ],
+      "name": "Guinea",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-GIN-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            387.36957729081365,
+            90.05598939650044
+          ],
+          [
+            395.48253170603675,
+            95.92225510743657
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-GNB",
+      "iso3": "GNB",
+      "iso2": "GW",
+      "naturalEarthCode": "GNB",
+      "naturalEarthId": 1159320799,
+      "sourceFeatures": [
+        {
+          "neId": 1159320799,
+          "name": "Guinea-Bissau",
+          "isoA3": "GNB",
+          "isoA3EH": "GNB"
+        }
+      ],
+      "name": "Guinea-Bissau",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-GNB-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            385.6497195877515,
+            90.00931513385827
+          ],
+          [
+            388.95903341592305,
+            91.77432415818024
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-LBR",
+      "iso3": "LBR",
+      "iso2": "LR",
+      "naturalEarthCode": "LBR",
+      "naturalEarthId": 1159321015,
+      "sourceFeatures": [
+        {
+          "neId": 1159321015,
+          "name": "Liberia",
+          "isoA3": "LBR",
+          "isoA3EH": "LBR"
+        }
+      ],
+      "name": "Liberia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-LBR-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            391.4732173251094,
+            94.55269948993876
+          ],
+          [
+            395.8075574111986,
+            99.20522983114611
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-SLE",
+      "iso3": "SLE",
+      "iso2": "SL",
+      "naturalEarthCode": "SLE",
+      "naturalEarthId": 1159321251,
+      "sourceFeatures": [
+        {
+          "neId": 1159321251,
+          "name": "Sierra Leone",
+          "isoA3": "SLE",
+          "isoA3EH": "SLE"
+        }
+      ],
+      "name": "Sierra Leone",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-SLE-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            389.46363391951013,
+            92.87865453158355
+          ],
+          [
+            392.8168351387577,
+            96.50377415555556
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-BFA",
+      "iso3": "BFA",
+      "iso2": "BF",
+      "naturalEarthCode": "BFA",
+      "naturalEarthId": 1159320405,
+      "sourceFeatures": [
+        {
+          "neId": 1159320405,
+          "name": "Burkina Faso",
+          "isoA3": "BFA",
+          "isoA3EH": "BFA"
+        }
+      ],
+      "name": "Burkina Faso",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-BFA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            4,
+            87.24357799230097
+          ],
+          [
+            404.18897637795277,
+            93.36349348118985
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-CAF",
+      "iso3": "CAF",
+      "iso2": "CF",
+      "naturalEarthCode": "CAF",
+      "naturalEarthId": 1159320463,
+      "sourceFeatures": [
+        {
+          "neId": 1159320463,
+          "name": "Central African Rep.",
+          "isoA3": "CAF",
+          "isoA3EH": "CAF"
+        }
+      ],
+      "name": "Central African Republic",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-CAF-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            20.073598017672765,
+            91.66095617935258
+          ],
+          [
+            34.43017633910759,
+            101.52645373228347
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-COG",
+      "iso3": "COG",
+      "iso2": "CG",
+      "naturalEarthCode": "COG",
+      "naturalEarthId": 1159320515,
+      "sourceFeatures": [
+        {
+          "neId": 1159320515,
+          "name": "Congo",
+          "isoA3": "COG",
+          "isoA3EH": "COG"
+        }
+      ],
+      "name": "Republic of the Congo",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-COG-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            16.332237947331578,
+            99.90284592458443
+          ],
+          [
+            24.51309220384951,
+            109.64765204041996
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-GAB",
+      "iso3": "GAB",
+      "iso2": "GA",
+      "naturalEarthCode": "GAB",
+      "naturalEarthId": 1159320693,
+      "sourceFeatures": [
+        {
+          "neId": 1159320693,
+          "name": "Gabon",
+          "isoA3": "GAB",
+          "isoA3EH": "GAB"
+        }
+      ],
+      "name": "Gabon",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-GAB-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            13.780169481714779,
+            101.46073603254594
+          ],
+          [
+            20.035856862292206,
+            108.47025160647419
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-GNQ",
+      "iso3": "GNQ",
+      "iso2": "GQ",
+      "naturalEarthCode": "GNQ",
+      "naturalEarthId": 1159320801,
+      "sourceFeatures": [
+        {
+          "neId": 1159320801,
+          "name": "Eq. Guinea",
+          "isoA3": "GNQ",
+          "isoA3EH": "GNQ"
+        }
+      ],
+      "name": "Equatorial Guinea",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-GNQ-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            14.34445483622045,
+            101.50841632580928
+          ],
+          [
+            16.54490059265092,
+            102.92435829221348
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-ZMB",
+      "iso3": "ZMB",
+      "iso2": "ZM",
+      "naturalEarthCode": "ZMB",
+      "naturalEarthId": 1159321439,
+      "sourceFeatures": [
+        {
+          "neId": 1159321439,
+          "name": "Zambia",
+          "isoA3": "ZMB",
+          "isoA3EH": "ZMB"
+        }
+      ],
+      "name": "Zambia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-ZMB-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            28.331315236920403,
+            113.20518752773404
+          ],
+          [
+            41.22389778897639,
+            124.01359367226597
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-MWI",
+      "iso3": "MWI",
+      "iso2": "MW",
+      "naturalEarthCode": "MWI",
+      "naturalEarthId": 1159321081,
+      "sourceFeatures": [
+        {
+          "neId": 1159321081,
+          "name": "Malawi",
+          "isoA3": "MWI",
+          "isoA3EH": "MWI"
+        }
+      ],
+      "name": "Malawi",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-MWI-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            40.33734247506561,
+            114.30831066439195
+          ],
+          [
+            43.76533901399824,
+            122.7241747856518
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-MOZ",
+      "iso3": "MOZ",
+      "iso2": "MZ",
+      "naturalEarthCode": "MOZ",
+      "naturalEarthId": 1159321073,
+      "sourceFeatures": [
+        {
+          "neId": 1159321073,
+          "name": "Mozambique",
+          "isoA3": "MOZ",
+          "isoA3EH": "MOZ"
+        }
+      ],
+      "name": "Mozambique",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-MOZ-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            37.54859891391078,
+            115.51609989291339
+          ],
+          [
+            49.32748778215225,
+            133.77482865721785
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-SWZ",
+      "iso3": "SWZ",
+      "iso2": "SZ",
+      "naturalEarthCode": "SWZ",
+      "naturalEarthId": 1159321289,
+      "sourceFeatures": [
+        {
+          "neId": 1159321289,
+          "name": "eSwatini",
+          "isoA3": "SWZ",
+          "isoA3EH": "SWZ"
+        }
+      ],
+      "name": "Eswatini",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-SWZ-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            38.10122431793525,
+            132.57203734435697
+          ],
+          [
+            39.652018853018376,
+            134.3792107238845
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-AGO",
+      "iso3": "AGO",
+      "iso2": "AO",
+      "naturalEarthCode": "AGO",
+      "naturalEarthId": 1159320323,
+      "sourceFeatures": [
+        {
+          "neId": 1159320323,
+          "name": "Angola",
+          "isoA3": "AGO",
+          "isoA3EH": "AGO"
+        }
+      ],
+      "name": "Angola",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "world-pacific--country-AGO-part-0001",
+        "world-pacific--country-AGO-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            17.245102351531045,
+            108.980710432021
+          ],
+          [
+            18.446285127034116,
+            110.48354009501313
+          ]
+        ],
+        [
+          [
+            16.93955028661418,
+            110.56614576955381
+          ],
+          [
+            30.76809037007874,
+            123.97958539072616
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-BDI",
+      "iso3": "BDI",
+      "iso2": "BI",
+      "naturalEarthCode": "BDI",
+      "naturalEarthId": 1159320387,
+      "sourceFeatures": [
+        {
+          "neId": 1159320387,
+          "name": "Burundi",
+          "isoA3": "BDI",
+          "isoA3EH": "BDI"
+        }
+      ],
+      "name": "Burundi",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-BDI-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            36.2651539594051,
+            106.657906896063
+          ],
+          [
+            38.18529846369202,
+            109.04958740139983
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-ISR",
+      "iso3": "ISR",
+      "iso2": "IL",
+      "naturalEarthCode": "ISR",
+      "naturalEarthId": 1159320895,
+      "sourceFeatures": [
+        {
+          "neId": 1159320895,
+          "name": "Israel",
+          "isoA3": "ISR",
+          "isoA3EH": "ISR"
+        }
+      ],
+      "name": "Israel",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-ISR-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            42.090690437270325,
+            67.05485785161855
+          ],
+          [
+            43.837030645844266,
+            71.25250672300962
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-LBN",
+      "iso3": "LBN",
+      "iso2": "LB",
+      "naturalEarthCode": "LBN",
+      "naturalEarthId": 1159321013,
+      "sourceFeatures": [
+        {
+          "neId": 1159321013,
+          "name": "Lebanon",
+          "isoA3": "LBN",
+          "isoA3EH": "LBN"
+        }
+      ],
+      "name": "Lebanon",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-LBN-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            43.04738665074365,
+            65.53470889903762
+          ],
+          [
+            44.69894098862642,
+            67.26427451968505
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-MDG",
+      "iso3": "MDG",
+      "iso2": "MG",
+      "naturalEarthCode": "MDG",
+      "naturalEarthId": 1159321051,
+      "sourceFeatures": [
+        {
+          "neId": 1159321051,
+          "name": "Madagascar",
+          "isoA3": "MDG",
+          "isoA3EH": "MDG"
+        }
+      ],
+      "name": "Madagascar",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-MDG-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            52.08291338775152,
+            117.43196126351707
+          ],
+          [
+            60.11153798092738,
+            132.50672094523185
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-PSE",
+      "iso3": "PSE",
+      "iso2": "PS",
+      "naturalEarthCode": "PSX",
+      "naturalEarthId": 1159320899,
+      "sourceFeatures": [
+        {
+          "neId": 1159320899,
+          "name": "Palestine",
+          "isoA3": "PSE",
+          "isoA3EH": "PSE"
+        }
+      ],
+      "name": "Palestine",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-PSE-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            42.82656570848644,
+            67.88293221644795
+          ],
+          [
+            43.513842475065616,
+            69.1936355984252
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-GMB",
+      "iso3": "GMB",
+      "iso2": "GM",
+      "naturalEarthCode": "GMB",
+      "naturalEarthId": 1159320797,
+      "sourceFeatures": [
+        {
+          "neId": 1159320797,
+          "name": "Gambia",
+          "isoA3": "GMB",
+          "isoA3EH": "GMB"
+        }
+      ],
+      "name": "The Gambia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-GMB-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            385.46733012685917,
+            88.62163540227472
+          ],
+          [
+            388.7984164586177,
+            89.45114711251094
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-TUN",
+      "iso3": "TUN",
+      "iso2": "TN",
+      "naturalEarthCode": "TUN",
+      "naturalEarthId": 1159321327,
+      "sourceFeatures": [
+        {
+          "neId": 1159321327,
+          "name": "Tunisia",
+          "isoA3": "TUN",
+          "isoA3EH": "TUN"
+        }
+      ],
+      "name": "Tunisia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-TUN-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            12.364485414873144,
+            62.52764446509187
+          ],
+          [
+            16.77134974820649,
+            70.35627239405073
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-DZA",
+      "iso3": "DZA",
+      "iso2": "DZ",
+      "naturalEarthCode": "DZA",
+      "naturalEarthId": 1159320565,
+      "sourceFeatures": [
+        {
+          "neId": 1159320565,
+          "name": "Algeria",
+          "isoA3": "DZA",
+          "isoA3EH": "DZA"
+        }
+      ],
+      "name": "Algeria",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-DZA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            4,
+            62.78511382449694
+          ],
+          [
+            404.18897637795277,
+            82.86239133998251
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-JOR",
+      "iso3": "JOR",
+      "iso2": "JO",
+      "naturalEarthCode": "JOR",
+      "naturalEarthId": 1159320935,
+      "sourceFeatures": [
+        {
+          "neId": 1159320935,
+          "name": "Jordan",
+          "isoA3": "JOR",
+          "isoA3EH": "JOR"
+        }
+      ],
+      "name": "Jordan",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-JOR-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            42.82122429728784,
+            66.94229358565178
+          ],
+          [
+            47.571095048818904,
+            71.59025621434822
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-ARE",
+      "iso3": "ARE",
+      "iso2": "AE",
+      "naturalEarthCode": "ARE",
+      "naturalEarthId": 1159320329,
+      "sourceFeatures": [
+        {
+          "neId": 1159320329,
+          "name": "United Arab Emirates",
+          "isoA3": "ARE",
+          "isoA3EH": "ARE"
+        }
+      ],
+      "name": "United Arab Emirates",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-ARE-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            61.33765252965878,
+            75.08305113000876
+          ],
+          [
+            66.69276797742782,
+            79.03882578407699
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-QAT",
+      "iso3": "QAT",
+      "iso2": "QA",
+      "naturalEarthCode": "QAT",
+      "naturalEarthId": 1159321197,
+      "sourceFeatures": [
+        {
+          "neId": 1159321197,
+          "name": "Qatar",
+          "isoA3": "QAT",
+          "isoA3EH": "QAT"
+        }
+      ],
+      "name": "Qatar",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-QAT-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            60.40876055695537,
+            75.01733343027122
+          ],
+          [
+            61.36786790901138,
+            76.74954140979878
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-KWT",
+      "iso3": "KWT",
+      "iso2": "KW",
+      "naturalEarthCode": "KWT",
+      "naturalEarthId": 1159321009,
+      "sourceFeatures": [
+        {
+          "neId": 1159321009,
+          "name": "Kuwait",
+          "isoA3": "KWT",
+          "isoA3EH": "KWT"
+        }
+      ],
+      "name": "Kuwait",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-KWT-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            55.76745996307963,
+            70.63249838845144
+          ],
+          [
+            57.821075272440964,
+            72.33664422764654
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-IRQ",
+      "iso3": "IRQ",
+      "iso2": "IQ",
+      "naturalEarthCode": "IRQ",
+      "naturalEarthId": 1159320887,
+      "sourceFeatures": [
+        {
+          "neId": 1159320887,
+          "name": "Iraq",
+          "isoA3": "IRQ",
+          "isoA3EH": "IRQ"
+        }
+      ],
+      "name": "Iraq",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-IRQ-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            47.12296454470692,
+            62.488437061767286
+          ],
+          [
+            57.98990722012249,
+            71.69971901574803
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-OMN",
+      "iso3": "OMN",
+      "iso2": "OM",
+      "naturalEarthCode": "OMN",
+      "naturalEarthId": 1159321151,
+      "sourceFeatures": [
+        {
+          "neId": 1159321151,
+          "name": "Oman",
+          "isoA3": "OMN",
+          "isoA3EH": "OMN"
+        }
+      ],
+      "name": "Oman",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "world-pacific--country-OMN-part-0001",
+        "world-pacific--country-OMN-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            61.805085482064754,
+            76.34001357900263
+          ],
+          [
+            70.48479530708661,
+            85.53733560752406
+          ]
+        ],
+        [
+          [
+            66.33034572405947,
+            74.7045724055993
+          ],
+          [
+            66.79151683062116,
+            75.46196116920385
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-VUT",
+      "iso3": "VUT",
+      "iso2": "VU",
+      "naturalEarthCode": "VUT",
+      "naturalEarthId": 1159321421,
+      "sourceFeatures": [
+        {
+          "neId": 1159321421,
+          "name": "Vanuatu",
+          "isoA3": "VUT",
+          "isoA3EH": "VUT"
+        }
+      ],
+      "name": "Vanuatu",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "world-pacific--country-VUT-part-0001",
+        "world-pacific--country-VUT-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            189.84332297882764,
+            121.71319293753281
+          ],
+          [
+            190.5824153247594,
+            122.49801243219598
+          ]
+        ],
+        [
+          [
+            189.23095491881014,
+            120.30658537900263
+          ],
+          [
+            189.94339245564305,
+            121.54441879492563
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-KHM",
+      "iso3": "KHM",
+      "iso2": "KH",
+      "naturalEarthCode": "KHM",
+      "naturalEarthId": 1159320979,
+      "sourceFeatures": [
+        {
+          "neId": 1159320979,
+          "name": "Cambodia",
+          "isoA3": "KHM",
+          "isoA3EH": "KHM"
+        }
+      ],
+      "name": "Cambodia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-KHM-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            117.77383603622049,
+            87.85005771618547
+          ],
+          [
+            123.62821057637797,
+            92.39002379142607
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-THA",
+      "iso3": "THA",
+      "iso2": "TH",
+      "naturalEarthCode": "THA",
+      "naturalEarthId": 1159321305,
+      "sourceFeatures": [
+        {
+          "neId": 1159321305,
+          "name": "Thailand",
+          "isoA3": "THA",
+          "isoA3EH": "THA"
+        }
+      ],
+      "name": "Thailand",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-THA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            112.24655595590552,
+            81.35002606299213
+          ],
+          [
+            121.37658176150481,
+            97.72049649133858
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-LAO",
+      "iso3": "LAO",
+      "iso2": "LA",
+      "naturalEarthCode": "LAO",
+      "naturalEarthId": 1159321011,
+      "sourceFeatures": [
+        {
+          "neId": 1159321011,
+          "name": "Laos",
+          "isoA3": "LAO",
+          "isoA3EH": "LAO"
+        }
+      ],
+      "name": "Laos",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-LAO-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            115.29254099107612,
+            79.07461490656168
+          ],
+          [
+            123.5726032064742,
+            88.6165229881015
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-MMR",
+      "iso3": "MMR",
+      "iso2": "MM",
+      "naturalEarthCode": "MMR",
+      "naturalEarthId": 1159321067,
+      "sourceFeatures": [
+        {
+          "neId": 1159321067,
+          "name": "Myanmar",
+          "isoA3": "MMR",
+          "isoA3EH": "MMR"
+        }
+      ],
+      "name": "Myanmar",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-MMR-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            106.60760203009625,
+            72.54798624934384
+          ],
+          [
+            116.47534064129484,
+            93.005407720035
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-VNM",
+      "iso3": "VNM",
+      "iso2": "VN",
+      "naturalEarthCode": "VNM",
+      "naturalEarthId": 1159321417,
+      "sourceFeatures": [
+        {
+          "neId": 1159321417,
+          "name": "Vietnam",
+          "isoA3": "VNM",
+          "isoA3EH": "VNM"
+        }
+      ],
+      "name": "Vietnam",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-VNM-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            117.57633944146981,
+            78.08824912703412
+          ],
+          [
+            125.54102717585302,
+            94.48744089588801
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-PRK",
+      "iso3": "PRK",
+      "iso2": "KP",
+      "naturalEarthCode": "PRK",
+      "naturalEarthId": 1159321181,
+      "sourceFeatures": [
+        {
+          "neId": 1159321181,
+          "name": "North Korea",
+          "isoA3": "PRK",
+          "isoA3EH": "PRK"
+        }
+      ],
+      "name": "North Korea",
+      "sourcePartCount": 2,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-PRK-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            142.13814796587928,
+            56.26313847576553
+          ],
+          [
+            149.37975313665794,
+            62.172946970603675
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-KOR",
+      "iso3": "KOR",
+      "iso2": "KR",
+      "naturalEarthCode": "KOR",
+      "naturalEarthId": 1159320985,
+      "sourceFeatures": [
+        {
+          "neId": 1159320985,
+          "name": "South Korea",
+          "isoA3": "KOR",
+          "isoA3EH": "KOR"
+        }
+      ],
+      "name": "South Korea",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-KOR-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            144.19664558075243,
+            61.124482978302716
+          ],
+          [
+            147.92163347541558,
+            65.81802935468068
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-MNG",
+      "iso3": "MNG",
+      "iso2": "MN",
+      "naturalEarthCode": "MNG",
+      "naturalEarthId": 1159321071,
+      "sourceFeatures": [
+        {
+          "neId": 1159321071,
+          "name": "Mongolia",
+          "isoA3": "MNG",
+          "isoA3EH": "MNG"
+        }
+      ],
+      "name": "Mongolia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-MNG-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            101.5474681000875,
+            46.18951597585302
+          ],
+          [
+            137.14378842904637,
+            57.806063739282585
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-IND",
+      "iso3": "IND",
+      "iso2": "IN",
+      "naturalEarthCode": "IND",
+      "naturalEarthId": 1159320847,
+      "sourceFeatures": [
+        {
+          "neId": 1159320847,
+          "name": "India",
+          "isoA3": "IND",
+          "isoA3EH": "IND"
+        }
+      ],
+      "name": "India",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-IND-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            79.78761604286964,
+            64.59082317935258
+          ],
+          [
+            112.27619773105863,
+            95.19246826684164
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-BGD",
+      "iso3": "BGD",
+      "iso2": "BD",
+      "naturalEarthCode": "BGD",
+      "naturalEarthId": 1159320407,
+      "sourceFeatures": [
+        {
+          "neId": 1159320407,
+          "name": "Bangladesh",
+          "isoA3": "BGD",
+          "isoA3EH": "BGD"
+        }
+      ],
+      "name": "Bangladesh",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-BGD-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            101.91781854173229,
+            74.64833251478565
+          ],
+          [
+            107.0183370976378,
+            81.06874545949256
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-BTN",
+      "iso3": "BTN",
+      "iso2": "BT",
+      "naturalEarthCode": "BTN",
+      "naturalEarthId": 1159320453,
+      "sourceFeatures": [
+        {
+          "neId": 1159320453,
+          "name": "Bhutan",
+          "isoA3": "BTN",
+          "isoA3EH": "BTN"
+        }
+      ],
+      "name": "Bhutan",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-BTN-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            102.72911943027123,
+            72.59190254295713
+          ],
+          [
+            106.38580618302713,
+            74.3449926055993
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-NPL",
+      "iso3": "NPL",
+      "iso2": "NP",
+      "naturalEarthCode": "NPL",
+      "naturalEarthId": 1159321121,
+      "sourceFeatures": [
+        {
+          "neId": 1159321121,
+          "name": "Nepal",
+          "isoA3": "NPL",
+          "isoA3EH": "NPL"
+        }
+      ],
+      "name": "Nepal",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-NPL-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            93.02918005686789,
+            70.22825527541558
+          ],
+          [
+            102.01829043079616,
+            74.70238915240594
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-PAK",
+      "iso3": "PAK",
+      "iso2": "PK",
+      "naturalEarthCode": "PAK",
+      "naturalEarthId": 1159321153,
+      "sourceFeatures": [
+        {
+          "neId": 1159321153,
+          "name": "Pakistan",
+          "isoA3": "PAK",
+          "isoA3EH": "PAK"
+        }
+      ],
+      "name": "Pakistan",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-PAK-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            71.6700083191601,
+            62.76882835643044
+          ],
+          [
+            90.52691622099738,
+            77.71040181189852
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-AFG",
+      "iso3": "AFG",
+      "iso2": "AF",
+      "naturalEarthCode": "AFG",
+      "naturalEarthId": 1159320319,
+      "sourceFeatures": [
+        {
+          "neId": 1159320319,
+          "name": "Afghanistan",
+          "isoA3": "AFG",
+          "isoA3EH": "AFG"
+        }
+      ],
+      "name": "Afghanistan",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-AFG-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            71.28558456517936,
+            61.26450576622922
+          ],
+          [
+            87.54837303307087,
+            71.4556626568679
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-TJK",
+      "iso3": "TJK",
+      "iso2": "TJ",
+      "naturalEarthCode": "TJK",
+      "naturalEarthId": 1159321307,
+      "sourceFeatures": [
+        {
+          "neId": 1159321307,
+          "name": "Tajikistan",
+          "isoA3": "TJK",
+          "isoA3EH": "TJK"
+        }
+      ],
+      "name": "Tajikistan",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-TJK-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            78.97120274015748,
+            58.51439489256342
+          ],
+          [
+            87.3504729144357,
+            63.20776896535433
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-KGZ",
+      "iso3": "KGZ",
+      "iso2": "KG",
+      "naturalEarthCode": "KGZ",
+      "naturalEarthId": 1159320977,
+      "sourceFeatures": [
+        {
+          "neId": 1159320977,
+          "name": "Kyrgyzstan",
+          "isoA3": "KGZ",
+          "isoA3EH": "KGZ"
+        }
+      ],
+      "name": "Kyrgyzstan",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-KGZ-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            81.21967228538934,
+            55.91524975205599
+          ],
+          [
+            93.21989789501313,
+            60.38277717602799
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-TKM",
+      "iso3": "TKM",
+      "iso2": "TM",
+      "naturalEarthCode": "TKM",
+      "naturalEarthId": 1159321309,
+      "sourceFeatures": [
+        {
+          "neId": 1159321309,
+          "name": "Turkmenistan",
+          "isoA3": "TKM",
+          "isoA3EH": "TKM"
+        }
+      ],
+      "name": "Turkmenistan",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-TKM-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            62.36362701312336,
+            56.523079002099735
+          ],
+          [
+            77.9750990288714,
+            64.83910264356956
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-IRN",
+      "iso3": "IRN",
+      "iso2": "IR",
+      "naturalEarthCode": "IRN",
+      "naturalEarthId": 1159320881,
+      "sourceFeatures": [
+        {
+          "neId": 1159320881,
+          "name": "Iran",
+          "isoA3": "IRN",
+          "isoA3EH": "IRN"
+        }
+      ],
+      "name": "Iran",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-IRN-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            53.033404448818914,
+            59.90083848486439
+          ],
+          [
+            74.38505041049868,
+            76.16937188783902
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-SYR",
+      "iso3": "SYR",
+      "iso2": "SY",
+      "naturalEarthCode": "SYR",
+      "naturalEarthId": 1159321295,
+      "sourceFeatures": [
+        {
+          "neId": 1159321295,
+          "name": "Syria",
+          "isoA3": "SYR",
+          "isoA3EH": "SYR"
+        }
+      ],
+      "name": "Syria",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-SYR-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            43.68629390971128,
+            62.66117529851269
+          ],
+          [
+            51.077331867541545,
+            68.12701747786527
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-ARM",
+      "iso3": "ARM",
+      "iso2": "AM",
+      "naturalEarthCode": "ARM",
+      "naturalEarthId": 1159320333,
+      "sourceFeatures": [
+        {
+          "neId": 1159320333,
+          "name": "Armenia",
+          "isoA3": "ARM",
+          "isoA3EH": "ARM"
+        }
+      ],
+      "name": "Armenia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-ARM-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            52.448151415223094,
+            58.194337088888894
+          ],
+          [
+            55.69743467366578,
+            60.98112861714786
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-SWE",
+      "iso3": "SWE",
+      "iso2": "SE",
+      "naturalEarthCode": "SWE",
+      "naturalEarthId": 1159321287,
+      "sourceFeatures": [
+        {
+          "neId": 1159321287,
+          "name": "Sweden",
+          "isoA3": "SWE",
+          "isoA3EH": "SWE"
+        }
+      ],
+      "name": "Sweden",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-SWE-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            16.258420867366567,
+            27.226248960454953
+          ],
+          [
+            30.571857705511803,
+            42.50514170411199
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-BLR",
+      "iso3": "BLR",
+      "iso2": "BY",
+      "naturalEarthCode": "BLR",
+      "naturalEarthId": 1159320427,
+      "sourceFeatures": [
+        {
+          "neId": 1159320427,
+          "name": "Belarus",
+          "isoA3": "BLR",
+          "isoA3EH": "BLR"
+        }
+      ],
+      "name": "Belarus",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-BLR-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            29.789393767629036,
+            41.60761454243219
+          ],
+          [
+            40.34343201732284,
+            46.99863472283465
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-UKR",
+      "iso3": "UKR",
+      "iso2": "UA",
+      "naturalEarthCode": "UKR",
+      "naturalEarthId": 1159321345,
+      "sourceFeatures": [
+        {
+          "neId": 1159321345,
+          "name": "Ukraine",
+          "isoA3": "UKR",
+          "isoA3EH": "UKR"
+        }
+      ],
+      "name": "Ukraine",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-UKR-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            28.55115793945754,
+            45.86968828083989
+          ],
+          [
+            48.55524978425197,
+            53.697570302012245
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-POL",
+      "iso3": "POL",
+      "iso2": "PL",
+      "naturalEarthCode": "POL",
+      "naturalEarthId": 1159321179,
+      "sourceFeatures": [
+        {
+          "neId": 1159321179,
+          "name": "Poland",
+          "isoA3": "POL",
+          "isoA3EH": "POL"
+        }
+      ],
+      "name": "Poland",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-POL-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            19.64574486666666,
+            43.07229952615923
+          ],
+          [
+            30.71259861032371,
+            49.54662459580052
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-AUT",
+      "iso3": "AUT",
+      "iso2": "AT",
+      "naturalEarthCode": "AUT",
+      "naturalEarthId": 1159320379,
+      "sourceFeatures": [
+        {
+          "neId": 1159320379,
+          "name": "Austria",
+          "isoA3": "AUT",
+          "isoA3EH": "AUT"
+        }
+      ],
+      "name": "Austria",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-AUT-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            14.538276362204726,
+            49.5336417984252
+          ],
+          [
+            22.87520987769028,
+            52.43196265949256
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-HUN",
+      "iso3": "HUN",
+      "iso2": "HU",
+      "naturalEarthCode": "HUN",
+      "naturalEarthId": 1159320841,
+      "sourceFeatures": [
+        {
+          "neId": 1159320841,
+          "name": "Hungary",
+          "isoA3": "HUN",
+          "isoA3EH": "HUN"
+        }
+      ],
+      "name": "Hungary",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-HUN-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            22.011058476640414,
+            49.99521531723534
+          ],
+          [
+            29.245844871916006,
+            53.17935559177603
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-MDA",
+      "iso3": "MDA",
+      "iso2": "MD",
+      "naturalEarthCode": "MDA",
+      "naturalEarthId": 1159321045,
+      "sourceFeatures": [
+        {
+          "neId": 1159321045,
+          "name": "Moldova",
+          "isoA3": "MDA",
+          "isoA3EH": "MDA"
+        }
+      ],
+      "name": "Moldova",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-MDA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            33.591014516360445,
+            50.169447592825904
+          ],
+          [
+            37.376493198075224,
+            53.48082906404199
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-ROU",
+      "iso3": "ROU",
+      "iso2": "RO",
+      "naturalEarthCode": "ROU",
+      "naturalEarthId": 1159321199,
+      "sourceFeatures": [
+        {
+          "neId": 1159321199,
+          "name": "Romania",
+          "isoA3": "ROU",
+          "isoA3EH": "ROU"
+        }
+      ],
+      "name": "Romania",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-ROU-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            26.477494274015754,
+            50.443174629396324
+          ],
+          [
+            36.93393310218724,
+            55.48159386089239
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-LTU",
+      "iso3": "LTU",
+      "iso2": "LT",
+      "naturalEarthCode": "LTU",
+      "naturalEarthId": 1159321029,
+      "sourceFeatures": [
+        {
+          "neId": 1159321029,
+          "name": "Lithuania",
+          "isoA3": "LTU",
+          "isoA3EH": "LTU"
+        }
+      ],
+      "name": "Lithuania",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-LTU-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            27.406386246719165,
+            41.381509994050745
+          ],
+          [
+            33.5564893240595,
+            44.123722693613296
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-LVA",
+      "iso3": "LVA",
+      "iso2": "LV",
+      "naturalEarthCode": "LVA",
+      "naturalEarthId": 1159321033,
+      "sourceFeatures": [
+        {
+          "neId": 1159321033,
+          "name": "Latvia",
+          "isoA3": "LVA",
+          "isoA3EH": "LVA"
+        }
+      ],
+      "name": "Latvia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-LVA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            27.406386246719165,
+            39.60552801032371
+          ],
+          [
+            35.322245367804015,
+            42.223486479265084
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-EST",
+      "iso3": "EST",
+      "iso2": "EE",
+      "naturalEarthCode": "EST",
+      "naturalEarthId": 1159320615,
+      "sourceFeatures": [
+        {
+          "neId": 1159320615,
+          "name": "Estonia",
+          "isoA3": "EST",
+          "isoA3EH": "EST"
+        }
+      ],
+      "name": "Estonia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-EST-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            29.945357416447933,
+            37.781407739282585
+          ],
+          [
+            35.27221062939634,
+            40.156487071916004
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-DEU",
+      "iso3": "DEU",
+      "iso2": "DE",
+      "naturalEarthCode": "DEU",
+      "naturalEarthId": 1159320539,
+      "sourceFeatures": [
+        {
+          "neId": 1159320539,
+          "name": "Germany",
+          "isoA3": "DEU",
+          "isoA3EH": "DEU"
+        }
+      ],
+      "name": "Germany",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-DEU-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            10.657208096937865,
+            42.92604379492563
+          ],
+          [
+            20.693434048643923,
+            51.46409339212598
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-BGR",
+      "iso3": "BGR",
+      "iso2": "BG",
+      "naturalEarthCode": "BGR",
+      "naturalEarthId": 1159320409,
+      "sourceFeatures": [
+        {
+          "neId": 1159320409,
+          "name": "Bulgaria",
+          "isoA3": "BGR",
+          "isoA3EH": "BGR"
+        }
+      ],
+      "name": "Bulgaria",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-BGR-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            28.878999418722657,
+            54.874109218022745
+          ],
+          [
+            35.74619222974627,
+            58.209503139457574
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-GRC",
+      "iso3": "GRC",
+      "iso2": "GR",
+      "naturalEarthCode": "GRC",
+      "naturalEarthId": 1159320811,
+      "sourceFeatures": [
+        {
+          "neId": 1159320811,
+          "name": "Greece",
+          "isoA3": "GRC",
+          "isoA3EH": "GRC"
+        }
+      ],
+      "name": "Greece",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "world-pacific--country-GRC-part-0001",
+        "world-pacific--country-GRC-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            30.140097153805783,
+            64.35627464356955
+          ],
+          [
+            33.22491497095362,
+            65.22892672545933
+          ]
+        ],
+        [
+          [
+            26.39948410288713,
+            57.55094882502188
+          ],
+          [
+            33.574183234995616,
+            63.572575678040245
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-TUR",
+      "iso3": "TUR",
+      "iso2": "TR",
+      "naturalEarthCode": "TUR",
+      "naturalEarthId": 1159321331,
+      "sourceFeatures": [
+        {
+          "neId": 1159321331,
+          "name": "Turkey",
+          "isoA3": "TUR",
+          "isoA3EH": "TUR"
+        }
+      ],
+      "name": "Turkey",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "world-pacific--country-TUR-part-0001",
+        "world-pacific--country-TUR-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            33.09238794488189,
+            57.31381462379703
+          ],
+          [
+            53.794613905511824,
+            64.22673458355206
+          ]
+        ],
+        [
+          [
+            32.950727717060374,
+            57.20125035783026
+          ],
+          [
+            36.224598141557294,
+            59.41284026561679
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-ALB",
+      "iso3": "ALB",
+      "iso2": "AL",
+      "naturalEarthCode": "ALB",
+      "naturalEarthId": 1159320325,
+      "sourceFeatures": [
+        {
+          "neId": 1159320325,
+          "name": "Albania",
+          "isoA3": "ALB",
+          "isoA3EH": "ALB"
+        }
+      ],
+      "name": "Albania",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-ALB-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            25.45956247734034,
+            56.593450010323714
+          ],
+          [
+            27.366634141732277,
+            59.99866801504812
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-HRV",
+      "iso3": "HRV",
+      "iso2": "HR",
+      "naturalEarthCode": "HRV",
+      "naturalEarthId": 1159320833,
+      "sourceFeatures": [
+        {
+          "neId": 1159320833,
+          "name": "Croatia",
+          "isoA3": "HRV",
+          "isoA3EH": "HRV"
+        }
+      ],
+      "name": "Croatia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-HRV-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            19.18158679405073,
+            52.351998232195974
+          ],
+          [
+            25.555152060892368,
+            56.82495488661417
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-CHE",
+      "iso3": "CHE",
+      "iso2": "CH",
+      "naturalEarthCode": "CHE",
+      "naturalEarthId": 1159320491,
+      "sourceFeatures": [
+        {
+          "neId": 1159320491,
+          "name": "Switzerland",
+          "isoA3": "CHE",
+          "isoA3EH": "CHE"
+        }
+      ],
+      "name": "Switzerland",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-CHE-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            10.694949252318452,
+            50.87677160384952
+          ],
+          [
+            15.608482843919518,
+            53.15993864496939
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-LUX",
+      "iso3": "LUX",
+      "iso2": "LU",
+      "naturalEarthCode": "LUX",
+      "naturalEarthId": 1159321031,
+      "sourceFeatures": [
+        {
+          "neId": 1159321031,
+          "name": "Luxembourg",
+          "isoA3": "LUX",
+          "isoA3EH": "LUX"
+        }
+      ],
+      "name": "Luxembourg",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-LUX-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            10.307480727209082,
+            48.32309460087489
+          ],
+          [
+            10.93966703464568,
+            49.084993271916005
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-BEL",
+      "iso3": "BEL",
+      "iso2": "BE",
+      "naturalEarthCode": "BEL",
+      "naturalEarthId": 1159320389,
+      "sourceFeatures": [
+        {
+          "neId": 1159320389,
+          "name": "Belgium",
+          "isoA3": "BEL",
+          "isoA3EH": "BEL"
+        }
+      ],
+      "name": "Belgium",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-BEL-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            6.794178349781276,
+            46.82575197340333
+          ],
+          [
+            10.84396295258091,
+            48.98848436535433
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-NLD",
+      "iso3": "NLD",
+      "iso2": "NL",
+      "naturalEarthCode": "NLD",
+      "naturalEarthId": 1159321101,
+      "sourceFeatures": [
+        {
+          "neId": 1159321101,
+          "name": "Netherlands",
+          "isoA3": "NLD",
+          "isoA3EH": "NLD"
+        }
+      ],
+      "name": "Netherlands",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-NLD-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            7.685041253368325,
+            44.56315131076116
+          ],
+          [
+            11.883781751356082,
+            47.57199658565179
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-PRT",
+      "iso3": "PRT",
+      "iso2": "PT",
+      "naturalEarthCode": "PRT",
+      "naturalEarthId": 1159321187,
+      "sourceFeatures": [
+        {
+          "neId": 1159321187,
+          "name": "Portugal",
+          "isoA3": "PRT",
+          "isoA3EH": "PRT"
+        }
+      ],
+      "name": "Portugal",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-PRT-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            393.598896664392,
+            57.0467507336833
+          ],
+          [
+            397.08663585931765,
+            63.09649642047244
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-ESP",
+      "iso3": "ESP",
+      "iso2": "ES",
+      "naturalEarthCode": "ESP",
+      "naturalEarthId": 1159320587,
+      "sourceFeatures": [
+        {
+          "neId": 1159320587,
+          "name": "Spain",
+          "isoA3": "ESP",
+          "isoA3EH": "ESP"
+        }
+      ],
+      "name": "Spain",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-ESP-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            4,
+            55.4150146432196
+          ],
+          [
+            404.18897637795277,
+            64.08742991251094
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-IRL",
+      "iso3": "IRL",
+      "iso2": "IE",
+      "naturalEarthCode": "IRL",
+      "naturalEarthId": 1159320877,
+      "sourceFeatures": [
+        {
+          "neId": 1159320877,
+          "name": "Ireland",
+          "isoA3": "IRL",
+          "isoA3EH": "IRL"
+        }
+      ],
+      "name": "Ireland",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-IRL-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            393.0980879513561,
+            42.76094583272091
+          ],
+          [
+            397.4824927900263,
+            46.60978665739283
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-NCL",
+      "iso3": "NCL",
+      "iso2": "NC",
+      "naturalEarthCode": "NCL",
+      "naturalEarthId": 1159320641,
+      "sourceFeatures": [
+        {
+          "neId": 1159320641,
+          "name": "New Caledonia",
+          "isoA3": "NCL",
+          "isoA3EH": "NCL"
+        }
+      ],
+      "name": "New Caledonia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-NCL-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            186.34122255783026,
+            126.39740490603675
+          ],
+          [
+            189.77662815100615,
+            128.94786483429573
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-SLB",
+      "iso3": "SLB",
+      "iso2": "SB",
+      "naturalEarthCode": "SLB",
+      "naturalEarthId": 1159321249,
+      "sourceFeatures": [
+        {
+          "neId": 1159321249,
+          "name": "Solomon Is.",
+          "isoA3": "SLB",
+          "isoA3EH": "SLB"
+        }
+      ],
+      "name": "Solomon Islands",
+      "sourcePartCount": 5,
+      "visiblePartCount": 5,
+      "partIds": [
+        "world-pacific--country-SLB-part-0001",
+        "world-pacific--country-SLB-part-0002",
+        "world-pacific--country-SLB-part-0003",
+        "world-pacific--country-SLB-part-0004",
+        "world-pacific--country-SLB-part-0005"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            183.32890119702537,
+            115.39121314138234
+          ],
+          [
+            184.5281886330709,
+            116.08222389343833
+          ]
+        ],
+        [
+          [
+            182.5065128505687,
+            113.2960659977253
+          ],
+          [
+            183.72929582607173,
+            114.92383799405074
+          ]
+        ],
+        [
+          [
+            181.4615816376203,
+            114.32204048118986
+          ],
+          [
+            182.8091357545057,
+            115.04711620822397
+          ]
+        ],
+        [
+          [
+            179.87321713910762,
+            112.18443995695539
+          ],
+          [
+            181.76994836500438,
+            113.53871502537183
+          ]
+        ],
+        [
+          [
+            177.96143436115486,
+            111.38330609168854
+          ],
+          [
+            179.1253928920385,
+            112.27865000017498
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-NZL",
+      "iso3": "NZL",
+      "iso2": "NZ",
+      "naturalEarthCode": "NZL",
+      "naturalEarthId": 1159321135,
+      "sourceFeatures": [
+        {
+          "neId": 1159321135,
+          "name": "New Zealand",
+          "isoA3": "NZL",
+          "isoA3EH": "NZL"
+        }
+      ],
+      "name": "New Zealand",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "world-pacific--country-NZL-part-0001",
+        "world-pacific--country-NZL-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            195.9084059081365,
+            142.3438417648294
+          ],
+          [
+            202.4460364272966,
+            150.38946994295713
+          ]
+        ],
+        [
+          [
+            189.09756637480316,
+            149.0617918785652
+          ],
+          [
+            197.7009323711286,
+            155.89532212685916
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-AUS",
+      "iso3": "AUS",
+      "iso2": "AU",
+      "naturalEarthCode": "AUS",
+      "naturalEarthId": 1159320355,
+      "sourceFeatures": [
+        {
+          "neId": 1159320355,
+          "name": "Australia",
+          "isoA3": "AUS",
+          "isoA3EH": "AUS"
+        }
+      ],
+      "name": "Australia",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "world-pacific--country-AUS-part-0001",
+        "world-pacific--country-AUS-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            164.87382415800528,
+            149.29524989938758
+          ],
+          [
+            168.9221736386702,
+            152.55303495030623
+          ]
+        ],
+        [
+          [
+            129.99166551338584,
+            115.90638419212598
+          ],
+          [
+            174.71335722782152,
+            147.44079863884514
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-LKA",
+      "iso3": "LKA",
+      "iso2": "LK",
+      "naturalEarthCode": "LKA",
+      "naturalEarthId": 1159321025,
+      "sourceFeatures": [
+        {
+          "neId": 1159321025,
+          "name": "Sri Lanka",
+          "isoA3": "LKA",
+          "isoA3EH": "LKA"
+        }
+      ],
+      "name": "Sri Lanka",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-LKA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            92.59202028888889,
+            93.1264448759405
+          ],
+          [
+            94.91844331181102,
+            97.4125888696413
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-CHN",
+      "iso3": "CHN",
+      "iso2": "CN",
+      "naturalEarthCode": "CHN",
+      "naturalEarthId": 1159320471,
+      "sourceFeatures": [
+        {
+          "neId": 1159320471,
+          "name": "China",
+          "isoA3": "CHN",
+          "isoA3EH": "CHN"
+        }
+      ],
+      "name": "People's Republic of China",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "world-pacific--country-CHN-part-0001",
+        "world-pacific--country-CHN-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            124.75281830288715,
+            81.70196558845144
+          ],
+          [
+            127.40277410376203,
+            83.81802371776028
+          ]
+        ],
+        [
+          [
+            85.90020696185478,
+            44.6205150656168
+          ],
+          [
+            154.1001143977253,
+            81.50053380209974
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-TWN",
+      "iso3": "TWN",
+      "iso2": "TW",
+      "naturalEarthCode": "TWN",
+      "naturalEarthId": 1159321335,
+      "sourceFeatures": [
+        {
+          "neId": 1159321335,
+          "name": "Taiwan",
+          "isoA3": "TWN",
+          "isoA3EH": "TWN"
+        }
+      ],
+      "name": "Taiwan",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-TWN-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            137.51436897935258,
+            75.92790008276465
+          ],
+          [
+            139.5653986232721,
+            79.62396543079615
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-ITA",
+      "iso3": "ITA",
+      "iso2": "IT",
+      "naturalEarthCode": "ITA",
+      "naturalEarthId": 1159320919,
+      "sourceFeatures": [
+        {
+          "neId": 1159320919,
+          "name": "Italy",
+          "isoA3": "ITA",
+          "isoA3EH": "ITA"
+        }
+      ],
+      "name": "Italy",
+      "sourcePartCount": 3,
+      "visiblePartCount": 3,
+      "partIds": [
+        "world-pacific--country-ITA-part-0001",
+        "world-pacific--country-ITA-part-0002",
+        "world-pacific--country-ITA-part-0003"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            11.503493283464536,
+            51.67207493805775
+          ],
+          [
+            24.543308694838146,
+            61.90640110288714
+          ]
+        ],
+        [
+          [
+            17.818752128083986,
+            61.548114135608046
+          ],
+          [
+            21.25300940122486,
+            63.33914655975502
+          ]
+        ],
+        [
+          [
+            13.070947907961482,
+            58.23673266439195
+          ],
+          [
+            14.905121815398076,
+            60.79724511741032
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-DNK",
+      "iso3": "DNK",
+      "iso2": "DK",
+      "naturalEarthCode": "DNK",
+      "naturalEarthId": 1159320547,
+      "sourceFeatures": [
+        {
+          "neId": 1159320547,
+          "name": "Denmark",
+          "isoA3": "DNK",
+          "isoA3EH": "DNK"
+        }
+      ],
+      "name": "Denmark",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "world-pacific--country-DNK-part-0001",
+        "world-pacific--country-DNK-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            12.993110040419936,
+            39.872476290288716
+          ],
+          [
+            16.13037484619423,
+            43.09527815485564
+          ]
+        ],
+        [
+          [
+            16.121183839370076,
+            41.671781509886266
+          ],
+          [
+            18.1066680871391,
+            43.12957212685914
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-GBR",
+      "iso3": "GBR",
+      "iso2": "GB",
+      "naturalEarthCode": "GBR",
+      "naturalEarthId": 1159320713,
+      "sourceFeatures": [
+        {
+          "neId": 1159320713,
+          "name": "United Kingdom",
+          "isoA3": "GBR",
+          "isoA3EH": "GBR"
+        }
+      ],
+      "name": "United Kingdom",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "world-pacific--country-GBR-part-0001",
+        "world-pacific--country-GBR-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            395.7714814866142,
+            42.71510418547681
+          ],
+          [
+            397.8949497818023,
+            44.166117157480315
+          ]
+        ],
+        [
+          [
+            4,
+            38.866464566929125
+          ],
+          [
+            404.18897637795277,
+            48.509907261592296
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-ISL",
+      "iso3": "ISL",
+      "iso2": "IS",
+      "naturalEarthCode": "ISL",
+      "naturalEarthId": 1159320917,
+      "sourceFeatures": [
+        {
+          "neId": 1159320917,
+          "name": "Iceland",
+          "isoA3": "ISL",
+          "isoA3EH": "ISL"
+        }
+      ],
+      "name": "Iceland",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-ISL-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            377.14711339422576,
+            30.09366411618548
+          ],
+          [
+            389.0599077172353,
+            33.46237599317584
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-AZE",
+      "iso3": "AZE",
+      "iso2": "AZ",
+      "naturalEarthCode": "AZE",
+      "naturalEarthId": 1159320381,
+      "sourceFeatures": [
+        {
+          "neId": 1159320381,
+          "name": "Azerbaijan",
+          "isoA3": "AZE",
+          "isoA3EH": "AZE"
+        }
+      ],
+      "name": "Azerbaijan",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "world-pacific--country-AZE-part-0001",
+        "world-pacific--country-AZE-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            53.99302982327208,
+            57.51340887576553
+          ],
+          [
+            60.018476257742776,
+            61.50451243499562
+          ]
+        ],
+        [
+          [
+            53.794613905511824,
+            59.870823200000004
+          ],
+          [
+            55.29491459650043,
+            60.98112861714786
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-GEO",
+      "iso3": "GEO",
+      "iso2": "GE",
+      "naturalEarthCode": "GEO",
+      "naturalEarthId": 1159320779,
+      "sourceFeatures": [
+        {
+          "neId": 1159320779,
+          "name": "Georgia",
+          "isoA3": "GEO",
+          "isoA3EH": "GEO"
+        }
+      ],
+      "name": "Georgia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-GEO-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            48.415428202449675,
+            55.632043794925636
+          ],
+          [
+            55.844379619247576,
+            58.39852684426946
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-PHL",
+      "iso3": "PHL",
+      "iso2": "PH",
+      "naturalEarthCode": "PHL",
+      "naturalEarthId": 1159321169,
+      "sourceFeatures": [
+        {
+          "neId": 1159321169,
+          "name": "Philippines",
+          "isoA3": "PHL",
+          "isoA3EH": "PHL"
+        }
+      ],
+      "name": "Philippines",
+      "sourcePartCount": 7,
+      "visiblePartCount": 7,
+      "partIds": [
+        "world-pacific--country-PHL-part-0001",
+        "world-pacific--country-PHL-part-0002",
+        "world-pacific--country-PHL-part-0003",
+        "world-pacific--country-PHL-part-0004",
+        "world-pacific--country-PHL-part-0005",
+        "world-pacific--country-PHL-part-0006",
+        "world-pacific--country-PHL-part-0007"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            137.75586857532807,
+            89.07749400017498
+          ],
+          [
+            139.09423168538933,
+            90.47910364304462
+          ]
+        ],
+        [
+          [
+            140.04208038757656,
+            91.56054098372704
+          ],
+          [
+            141.92950610813648,
+            94.0178535928259
+          ]
+        ],
+        [
+          [
+            139.5305866288714,
+            93.19730389238845
+          ],
+          [
+            144.66356162239722,
+            97.8431999896763
+          ]
+        ],
+        [
+          [
+            134.25514769466315,
+            91.40831132038495
+          ],
+          [
+            137.05135922677167,
+            94.74562948381453
+          ]
+        ],
+        [
+          [
+            137.26712333665793,
+            83.4761667312336
+          ],
+          [
+            142.04439702834648,
+            90.11102205056868
+          ]
+        ],
+        [
+          [
+            139.49014530953633,
+            90.82794059230096
+          ],
+          [
+            140.8648711462817,
+            92.44063324566929
+          ]
+        ],
+        [
+          [
+            142.139411896063,
+            90.08758431618548
+          ],
+          [
+            143.82543362117235,
+            92.78116960857393
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-MYS",
+      "iso3": "MYS",
+      "iso2": "MY",
+      "naturalEarthCode": "MYS",
+      "naturalEarthId": 1159321083,
+      "sourceFeatures": [
+        {
+          "neId": 1159321083,
+          "name": "Malaysia",
+          "isoA3": "MYS",
+          "isoA3EH": "MYS"
+        }
+      ],
+      "name": "Malaysia",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "world-pacific--country-MYS-part-0001",
+        "world-pacific--country-MYS-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            115.25893512178477,
+            96.66284038057744
+          ],
+          [
+            119.88575887944008,
+            102.68400701627297
+          ]
+        ],
+        [
+          [
+            125.9056326824147,
+            96.34577065459318
+          ],
+          [
+            136.4869004570429,
+            103.18780380699913
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-BRN",
+      "iso3": "BRN",
+      "iso2": "BN",
+      "naturalEarthCode": "BRN",
+      "naturalEarthId": 1159320451,
+      "sourceFeatures": [
+        {
+          "neId": 1159320451,
+          "name": "Brunei",
+          "isoA3": "BRN",
+          "isoA3EH": "BRN"
+        }
+      ],
+      "name": "Brunei",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-BRN-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            130.95330183744534,
+            97.99135106036746
+          ],
+          [
+            132.33917071391076,
+            99.5922103480315
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-SVN",
+      "iso3": "SVN",
+      "iso2": "SI",
+      "naturalEarthCode": "SVN",
+      "naturalEarthId": 1159321285,
+      "sourceFeatures": [
+        {
+          "neId": 1159321285,
+          "name": "Slovenia",
+          "isoA3": "SVN",
+          "isoA3EH": "SVN"
+        }
+      ],
+      "name": "Slovenia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-SVN-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            19.227312831146094,
+            51.96444299947506
+          ],
+          [
+            22.41403765949255,
+            53.520811277690285
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-FIN",
+      "iso3": "FIN",
+      "iso2": "FI",
+      "naturalEarthCode": "FIN",
+      "naturalEarthId": 1159320623,
+      "sourceFeatures": [
+        {
+          "neId": 1159320623,
+          "name": "Finland",
+          "isoA3": "FIN",
+          "isoA3EH": "FIN"
+        }
+      ],
+      "name": "Finland",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-FIN-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            26.95038535940506,
+            26.050198052668406
+          ],
+          [
+            39.03442388031496,
+            37.519858675590555
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-SVK",
+      "iso3": "SVK",
+      "iso2": "SK",
+      "naturalEarthCode": "SVK",
+      "naturalEarthId": 1159321283,
+      "sourceFeatures": [
+        {
+          "neId": 1159321283,
+          "name": "Slovakia",
+          "isoA3": "SVK",
+          "isoA3EH": "SVK"
+        }
+      ],
+      "name": "Slovakia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-SVK-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            22.764397550131235,
+            48.94169560419948
+          ],
+          [
+            29.07643932003498,
+            50.95725294190726
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-CZE",
+      "iso3": "CZE",
+      "iso2": "CZ",
+      "naturalEarthCode": "CZE",
+      "naturalEarthId": 1159320535,
+      "sourceFeatures": [
+        {
+          "neId": 1159320535,
+          "name": "Czechia",
+          "isoA3": "CZE",
+          "isoA3EH": "CZE"
+        }
+      ],
+      "name": "Czech Republic",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-CZE-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            17.60654858845146,
+            47.22344643849518
+          ],
+          [
+            24.957834441294835,
+            50.071416856517935
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-ERI",
+      "iso3": "ERI",
+      "iso2": "ER",
+      "naturalEarthCode": "ERI",
+      "naturalEarthId": 1159320581,
+      "sourceFeatures": [
+        {
+          "neId": 1159320581,
+          "name": "Eritrea",
+          "isoA3": "ERI",
+          "isoA3EH": "ERI"
+        }
+      ],
+      "name": "Eritrea",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-ERI-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            44.37820064041995,
+            84.03967727541557
+          ],
+          [
+            51.890643705686784,
+            90.2013547072616
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-JPN",
+      "iso3": "JPN",
+      "iso2": "JP",
+      "naturalEarthCode": "JPN",
+      "naturalEarthId": 1159320937,
+      "sourceFeatures": [
+        {
+          "neId": 1159320937,
+          "name": "Japan",
+          "isoA3": "JPN",
+          "isoA3EH": "JPN"
+        }
+      ],
+      "name": "Japan",
+      "sourcePartCount": 3,
+      "visiblePartCount": 3,
+      "partIds": [
+        "world-pacific--country-JPN-part-0001",
+        "world-pacific--country-JPN-part-0002",
+        "world-pacific--country-JPN-part-0003"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            147.85511206281717,
+            58.04934528783902
+          ],
+          [
+            161.75701012055995,
+            69.5536456015748
+          ]
+        ],
+        [
+          [
+            159.42622170288712,
+            53.41057366596676
+          ],
+          [
+            165.79099726351706,
+            57.83702724969379
+          ]
+        ],
+        [
+          [
+            151.139609727909,
+            65.84594809396326
+          ],
+          [
+            153.81116461714785,
+            67.69166856500438
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-PRY",
+      "iso3": "PRY",
+      "iso2": "PY",
+      "naturalEarthCode": "PRY",
+      "naturalEarthId": 1159321195,
+      "sourceFeatures": [
+        {
+          "neId": 1159321195,
+          "name": "Paraguay",
+          "isoA3": "PRY",
+          "isoA3EH": "PRY"
+        }
+      ],
+      "name": "Paraguay",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-PRY-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            334.5060075028872,
+            125.54933887856518
+          ],
+          [
+            343.83496502537184,
+            134.67114858215223
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-YEM",
+      "iso3": "YEM",
+      "iso2": "YE",
+      "naturalEarthCode": "YEM",
+      "naturalEarthId": 1159321425,
+      "sourceFeatures": [
+        {
+          "neId": 1159321425,
+          "name": "Yemen",
+          "isoA3": "YEM",
+          "isoA3EH": "YEM"
+        }
+      ],
+      "name": "Yemen",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-YEM-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            51.361112540507435,
+            82.9261558951881
+          ],
+          [
+            63.037404071566044,
+            90.05624840769904
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-SAU",
+      "iso3": "SAU",
+      "iso2": "SA",
+      "naturalEarthCode": "SAU",
+      "naturalEarthId": 1159321225,
+      "sourceFeatures": [
+        {
+          "neId": 1159321225,
+          "name": "Saudi Arabia",
+          "isoA3": "SAU",
+          "isoA3EH": "SAU"
+        }
+      ],
+      "name": "Saudi Arabia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-SAU-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            42.49855303727034,
+            68.29590723062117
+          ],
+          [
+            65.88106467664042,
+            85.87433919107612
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-ATA",
+      "iso3": "ATA",
+      "iso2": "AQ",
+      "naturalEarthCode": "ATA",
+      "naturalEarthId": 1159320335,
+      "sourceFeatures": [
+        {
+          "neId": 1159320335,
+          "name": "Antarctica",
+          "isoA3": "ATA",
+          "isoA3EH": "ATA"
+        }
+      ],
+      "name": "Antarctica",
+      "sourcePartCount": 8,
+      "visiblePartCount": 8,
+      "partIds": [
+        "world-pacific--country-ATA-part-0001",
+        "world-pacific--country-ATA-part-0002",
+        "world-pacific--country-ATA-part-0003",
+        "world-pacific--country-ATA-part-0004",
+        "world-pacific--country-ATA-part-0005",
+        "world-pacific--country-ATA-part-0006",
+        "world-pacific--country-ATA-part-0007",
+        "world-pacific--country-ATA-part-0008"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            343.978033696063,
+            190.56751829011375
+          ],
+          [
+            356.01815481172355,
+            194.11804602379704
+          ]
+        ],
+        [
+          [
+            330.49858846141734,
+            192.56535392598425
+          ],
+          [
+            337.96648827034124,
+            194.09012728451444
+          ]
+        ],
+        [
+          [
+            320.80223856080494,
+            180.61533424671916
+          ],
+          [
+            328.2266233767279,
+            184.6451282985127
+          ]
+        ],
+        [
+          [
+            290.4344539063867,
+            183.7713267849519
+          ],
+          [
+            297.2491997287839,
+            184.66442963517062
+          ]
+        ],
+        [
+          [
+            267.87823579090116,
+            185.55753359702538
+          ],
+          [
+            272.21093954873146,
+            186.4070358582677
+          ]
+        ],
+        [
+          [
+            262.69646108661414,
+            185.47038911251093
+          ],
+          [
+            266.31066555625546,
+            186.1674316017498
+          ]
+        ],
+        [
+          [
+            222.199820072091,
+            191.00312621417322
+          ],
+          [
+            227.2074203058618,
+            192.57150127331585
+          ]
+        ],
+        [
+          [
+            4,
+            174.38119037270343
+          ],
+          [
+            404.18897637795277,
+            204.09448818897638
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-NE-CYN-1159320531",
+      "iso3": null,
+      "iso2": null,
+      "naturalEarthCode": "CYN",
+      "naturalEarthId": 1159320531,
+      "sourceFeatures": [
+        {
+          "neId": 1159320531,
+          "name": "N. Cyprus",
+          "isoA3": "-99",
+          "isoA3EH": "-99"
+        }
+      ],
+      "name": "Turkish Republic of Northern Cyprus",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-NE-CYN-1159320531-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            40.385826481189866,
+            64.39341218057743
+          ],
+          [
+            42.436454824496934,
+            65.13959898775153
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-CYP",
+      "iso3": "CYP",
+      "iso2": "CY",
+      "naturalEarthCode": "CYP",
+      "naturalEarthId": 1159320533,
+      "sourceFeatures": [
+        {
+          "neId": 1159320533,
+          "name": "Cyprus",
+          "isoA3": "CYP",
+          "isoA3EH": "CYP"
+        }
+      ],
+      "name": "Cyprus",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-CYP-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            39.857673744706915,
+            64.94753051181104
+          ],
+          [
+            41.801051442344715,
+            65.61590835398076
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-MAR",
+      "iso3": "MAR",
+      "iso2": "MA",
+      "naturalEarthCode": "MAR",
+      "naturalEarthId": 1159321035,
+      "sourceFeatures": [
+        {
+          "neId": 1159321035,
+          "name": "Morocco",
+          "isoA3": "MAR",
+          "isoA3EH": "MAR"
+        }
+      ],
+      "name": "Morocco",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-MAR-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            385.26845510341207,
+            64.2951524472441
+          ],
+          [
+            402.93888495135604,
+            80.23518405914261
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-EGY",
+      "iso3": "EGY",
+      "iso2": "EG",
+      "naturalEarthCode": "EGY",
+      "naturalEarthId": 1159320575,
+      "sourceFeatures": [
+        {
+          "neId": 1159320575,
+          "name": "Egypt",
+          "isoA3": "EGY",
+          "isoA3EH": "EGY"
+        }
+      ],
+      "name": "Egypt",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-EGY-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            31.45748813823272,
+            68.93546368503937
+          ],
+          [
+            44.981830129483825,
+            79.5912510936133
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-LBY",
+      "iso3": "LBY",
+      "iso2": "LY",
+      "naturalEarthCode": "LBY",
+      "naturalEarthId": 1159321017,
+      "sourceFeatures": [
+        {
+          "neId": 1159321017,
+          "name": "Libya",
+          "isoA3": "LBY",
+          "isoA3EH": "LBY"
+        }
+      ],
+      "name": "Libya",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-LBY-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            14.359793190376195,
+            67.2109649014873
+          ],
+          [
+            31.97412099037618,
+            82.28088785476815
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-ETH",
+      "iso3": "ETH",
+      "iso2": "ET",
+      "naturalEarthCode": "ETH",
+      "naturalEarthId": 1159320617,
+      "sourceFeatures": [
+        {
+          "neId": 1159320617,
+          "name": "Ethiopia",
+          "isoA3": "ETH",
+          "isoA3EH": "ETH"
+        }
+      ],
+      "name": "Ethiopia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-ETH-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            40.63305433770779,
+            87.4178024864392
+          ],
+          [
+            57.124441865266846,
+            100.24315884864393
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-DJI",
+      "iso3": "DJI",
+      "iso2": "DJ",
+      "naturalEarthCode": "DJI",
+      "naturalEarthId": 1159320541,
+      "sourceFeatures": [
+        {
+          "neId": 1159320541,
+          "name": "Djibouti",
+          "isoA3": "DJI",
+          "isoA3EH": "DJI"
+        }
+      ],
+      "name": "Djibouti",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-DJI-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            50.31271413473314,
+            89.92986761732284
+          ],
+          [
+            52.15368569658793,
+            91.90053153333334
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-NE-SOL-1159321259",
+      "iso3": null,
+      "iso2": null,
+      "naturalEarthCode": "SOL",
+      "naturalEarthId": 1159321259,
+      "sourceFeatures": [
+        {
+          "neId": 1159321259,
+          "name": "Somaliland",
+          "isoA3": "-99",
+          "isoA3EH": "-99"
+        }
+      ],
+      "name": "Somaliland",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-NE-SOL-1159321259-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            51.30985166754155,
+            91.30562727559055
+          ],
+          [
+            58.412590151881005,
+            95.15762403499564
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-UGA",
+      "iso3": "UGA",
+      "iso2": "UG",
+      "naturalEarthCode": "UGA",
+      "naturalEarthId": 1159321343,
+      "sourceFeatures": [
+        {
+          "neId": 1159321343,
+          "name": "Uganda",
+          "isoA3": "UGA",
+          "isoA3EH": "UGA"
+        }
+      ],
+      "name": "Uganda",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-UGA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            36.88160061207347,
+            99.3229187392826
+          ],
+          [
+            42.94726937357831,
+            105.65169285494314
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-RWA",
+      "iso3": "RWA",
+      "iso2": "RW",
+      "naturalEarthCode": "RWA",
+      "naturalEarthId": 1159321219,
+      "sourceFeatures": [
+        {
+          "neId": 1159321219,
+          "name": "Rwanda",
+          "isoA3": "RWA",
+          "isoA3EH": "RWA"
+        }
+      ],
+      "name": "Rwanda",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-RWA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            36.2651539594051,
+            105.30857193823273
+          ],
+          [
+            38.256326448818896,
+            107.29084022292214
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-BIH",
+      "iso3": "BIH",
+      "iso2": "BA",
+      "naturalEarthCode": "BIH",
+      "naturalEarthId": 1159320417,
+      "sourceFeatures": [
+        {
+          "neId": 1159320417,
+          "name": "Bosnia and Herz.",
+          "isoA3": "BIH",
+          "isoA3EH": "BIH"
+        }
+      ],
+      "name": "Bosnia and Herzegovina",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-BIH-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            21.50829661907261,
+            53.763747107436565
+          ],
+          [
+            25.787799699037606,
+            56.63596675415573
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-MKD",
+      "iso3": "MKD",
+      "iso2": "MK",
+      "naturalEarthCode": "MKD",
+      "naturalEarthId": 1159321061,
+      "sourceFeatures": [
+        {
+          "neId": 1159321061,
+          "name": "North Macedonia",
+          "isoA3": "MKD",
+          "isoA3EH": "MKD"
+        }
+      ],
+      "name": "North Macedonia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-MKD-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            26.7476029352581,
+            57.002517623797026
+          ],
+          [
+            29.51468960297464,
+            58.64499656500438
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-SRB",
+      "iso3": "SRB",
+      "iso2": "RS",
+      "naturalEarthCode": "SRB",
+      "naturalEarthId": 1159321267,
+      "sourceFeatures": [
+        {
+          "neId": 1159321267,
+          "name": "Serbia",
+          "isoA3": "SRB",
+          "isoA3EH": "SRB"
+        }
+      ],
+      "name": "Serbia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-SRB-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            24.931912200349956,
+            52.721084743657045
+          ],
+          [
+            29.55208726281714,
+            57.085930346106736
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-MNE",
+      "iso3": "MNE",
+      "iso2": "ME",
+      "naturalEarthCode": "MNE",
+      "naturalEarthId": 1159321069,
+      "sourceFeatures": [
+        {
+          "neId": 1159321069,
+          "name": "Montenegro",
+          "isoA3": "MNE",
+          "isoA3EH": "MNE"
+        }
+      ],
+      "name": "Montenegro",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-MNE-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            24.50970393718285,
+            55.66457471216098
+          ],
+          [
+            26.610454838145245,
+            57.49464890586177
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-NE-KOS-1159321007",
+      "iso3": null,
+      "iso2": "XK",
+      "naturalEarthCode": "KOS",
+      "naturalEarthId": 1159321007,
+      "sourceFeatures": [
+        {
+          "neId": 1159321007,
+          "name": "Kosovo",
+          "isoA3": "-99",
+          "isoA3EH": "-99"
+        }
+      ],
+      "name": "Kosovo",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-NE-KOS-1159321007-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            26.311313578302702,
+            55.944473552055996
+          ],
+          [
+            28.20593047244094,
+            57.52848821872266
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-TTO",
+      "iso3": "TTO",
+      "iso2": "TT",
+      "naturalEarthCode": "TTO",
+      "naturalEarthId": 1159321321,
+      "sourceFeatures": [
+        {
+          "neId": 1159321321,
+          "name": "Trinidad and Tobago",
+          "isoA3": "TTO",
+          "isoA3EH": "TTO"
+        }
+      ],
+      "name": "Trinidad and Tobago",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-TTO-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            335.32312335958005,
+            91.94152755905512
+          ],
+          [
+            336.49589938757657,
+            92.93088363954506
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "world-pacific--country-SSD",
+      "iso3": "SSD",
+      "iso2": "SS",
+      "naturalEarthCode": "SDS",
+      "naturalEarthId": 1159321235,
+      "sourceFeatures": [
+        {
+          "neId": 1159321235,
+          "name": "S. Sudan",
+          "isoA3": "SSD",
+          "isoA3EH": "SSD"
+        }
+      ],
+      "name": "South Sudan",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "world-pacific--country-SSD-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            30.553627986001743,
+            90.43191691618549
+          ],
+          [
+            43.23853691531059,
+            100.14632200944882
+          ]
+        ]
+      ]
+    }
+  ],
+  "roles": {
+    "lakes": 24,
+    "rivers": 13,
+    "coastline": 134,
+    "national-boundaries": 331,
+    "admin-boundaries": 0
+  },
+  "svgGroupIds": {
+    "sea": "world-pacific--sea",
+    "country-fills": "world-pacific--country-fills",
+    "highlights": "world-pacific--highlights",
+    "lakes": "world-pacific--lakes",
+    "rivers": "world-pacific--rivers",
+    "coastline": "world-pacific--coastline",
+    "national-boundaries": "world-pacific--national-boundaries",
+    "admin-boundaries": "world-pacific--admin-boundaries",
+    "graticule": "world-pacific--graticule",
+    "frame": "world-pacific--frame"
+  },
+  "style": {
+    "countryFill": "#FFFFFF",
+    "sea": "#EEEEEE",
+    "highlight": "#AAAAAA",
+    "stroke": "#000000",
+    "coastWidthPx": 0.4,
+    "nationalDashPx": [
+      1.4,
+      1.1
+    ]
+  },
+  "highlightEdit": "Set fill on country-ISO group (including every child part). Keep coastline/national boundaries above country-fills; a separate overlay can be placed in highlights below line layers.",
+  "controlPoints": [
+    {
+      "lonlat": [
+        180,
+        0
+      ],
+      "xy": [
+        204.09448818897638,
+        104.04724409448819
+      ],
+      "expectedXY": [
+        204.09448818897638,
+        104.04724409448819
+      ],
+      "errorPx": 0
+    },
+    {
+      "lonlat": [
+        270,
+        0
+      ],
+      "xy": [
+        304.1417322834646,
+        104.04724409448819
+      ],
+      "expectedXY": [
+        304.1417322834646,
+        104.04724409448819
+      ],
+      "errorPx": 0
+    },
+    {
+      "lonlat": [
+        180,
+        45
+      ],
+      "xy": [
+        204.09448818897638,
+        54.023622047244096
+      ],
+      "expectedXY": [
+        204.09448818897638,
+        54.023622047244096
+      ],
+      "errorPx": 0
+    },
+    {
+      "lonlat": [
+        0,
+        -90
+      ],
+      "xy": [
+        4,
+        204.09448818897638
+      ],
+      "expectedXY": [
+        4,
+        204.09448818897638
+      ],
+      "errorPx": 0
+    },
+    {
+      "lonlat": [
+        360,
+        90
+      ],
+      "xy": [
+        404.18897637795277,
+        4
+      ],
+      "expectedXY": [
+        404.18897637795277,
+        4
+      ],
+      "errorPx": 0
+    }
+  ],
+  "gaps": [
+    "Natural Earth is generalized cartography, not survey-grade or current local coastal/hydrological mapping.",
+    "Boundary policy follows pinned Natural Earth de facto country dataset; disputed territories are not independently adjudicated.",
+    "Country direct-fill is supported by standard SVG; no installed map core API is claimed.",
+    "Small countries/islands omitted at 110m; choose a 50m/10m regional template when needed."
+  ],
+  "nativeValidation": {
+    "status": "nativeVerified",
+    "appVersion": "1.1.8",
+    "verifiedAt": "2026-10-03T15:40:43.997803+00:00",
+    "sourceSha256": "b4ec463d23427455ab29b7e06224892dd5db826d7e9d4db62e2a25879c4b67a7",
+    "saveReopenExportVerified": true,
+    "visualReview": "passed",
+    "outputs": {
+      "vectora": {
+        "sha256": "45cb9a78627854e727529caa14b1d695201703c5a2c4dde161742ee0bdaafae9",
+        "bytes": 3844818
+      },
+      "jpeg": {
+        "sha256": "6dbd7da6778dfa37a24b4c718a3d6a48cb18dc3fd66998a2755d93329f7fee1b",
+        "bytes": 200001,
+        "scale": 4
+      }
+    },
+    "preservationSummary": {
+      "primitiveIds": {
+        "sourceCount": 792,
+        "exactMatchesAfterReopen": 792
+      },
+      "groupNames": {
+        "sourceCount": 185,
+        "preservedAfterReopen": 185
+      },
+      "hiddenPaths": {
+        "sourceCount": 14,
+        "missingOrVisible": 0
+      },
+      "strokeColors": "preserved",
+      "objectCount": "preserved",
+      "artboardWidthMm": 108,
+      "widthPreserved": true,
+      "structuralIssueCount": 0
+    },
+    "evidence": {
+      "nativeSummarySha256": "68a755e35729ab7a962fd30605a31a3dea81c3d3647a335f0a3878878d262140",
+      "visualReviewSha256": "bb58c495c5d9a7738ba24aff07111a506312d65719b99c9991d5c05592787db2",
+      "runtimeFileDependency": false,
+      "summary": "Source-hash matched native save/reopen/JPEG and parent visual review; structural issues 0."
+    },
+    "nativeArtifactsIncludedInLibrary": false
+  },
+  "approvedOriginal": {
+    "file": "../world_continents.vectora",
+    "sha256": "3d968c1772c1b25f37a36af0681b15b7696a5bef4938dca9dbf5306ea6064e0b",
+    "modified": false
+  }
+}

@@ -1,0 +1,1913 @@
+{
+  "schema": "vectora-map-template/v1",
+  "id": "continent-south-america",
+  "title": "남아메리카",
+  "svg": "continent-south-america.svg",
+  "sourceKind": "reprojected-geographic-data",
+  "originalDownloadedSvg": false,
+  "status": "nativeVerified",
+  "sha256": "ab326b71ea7b9d65dd07cf831e396c6839ad4e75307ec9d1316e8a8c49435a7e",
+  "bytes": 368534,
+  "source": {
+    "repository": "https://github.com/nvkelso/natural-earth-vector",
+    "commit": "ca96624a56bd078437bca8184e78163e5039ad19",
+    "resolution": "50m",
+    "license": "public-domain",
+    "rightsURL": "https://www.naturalearthdata.com/about/terms-of-use/",
+    "datasets": [
+      {
+        "file": "ne_50m_coastline.geojson",
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_50m_coastline.geojson",
+        "sha256": "271f1c4c1908312bac6b29d158ea1356544beafc129f260005300913aa5ea283",
+        "bytes": 1640858,
+        "revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "kind": "geographic-data"
+      },
+      {
+        "file": "ne_50m_rivers_lake_centerlines.geojson",
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_50m_rivers_lake_centerlines.geojson",
+        "sha256": "f286e0ce978fde999ca2d7a78c764be08542e19b63cded52b05c12d5173ccc51",
+        "bytes": 827318,
+        "revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "kind": "geographic-data"
+      },
+      {
+        "file": "ne_50m_admin_0_boundary_lines_land.geojson",
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_50m_admin_0_boundary_lines_land.geojson",
+        "sha256": "2faac4f6b34386f3d21b6e018cf151f241f00e5c936d44dd17d7d9bfb147fa48",
+        "bytes": 760189,
+        "revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "kind": "geographic-data"
+      },
+      {
+        "file": "ne_50m_lakes.geojson",
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_50m_lakes.geojson",
+        "sha256": "d350b75978b26fe839b797c2c529b2fb8f47fb3983c03f4964e36d5df9378a52",
+        "bytes": 876018,
+        "revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "kind": "geographic-data"
+      },
+      {
+        "file": "ne_50m_admin_0_countries.geojson",
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_50m_admin_0_countries.geojson",
+        "sha256": "3e458fc036ad0a66411f2c1e6cac49c5d7bfb81cb1123bc513b22511a2b7fdeb",
+        "bytes": 3083490,
+        "revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "kind": "geographic-data"
+      }
+    ]
+  },
+  "projection": {
+    "name": "Equirectangular",
+    "implementation": "d3-geo@3.1.1",
+    "inputCRS": "WGS84 geographic longitude/latitude degrees",
+    "centralMeridian": -58,
+    "rotation": [
+      58.00000000000001,
+      0,
+      0
+    ],
+    "center": [
+      0,
+      -21.5
+    ],
+    "scale": 409.44891703780877,
+    "translate": [
+      204.09448818897638,
+      264.83745781777276
+    ],
+    "clipAngle": 0,
+    "clipExtent": [
+      [
+        4,
+        4
+      ],
+      [
+        404.18897637795277,
+        525.6749156355455
+      ]
+    ],
+    "extentLonLat": [
+      -86,
+      -58,
+      -30,
+      15
+    ],
+    "units": "SVG viewBox px at 96px/in",
+    "antimeridian": "d3 spherical antimeridian preclip after rotation",
+    "latitudeOrientation": "north-up; pole north/south use registered rotation"
+  },
+  "widthMm": 108,
+  "heightMm": 140.14315476190475,
+  "viewBox": [
+    0,
+    0,
+    408.18897637795277,
+    529.6749156355455
+  ],
+  "targetISO": null,
+  "countries": [
+    {
+      "id": "continent-south-america--country-VEN",
+      "iso3": "VEN",
+      "iso2": "VE",
+      "naturalEarthCode": "VEN",
+      "naturalEarthId": 1159321411,
+      "sourceFeatures": [
+        {
+          "neId": 1159321411,
+          "name": "Venezuela",
+          "isoA3": "VEN",
+          "isoA3EH": "VEN"
+        }
+      ],
+      "name": "Venezuela",
+      "sourcePartCount": 5,
+      "visiblePartCount": 5,
+      "partIds": [
+        "continent-south-america--country-VEN-part-0001",
+        "continent-south-america--country-VEN-part-0002",
+        "continent-south-america--country-VEN-part-0003",
+        "continent-south-america--country-VEN-part-0004",
+        "continent-south-america--country-VEN-part-0005"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            183.07451932733412,
+            45.31694631383573
+          ],
+          [
+            184.54354159730036,
+            46.12299122834641
+          ]
+        ],
+        [
+          [
+            158.34185440719918,
+            31.389819676040446
+          ],
+          [
+            162.52282159167606,
+            33.43389206636665
+          ]
+        ],
+        [
+          [
+            151.10769545106868,
+            32.771958060742364
+          ],
+          [
+            152.5522919010124,
+            33.41400410348702
+          ]
+        ],
+        [
+          [
+            182.1613523993251,
+            46.37492448143978
+          ],
+          [
+            183.73365915635546,
+            47.970613708661375
+          ]
+        ],
+        [
+          [
+            94.2839837086614,
+            24.16751631833516
+          ],
+          [
+            191.02470211698537,
+            106.27695414623167
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-south-america--country-URY",
+      "iso3": "URY",
+      "iso2": "UY",
+      "naturalEarthCode": "URY",
+      "naturalEarthId": 1159321353,
+      "sourceFeatures": [
+        {
+          "neId": 1159321353,
+          "name": "Uruguay",
+          "isoA3": "URY",
+          "isoA3EH": "URY"
+        }
+      ],
+      "name": "Uruguay",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-south-america--country-URY-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            200.96347395388077,
+            326.302725671541
+          ],
+          [
+            238.9281801372329,
+            360.83145218110235
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-south-america--country-SGS",
+      "iso3": "SGS",
+      "iso2": "GS",
+      "naturalEarthCode": "SGS",
+      "naturalEarthId": 1159320731,
+      "sourceFeatures": [
+        {
+          "neId": 1159320731,
+          "name": "S. Geo. and the Is.",
+          "isoA3": "SGS",
+          "isoA3EH": "SGS"
+        }
+      ],
+      "name": "South Georgia and the South Sandwich Islands",
+      "sourcePartCount": 2,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-south-america--country-SGS-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            346.89454949831276,
+            496.9762350348706
+          ],
+          [
+            362.75095146006754,
+            503.2843209685039
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-south-america--country-FLK",
+      "iso3": "FLK",
+      "iso2": "FK",
+      "naturalEarthCode": "FLK",
+      "naturalEarthId": 1159320711,
+      "sourceFeatures": [
+        {
+          "neId": 1159320711,
+          "name": "Falkland Is.",
+          "isoA3": "FLK",
+          "isoA3EH": "FLK"
+        }
+      ],
+      "name": "Falkland Islands",
+      "sourcePartCount": 6,
+      "visiblePartCount": 6,
+      "partIds": [
+        "continent-south-america--country-FLK-part-0001",
+        "continent-south-america--country-FLK-part-0002",
+        "continent-south-america--country-FLK-part-0003",
+        "continent-south-america--country-FLK-part-0004",
+        "continent-south-america--country-FLK-part-0005",
+        "continent-south-america--country-FLK-part-0006"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            192.3091372215973,
+            477.5802187469066
+          ],
+          [
+            205.58235507199106,
+            484.99862184926883
+          ]
+        ],
+        [
+          [
+            182.931451768279,
+            478.18318204836896
+          ],
+          [
+            195.0325947154106,
+            484.18908957367825
+          ]
+        ],
+        [
+          [
+            181.61944650168732,
+            481.2663879932508
+          ],
+          [
+            183.54209012260972,
+            482.4136940573678
+          ]
+        ],
+        [
+          [
+            200.22547545781785,
+            482.79333761754776
+          ],
+          [
+            201.0022065298088,
+            483.50516661304835
+          ]
+        ],
+        [
+          [
+            187.83052948593925,
+            477.60534489763774
+          ],
+          [
+            189.30304626321717,
+            478.48117276490433
+          ]
+        ],
+        [
+          [
+            191.27907223509558,
+            483.75640668166477
+          ],
+          [
+            192.0816297885265,
+            484.5903647772778
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-south-america--country-TTO",
+      "iso3": "TTO",
+      "iso2": "TT",
+      "naturalEarthCode": "TTO",
+      "naturalEarthId": 1159321321,
+      "sourceFeatures": [
+        {
+          "neId": 1159321321,
+          "name": "Trinidad and Tobago",
+          "isoA3": "TTO",
+          "isoA3EH": "TTO"
+        }
+      ],
+      "name": "Trinidad and Tobago",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "continent-south-america--country-TTO-part-0001",
+        "continent-south-america--country-TTO-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            184.00896773340835,
+            30.259607398200174
+          ],
+          [
+            186.04676573228343,
+            31.380043631046078
+          ]
+        ],
+        [
+          [
+            176.1805638785152,
+            33.72665174128228
+          ],
+          [
+            183.24444957142856,
+            39.26916901687285
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-south-america--country-SUR",
+      "iso3": "SUR",
+      "iso2": "SR",
+      "naturalEarthCode": "SUR",
+      "naturalEarthId": 1159321281,
+      "sourceFeatures": [
+        {
+          "neId": 1159321281,
+          "name": "Suriname",
+          "isoA3": "SUR",
+          "isoA3EH": "SUR"
+        }
+      ],
+      "name": "Suriname",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-south-america--country-SUR-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            203.70507573003377,
+            68.36284328346451
+          ],
+          [
+            232.7474543453319,
+            98.02843047469062
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-south-america--country-VCT",
+      "iso3": "VCT",
+      "iso2": "VC",
+      "naturalEarthCode": "VCT",
+      "naturalEarthId": 1159321409,
+      "sourceFeatures": [
+        {
+          "neId": 1159321409,
+          "name": "St. Vin. and Gren.",
+          "isoA3": "VCT",
+          "isoA3EH": "VCT"
+        }
+      ],
+      "name": "Saint Vincent and the Grenadines",
+      "sourcePartCount": 3,
+      "visiblePartCount": 3,
+      "partIds": [
+        "continent-south-america--country-VCT-part-0001",
+        "continent-south-america--country-VCT-part-0002",
+        "continent-south-america--country-VCT-part-0003"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            180.6741787007874,
+            15.728824274465651
+          ],
+          [
+            181.76949592913385,
+            17.275661861642263
+          ]
+        ],
+        [
+          [
+            180.676622712036,
+            17.917007573678248
+          ],
+          [
+            181.27121062992128,
+            18.462043520809857
+          ]
+        ],
+        [
+          [
+            180.12948577277848,
+            20.183006190101196
+          ],
+          [
+            180.40584484589434,
+            20.47401503824517
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-south-america--country-LCA",
+      "iso3": "LCA",
+      "iso2": "LC",
+      "naturalEarthCode": "LCA",
+      "naturalEarthId": 1159321019,
+      "sourceFeatures": [
+        {
+          "neId": 1159321019,
+          "name": "Saint Lucia",
+          "isoA3": "LCA",
+          "isoA3EH": "LCA"
+        }
+      ],
+      "name": "Saint Lucia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-south-america--country-LCA-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            182.13308190663673,
+            10.47906667379074
+          ],
+          [
+            183.46497513610805,
+            13.164484776152932
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-south-america--country-PER",
+      "iso3": "PER",
+      "iso2": "PE",
+      "naturalEarthCode": "PER",
+      "naturalEarthId": 1159321163,
+      "sourceFeatures": [
+        {
+          "neId": 1159321163,
+          "name": "Peru",
+          "isoA3": "PER",
+          "isoA3EH": "PER"
+        }
+      ],
+      "name": "Peru",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-south-america--country-PER-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            37.32558693700801,
+            111.49181669741277
+          ],
+          [
+            127.73518710686167,
+            242.29542020809893
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-south-america--country-PRY",
+      "iso3": "PRY",
+      "iso2": "PY",
+      "naturalEarthCode": "PRY",
+      "naturalEarthId": 1159321195,
+      "sourceFeatures": [
+        {
+          "neId": 1159321195,
+          "name": "Paraguay",
+          "isoA3": "PRY",
+          "isoA3EH": "PRY"
+        }
+      ],
+      "name": "Paraguay",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-south-america--country-PRY-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            170.8575288177728,
+            249.01734442069736
+          ],
+          [
+            230.95147768166487,
+            308.0993797266591
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-south-america--country-PAN",
+      "iso3": "PAN",
+      "iso2": "PA",
+      "naturalEarthCode": "PAN",
+      "naturalEarthId": 1159321161,
+      "sourceFeatures": [
+        {
+          "neId": 1159321161,
+          "name": "Panama",
+          "isoA3": "PAN",
+          "isoA3EH": "PAN"
+        }
+      ],
+      "name": "Panama",
+      "sourcePartCount": 5,
+      "visiblePartCount": 5,
+      "partIds": [
+        "continent-south-america--country-PAN-part-0001",
+        "continent-south-america--country-PAN-part-0002",
+        "continent-south-america--country-PAN-part-0003",
+        "continent-south-america--country-PAN-part-0004",
+        "continent-south-america--country-PAN-part-0005"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            25.243288602924707,
+            42.60500139932505
+          ],
+          [
+            66.915452656918,
+            59.59719684589421
+          ]
+        ],
+        [
+          [
+            54.27416178515193,
+            50.73454031271086
+          ],
+          [
+            55.173021957255344,
+            52.366167939257544
+          ]
+        ],
+        [
+          [
+            33.59544692688419,
+            56.72753459730029
+          ],
+          [
+            35.42004424859391,
+            58.82918417660288
+          ]
+        ],
+        [
+          [
+            30.285776898762634,
+            43.79104003937003
+          ],
+          [
+            30.91631036220471,
+            44.4899629403824
+          ]
+        ],
+        [
+          [
+            53.11219879977506,
+            51.9097595579302
+          ],
+          [
+            53.55604410573673,
+            52.52424258492684
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-south-america--country-NIC",
+      "iso3": "NIC",
+      "iso2": "NI",
+      "naturalEarthCode": "NIC",
+      "naturalEarthId": 1159321091,
+      "sourceFeatures": [
+        {
+          "neId": 1159321091,
+          "name": "Nicaragua",
+          "isoA3": "NIC",
+          "isoA3EH": "NIC"
+        }
+      ],
+      "name": "Nicaragua",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-south-america--country-NIC-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            4,
+            4
+          ],
+          [
+            24.31302074240719,
+            34.47616281664787
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-south-america--country-NLD",
+      "iso3": "NLD",
+      "iso2": "NL",
+      "naturalEarthCode": "NLD",
+      "naturalEarthId": 1159321101,
+      "sourceFeatures": [
+        {
+          "neId": 1159321101,
+          "name": "Netherlands",
+          "isoA3": "NLD",
+          "isoA3EH": "NLD"
+        }
+      ],
+      "name": "Netherlands",
+      "sourcePartCount": 12,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-south-america--country-NLD-part-0010"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            129.98024726434204,
+            23.280869056242935
+          ],
+          [
+            131.16139788188985,
+            25.20944404949377
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-south-america--country-ABW",
+      "iso3": "ABW",
+      "iso2": "AW",
+      "naturalEarthCode": "ABW",
+      "naturalEarthId": 1159321097,
+      "sourceFeatures": [
+        {
+          "neId": 1159321097,
+          "name": "Aruba",
+          "isoA3": "ABW",
+          "isoA3EH": "ABW"
+        }
+      ],
+      "name": "Aruba",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-south-america--country-ABW-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            117.86724871878516,
+            21.05011565466812
+          ],
+          [
+            119.08503806636678,
+            22.415853437570263
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-south-america--country-CUW",
+      "iso3": "CUW",
+      "iso2": "CW",
+      "naturalEarthCode": "CUW",
+      "naturalEarthId": 1159321099,
+      "sourceFeatures": [
+        {
+          "neId": 1159321099,
+          "name": "Curaçao",
+          "isoA3": "CUW",
+          "isoA3EH": "CUW"
+        }
+      ],
+      "name": "Curaçao",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-south-america--country-CUW-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            124.35049593813278,
+            22.72117618785147
+          ],
+          [
+            127.2648221349831,
+            25.113834615298046
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-south-america--country-HND",
+      "iso3": "HND",
+      "iso2": "HN",
+      "naturalEarthCode": "HND",
+      "naturalEarthId": 1159320827,
+      "sourceFeatures": [
+        {
+          "neId": 1159320827,
+          "name": "Honduras",
+          "isoA3": "HND",
+          "isoA3EH": "HND"
+        }
+      ],
+      "name": "Honduras",
+      "sourcePartCount": 3,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-south-america--country-HND-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            4,
+            4
+          ],
+          [
+            24.31302074240719,
+            12.257942404949333
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-south-america--country-GUY",
+      "iso3": "GUY",
+      "iso2": "GY",
+      "naturalEarthCode": "GUY",
+      "naturalEarthId": 1159320817,
+      "sourceFeatures": [
+        {
+          "neId": 1159320817,
+          "name": "Guyana",
+          "isoA3": "GUY",
+          "isoA3EH": "GUY"
+        }
+      ],
+      "name": "Guyana",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-south-america--country-GUY-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            179.862902744657,
+            50.09808262317206
+          ],
+          [
+            214.93666520134985,
+            102.60927220134978
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-south-america--country-GRD",
+      "iso3": "GRD",
+      "iso2": "GD",
+      "naturalEarthCode": "GRD",
+      "naturalEarthId": 1159320813,
+      "sourceFeatures": [
+        {
+          "neId": 1159320813,
+          "name": "Grenada",
+          "isoA3": "GRD",
+          "isoA3EH": "GRD"
+        }
+      ],
+      "name": "Grenada",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-south-america--country-GRD-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            177.0661677907762,
+            23.74495249043865
+          ],
+          [
+            178.31780883802028,
+            25.378330943756993
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-south-america--country-FRA",
+      "iso3": "FRA",
+      "iso2": "FR",
+      "naturalEarthCode": "FRA",
+      "naturalEarthId": 1159320637,
+      "sourceFeatures": [
+        {
+          "neId": 1159320637,
+          "name": "France",
+          "isoA3": "-99",
+          "isoA3EH": "FRA"
+        }
+      ],
+      "name": "France",
+      "sourcePartCount": 10,
+      "visiblePartCount": 2,
+      "partIds": [
+        "continent-south-america--country-FRA-part-0006",
+        "continent-south-america--country-FRA-part-0010"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            181.08557296850398,
+            4.891185119235061
+          ],
+          [
+            183.89730786276718,
+            8.10000752530928
+          ]
+        ],
+        [
+          [
+            228.27547831271096,
+            69.87234180989873
+          ],
+          [
+            249.45491533520814,
+            96.03599675478061
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-south-america--country-ECU",
+      "iso3": "ECU",
+      "iso2": "EC",
+      "naturalEarthCode": "ECU",
+      "naturalEarthId": 1159320567,
+      "sourceFeatures": [
+        {
+          "neId": 1159320567,
+          "name": "Ecuador",
+          "isoA3": "ECU",
+          "isoA3EH": "ECU"
+        }
+      ],
+      "name": "Ecuador",
+      "sourcePartCount": 9,
+      "visiblePartCount": 3,
+      "partIds": [
+        "continent-south-america--country-ECU-part-0001",
+        "continent-south-america--country-ECU-part-0002",
+        "continent-south-america--country-ECU-part-0003"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            39.99704844881893,
+            100.79305740944878
+          ],
+          [
+            80.82478517772778,
+            146.85763849831267
+          ]
+        ],
+        [
+          [
+            44.9268335241845,
+            130.26568205174348
+          ],
+          [
+            47.527461587176674,
+            132.71591766816644
+          ]
+        ],
+        [
+          [
+            54.08294291676046,
+            101.47627289313832
+          ],
+          [
+            54.73963873453317,
+            102.29383753318331
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-south-america--country-CRI",
+      "iso3": "CRI",
+      "iso2": "CR",
+      "naturalEarthCode": "CRI",
+      "naturalEarthId": 1159320525,
+      "sourceFeatures": [
+        {
+          "neId": 1159320525,
+          "name": "Costa Rica",
+          "isoA3": "CRI",
+          "isoA3EH": "CRI"
+        }
+      ],
+      "name": "Costa Rica",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-south-america--country-CRI-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            4.657396148481496,
+            31.231051845894214
+          ],
+          [
+            28.557496488189003,
+            53.51871219122606
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-south-america--country-COL",
+      "iso3": "COL",
+      "iso2": "CO",
+      "naturalEarthCode": "COL",
+      "naturalEarthId": 1159320517,
+      "sourceFeatures": [
+        {
+          "neId": 1159320517,
+          "name": "Colombia",
+          "isoA3": "COL",
+          "isoA3EH": "COL"
+        }
+      ],
+      "name": "Colombia",
+      "sourcePartCount": 2,
+      "visiblePartCount": 2,
+      "partIds": [
+        "continent-south-america--country-COL-part-0001",
+        "continent-south-america--country-COL-part-0002"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            53.84182905849272,
+            22.33455075928005
+          ],
+          [
+            140.66435677727793,
+            141.46447031946002
+          ]
+        ],
+        [
+          [
+            59.66838046006754,
+            92.28213125534305
+          ],
+          [
+            60.357177150731246,
+            93.18727296512932
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-south-america--country-CHL",
+      "iso3": "CHL",
+      "iso2": "CL",
+      "naturalEarthCode": "CHL",
+      "naturalEarthId": 1159320493,
+      "sourceFeatures": [
+        {
+          "neId": 1159320493,
+          "name": "Chile",
+          "isoA3": "CHL",
+          "isoA3EH": "CHL"
+        }
+      ],
+      "name": "Chile",
+      "sourcePartCount": 31,
+      "visiblePartCount": 30,
+      "partIds": [
+        "continent-south-america--country-CHL-part-0002",
+        "continent-south-america--country-CHL-part-0003",
+        "continent-south-america--country-CHL-part-0004",
+        "continent-south-america--country-CHL-part-0005",
+        "continent-south-america--country-CHL-part-0006",
+        "continent-south-america--country-CHL-part-0007",
+        "continent-south-america--country-CHL-part-0008",
+        "continent-south-america--country-CHL-part-0009",
+        "continent-south-america--country-CHL-part-0010",
+        "continent-south-america--country-CHL-part-0011",
+        "continent-south-america--country-CHL-part-0012",
+        "continent-south-america--country-CHL-part-0013",
+        "continent-south-america--country-CHL-part-0014",
+        "continent-south-america--country-CHL-part-0015",
+        "continent-south-america--country-CHL-part-0016",
+        "continent-south-america--country-CHL-part-0017",
+        "continent-south-america--country-CHL-part-0018",
+        "continent-south-america--country-CHL-part-0019",
+        "continent-south-america--country-CHL-part-0020",
+        "continent-south-america--country-CHL-part-0021",
+        "continent-south-america--country-CHL-part-0022",
+        "continent-south-america--country-CHL-part-0023",
+        "continent-south-america--country-CHL-part-0024",
+        "continent-south-america--country-CHL-part-0025",
+        "continent-south-america--country-CHL-part-0026",
+        "continent-south-america--country-CHL-part-0027",
+        "continent-south-america--country-CHL-part-0028",
+        "continent-south-america--country-CHL-part-0029",
+        "continent-south-america--country-CHL-part-0030",
+        "continent-south-america--country-CHL-part-0031"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            54.09899335320591,
+            351.1295993644544
+          ],
+          [
+            55.67479461754786,
+            351.79118320472435
+          ]
+        ],
+        [
+          [
+            77.54826651856024,
+            236.29580136670413
+          ],
+          [
+            139.71559446906642,
+            496.25672384026996
+          ]
+        ],
+        [
+          [
+            104.56367367604054,
+            486.2722375590551
+          ],
+          [
+            128.13053093813275,
+            503.592080583802
+          ]
+        ],
+        [
+          [
+            130.4785325635546,
+            503.73166078177724
+          ],
+          [
+            139.20719010573686,
+            506.32705065691783
+          ]
+        ],
+        [
+          [
+            86.98665921034876,
+            409.8738608818897
+          ],
+          [
+            93.87887097862769,
+            421.1396450719909
+          ]
+        ],
+        [
+          [
+            78.5343607412824,
+            459.25124919460063
+          ],
+          [
+            86.47581798200231,
+            468.6425410731158
+          ]
+        ],
+        [
+          [
+            77.95686660967388,
+            454.3535721383577
+          ],
+          [
+            81.49718126659167,
+            459.6769502182227
+          ]
+        ],
+        [
+          [
+            84.666577912261,
+            488.0420518683914
+          ],
+          [
+            95.93480611361083,
+            492.50495218672665
+          ]
+        ],
+        [
+          [
+            80.84152879865027,
+            453.0645920303711
+          ],
+          [
+            85.70083059055126,
+            458.68946248031494
+          ]
+        ],
+        [
+          [
+            90.85916644881888,
+            492.76247379302583
+          ],
+          [
+            102.57926517435321,
+            497.99443727671536
+          ]
+        ],
+        [
+          [
+            81.85554334870645,
+            480.15467730933625
+          ],
+          [
+            85.95415735883017,
+            484.7927460596175
+          ]
+        ],
+        [
+          [
+            118.425548071991,
+            503.3931866625421
+          ],
+          [
+            132.3066101001125,
+            508.8854587829021
+          ]
+        ],
+        [
+          [
+            102.54332677502822,
+            496.26719306974127
+          ],
+          [
+            111.15858076602925,
+            499.76284377840267
+          ]
+        ],
+        [
+          [
+            85.34003164341962,
+            426.59143378965126
+          ],
+          [
+            91.87561786389212,
+            435.238795799775
+          ]
+        ],
+        [
+          [
+            93.72045331383572,
+            428.0213804645669
+          ],
+          [
+            98.58707999325091,
+            431.7731521181102
+          ]
+        ],
+        [
+          [
+            81.5927907007874,
+            431.3097618683914
+          ],
+          [
+            82.37824732170981,
+            432.1060378841394
+          ]
+        ],
+        [
+          [
+            79.19698793138356,
+            471.9392978605174
+          ],
+          [
+            81.78435973453324,
+            474.0245468380202
+          ]
+        ],
+        [
+          [
+            78.02665670866152,
+            459.73627108773894
+          ],
+          [
+            81.84612461529807,
+            463.00720853993244
+          ]
+        ],
+        [
+          [
+            80.74313233408323,
+            452.0017329865016
+          ],
+          [
+            83.20871805624297,
+            453.14555168953876
+          ]
+        ],
+        [
+          [
+            83.73282269066374,
+            422.31137695613046
+          ],
+          [
+            85.00400153543309,
+            422.95062882227217
+          ]
+        ],
+        [
+          [
+            91.05212899775037,
+            429.5169224004499
+          ],
+          [
+            92.49463160179982,
+            431.57983940382445
+          ]
+        ],
+        [
+          [
+            80.46432924971883,
+            477.13148541844765
+          ],
+          [
+            85.76258832508435,
+            480.12048259055115
+          ]
+        ],
+        [
+          [
+            79.39902619460064,
+            468.58950174128233
+          ],
+          [
+            83.76213653318341,
+            471.19397447694035
+          ]
+        ],
+        [
+          [
+            88.73309104949392,
+            424.08257763442066
+          ],
+          [
+            91.25800478740163,
+            425.07007251856015
+          ]
+        ],
+        [
+          [
+            86.35752640832396,
+            480.83161125534303
+          ],
+          [
+            88.92989112485941,
+            482.38368703037116
+          ]
+        ],
+        [
+          [
+            84.82499557705297,
+            434.0077430461192
+          ],
+          [
+            88.116871488189,
+            438.1852228695163
+          ]
+        ],
+        [
+          [
+            133.7061995826772,
+            510.0683530809898
+          ],
+          [
+            136.1351537210349,
+            510.608508151856
+          ]
+        ],
+        [
+          [
+            142.37519323622053,
+            505.41911477052867
+          ],
+          [
+            143.81037095275593,
+            506.1860840899887
+          ]
+        ],
+        [
+          [
+            108.06909328346464,
+            503.05401935883015
+          ],
+          [
+            116.31691662429697,
+            505.5014679448819
+          ]
+        ],
+        [
+          [
+            135.751665488189,
+            508.4178808413948
+          ],
+          [
+            137.9028670382453,
+            509.84434015523055
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-south-america--country-BRA",
+      "iso3": "BRA",
+      "iso2": "BR",
+      "naturalEarthCode": "BRA",
+      "naturalEarthId": 1159320441,
+      "sourceFeatures": [
+        {
+          "neId": 1159320441,
+          "name": "Brazil",
+          "isoA3": "BRA",
+          "isoA3EH": "BRA"
+        }
+      ],
+      "name": "Brazil",
+      "sourcePartCount": 17,
+      "visiblePartCount": 17,
+      "partIds": [
+        "continent-south-america--country-BRA-part-0001",
+        "continent-south-america--country-BRA-part-0002",
+        "continent-south-america--country-BRA-part-0003",
+        "continent-south-america--country-BRA-part-0004",
+        "continent-south-america--country-BRA-part-0005",
+        "continent-south-america--country-BRA-part-0006",
+        "continent-south-america--country-BRA-part-0007",
+        "continent-south-america--country-BRA-part-0008",
+        "continent-south-america--country-BRA-part-0009",
+        "continent-south-america--country-BRA-part-0010",
+        "continent-south-america--country-BRA-part-0011",
+        "continent-south-america--country-BRA-part-0012",
+        "continent-south-america--country-BRA-part-0013",
+        "continent-south-america--country-BRA-part-0014",
+        "continent-south-america--country-BRA-part-0015",
+        "continent-south-america--country-BRA-part-0016",
+        "continent-south-america--country-BRA-part-0017"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            89.74012373115869,
+            73.61888242182224
+          ],
+          [
+            369.84798137570306,
+            352.3229700382452
+          ]
+        ],
+        [
+          [
+            255.57526976152988,
+            112.0253400652418
+          ],
+          [
+            272.8434741158606,
+            124.06158093588297
+          ]
+        ],
+        [
+          [
+            301.5679740517436,
+            276.08649124071985
+          ],
+          [
+            303.4410657019123,
+            277.0739861248594
+          ]
+        ],
+        [
+          [
+            270.79905156018003,
+            298.21259672553424
+          ],
+          [
+            272.0007904713161,
+            299.9523968616422
+          ]
+        ],
+        [
+          [
+            293.769577223847,
+            280.75596767941505
+          ],
+          [
+            295.32967821709786,
+            282.2836176344207
+          ]
+        ],
+        [
+          [
+            299.8700436872891,
+            130.61391792350952
+          ],
+          [
+            300.701214752531,
+            132.9008549988751
+          ]
+        ],
+        [
+          [
+            341.3953026557931,
+            203.23819811923505
+          ],
+          [
+            342.7292897311586,
+            204.94240287514054
+          ]
+        ],
+        [
+          [
+            339.71447322384705,
+            206.94181846344202
+          ],
+          [
+            340.5620448908886,
+            207.8985988436445
+          ]
+        ],
+        [
+          [
+            296.8465016310462,
+            120.24978808211469
+          ],
+          [
+            297.8308593194601,
+            121.13259781777273
+          ]
+        ],
+        [
+          [
+            258.79805590438696,
+            109.01715526096733
+          ],
+          [
+            263.42774927109116,
+            111.40283896625418
+          ]
+        ],
+        [
+          [
+            257.6270243509562,
+            95.74707460629917
+          ],
+          [
+            259.1769991338583,
+            97.66658103149602
+          ]
+        ],
+        [
+          [
+            253.84593885489318,
+            111.48553515972999
+          ],
+          [
+            256.6151036467942,
+            113.53275189201345
+          ]
+        ],
+        [
+          [
+            262.47864394375705,
+            110.59540053655789
+          ],
+          [
+            265.74993156130483,
+            112.22074662542178
+          ]
+        ],
+        [
+          [
+            256.805622184477,
+            106.97098902474686
+          ],
+          [
+            258.8898278121485,
+            111.24825882789646
+          ]
+        ],
+        [
+          [
+            259.25132708998876,
+            106.63391556692909
+          ],
+          [
+            261.00124629021377,
+            108.62669230596171
+          ]
+        ],
+        [
+          [
+            247.41223646006756,
+            115.06248854668162
+          ],
+          [
+            252.96941065691794,
+            121.57435642407195
+          ]
+        ],
+        [
+          [
+            271.59357674915645,
+            306.9974307952756
+          ],
+          [
+            272.85603004499444,
+            309.9459517109111
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-south-america--country-BOL",
+      "iso3": "BOL",
+      "iso2": "BO",
+      "naturalEarthCode": "BOL",
+      "naturalEarthId": 1159320439,
+      "sourceFeatures": [
+        {
+          "neId": 1159320439,
+          "name": "Bolivia",
+          "isoA3": "BOL",
+          "isoA3EH": "BOL"
+        }
+      ],
+      "name": "Bolivia",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-south-america--country-BOL-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            120.87159599662547,
+            180.58659448481436
+          ],
+          [
+            207.69866157255348,
+            274.7828613577052
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-south-america--country-BRB",
+      "iso3": "BRB",
+      "iso2": "BB",
+      "naturalEarthCode": "BRB",
+      "naturalEarthId": 1159320449,
+      "sourceFeatures": [
+        {
+          "neId": 1159320449,
+          "name": "Barbados",
+          "isoA3": "BRB",
+          "isoA3EH": "BRB"
+        }
+      ],
+      "name": "Barbados",
+      "sourcePartCount": 1,
+      "visiblePartCount": 1,
+      "partIds": [
+        "continent-south-america--country-BRB-part-0001"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            192.32693133858268,
+            16.02227713385821
+          ],
+          [
+            193.89226337345337,
+            17.847917805399277
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "continent-south-america--country-ARG",
+      "iso3": "ARG",
+      "iso2": "AR",
+      "naturalEarthCode": "ARG",
+      "naturalEarthId": 1159320331,
+      "sourceFeatures": [
+        {
+          "neId": 1159320331,
+          "name": "Argentina",
+          "isoA3": "ARG",
+          "isoA3EH": "ARG"
+        }
+      ],
+      "name": "Argentina",
+      "sourcePartCount": 4,
+      "visiblePartCount": 4,
+      "partIds": [
+        "continent-south-america--country-ARG-part-0001",
+        "continent-south-america--country-ARG-part-0002",
+        "continent-south-america--country-ARG-part-0003",
+        "continent-south-america--country-ARG-part-0004"
+      ],
+      "projectedPartBounds": [
+        [
+          [
+            92.7828534195726,
+            266.9994716164229
+          ],
+          [
+            235.04799784589432,
+            485.3461645365579
+          ]
+        ],
+        [
+          [
+            127.96408805511815,
+            487.46142054105735
+          ],
+          [
+            152.79166207874013,
+            504.46582175140605
+          ]
+        ],
+        [
+          [
+            155.8050850708662,
+            502.20819851856015
+          ],
+          [
+            162.53607785151866,
+            503.5397415826771
+          ]
+        ],
+        [
+          [
+            174.84483312260969,
+            390.5127324971878
+          ],
+          [
+            176.4673921811024,
+            391.5748983565803
+          ]
+        ]
+      ]
+    }
+  ],
+  "roles": {
+    "lakes": 18,
+    "rivers": 49,
+    "coastline": 76,
+    "national-boundaries": 38,
+    "admin-boundaries": 0
+  },
+  "svgGroupIds": {
+    "sea": "continent-south-america--sea",
+    "country-fills": "continent-south-america--country-fills",
+    "highlights": "continent-south-america--highlights",
+    "lakes": "continent-south-america--lakes",
+    "rivers": "continent-south-america--rivers",
+    "coastline": "continent-south-america--coastline",
+    "national-boundaries": "continent-south-america--national-boundaries",
+    "admin-boundaries": "continent-south-america--admin-boundaries",
+    "graticule": "continent-south-america--graticule",
+    "frame": "continent-south-america--frame"
+  },
+  "style": {
+    "countryFill": "#FFFFFF",
+    "sea": "#EEEEEE",
+    "highlight": "#AAAAAA",
+    "stroke": "#000000",
+    "coastWidthPx": 0.4,
+    "nationalDashPx": [
+      1.4,
+      1.1
+    ]
+  },
+  "highlightEdit": "Set fill on country-ISO group (including every child part). Keep coastline/national boundaries above country-fills; a separate overlay can be placed in highlights below line layers.",
+  "controlPoints": [
+    {
+      "lonlat": [
+        -58,
+        -21.5
+      ],
+      "xy": [
+        204.09448818897638,
+        264.83745781777276
+      ],
+      "expectedXY": [
+        204.09448818897638,
+        264.83745781777276
+      ],
+      "errorPx": 0
+    },
+    {
+      "lonlat": [
+        -44,
+        -21.5
+      ],
+      "xy": [
+        304.14173228346465,
+        264.83745781777276
+      ],
+      "expectedXY": [
+        304.1417322834646,
+        264.83745781777276
+      ],
+      "errorPx": 5.684341886080802e-14
+    },
+    {
+      "lonlat": [
+        -58,
+        -3.25
+      ],
+      "xy": [
+        204.09448818897638,
+        134.41872890888635
+      ],
+      "expectedXY": [
+        204.09448818897638,
+        134.41872890888635
+      ],
+      "errorPx": 0
+    },
+    {
+      "lonlat": [
+        -86,
+        -58
+      ],
+      "xy": [
+        4,
+        525.6749156355456
+      ],
+      "expectedXY": [
+        4,
+        525.6749156355456
+      ],
+      "errorPx": 0
+    },
+    {
+      "lonlat": [
+        -30,
+        15
+      ],
+      "xy": [
+        404.1889763779528,
+        3.9999999999999574
+      ],
+      "expectedXY": [
+        404.18897637795277,
+        3.999999999999943
+      ],
+      "errorPx": 5.859285502108464e-14
+    }
+  ],
+  "gaps": [
+    "Natural Earth is generalized cartography, not survey-grade or current local coastal/hydrological mapping.",
+    "Boundary policy follows pinned Natural Earth de facto country dataset; disputed territories are not independently adjudicated.",
+    "Country direct-fill is supported by standard SVG; no installed map core API is claimed."
+  ],
+  "nativeValidation": {
+    "status": "nativeVerified",
+    "appVersion": "1.1.8",
+    "verifiedAt": "2026-10-03T15:40:43.997803+00:00",
+    "sourceSha256": "ab326b71ea7b9d65dd07cf831e396c6839ad4e75307ec9d1316e8a8c49435a7e",
+    "saveReopenExportVerified": true,
+    "visualReview": "passed",
+    "outputs": {
+      "vectora": {
+        "sha256": "a9aee8abf0dca7a5c252e16c4b76982afff9c04d4937ba6e03b9d29f9b4f4f33",
+        "bytes": 2742973
+      },
+      "jpeg": {
+        "sha256": "bf1e6376ef51c17403411aab729723b741ca9315518fff59cdb810695f07ad97",
+        "bytes": 212969,
+        "scale": 4
+      }
+    },
+    "preservationSummary": {
+      "primitiveIds": {
+        "sourceCount": 279,
+        "exactMatchesAfterReopen": 279
+      },
+      "groupNames": {
+        "sourceCount": 35,
+        "preservedAfterReopen": 35
+      },
+      "hiddenPaths": {
+        "sourceCount": 50,
+        "missingOrVisible": 0
+      },
+      "strokeColors": "preserved",
+      "objectCount": "preserved",
+      "artboardWidthMm": 108,
+      "widthPreserved": true,
+      "structuralIssueCount": 0
+    },
+    "evidence": {
+      "nativeSummarySha256": "68a755e35729ab7a962fd30605a31a3dea81c3d3647a335f0a3878878d262140",
+      "visualReviewSha256": "bb58c495c5d9a7738ba24aff07111a506312d65719b99c9991d5c05592787db2",
+      "runtimeFileDependency": false,
+      "summary": "Source-hash matched native save/reopen/JPEG and parent visual review; structural issues 0."
+    },
+    "nativeArtifactsIncludedInLibrary": false
+  },
+  "approvedOriginal": {
+    "file": "../world_continents.vectora",
+    "sha256": "3d968c1772c1b25f37a36af0681b15b7696a5bef4938dca9dbf5306ea6064e0b",
+    "modified": false
+  }
+}
