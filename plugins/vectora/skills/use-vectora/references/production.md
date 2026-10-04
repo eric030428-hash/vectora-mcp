@@ -19,11 +19,11 @@ Ink bounds use measured glyphs; `decorationBounds` and `underlineBounds` are sep
 
 ### 새 그래프·벤 계약
 
-새 그래프의 `chartStyle` 16스타일과 `layout:"venn"`은 [그래프·벤 실행](../../create-kice-illustration/references/graph-venn-production.md)을 따른다. 일부 옵션만 미지원이면 생성기로 기본 자료 구조를 만든 뒤 미지원 부분만 실제 개체 ID로 수정·보충한다. 보충 개체의 자동 재배치는 보장되지 않으므로 후속 변경 뒤 재검수하며 전체 SVG 대체나 불필요한 detach를 하지 않는다. 아래 Graph의 type/layout 설명은 **chartStyle 없는 legacy 계약**이다. 새 spec에 legacy 전용 필드를 혼합하지 않는다. 이 참조의 옛 버전·UND 메뉴 설명은 최신 앱 UI 기능을 제한하는 근거가 아니다.
+새 그래프의 `chartStyle` 16스타일과 `layout:"venn"`은 [차트 실행](../../create-kice-illustration/references/types/chart.md)과 [벤 실행](../../create-kice-illustration/references/subtypes/diagram/venn.md)을 따른다. 일부 옵션만 미지원이면 생성기로 기본 자료 구조를 만든 뒤 미지원 부분만 실제 개체 ID로 수정·보충한다. 보충 개체의 자동 재배치는 보장되지 않으므로 후속 변경 뒤 재검수하며 전체 SVG 대체나 불필요한 detach를 하지 않는다. 아래 Graph의 type/layout 설명은 **chartStyle 없는 legacy 계약**이다. 새 spec에 legacy 전용 필드를 혼합하지 않는다. 이 참조의 옛 버전·UND 메뉴 설명은 최신 앱 UI 기능을 제한하는 근거가 아니다.
 
 ### 등록 프리셋 지도
 
-지도는 실제 UND 프리셋 ID를 조회해 새 문서로 시작한다. UND 목록의 실제 ID와 planner의 `presetId`가 대응되는 등록 양식에 [지도 production 실행](../../create-kice-illustration/references/map-production.md)을 적용한다. 프리셋별 국가·레이어·위경도·재투영·보존 계약은 그 문서에서만 읽는다. `unregistered` 양식은 기존 문서 좌표만 사용한다. 신도구가 없는 공식 설치 앱과 다른 지도 프리셋은 기존 일반 style·clip 편집을 유지한다.
+지도는 실제 UND 프리셋 ID를 조회해 새 문서로 시작한다. UND 목록의 실제 ID와 planner의 `presetId`가 대응되는 등록 양식에 [지도 production 실행](../../create-kice-illustration/references/types/map.md)을 적용한다. 프리셋별 국가·레이어·위경도·재투영·보존 계약은 그 문서에서만 읽는다. `unregistered` 양식은 기존 문서 좌표만 사용한다. 신도구가 없는 공식 설치 앱과 다른 지도 프리셋은 기존 일반 style·clip 편집을 유지한다.
 
 ### Production specifications
 

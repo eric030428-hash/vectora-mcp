@@ -1,0 +1,38 @@
+# 차트 · chart
+
+유한한 관측값의 범주·시점·구성비를 표현한다. 연속 이론·개념 관계와 경계·영역은 숫자가 없어도 graph다. 비정량 특성 축에 개별 대상의 위치를 배치하면 diagram/schematic이다. 아래에서 하나만 읽는다.
+
+| ID | TSV 폴더 ID | 분류표의 한국어 명칭 | 읽을 하위유형 |
+|---|---|---|---|
+| `bar` | `D2-01_Bar` | 막대 | [bar](../subtypes/chart/bar.md) |
+| `stacked-bar` | `D2-02_StackedBar` | 누적 막대·띠 | [stacked-bar](../subtypes/chart/stacked-bar.md) |
+| `pie` | `D2-03_Pie` | 원·도넛 | [pie](../subtypes/chart/pie.md) |
+| `line` | `D2-04_Line` | 선 | [line](../subtypes/chart/line.md) |
+| `scatter` | `D2-05_Scatter` | 산점·버블 | [scatter](../subtypes/chart/scatter.md) |
+| `dot` | `D2-06_Dot` | 점 | [dot](../subtypes/chart/dot.md) |
+| `radar` | `D2-07_Radar` | 방사형 | [radar](../subtypes/chart/radar.md) |
+| `others` | `D2-08_Others` | 기타 차트 | [others](../subtypes/chart/others.md) |
+
+## 차트 공통 데이터·보조선
+
+- 항목·계열·시점·단위·결측과 척도를 확정한다. 결측은 0이 아니고 실제 x간격은 유지한다. 같은 좌표는 겹친 채 두고 표식·라벨만 구별한다. 계열과 채움·무늬·선·표식 대응을 전체에서 유지한다.
+- 수치 Y축의 선·산점·세로 막대/누적 막대는 주요 눈금의 가로 보조 파선을 기본으로 둔다. 값 라벨로 대신하지 않는다. 단일/소수 항목이 바닥선+값으로 충분하거나 사용자가 생략을 지정하면 생략할 수 있다. 가로 막대는 값 축에 수직인 세로 보조선이다.
+- 작은 패널은 주요 높이 약 3–5개부터 정한다. 보조선은 자료 영역 끝까지만, 자료·문자 뒤에 두고 축/영점/테두리와 중복하지 않는다. 패널 여백·범례·생략 구간으로 연장하지 않는다. X 판독에 필요한 세로선만 추가하며 점→축 인출선과 전면 격자를 구별한다. 원/도넛에는 격자가 없다.
+- 이중 축은 필요할 때만 각각 단위·범위·계열 대응을 명시해 독립 계산한다. 시각적으로 맞추려고 척도를 바꾸지 않는다. 점 라벨은 관측값, 축 눈금은 척도다. 기간 화살표·괄호 양끝은 실제 시점에 맞추고 떨어진 띠에는 짧은 보조선을 둔다. 공통 시간 단위는 마지막 시점 문자열과 분리한다.
+
+## graph 생성기의 compact spec
+
+`kind:"graph",chartStyle,type,dataFidelity:"exact"|"approximate",categories,series`. 새 chartStyle에는 relative가 없다. categories는 비어 있지 않은 1–200개 문자열, series는 1–8개이며 각 `{id,label,values}`는 안정적 고유 ID(영문·숫자·`._:-`, 1–100자)와 같은 범주 수의 유한수/null 배열을 가진다. points 계열도 values가 필요하며 미지 값은 null이다. points 전체 최대 5,000개.
+
+- 폭 `widthMm:18–108`, `plotHeightMm:15–200`, `strokePt:0.6|0.7|0.8`. `domain,ticks`는 값 축, `xDomain,xTicks`는 독립축. 막대 값 축은 0을 포함하고 수동 축은 모든 표시값을 포함한다. 기본 선 수치 X에는 `chartOptions:{xNumeric:true},xValues`를 범주 수와 같은 엄격 증가 배열로 준다.
+- series의 `fill`, `pattern:none|dots|hatch`, `line:solid|dash|dash-dot`, `marker:none|circle|triangle|square|open-square|open-circle|open-triangle`를 대응시킨다. 표식 없는 선에 표식 무늬를 넣지 않는다. `grid:true,chartOptions:{gridStyle:"dash"}`; dot 옵션은 규격 1.5/1pt와 다르다. 실제 `valueLabels,xTitle,yTitle,unit`, `chartOptions.labelDecimals`(0–10)을 지정한다.
+- `legend:above|beneath|right|inside|none`; 아래는 beneath이고 bottom/below 별칭은 쓰지 않는다. inside의 `legendAnchor:top-left|top-right|bottom-left|bottom-right`, `legendReverse`, `legendStyle:swatch|label-fill` 중 견본 상자는 swatch 우선이다.
+- `axisBreaks:{x?:{from,to,gapMm},y?:{from,to,gapMm}}`; 가로 막대 값 축 생략도 y이고 x 생략은 미지원이다. 범주 X 생략은 인접 범주 사이만. 생략 안 자료 숨김·누적 결측 warnings를 읽는다. `chartOptions.annotations:[{from,to,label,position:above|below}]` 최대 20개, 범주는 0 기반 인덱스·수치 X는 실제 좌표; 기본 가로 막대에는 적용하지 않는다.
+- 혼합 `chartStyle:"bar-scatter",type:"bar"`는 계열 `renderRole:bar|line|scatter|area,axis:primary|secondary`로 만들 수 있다. 실제 secondary 계열에만 `chartOptions.secondaryDomain,secondaryTicks,secondaryTitle`을 준다. 전용 옵션을 다른 스타일에 섞지 않는다.
+- chartStyle을 생략하는 legacy는 별도 계약이다. `layout,panels,x,yDomain,labelOffsets`를 새 spec에 섞지 않는다. legacy는 새 그래프 UI 편집 지원을 약속하지 않는다. live 도구 spec이 open record여도 허용 옵션을 추측하지 않는다.
+
+## 선택 Node 경로·최종 대조
+
+production을 우선한다. 사용할 수 없거나 해당 구조가 미지원이면 `node scripts/build_graph.mjs --spec <입력.json> --output <그래프.svg> [--font <UND-Regular.ttf>]`의 bar/pie/line 경로를 쓸 수 있다. 실제 로컬 폰트와 fontkit 필요; 기본 덮어쓰기 금지. 폭 40–108, 높이 15–200, dataFidelity exact/approximate/relative(원에는 relative 불가), legend none/right/center(원 2개), domain/ticks/grid/unit/panelGapMm/source 지원. 최소 입력은 `type:bar|pie|line`, `dataFidelity`, `series:[{label,fill?,pattern?,line?,marker?,values?}]`, `widthMm`, `plotHeightMm`다. bar horizontal은 `layout:"horizontal",categories,series.values,domain:[0,max]`; bar panels/mirror는 `layout,panels:[{label,values}]`(계열 순서), mirror는 양수 2패널·범례 없음. pie는 `panels:[{label,values,outside?}]`(각 합100), `labelMode:category-percent|percent`; line은 `x`, 계열 values(null 결측), 증가 `xValues?`, `xAxis:zero|bottom`, `xLabelsAt:axis|bottom`, `labelMode:end|legend`, `valueLabels?`다. 이 CLI 입력에 production의 chartStyle/전용 옵션을 섞지 않는다. 예시 JSON을 복사하지 않는다. report의 geometry·textBounds·checks·substitutions/vectorGlyphs는 제한된 근거이고 실제 가져온 렌더·물리 크기·편집성을 확인한다. 필요한 눈금/보조선이 미지원이면 후속 편집으로 추가한다. labelOffsets는 예외적으로 문서 px다.
+
+자료·영점·범위·결측·각도·계열 대응과 외곽·무늬·라벨을 따로 대조한다. 누적 경계·크기 변환·두 축은 수치로 검산한다. 정확 입력/추정/상대표현 상태를 그림 밖에 기록한다.

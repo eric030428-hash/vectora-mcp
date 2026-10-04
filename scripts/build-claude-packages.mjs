@@ -76,39 +76,22 @@ function adaptUseVectora(skillRoot) {
 }
 
 function adaptCreateKice(skillRoot) {
+  // Client restrictions belong in the first/common document, never a fourth reference.
   const skillPath = path.join(skillRoot, 'SKILL.md');
-  updateFile(skillPath, (value) => {
-    value = replaceExactlyOnce(
-      value,
-      'description: "사용자의 설명으로 Vectora용 편집 가능한 평가원 스타일 일러스트를 제작·수정한다. 인물·삽화 원화와 벡터 조판을 함께 사용한다. 텍스트 배경, 그래프·산점도, 모식도·표·연표, 대화·발표, 얼굴·흉상, 삽화, 양식 기반 지도 요청에 사용한다. 공통 원칙과 필요한 유형의 원칙만 읽고 새로 구성한다. 문항 출제·정답 풀이는 범위 밖이다."',
-      'description: "Vectora에서 평가원 스타일 일러스트를 만들고 수정한다. 텍스트·그래프·산점도·모식도·표·연표·대화·인물·삽화·양식 기반 지도 제작에 쓰며 공통 원칙과 해당 유형 지침을 적용한다."',
-      'create-kice-illustration/SKILL.md frontmatter',
-    );
-    const anchor = '문자·말풍선·그래프·모식도·레이아웃은 편집 가능한 벡터로 분리한다. 전체가 벡터여야 한다는 요청이나 그림 내부 경로 편집이 필요한 경우에만 원화를 벡터화한다.\n';
-    const addition = `${anchor}\nClaude에서 작업하기 전에 현재 노출된 MCP 도구 목록에서 Vectora 연결을 확인하고 실제 도구 이름과 입력 스키마를 따른다. Vectora MCP가 보이지 않는 Claude 웹/클라우드 세션에서는 이 지침으로 설계 설명이나 비최종 초안만 준비할 수 있다. Claude Desktop 스킬의 코드 실행 첨부 경로는 로컬 앱·글꼴 경로와 별개일 수 있으므로 로컬 파일 접근을 가정하지 않는다. 노출된 \`vectora_fonts\`와 \`vectora_check_font\`·\`vectora_measure_text\`, 실제 스키마에 맞는 \`vectora_apply\`·\`vectora_import_svg\`를 우선 사용하고, SVG 문자열/data URL 입력은 가져오기 스키마가 허용할 때만 전달한다. 첨부 경로를 로컬 저장 경로로 쓰지 말고 사용자가 지정한 실제 경로에 저장한다. Claude Code 로컬 플러그인에서는 번들된 보조 스크립트를 실행할 수 있다. MCP가 연결되지 않은 경우에는 로컬 Vectora 편집, 저장, 재열기를 수행했다고 주장하지 말고 Claude Desktop 또는 로컬 Claude Code에서 연결한 뒤 완료한다. 평가원 시각·조판 규칙은 아래 원칙 그대로 적용한다.\n`;
-    const imageCapability = '\n이 패키지는 Vectora 편집 엔진과 제작 지침을 제공하며 이미지 생성 모델을 포함하지 않는다. 인물·삽화의 새 원화가 필요하면 현재 Claude 세션에서 실제 사용할 수 있는 이미지 생성 도구를 먼저 확인한다. 해당 도구가 없으면 생성용 지시와 벡터 조판을 준비하고 사용자에게 필요한 원화를 요청한다. 다른 화풍의 임시 인물이나 과거 예시를 넣어 완성했다고 보고하지 않는다.\n';
-    return replaceExactlyOnce(value, anchor, addition + imageCapability, 'create-kice-illustration/SKILL.md');
-  });
+  updateFile(skillPath, (value) => replaceExactlyOnce(
+    value,
+    '<!-- VECTORA_CLIENT_BOUNDARY -->',
+    `<!-- VECTORA_CLIENT_BOUNDARY -->
 
-  const contractPath = path.join(skillRoot, 'references', 'vectora-contract.md');
-  updateFile(contractPath, (value) => {
-    value = replaceExactlyOnce(
-      value,
-      '실제 제작할 때만 읽는다. 스타일 원칙은 공통/유형 문서에 있으므로 여기서 다시 정의하지 않는다. 저장소에는 stdio MCP가 구현되어 있지만 현재 세션에 연결되었는지는 도구 조회로 확인한다. 새 기능 설계안이나 도판 라이브러리는 생성 지침이 아니다.',
-      '실제 제작할 때만 읽는다. 스타일 원칙은 공통/유형 문서에 있으므로 여기서 다시 정의하지 않는다. 현재 세션의 MCP 도구 목록에서 Vectora stdio MCP가 연결되었는지 확인한다. Claude 웹/클라우드 세션에 로컬 Vectora가 자동 연결된다고 가정하지 않는다. 새 기능 설계안이나 도판 라이브러리는 생성 지침이 아니다.',
-      'create-kice-illustration/references/vectora-contract.md',
-    );
-    value = replaceExactlyOnce(
-      value,
-      '- 도구가 연결되지 않았으면 벡터 SVG를 직접 만들고 사용할 수 있는 실제 Editor 경로로 검사한다. 파일 생성만 했으면 앱 저장/재열기 검증을 완료했다고 말하지 않는다. 스킬 작업 중 앱 기능 개발이나 외부 모델 연결로 범위를 넓히지 않는다.',
-      '- 도구가 연결되지 않았으면 Claude 웹/클라우드에서는 비최종 설계안만 준비하고 저장·재열기를 완료했다고 말하지 않는다. 로컬 세션에서 실제 Editor를 사용할 수 있을 때만 직접 SVG 경로로 검수한다. 스킬 작업 중 앱 기능 개발이나 외부 모델 연결로 범위를 넓히지 않는다.',
-      'create-kice-illustration/references/vectora-contract.md execution boundary',
-    );
-    value = value.replace(
-      '- `vectora_new_document` 또는 별도 문서의 `vectora_open_document` → `vectora_apply`/`vectora_import_svg` → `vectora_inspect` → `vectora_preview` → `vectora_save`/`vectora_export`를 사용한다. 현재 MCP 문서는 일반 UI 탭과 독립 세션이다.',
-      '- Claude에서 현재 MCP 도구 목록으로 정확한 도구 이름을 확인한 뒤 `vectora_new_document` 또는 `vectora_open_document` → `vectora_apply`/`vectora_import_svg` → `vectora_inspect` → `vectora_preview` → `vectora_save`/`vectora_export`의 해당 호출을 한다. 현재 MCP 문서는 일반 UI 탭과 독립 세션이다.\n- 글꼴 목록은 실제 글꼴 목록 도구인 `vectora_fonts`로 확인하고, `vectora_check_font`가 노출되어 있으면 출력할 전체 문장도 검사한다.\n- 새 문서의 실제 도구 스키마에 `colorMode`가 있을 때만 사용한다. 해당 필드가 있고 사용자가 RGB를 요구하지 않았다면 기본 `cmyk`, RGB 요청이면 `rgb`를 보낸다.\n- 열기/가져오기 도구 스키마에 `fontReplacements`가 있을 때만 `{"원본 글꼴명":"설치 글꼴명"}` 매핑을 전달한다. `MISSING_FONTS` 오류의 목록을 읽고 `vectora_fonts`로 설치 글꼴을 확인한 뒤 명시적으로 선택한 매핑으로 재시도한다. 평가원 제작의 UND폰트v2.1은 사용자 승인 없이 다른 글꼴로 바꾸지 않는다.\n- 새 가로·세로 문자 기본 자간은 `-60`(1/1000 em)이다. 생성 스키마에 `charSpacing`이 있으면 `-60`을 전달하고, 측정 도구가 있으면 같은 자간으로 측정한다.');
-    return value;
-  });
+### Claude 로컬 실행 경계
+
+Claude에서 현재 노출된 MCP 도구 목록으로 Vectora 연결·실제 도구 이름·입력 스키마를 확인한다. 플러그인 접두사가 붙을 수 있다. 로컬 MCP는 Claude Code와 Claude Desktop Cowork 로컬 세션에서 사용하며 일반 웹/클라우드에는 자동 연결되지 않는다. MCP가 없으면 비최종 설계안만 준비하고 로컬 편집·저장·재열기·내보내기를 완료했다고 주장하지 않는다.
+
+Claude 코드 실행 첨부 경로는 로컬 앱·글꼴 경로와 별개일 수 있다. 실제 노출된 vectora_fonts 및 제공되는 vectora_check_font/vectora_measure_text를 사용하고, SVG 문자열/data URL은 가져오기 스키마가 허용할 때만 전달한다. 첨부 경로를 Vectora 저장 경로로 재사용하지 말고 사용자가 지정한 실제 로컬 경로를 사용한다. Claude Code 로컬 플러그인에서는 번들된 보조 스크립트를 사용할 수 있다.
+
+이 패키지는 이미지 생성 모델을 포함하지 않는다. 새 원화는 현재 세션의 실제 이미지 생성/편집 도구가 있을 때만 만들며 없으면 생성 지시와 벡터 조판을 준비하고 필요한 원화를 요청한다. 원본 Photo는 생성 대체하지 않는다. 임시 인물·과거 예시를 넣어 완성으로 보고하지 않는다. 아래 세 단계 화풍·편집·저장 규칙은 그대로 적용한다.`,
+    'create-kice-illustration/SKILL.md client boundary',
+  ));
 }
 
 function stageSkill(name, stagingRoot) {

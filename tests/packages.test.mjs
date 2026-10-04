@@ -39,13 +39,22 @@ test('Claude marketplace installs one self-contained plugin with both skills and
 });
 
 test('Claude adaptations preserve the assessment artwork rules', () => {
-  for (const name of ['common', 'dialogue-illustrations', 'freeform-illustrations', 'graph-illustrations', 'people', 'schematic-illustrations', 'text-illustrations']) {
-    const relative = `references/${name}.md`;
+  const references = listFiles(path.join(PLUGIN_ROOT, 'skills/create-kice-illustration/references'))
+    .filter(file => file.endsWith('.md'));
+  assert.equal(references.filter(file=>file.startsWith('types/')).length, 10);
+  assert.equal(references.filter(file=>file.startsWith('subtypes/')).length, 44);
+  for (const name of references) {
+    const relative = `references/${name}`;
     const expected = readFileSync(path.join(PLUGIN_ROOT, 'skills/create-kice-illustration', relative), 'utf8')
       .replaceAll('node skills/create-kice-illustration/scripts/', 'node scripts/')
       .replaceAll('python3 skills/create-kice-illustration/scripts/', 'python3 scripts/');
     assert.equal(readFileSync(path.join(skill, relative), 'utf8'), expected, name);
   }
+  const root = readFileSync(path.join(skill, 'SKILL.md'), 'utf8');
+  assert.match(root, /Claude 로컬 실행 경계/);
+  assert.match(root, /이미지 생성 모델을 포함하지 않는다/);
+  assert.match(root, /STYLE CONTRACT: Draw a living human character/);
+  assert.match(root, /STYLE CONTRACT: Draw a clean grayscale/);
 });
 
 test('copied Claude helpers parse fonts and trace PNG without source-workspace dependencies', (t) => {

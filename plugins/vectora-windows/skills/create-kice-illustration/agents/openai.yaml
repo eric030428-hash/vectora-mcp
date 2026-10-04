@@ -1,4 +1,4 @@
 interface:
   display_name: "평가원 스타일 일러스트 만들기"
-  short_description: "원화 이미지와 편집 가능한 벡터 조판으로 평가원 스타일 일러스트 제작"
-  default_prompt: "$create-kice-illustration 스킬로 요청한 그림을 분류하고, 공통 원칙과 해당 유형의 원칙만 읽어 새로 구성해줘. 과거 예시를 찾아보지 말고, 지도는 승인된 지리 양식을 편집하며 인물·삽화 원화는 이미지로 배치하고 문자·도형은 편집 가능한 벡터로 제작·검수해줘."
+  short_description: "10유형·44하위유형의 세 단계 지침으로 편집 가능한 그림 제작"
+  default_prompt: "$create-kice-illustration 스킬로 정보 역할을 분류하고 SKILL.md → 해당 유형 → 해당 하위유형의 세 지침으로 새로 제작·검수해줘. 복합형은 각 독립 자료 단위에 이 경로를 적용하고, 원본 사진은 보존하며 새 원화와 편집 가능한 문자·도형을 분리해 같은 이름의 .vectora와 .jpeg로 저장·재열기·확인해줘."

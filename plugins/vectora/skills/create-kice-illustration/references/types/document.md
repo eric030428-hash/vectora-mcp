@@ -1,0 +1,23 @@
+# Document — 문서·매체 텍스트그림
+
+원래 IT2 계열이다. 신문·문서·웹·방송 외피가 기사·자막·정보 텍스트를 담으며 발화 말풍선은 없다. 발화 말풍선은 Dialogue, 수업 보드·슬라이드·학습지는 Activity다.
+
+| 매체 | 읽을 하위 문서 |
+|---|---|
+| 종이 신문·인터넷 신문 | [newspaper](../subtypes/document/newspaper.md) |
+| 웹·앱·휴대폰·발화 없는 방송 자막 | [screen](../subtypes/document/screen.md) |
+| 종이 문서·책·대본·자료카드·인용문 카드·정보카드·단순 정보상자 | [paper](../subtypes/document/paper.md) |
+| 말린 종이/두루마리 | [scroll](../subtypes/document/scroll.md) |
+
+인터넷 신문은 기사·제호 구조가 중심이므로 newspaper 한 문서로 처리한다. 글을 담는 외피의 연속 흰 공간·장식 분리·팔레트·여백·반복 카드 배치는 SKILL.md의 조건을 적용한다.
+
+제목·본문·작성자·삽화 자리를 구분한다. 글 옆 삽화는 독립 열 또는 좁은 옆 흐름과 넓은 아래 흐름으로 배치한다. 임시 입력선·가짜 기사·메뉴·주소·알림을 지어내지 않는다. 여백과 외피 장식을 제외한 실제 연속 내용 직사각형 치수, 마지막 줄 침범·작성자 대응·매체 식별성을 확인한다.
+
+## 선택 배경 도구—지원 매체만
+
+신문·브라우저·두루마리 배경을 자동 구성할 때만 사용한다. 미지원 매체와 paper는 직접 구성하며 도구 사용을 강제하지 않는다. variant와 고유 슬롯/설정은 선택한 하위 문서를 따른다.
+
+스킬 루트에서 `node scripts/build_text_frame.mjs --spec <입력.json> --output <배경.svg>` 또는 `buildTextFrame(spec)`을 사용한다. 기존 출력 교체는 명시적 `--force`만 허용한다.
+
+`widthMm` 기본 108/범위 30–108, 필수 `contentHeightMm`은 실제 측정/지정 본문 높이이며 `paddingMm`은 그 밖에 더한다. 반환 `{svg,layout}`의 `layout.slots`는 문서 px 좌표이며 실제 높이에 맞는 `textAlign`/`verticalAlign`을 적용한다. `lineCount`/`contentWidthMm`은 미지원이므로 입력하지 않고 실제 content 슬롯의 연속 너비/높이를 확인한다. 색·아이콘은 반환 SVG/개체를 편집한다.
+도구는 본문을 작성하거나 줄 수를 측정하지 않는다. 지정 너비는 외곽/여백 계산과 실제 슬롯으로 확인하며, 여러 슬롯 면적의 합이 아닌 하나의 연속 content 직사각형이 지정 크기를 수용해야 한다.
