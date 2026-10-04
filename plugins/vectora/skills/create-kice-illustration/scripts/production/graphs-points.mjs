@@ -24,7 +24,7 @@ export function buildPointsGraph(spec,{fontAdapter,widthMm,plotMm,strokePt,palet
   const box=(value,x,y,anchor='middle')=>{const lines=normalize(value).split('\n'),w=measure(value),h=lines.length*LH;return{x:x-(anchor==='middle'?w/2:anchor==='end'?w:0),y:y-h/2,w,h};};
   const text=(name,value,x,y,anchor='middle')=>{
     const normalized=normalize(value),b=box(normalized,x,y,anchor);boxes.push({...b,name,text:normalized});
-    normalized.split('\n').forEach((line,index)=>parts.push(`<text ${attrs({'data-name':name,x,y:b.y+index*LH+F*.9,'text-anchor':anchor,'font-family':'UND폰트v2.1','font-weight':400,'font-style':'normal','font-size':F,'letter-spacing':track,fill:'#000000'})}>${esc(line)}</text>`));
+    normalized.split('\n').forEach((line,index)=>parts.push(`<text ${attrs({'data-name':name,x,y:b.y+index*LH+F*.9,'text-anchor':anchor,'font-family':'UND v3.0','font-weight':400,'font-style':'normal','font-size':F,'letter-spacing':track,fill:'#000000'})}>${esc(line)}</text>`));
   };
   const line=(name,x1,y1,x2,y2,stroke=ruleSw,dash)=>parts.push(`<line ${attrs({'data-name':name,x1,y1,x2,y2,stroke:'#000000','stroke-width':stroke,'stroke-dasharray':dash,fill:'none'})}/>`);
   const marker=(name,x,y,series)=>{

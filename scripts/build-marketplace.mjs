@@ -19,9 +19,11 @@ const CLAUDE_PLUGIN = { id: 'vectora' };
 function codexMarketplaceText() {
   return `${JSON.stringify({
     name: 'vectora',
+    description: '새 글꼴 기능을 사용하려면 Vectora 앱 1.1.11 이상을 먼저 설치하거나 업데이트하세요.',
     interface: { displayName: 'Vectora' },
     plugins: CODEX_PLUGINS.map(({ id }) => ({
       name: id,
+      description: '새 글꼴 기능을 사용하기 전에 Vectora 앱 1.1.11 이상을 먼저 설치하거나 업데이트하세요.',
       source: { source: 'local', path: `./plugins/${id}` },
       policy: { installation: 'AVAILABLE', authentication: 'ON_INSTALL' },
       category: 'Productivity',
@@ -33,7 +35,7 @@ function claudeMarketplaceText() {
   return `${JSON.stringify({
     name: 'vectora',
     owner: { name: 'Vectora' },
-    description: 'Vectora MCP and Korean assessment illustration skills for Claude.',
+    description: 'Vectora MCP and Korean assessment illustration skills for Claude. Install or update the Vectora app to 1.1.11 or later before using the new font features.',
     plugins: [{ name: 'vectora', source: './plugins/vectora' }],
   }, null, 2)}\n`;
 }

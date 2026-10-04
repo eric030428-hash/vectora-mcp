@@ -4,7 +4,7 @@ v1.0.4부터 Claude용 MCP와 두 스킬은 **GitHub 마켓플레이스의 Vecto
 
 ## 데스크톱 Claude / Cowork
 
-1. 컴퓨터에 Vectora 앱을 별도로 설치합니다. 기본 MCP 기능에는 1.0.0 이상, 등록된 지도 프리셋의 지리 편집·투영 기능에는 1.1.10 이상이 필요하며 이전 앱의 새 기능 지원은 보장하지 않습니다. 평가원 제작에는 UND폰트v2.1도 필요합니다.
+1. Vectora 앱을 별도로 설치합니다. 새 글꼴 기능을 사용하려면 앱 1.1.11 이상을 먼저 설치하거나 업데이트하세요. 기본 MCP 기능에는 1.0.0 이상, 등록된 지도 프리셋의 지리 편집·투영 기능에는 1.1.10 이상이 필요하며, 평가원 제작에는 UND폰트v3.0도 필요합니다.
 2. 데스크톱 앱의 Cowork 탭에서 **Customize → Plugins → Add → Add marketplace**를 엽니다.
 3. **Add from a repository**에 `eric030428-hash/vectora-mcp`를 입력합니다.
 4. 추가된 Vectora 마켓플레이스에서 **Vectora**를 설치합니다.

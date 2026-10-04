@@ -133,8 +133,8 @@ function addProductionSources(skillRoot) {
     const oldFontSearch = `export function findFont(explicit){
   if(explicit)return explicit;
   const dir=path.join(os.homedir(),'Library/Fonts');
-  const file=fs.existsSync(dir)&&fs.readdirSync(dir).find(n=>n.includes('UND')&&n.includes('Regular')&&n.endsWith('.ttf'));
-  check(file,'Installed UND Regular font not found. Supply --font; no fallback is used.');
+  const file=fs.existsSync(dir)&&fs.readdirSync(dir).find(n=>/^UND(?:-v3\\.0|v30)-Regular\\.otf$/i.test(n));
+  check(file,'Installed UND v3.0 Regular font not found. Supply --font; no fallback is used.');
   return path.join(dir,file);
 }`;
     const newFontSearch = `export function findFont(explicit){
@@ -145,10 +145,10 @@ function addProductionSources(skillRoot) {
     path.join(process.env.WINDIR||'C:\\\\Windows','Fonts'),
   ];
   for(const dir of directories){
-    const file=fs.existsSync(dir)&&fs.readdirSync(dir).find(n=>n.includes('UND')&&n.includes('Regular')&&n.endsWith('.ttf'));
+    const file=fs.existsSync(dir)&&fs.readdirSync(dir).find(n=>/^UND(?:-v3\\.0|v30)-Regular\\.otf$/i.test(n));
     if(file)return path.join(dir,file);
   }
-  throw new Error('Installed UND Regular font not found. Supply --font; no fallback is used.');
+  throw new Error('Installed UND v3.0 Regular OTF font not found. Supply --font; no fallback is used.');
 }`;
     return replaceExactlyOnce(value, oldFontSearch, newFontSearch, 'build_graph.mjs font lookup');
   });
@@ -208,14 +208,14 @@ function adaptAuditHelper(skillRoot) {
     );
     value = replaceExactlyOnce(
       value,
-      "import argparse,base64,binascii,json,sys,unicodedata\n",
-      "import argparse,base64,binascii,json,os,sys,unicodedata\n",
+      "import argparse\n",
+      "import argparse\nimport os\n",
       'audit_svg.py portable font search import',
     );
     return replaceExactlyOnce(
       value,
-      " font=a.font or next((x for x in (Path.home()/'Library/Fonts').glob('*Regular.ttf') if 'UND' in x.name),None)\n",
-      " font_dirs=[Path.home()/'Library'/'Fonts',Path.home()/'AppData'/'Local'/'Microsoft'/'Windows'/'Fonts',Path(os.environ.get('WINDIR','C:/Windows'))/'Fonts',Path('/usr/share/fonts'),Path('/usr/local/share/fonts')]\n font=a.font or next((x for base in font_dirs if base.exists() for x in base.rglob('*Regular.ttf') if 'UND' in x.name),None)\n",
+      '    anchors = [Path.home() / "Library" / "Fonts"]\n',
+      `    anchors = [\n        Path.home() / "Library" / "Fonts",\n        Path.home() / "AppData" / "Local" / "Microsoft" / "Windows" / "Fonts",\n        Path(os.environ.get("WINDIR", "C:/Windows")) / "Fonts",\n        Path("/usr/share/fonts"),\n        Path("/usr/local/share/fonts"),\n    ]\n`,
       'audit_svg.py cross-platform installed font lookup',
     );
   });
@@ -257,7 +257,7 @@ export function buildClaudePlugin(targetRoot) {
     writeFileSync(path.join(stagedRoot, '.claude-plugin', 'plugin.json'), `${JSON.stringify({
       name: 'vectora',
       version: PLUGIN_VERSION,
-      description: 'Local Vectora MCP and two assessment-style illustration skills for Claude.',
+      description: 'Local Vectora MCP and two assessment-style illustration skills for Claude. Install or update the Vectora app to 1.1.11 or later before using the new font features.',
       author: { name: 'Vectora' },
     }, null, 2)}\n`);
     writeFileSync(path.join(stagedRoot, '.mcp.json'), `${JSON.stringify({

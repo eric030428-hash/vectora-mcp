@@ -35,6 +35,56 @@ export function createMcpConfig(platform) {
   throw new Error(`Unsupported Vectora MCP platform: ${platform}`);
 }
 
+export function patchWindowsGraphFontLookup(targetRoot) {
+  const helperPath = path.join(targetRoot, 'skills', 'create-kice-illustration', 'scripts', 'build_graph.mjs');
+  const value = readFileSync(helperPath, 'utf8');
+  const oldFontSearch = `export function findFont(explicit){
+  if(explicit)return explicit;
+  const dir=path.join(os.homedir(),'Library/Fonts');
+  const file=fs.existsSync(dir)&&fs.readdirSync(dir).find(n=>/^UND(?:-v3\\.0|v30)-Regular\\.otf$/i.test(n));
+  check(file,'Installed UND v3.0 Regular font not found. Supply --font; no fallback is used.');
+  return path.join(dir,file);
+}`;
+  const newFontSearch = `export function findFont(explicit){
+  if(explicit)return explicit;
+  const directories=[
+    process.env.LOCALAPPDATA&&path.join(process.env.LOCALAPPDATA,'Microsoft','Windows','Fonts'),
+    process.env.WINDIR&&path.join(process.env.WINDIR,'Fonts'),
+  ].filter(Boolean);
+  for(const dir of directories){
+    const file=fs.existsSync(dir)&&fs.readdirSync(dir).find(n=>/^UND(?:-v3\\.0|v30)-Regular\\.otf$/i.test(n));
+    if(file)return path.join(dir,file);
+  }
+  check(false,'Installed UND v3.0 Regular OTF font not found in %LOCALAPPDATA%/Microsoft/Windows/Fonts or %WINDIR%/Fonts. Supply --font; no fallback is used.');
+}`;
+  if (value.split(oldFontSearch).length !== 2) {
+    throw new Error('Expected one canonical UND v3 font lookup to adapt for the Windows Codex package.');
+  }
+  writeFileSync(helperPath, value.replace(oldFontSearch, newFontSearch), 'utf8');
+}
+
+export function patchWindowsAuditFontLookup(targetRoot) {
+  const helperPath = path.join(targetRoot, 'skills', 'create-kice-illustration', 'scripts', 'audit_svg.py');
+  let value = readFileSync(helperPath, 'utf8');
+  const importLine = 'import json\n';
+  const oldAnchors = '    anchors = [Path.home() / "Library" / "Fonts"]\n';
+  const newAnchors = `    anchors = [
+        Path.home() / "Library" / "Fonts",
+        Path.home() / "AppData" / "Local" / "Microsoft" / "Windows" / "Fonts",
+        Path(os.environ.get("WINDIR", "C:/Windows")) / "Fonts",
+    ]
+`;
+  if (value.split(importLine).length !== 2 || value.includes('import os\n')) {
+    throw new Error('Expected one canonical audit helper import block before Windows adaptation.');
+  }
+  if (value.split(oldAnchors).length !== 2) {
+    throw new Error('Expected one canonical audit font anchor before Windows adaptation.');
+  }
+  value = value.replace(importLine, `${importLine}import os\n`)
+    .replace(oldAnchors, newAnchors);
+  writeFileSync(helperPath, value, 'utf8');
+}
+
 export function copyCodexPlugin(targetRoot, platform, { id, displayName }) {
   mkdirSync(targetRoot, { recursive: true });
   const extension = platform === 'macos' ? 'sh' : 'ps1';
@@ -65,6 +115,11 @@ export function copyCodexPlugin(targetRoot, platform, { id, displayName }) {
           && !base.endsWith('.pyc');
       },
     });
+  }
+
+  if (platform === 'windows') {
+    patchWindowsGraphFontLookup(targetRoot);
+    patchWindowsAuditFontLookup(targetRoot);
   }
 
   const manifestPath = path.join(targetRoot, '.codex-plugin', 'plugin.json');

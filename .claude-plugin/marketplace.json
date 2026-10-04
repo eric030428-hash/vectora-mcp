@@ -3,7 +3,7 @@
   "owner": {
     "name": "Vectora"
   },
-  "description": "Vectora MCP and Korean assessment illustration skills for Claude.",
+  "description": "Vectora MCP and Korean assessment illustration skills for Claude. Install or update the Vectora app to 1.1.11 or later before using the new font features.",
   "plugins": [
     {
       "name": "vectora",

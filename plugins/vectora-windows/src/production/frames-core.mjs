@@ -163,7 +163,7 @@ export function buildTextFrame(spec) {
     const a=slots[i];
     if(Math.min(a.x+a.width,b.x+b.width)-Math.max(a.x,b.x)>.001 && Math.min(a.y+a.height,b.y+b.height)-Math.max(a.y,b.y)>.001)throw new Error(`Overlapping slots: ${a.name}, ${b.name}`);
   }
-  const layout={schema:'vectora.text-frame/v1',variant,widthMm,heightMm:round(H*25.4/96),widthPx:round(W),heightPx:round(H),slots,illustrationSlots:reserved,typography:{family:'UND폰트v2.1',style:'Regular',fontPt:8,fontPx:8*96/72,charSpacing:-60},status:'frame-only; text, requested illustrations, and charts still need composition and verification'};
+  const layout={schema:'vectora.text-frame/v1',variant,widthMm,heightMm:round(H*25.4/96),widthPx:round(W),heightPx:round(H),slots,illustrationSlots:reserved,typography:{family:'UND v3.0',style:'Regular',fontPt:8,fontPx:8*96/72,charSpacing:-60},status:'frame-only; text, requested illustrations, and charts still need composition and verification'};
   const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="${widthMm}mm" height="${layout.heightMm}mm" viewBox="0 0 ${round(W)} ${round(H)}"><g id="vframe.root.1" data-name="text-illustration-frame">${parts.join('')}</g></svg>`;
   return {svg,layout};
 }
