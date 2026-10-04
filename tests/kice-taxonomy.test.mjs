@@ -87,14 +87,14 @@ test('global boundary, physical rules and both conditional style templates stay 
   const root = read('SKILL.md');
   assert.equal(root.split('<!-- VECTORA_CLIENT_BOUNDARY -->').length, 2);
   assert.equal(root.split('\n').filter(x=>x.trim()).length <= 230, true);
-  for (const fragment of ['108mm', 'UNDv21-Regular', 'charSpacing:-60', 'frameBounds.heightMm', '1.5–2.5mm', '1.5–3mm', '2–3.5mm', '1–2mm', '0.8–1.5mm', 'STYLE CONTRACT: Draw a living human character', 'STYLE CONTRACT: Draw a clean grayscale', 'exact', 'approximate', 'scale:4', 'transparent:false']) assert.ok(root.includes(fragment), fragment);
+  for (const fragment of ['108mm', 'UNDv30-Regular', 'charSpacing:-60', 'frameBounds.heightMm', '1.5–2.5mm', '1.5–3mm', '2–3.5mm', '1–2mm', '0.8–1.5mm', 'STYLE CONTRACT: Draw a living human character', 'STYLE CONTRACT: Draw a clean grayscale', 'exact', 'approximate', 'scale:4', 'transparent:false']) assert.ok(root.includes(fragment), fragment);
   assert.match(root, /Photo[^\n]*原|Photo[^\n]*원본|원본 photo/i);
 });
 
 test('graph helper help is self-contained and no longer points at a removed reference', () => {
   const help = execFileSync(process.execPath, [path.join(skill, 'scripts/build_graph.mjs'), '--help'], {encoding:'utf8'});
   assert.doesNotMatch(help, oldRefs);
-  for (const fragment of ['--spec', '--output', 'dataFidelity', 'series', 'domain', 'xValues', 'null gaps', '.layout.json', 'UNDv21-Regular']) assert.ok(help.includes(fragment), fragment);
+  for (const fragment of ['--spec', '--output', 'dataFidelity', 'series', 'domain', 'xValues', 'null gaps', '.layout.json', 'UNDv30-Regular']) assert.ok(help.includes(fragment), fragment);
 });
 
 test('Claude adapter inserts local MCP and missing-imagegen restrictions only in root', () => {

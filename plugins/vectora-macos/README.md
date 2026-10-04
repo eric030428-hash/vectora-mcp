@@ -1,4 +1,4 @@
-# Vectora MCP + 평가원 스타일 스킬 1.0.10
+# Vectora MCP + 평가원 스타일 스킬 1.0.11
 
 Codex와 Claude에서 **GitHub 마켓플레이스로 설치**합니다. Vectora 편집 도구와 `use-vectora`, `create-kice-illustration` 두 스킬이 함께 설치됩니다.
 

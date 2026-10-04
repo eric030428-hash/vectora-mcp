@@ -1,10 +1,17 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { execFileSync, spawnSync } from 'node:child_process';
-import { lstatSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { lstatSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
+import os from 'node:os';
 import path from 'node:path';
 import test from 'node:test';
-import { createMcpConfig, PLUGIN_ROOT, PLUGIN_VERSION } from '../scripts/build-packages.mjs';
+import {
+  createMcpConfig,
+  patchWindowsAuditFontLookup,
+  patchWindowsGraphFontLookup,
+  PLUGIN_ROOT,
+  PLUGIN_VERSION,
+} from '../scripts/build-packages.mjs';
 
 const marketplacePath = path.join(PLUGIN_ROOT, '.agents', 'plugins', 'marketplace.json');
 const marketplace = JSON.parse(readFileSync(marketplacePath, 'utf8'));
@@ -14,6 +21,10 @@ const generated = [
   { id: 'vectora-windows', platform: 'windows', displayName: 'Vectora (Windows)', script: 'ps1' },
 ];
 const excludedSegments = new Set(['.git', 'node_modules', 'release', 'tests', '__pycache__']);
+const windowsAdaptedHelpers = [
+  'create-kice-illustration/scripts/audit_svg.py',
+  'create-kice-illustration/scripts/build_graph.mjs',
+];
 
 function listFiles(directory, prefix = '') {
   const result = [];
@@ -44,6 +55,25 @@ function treeHash(root) {
   return hash.digest('hex');
 }
 
+function expectedWindowsSkillHelpers() {
+  const temporary = mkdtempSync(path.join(os.tmpdir(), 'vectora-marketplace-windows-adapter-'));
+  try {
+    for (const helper of windowsAdaptedHelpers) {
+      const expectedPath = path.join(temporary, 'skills', helper);
+      mkdirSync(path.dirname(expectedPath), { recursive: true });
+      writeFileSync(expectedPath, readFileSync(path.join(PLUGIN_ROOT, 'skills', helper)));
+    }
+    patchWindowsAuditFontLookup(temporary);
+    patchWindowsGraphFontLookup(temporary);
+    return new Map(windowsAdaptedHelpers.map(helper => [
+      helper,
+      readFileSync(path.join(temporary, 'skills', helper)),
+    ]));
+  } finally {
+    rmSync(temporary, { recursive: true, force: true });
+  }
+}
+
 test('marketplace catalog uses the two local plugin IDs and requested install policy', () => {
   assert.equal(marketplace.name, 'vectora');
   assert.equal(marketplace.interface.displayName, 'Vectora');
@@ -69,6 +99,18 @@ test('platform plugin manifests match their folders, display names, and source v
   }
 });
 
+test('Windows packaged helpers exactly match the exported font lookup adaptations', () => {
+  const expectedWindows = expectedWindowsSkillHelpers();
+  for (const helper of windowsAdaptedHelpers) {
+    const canonical = readFileSync(path.join(PLUGIN_ROOT, 'skills', helper));
+    const macos = readFileSync(path.join(PLUGIN_ROOT, 'plugins/vectora-macos/skills', helper));
+    const windows = readFileSync(path.join(PLUGIN_ROOT, 'plugins/vectora-windows/skills', helper));
+    assert.deepEqual(macos, canonical, `vectora-macos: skills/${helper}`);
+    assert.notDeepEqual(expectedWindows.get(helper), canonical, `${helper}: Windows adapter must change the font lookup`);
+    assert.deepEqual(windows, expectedWindows.get(helper), `vectora-windows: skills/${helper}`);
+  }
+});
+
 test('each plugin embeds its matching native launcher config without adding a Node launcher', () => {
   for (const { id, platform, script } of generated) {
     const target = path.join(PLUGIN_ROOT, 'plugins', id);
@@ -90,6 +132,7 @@ test('each plugin embeds its matching native launcher config without adding a No
 test('generated trees contain the complete canonical skills and runtime allowlist only', () => {
   const sourceSkillsRoot = path.join(PLUGIN_ROOT, 'skills');
   const expectedSkills = listFiles(sourceSkillsRoot).filter(packagable).map((file) => `skills/${file}`);
+  const windowsHelpers = expectedWindowsSkillHelpers();
   const productionFiles = [
     'src/production/frames-core.mjs',
     'src/production/graphs-core.mjs',
@@ -107,9 +150,11 @@ test('generated trees contain the complete canonical skills and runtime allowlis
     ].sort();
     assert.deepEqual(actual, expected, id);
     for (const file of listFiles(sourceSkillsRoot).filter(packagable)) {
+      const canonical = readFileSync(path.join(sourceSkillsRoot, file));
+      const expectedSkill = id === 'vectora-windows' ? windowsHelpers.get(file) ?? canonical : canonical;
       assert.deepEqual(
         readFileSync(path.join(target, 'skills', file)),
-        readFileSync(path.join(sourceSkillsRoot, file)),
+        expectedSkill,
         `${id}: skills/${file}`,
       );
     }
