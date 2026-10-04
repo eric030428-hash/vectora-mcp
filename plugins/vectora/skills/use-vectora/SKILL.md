@@ -57,6 +57,12 @@ Claude Desktop 스킬의 코드 실행 첨부 경로는 별도 작업공간일 �
 
 실제 스키마를 확인한 `vectora_apply.commands`의 `{type:"select",ids:[실제 납품 ID들]}`→`{type:"artboard",action:"fitSelection",id:실제 대지 ID}`를 사용한다. 임시·숨김·측정용·가짜 사각형을 제외하고 납품 전체를 선택한다. `selectAll`은 보이는 잠금 해제 개체만 대상이므로 누락·타 대지 혼입을 확인한다. 스트로크·화살촉·꼬리·이름·그림자까지 포함하며 투명 패딩/텍스트 프레임과 보이는 외곽은 구별한다. fitSelection은 텍스트 프레임 사각형까지 포함하므로 실행 성공만으로 실외곽·외부 여백 0을 보증하지 않는다. 실제 text ink/스트로크·화살촉 외곽을 프레임/그림자와 대조하고, 과잉 여백 또는 외곽 누락이 있으면 확인한 외곽으로 `artboard/action:"update",values:{x,y,width,height}` 후 이미지 검증한다. fit 후 연결 컴포넌트 재조판·외곽 변화를 재확인한다. 실제 내용과 대지의 mm 치수·지정 폭과 차이·반올림/부동소수 허용차를 기록하며 맞춤 실패는 미완료로 남긴다.
 
+## 래스터 내보내기 색상
+
+- vectora_export는 PNG/JPEG에서만 rasterColorMode: "grayscale" | "color"를 받으며 생략 시 회색조다. scale:4 기본을 유지한다. 사용자가 컬러를 요청하면 color를 명시한다. SVG/PDF/WebP 내보내기에 이 필드를 보내면 거부되므로 생략한다. vectora_export_package의 옵션은 PNG 출력에만 적용된다.
+- 옵션은 내보내기 결과에만 적용하고 편집 원본의 색을 바꾸지 않는다. vectora_preview 및 SVG/PDF/WebP 미리보기는 원래 색을 보존한다. PDF의 colorMode: "rgb" | "cmyk"는 별도 계약이다.
+- 요청 전에 현재 tools/list 입력 스키마를 확인한다. rasterColorMode가 없으면 그 입력을 보내거나 새 기능을 주장하지 않는다. 앱 1.2.0 이상으로 업데이트하고 앱/MCP를 다시 연결한다. 회색 변환을 Computer Use나 다른 변환기로 대신하지 않는다.
+
 ## 글꼴과 가져오기
 
 - 실제 글꼴 목록 도구 vectora_fonts로 UND v3.0 및 UND v3.0 Body의 설치 face를 찾고, vectora_check_font가 현재 도구 목록에 있으면 실제 출력 문자열과 사용할 family/style/weight를 확인한다. supportsText와 missingGlyphs를 읽는다. 이름 검색만으로 글리프 존재를 보증하지 않는다.

@@ -74,6 +74,10 @@ Follow [SKILL.md의 편집과 검수·실제 외곽 맞춤](../SKILL.md#편집�
 
 `vectora_export_package({documentId,directory,baseName,includePdf?,overwrite?})` audits, writes editable SVG and `.vectora`, actual-font PNG, optional outlined PDF, and reopens the actual saved editable files in separate sessions. Read each file's status/hash and comparison results. `success:false` can coexist with successfully saved files. Existing outputs are protected by default. KICE/production SVG roots express the unchanged physical size in mm; edit metadata and viewBox remain present. No font binary is embedded.
 
+#### 래스터 색상
+
+vectora_export에서 format:"jpeg" 또는 "png"일 때만 rasterColorMode:"grayscale"|"color"를 사용한다. 생략 기본값은 회색조이며 scale:4 기본 배율은 바뀌지 않는다. SVG/PDF/WebP 내보내기에 이 필드를 보내면 거부되므로 생략한다. vectora_export_package의 옵션은 PNG 출력에만 적용한다. 두 도구 모두 호출 직전 라이브 스키마에 이 필드가 있는지 확인한다. 필드가 없으면 Vectora 앱 1.2.0 이상으로 업데이트한 뒤 앱과 MCP를 재연결한다. 원본 문서에는 색상 변환을 적용하지 않는다. 미리보기와 SVG/PDF/WebP 미리보기 색은 유지하며 PDF 색공간은 별도 colorMode로 지정한다.
+
 ## 0.8 부채꼴·원 그래프·변형
 
 `vectora_apply.commands`에서 다음 기능을 사용합니다. Computer Use는 필요하지 않습니다.

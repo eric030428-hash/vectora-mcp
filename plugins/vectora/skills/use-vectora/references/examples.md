@@ -41,6 +41,17 @@ ID/버전은 실제 도구 응답으로 바꾼다. 도구 이름 앞의 MCP 서�
 
 `vectora_save({documentId,path:"/절대/경로/그림.svg"})`는 편집 메타데이터를 포함한다. `vectora_export({documentId,path:"/절대/경로/배포.pdf",format:"pdf",outlineText:true})`는 인쇄용 사본이다. 폴더는 미리 존재해야 하고 모든 파일은 64MiB 이하이다. 미리보기와 내보내기는 개체나 이력을 수정하지 않는다.
 
+## JPEG/PNG 회색조와 컬러 내보내기
+
+먼저 현재 tools/list에서 rasterColorMode가 지원되는지 확인한다. 앱 1.2.0 이상에서만 아래 새 필드를 사용하며, 이전 스키마에서는 앱을 업데이트하고 MCP를 다시 연결한다.
+
+~~~js
+vectora_export({documentId, path:"/절대/경로/그림.jpeg", format:"jpeg", scale:4, rasterColorMode:"grayscale"})
+vectora_export({documentId, path:"/절대/경로/그림.png", format:"png", scale:4, rasterColorMode:"color"})
+~~~
+
+rasterColorMode를 생략하면 JPEG/PNG는 회색조다. 컬러 요청은 "color"로 지정한다. 이 옵션은 PNG/JPEG 내보내기에만 보내며 SVG/PDF/WebP 내보내기에 포함하면 거부된다. vectora_export_package의 옵션은 PNG 출력에만 적용된다. 변환은 출력에만 적용되며 편집 원본과 vectora_preview, SVG/PDF/WebP 미리보기의 색은 유지된다. PDF의 colorMode는 별개다.
+
 ## 사용자 프리셋
 
 `vectora_list_presets`는 내장·사용자 프리셋을 반환한다. 분류를 제한할 때는 `category`를 `text`, `graph`, `schematic`, `dialogue` 중 하나로 지정한다. 내장·사용자 프리셋을 열 때는 목록에서 받은 실제 `id`를 `presetId`에 넣는다.

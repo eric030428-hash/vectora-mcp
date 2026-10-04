@@ -1,7 +1,7 @@
 {
   "name": "vectora-macos",
-  "version": "1.0.11",
-  "description": "macOS와 Windows에서 Vectora 편집 엔진을 MCP로 사용합니다. 새 글꼴 기능은 Vectora 앱 1.1.11 이상을 먼저 설치하거나 업데이트한 뒤 사용할 수 있습니다.",
+  "version": "1.1.0",
+  "description": "macOS와 Windows에서 Vectora 편집 엔진을 MCP로 사용합니다. 새 JPEG/PNG 회색조 래스터 내보내기는 Vectora 앱 1.2.0 이상에서 사용할 수 있습니다.",
   "author": {
     "name": "Vectora"
   },
@@ -9,7 +9,7 @@
   "interface": {
     "displayName": "Vectora (macOS)",
     "shortDescription": "macOS와 Windows에서 MCP로 벡터 그림을 편집",
-    "longDescription": "새 글꼴 기능을 사용하기 전에 Vectora 앱 1.1.11 이상을 먼저 설치하거나 업데이트하세요. macOS와 Windows의 Vectora 편집 엔진을 MCP로 연결합니다. 텍스트 배경·그래프·대화·모식도, 실제 UND 조판, 연결선, 인물 자산, 확대·잔상, 제작 규격 검사와 SVG·PDF·PNG 묶음 저장을 지원합니다. 도형·곡률·화살표도 Computer Use 없이 편집합니다.",
+    "longDescription": "JPEG/PNG 회색조 래스터 내보내기는 Vectora 앱 1.2.0 이상을 먼저 설치하거나 업데이트하세요. macOS와 Windows의 Vectora 편집 엔진을 MCP로 연결합니다. 텍스트 배경·그래프·대화·모식도, 실제 UND 조판, 연결선, 인물 자산, 확대·잔상, 제작 규격 검사와 SVG·PDF·PNG 묶음 저장을 지원합니다. 도형·곡률·화살표도 Computer Use 없이 편집합니다.",
     "developerName": "Vectora",
     "category": "Productivity",
     "capabilities": [

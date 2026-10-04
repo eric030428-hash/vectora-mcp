@@ -138,6 +138,12 @@ Dialogue와 activity 속 교사 발화 등 **말풍선이 실제 있는 경우�
 - 작업 SVG 여러 줄은 독립 `<text x/y>`를 문단 그룹에 묶는 경로 우선; tspan 사용 시 실제 가져온 줄 수/위치 확인. SVG pattern/textPath/filter/mask 보존을 가정하지 않고 실제 선·원+clip/직립 글리프 등 편집 구조로 구현한다. 화살촉은 실제 끝, `arrow-3` 등은 현재 스키마 허용값 확인. 단순 자동 audit가 시각 품질·의미를 인증하지 않는다.
 - 포함 PNG/JPEG 이미지로 가져오고 임시 경로 의존을 제거한다. vector asset 등록이 래스터를 거부하면 일반 이미지로 배치하며 등록을 위해 추적하지 않는다. 도구 연결 실패면 이용 가능한 실제 Vectora Editor 경로로 검사하되 파일 작성만으로 앱 저장·재열기를 주장하지 않는다. 앱 개발/외부 모델 설치로 범위를 넓히지 않는다.
 
+## 래스터 출력 색상
+
+- 평가원 그림의 기본 납품은 편집 가능한 .vectora 원본과 4배 .jpeg이며, JPEG/PNG 래스터는 기본 회색조로 내보낸다. 사용자가 컬러를 명시하면 컬러를 우선한다. rasterColorMode는 PNG/JPEG에만 전달하고 SVG/PDF/WebP에는 보내지 않는다(거부됨). vectora_export_package 옵션은 PNG 출력에만 적용한다.
+- 색상 변환은 내보내기 단계에서만 한다. 편집 원본의 채움·선·이미지 색상을 바꾸어 회색으로 만들지 않는다. vectora_preview와 SVG/PDF/WebP 미리보기는 원래 색을 유지한다. PDF colorMode RGB/CMYK는 별도 설정이다.
+- 호출 전에 라이브 tools/list 스키마를 확인한다. vectora_export 또는 vectora_export_package에 rasterColorMode가 없으면 추측해 보내거나 다른 앱/변환기로 회색조를 흉내 내지 않는다. 앱 1.2.0 이상으로 업데이트하고 MCP를 다시 연결한 뒤 사용한다.
+
 ## 저장·재열기·납품
 
 - 완성 그림마다 기본 **같은 본체의 .vectora 한 개 + .jpeg 한 개**, 복합형도 한 쌍. 다른 형식/추가 파일은 명시 요청 때만. SVG/원본 PNG/기록/검수 이미지는 내부 임시 영역, 폰트 파일은 포함하지 않는다. 기존 파일을 두 개로 맞추려고 삭제하지 않는다.

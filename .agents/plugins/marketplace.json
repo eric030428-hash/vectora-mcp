@@ -1,13 +1,13 @@
 {
   "name": "vectora",
-  "description": "새 글꼴 기능을 사용하려면 Vectora 앱 1.1.11 이상을 먼저 설치하거나 업데이트하세요.",
+  "description": "JPEG/PNG 회색조 래스터 내보내기를 사용하려면 Vectora 앱 1.2.0 이상을 설치하거나 업데이트하세요.",
   "interface": {
     "displayName": "Vectora"
   },
   "plugins": [
     {
       "name": "vectora-macos",
-      "description": "새 글꼴 기능을 사용하기 전에 Vectora 앱 1.1.11 이상을 먼저 설치하거나 업데이트하세요.",
+      "description": "JPEG/PNG 회색조 래스터 내보내기를 사용하기 전에 Vectora 앱 1.2.0 이상을 설치하거나 업데이트하세요.",
       "source": {
         "source": "local",
         "path": "./plugins/vectora-macos"
@@ -20,7 +20,7 @@
     },
     {
       "name": "vectora-windows",
-      "description": "새 글꼴 기능을 사용하기 전에 Vectora 앱 1.1.11 이상을 먼저 설치하거나 업데이트하세요.",
+      "description": "JPEG/PNG 회색조 래스터 내보내기를 사용하기 전에 Vectora 앱 1.2.0 이상을 설치하거나 업데이트하세요.",
       "source": {
         "source": "local",
         "path": "./plugins/vectora-windows"
