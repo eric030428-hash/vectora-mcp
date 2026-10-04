@@ -14,3 +14,5 @@ primary가 다른 유형이어도 구형/극중심 바탕, 곡선 격자, 투영
 
 - manifest에 도법·중심·범위가 검증된 고정 SVG 바탕이 있으면 그 좌표 그대로 가져와 조판할 수 있다. 이는 앱의 새 projection API 지원이 아니다.
 - 외부 변환 수단은 실제 존재하는 helper와 확인된 입력/출력 계약만 사용한다. 아직 통합되지 않은 planner·projection ID·등록 API를 호출 지침에 넣지 않는다.
+
+- 등록된 native map의 재투영은 [지도 production](map-production.md)의 실제 capability·projection 계약을 따른다. 같은 변환을 국가 면·해안·주제층·위경도 anchor에 적용한다. 원그림에서 복원된 판 이동 화살표·열점 기호는 도법을 바꾸면 기호 폭/방향도 달라질 수 있으므로 출력에서 확인하고, 원자료가 수치 벡터라고 단정하지 않는다.

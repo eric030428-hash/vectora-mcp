@@ -1,14 +1,16 @@
-# 승인 양식 지도 production 실행 — W0/W1
+# 프리셋 기반 지도 production 실행
 
-지도 전용 경로를 실제 사용할 때만 읽는다. 먼저 [양식 실행](map-template.md)의 **UND 새 도식 프리셋 조회 → 실제 ID 선택 → 새 문서**를 지킨다. 선택한 바탕과 아래 승인 양식의 대응이 확인되지 않으면 기존 일반 선택·style·clip을 유지한다. 다른 지도 프리셋을 native map으로 간주하거나 바탕을 임의 교체하지 않는다.
+지도 자동 제작을 실제 사용할 때만 읽는다. 먼저 [양식 실행](map-template.md)에서 실제 UND 프리셋을 선택한다.
 
-## 연결본과 자료 확인
+## 프리셋과 등록 정보 확인
 
-- 실제 도구 목록에 `vectora_map_plan`이 있고 `vectora_status`의 map capability가 `vectora.map/v1`·`template`을 지원하는지 확인한다. `vectora_map_plan({})`에서 `templates`, `defaultSpec`, `capabilities`를 조회한다. 버전 번호나 오래된 guide만으로 기능을 판정하지 않는다.
-- 공식 설치 앱과 테스트 앱은 각각 연결본의 도구·capability로 판단한다. 한 앱의 지원을 다른 앱·OS·클라이언트의 지원으로 확대하지 않는다. 신도구가 없는 연결본은 기존 일반 편집 경로를 유지한다.
-- 소스에 구현된 지도 프리셋과 실행 번들의 카탈로그를 구분한다. 소스에 추가된 지도 프리셋이 실행 번들에 포함됐다고 가정하지 않는다. `vectora_map_plan`의 template 조회와 UND 프리셋 조회는 별개다. 지도 프리셋이 없으면 프리셋 시작 조건을 충족했다고 보고하거나 template discovery를 대신 사용해 조용히 새 지도를 만들지 않는다. 이 경우 지도 전용 엔진의 지원 여부와 프리셋 시작 불가를 각각 알린다.
-- W1 등록 자료는 `world_continents`와 같은 참조의 sidecar다. CHN 2경로, JPN 3경로, KOR 1경로만 **partial**이다. 전체 영토·섬 검증이 아니며 `islandPolicy:"all"`도 미확인 섬을 추가하지 않는다. IDN은 검증 경로가 없어 거부된다. 다른 library/manifest의 국가 ID를 여기에 넣지 않는다.
-- 조회한 참조·원본/sidecar 해시·국가 매핑을 사용한다. 승인 원본 SHA-256은 `3d968c1772c1b25f37a36af0681b15b7696a5bef4938dca9dbf5306ea6064e0b`로 고정된다. 버전·원자료 바이트 해시·sidecar 역할/경로 ID 검증을 우회하거나 원본·manifest를 수정하지 않는다. 해시나 매핑 오류는 중단하고 원인을 확인한다.
+- `vectora_map_plan({})`의 `templates`·`capabilities`와 실제 UND 목록을 대조한다. 선택한 **기본 프리셋 ID와 template의 `presetId`가 같은 경우** 해당 `assetRef`를 사용한다. 이름이 비슷한 다른 지도나 개인 저장 프리셋을 임의 연결하지 않는다.
+- 지원 연결본에서 `vectora_map_plan({assetRef:선택한 참조})`로 그 프리셋의 `defaultSpec`을 얻는다. 조회한 `assetHash/sidecarHash`·국가 목록·`roles`·`projection`·`notes`를 그대로 사용한다. 해시나 매핑 오류를 우회하지 않는다.
+- 등록된 프리셋 자동 제작은 UND와 **같은 바탕 파일**에서 생성한다. 먼저 `vectora_new_document`로 새 격리 문서를 만들고 아래 production create를 한 번 사용한다. 이미 `create_preset`으로 일반 벡터를 열었다면 그 위에 관리 지도를 중복 생성하지 않는다. 일반 편집을 계속하거나 같은 프리셋 참조로 별도 새 제작 문서를 만든다.
+- 실제 연결본이 `presetId` 대응을 제공하지 않으면 `vectora_create_preset`으로 연 일반 문서를 편집한다. 소스 코드나 버전 번호만 보고 설치 앱·다른 OS의 지원을 주장하지 않는다.
+- `registration:"geographic"`는 등록된 원지리 자료의 위경도 배치·재투영을 허용한다. `unregistered`는 문서 좌표와 원래 도법만 사용한다. 기존 `world_continents`는 후자이며 CHN·JPN·KOR 부분 매핑만 있다. 새 프리셋의 국가 ID를 기존 양식에 넣지 않는다.
+- 국가 목록은 바탕 원자료에 포함된 영역이다. `partial`은 모든 영토·섬의 완전성을 보증하지 않는다. `parts:["unclassified"]`이면 `islandPolicy:"all"`만 쓰며 본토·섬을 이름이나 크기로 추측하지 않는다.
+- 교체된 외부 양식은 현재 조회의 `source/notes`를 우선한다. 예전 library SVG와 같은 ID라도 내용·좌표·도법이 달라질 수 있으므로 예전 manifest의 좌표를 혼용하지 않는다.
 
 ## Spec와 좌표
 
@@ -22,7 +24,10 @@
 - 라벨은 실제 UND v2.1 8pt·자간 -60이며 상위 균일 배율에도 실효 8pt를 유지한다. 해결되지 않은 충돌은 partial, 폭 넘침 등은 오류로 보고되므로 글을 축소해 숨기지 않는다.
 - 라벨끼리 충돌은 컴파일 단계에서 검출되지만 자동 배치로 해결하지 않는다. 라벨–점·지도 창/테두리의 충돌은 자동 검출·회피를 보장하지 않는다. compiled ready·issues 없음이어도 실제 객체의 기하와 JPEG를 함께 대조한다. plan의 ready나 UI 경고 없음만으로 배치가 통과한 것으로 판단하지 말고 실제 8pt 출력에서 겹침·잘림과 라벨–대상의 대응을 확인한다. 국가 위 문자가 면을 가리거나 대응이 모호하면 독립 라벨 위치와 필요한 인출선을 조정한다. 자동 인출선 생성을 가정하지 않는다.
 - 일반 Editor/recipe 내부와 plan의 `transform.xPx/yPx`는 **문서 px**이며 화면 px가 아니다. mm↔문서 px는 96px/in 기준이다. `*Mm`에 이 값을 그대로 넣거나 `vectora_apply.units`로 production 단위를 다시 환산하지 않는다. plan의 scale은 균일 비율이다.
-- 좌표등록은 `unregistered`다. `lonLat`, longitude/CRS/projection, 지리/개념 모드, 재투영·지리 자료 import·LOD·자동 통계 join은 지원하지 않는다. 문서 crop을 지리 확대/재투영으로 설명하지 않는다.
+- 등록된 지도에서는 anchor를 `{kind:"geographic",longitude,latitude}`로 지정할 수 있다. 단위는 WGS84 경도 −180~180°, 위도 −90~90°다. 지도와 동일 투영·반구 clipping을 적용하며 뒤쪽 반구나 창 밖 점을 표시하려고 좌표를 임의 수정하지 않는다.
+- `projection`은 조회한 원본 설정을 복사해 필요한 값을 바꾼 **완전한 설정 객체**로 전달하며 update도 객체 전체 교체다. `clipAngle:null`은 구면 각도 제한 없음이고, 최상위 `projection:null`은 원본 도법 복원이다. 지원 `name`은 현재 capability에서 확인한다. `rotate:[경도회전,위도회전,롤]`·`center`는 degree, `scale`·`translate`·`clipExtent`는 **원문서 96px/in 좌표**이며 `clipAngle`은 degree/null이다. 중심 경도 λ는 `rotate[0]=-λ`다. 원뿔 도법의 `parallels`도 지원되는 경우에만 쓴다. 새 도법에서 지도 크기·중심·clip·crop를 함께 검수한다.
+- 재투영은 보존된 원지리 도형을 다시 그린다. 단순 늘이기/회전과 구별하며, 프리셋에 없는 나라·세밀한 해안·새 자료를 추가하지 않는다. 위경도 anchor는 따라 이동하지만 문서 좌표 anchor는 그대로 남으므로 위치를 재검수한다. 지리자료 import·자동 통계 join·상세도 자동 교체는 지원을 확인하기 전 사용하지 않는다.
+- `layers:{역할:true|false}`로 실제 `roles`에 존재하는 층만 켜거나 끈다. 생략하면 원본 가시성을 유지한다. 국경 선종류는 `borderStyle`, 가시성은 `layers["internal-border"]`로 구분하며 해안·호수·빙상까지 함께 숨기지 않는다. 별도 역할이 없는 층을 가정하지 않는다.
 
 ## Plan → 변경 → 확인
 

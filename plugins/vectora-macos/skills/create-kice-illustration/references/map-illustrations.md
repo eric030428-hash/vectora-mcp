@@ -26,7 +26,7 @@ secondary도 표현하면 해당 문서를 읽는다. primary와 무관하게 �
 - [world_continents.vectora](../assets/maps/world_continents.vectora)와 library SVG의 경계·수역·기하는 각 바탕의 속성이며 다른 지도에 일반화하지 않는다.
 - 이 자산의 기본 국경·수역·기하는 한 양식의 값이다. 다른 지도에 보편 규칙으로 강제하지 않는다.
 - 선택 프리셋 출처 확인과 manifest 대조는 [양식 실행](map-template.md)을 따른다.
-- 현재 연결본의 기능을 확인해 승인 양식 W0/W1이면 [지도 production 실행](map-production.md)을 적용한다. 신도구가 없는 설치 앱이나 다른 프리셋은 기존 선택·style·clip과 일반 벡터 조판을 유지한다. 지리 투영이나 지역 경계 자동 생성 지원으로 확대하지 않는다.
+- 현재 연결본의 실제 프리셋 ID와 planner의 등록 바탕 대응을 확인해 일치하면 [지도 production 실행](map-production.md)을 적용한다. 신도구가 없는 설치 앱이나 다른 프리셋은 기존 선택·style·clip과 일반 벡터 조판을 유지한다. 위경도·재투영은 해당 바탕의 등록과 capability에 한정하며, 없는 지역 경계를 자동 생성한다고 가정하지 않는다.
 - 실제 위치·분포·통계를 확인할 때 [실자료 조사·표시](real-data.md)를 읽는다. 검수용 기출·관찰 카탈로그·측정표는 생성 의존성으로 사용하지 않는다.
 
 ## 지리와 좌표 등록

@@ -5,7 +5,7 @@
 ## 프리셋 선택과 새 문서
 
 - `vectora_list_presets({})`를 category 필터 없이 호출한다. 이 목록은 UND 메뉴의 새 도식 프리셋과 같은 현재 OS 사용자 카탈로그이며 연결본에 따라 map category 지원이 다르므로 범주 필터를 걸지 않는다. 실제 반환 목록의 이름(title/name)·설명·ID만 사용하고 사용자별 ID나 지도 양식 수를 하드코딩하지 않는다.
-- 요청 범위·경계·도법·상세도에 맞는 실제 목록 항목을 골라 `vectora_create_preset({presetId:실제 ID,name?:작업명})`으로 새 격리 편집 문서를 만든다. 반환된 documentId와 revision을 기록하고 `vectora_inspect`로 실제 객체 ID·이름·계층·mask를 확인한 뒤 편집한다.
+- 요청 범위·경계·도법·상세도에 맞는 실제 목록 항목을 고른다. 지도 planner가 같은 `presetId`의 등록 바탕을 제공하면 [지도 production 실행](map-production.md)으로 같은 프리셋에서 새 관리 지도를 만든다. 대응이 없거나 일반 벡터 편집이 필요하면 `vectora_create_preset({presetId:실제 ID,name?:작업명})`으로 새 격리 문서를 연다. 두 경로의 바탕을 한 문서에 중복 삽입하지 않는다. 실제 documentId·revision·객체·mask를 확인한다.
 - 사용자가 이번 작업용 별도 파일을 명시했다면 그 파일을 우선한다. 그 외에는 `world_continents.vectora`나 library SVG를 직접 열거나 `vectora_import_svg`로 가져와 제작을 시작하지 않는다.
 - 카탈로그의 그룹·출처 메타데이터는 실제 반환 필드가 있을 때만 해석한다. `category`·`source`를 지리 역할/국가 binding으로 해석하거나 없는 group 필드를 만들어내지 않는다.
 - 소스의 프리셋 구현·자산 목록은 실행 번들의 카탈로그와 다를 수 있다. 지도 planner의 template 목록도 UND 프리셋 목록이 아니다. 실제 프리셋 조회 결과만 시작 가능 여부의 근거로 사용한다.
@@ -13,9 +13,11 @@
 
 ## 실행 경로 선택
 
-프리셋 새 문서와 출처 확인 후, 연결본의 승인 양식 W0/W1 capability가 확인되면 [지도 production 실행](map-production.md)을 읽는다. 다른 지도 프리셋을 모두 native map으로 취급하거나 선택 바탕을 world_continents로 바꾸지 않는다. 아래 일반 선택·style·clip은 신도구가 없는 설치 앱과 다른 양식의 기존 편집 경로다. 관리되는 map 컴포넌트에는 일반 경로 이동·클립을 무조건 적용하지 않고 해당 실행 문서의 binding 보존 규칙을 따른다.
+실제 프리셋과 출처를 확인한 뒤, planner에서 동일 `presetId`를 찾을 수 있으면 [지도 production 실행](map-production.md)을 읽는다. 국가·역할·도법·위경도 지원은 해당 template의 등록 정보로 판정한다. 선택한 바탕을 world_continents로 바꾸지 않는다. 아래 일반 선택·style·clip은 신도구가 없는 설치 앱과 다른 양식의 기존 편집 경로다. 관리되는 map 컴포넌트에는 일반 경로 이동·클립을 무조건 적용하지 않고 해당 실행 문서의 binding 보존 규칙을 따른다.
 
 ## 선택 양식의 출처와 manifest 참고
+
+등록 바탕은 현재 planner의 `source/notes/registration`을 먼저 읽는다. 외부 SVG 교체본의 현재 해시·도법·국가·레이어 정보가 예전 library와 다르면 현재 등록 정보를 따른다. 아래 고정 SVG/manifest 절은 자동 제작 대응이 없는 일반 편집 경로에서만 읽는다.
 
 - 기존 지도 자산과 manifest는 보존한다. 선택한 프리셋의 이름·설명과 대응하는 바탕을 확인한 경우에만 [library index](../assets/maps/library/index.json)에서 해당 항목을 찾아 manifest 하나와 연결 SVG를 출처·권리·경계·투영·상세도·ID 설명의 참고로 읽는다. 전체 manifest를 순회하거나 파일명·자산 수를 고정하지 않는다. 대응이 모호하면 임의로 연결하지 않는다.
 - manifest의 `schema`와 실제 존재하는 파일·출처·권리·좌표 계약을 확인한다. 일반 template은 `svg`·`sha256`·`bytes`, `source`의 원자료 revision·해시·resolution, `projection`, `viewBox`, `widthMm/heightMm`, `gaps`를 확인하고, source variant는 아래 특수 양식 분기를 따른다. `status`·`nativeValidation`의 pending은 원본 자산 상태이며 새 프리셋 문서의 inspect/save/reopen/export 검증을 뜻하지 않는다.
