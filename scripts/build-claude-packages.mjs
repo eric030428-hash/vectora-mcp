@@ -45,8 +45,8 @@ function adaptUseVectora(skillRoot) {
   updateFile(skillPath, (value) => {
     value = replaceExactlyOnce(
       value,
-      'description: "Vectora MCP로 벡터 그림을 만들고 SVG·AI/PDF·이미지를 열어 편집·추적·저장한다. 도형·경로·문자·부분 서식·양끝 화살표·그룹·레이어·대지를 다루거나 기존 그림을 변환할 때 사용한다. Computer Use 없이 작동한다. 평가원 스타일 요청에는 함께 제공된 create-kice-illustration 규칙도 적용한다."',
-      'description: "Claude의 Vectora MCP로 벡터 그림을 편집하고 저장한다. SVG·AI/PDF·이미지 가져오기, 문자·도형·그래프·레이어 편집과 평가원 스타일 제작에 사용한다."',
+      'description: "Vectora MCP로 벡터 그림을 만들고 SVG·AI/PDF·이미지를 열어 편집·추적·저장한다. 도형·경로·문자·부분 서식·양끝 화살표·그룹·레이어·대지를 다루거나 기존 그림을 변환할 때 사용한다. Computer Use 없이 작동한다. 통합사회 평가원 스타일 요청에는 함께 제공된 create-kice-illustration 규칙도 적용한다. 통합과학 스킬은 본문이 비어 있는 준비 중 항목이다."',
+      'description: "Claude의 Vectora MCP로 벡터 그림을 편집하고 저장한다. SVG·AI/PDF·이미지 가져오기, 문자·도형·그래프·레이어 편집과 통합사회 평가원 스타일 제작에 사용한다. 통합과학 스킬은 본문이 비어 있는 준비 중 항목이다."',
       'use-vectora/SKILL.md frontmatter',
     );
     const introStart = '# Vectora로 벡터 편집\n\n';
@@ -89,7 +89,9 @@ Claude에서 현재 노출된 MCP 도구 목록으로 Vectora 연결·실제 도
 
 Claude 코드 실행 첨부 경로는 로컬 앱·글꼴 경로와 별개일 수 있다. 실제 노출된 vectora_fonts 및 제공되는 vectora_check_font/vectora_measure_text를 사용하고, SVG 문자열/data URL은 가져오기 스키마가 허용할 때만 전달한다. 첨부 경로를 Vectora 저장 경로로 재사용하지 말고 사용자가 지정한 실제 로컬 경로를 사용한다. Claude Code 로컬 플러그인에서는 번들된 보조 스크립트를 사용할 수 있다.
 
-이 패키지는 이미지 생성 모델을 포함하지 않는다. 새 원화는 현재 세션의 실제 이미지 생성/편집 도구가 있을 때만 만들며 없으면 생성 지시와 벡터 조판을 준비하고 필요한 원화를 요청한다. 원본 Photo는 생성 대체하지 않는다. 임시 인물·과거 예시를 넣어 완성으로 보고하지 않는다. 아래 세 단계 화풍·편집·저장 규칙은 그대로 적용한다.`,
+이 패키지는 이미지 생성 모델을 포함하지 않는다. 먼저 현재 세션에 실제 연결된 외부 이미지 생성/편집 MCP 등의 도구를 확인한다. 있으면 이 문서의 화풍 계약·참조 검색·투명 배경 조건을 해당 도구의 실제 스키마에 맞춰 전달한다. 생성 결과는 실제로 열어 대상·화풍·배경을 확인하고 Vectora가 접근 가능한 로컬 파일 또는 지원되는 data URL로 가져온다. 원격 URL이나 Claude 첨부 경로를 로컬 파일 경로로 간주하지 않는다.
+
+생성 도구가 없으면 사용자가 제공했거나 재사용을 명시한 원화를 먼저 검토한다. 새 원화가 여전히 필요하면 대상·포즈·시점·식별 특징·공통 화풍 계약·배경 조건을 담은 생성 프롬프트와 벡터 조판을 준비하고 필요한 원화를 요청한다. 외부에서 생성한 원화를 받으면 이미지로 포함하고 문자·말풍선·도형은 별도 편집 요소로 마무리할 수 있다. 도구가 없다는 이유로 손그린 코드 도형·임시 얼굴·과거 예시를 대체 삽화로 넣지 않는다. 원본 Photo는 생성 대체하지 않으며 미완성 조판을 완성본으로 보고하지 않는다. 이 문서와 선택한 유형·하위유형의 세 단계 화풍·편집·저장 규칙은 그대로 적용한다.`,
     'create-kice-illustration/SKILL.md client boundary',
   ));
 }
@@ -98,7 +100,7 @@ function stageSkill(name, stagingRoot) {
   const skillRoot = copySkillSource(name, stagingRoot);
   if (name === 'use-vectora') adaptUseVectora(skillRoot);
   else if (name === 'create-kice-illustration') adaptCreateKice(skillRoot);
-  else throw new Error(`Unexpected skill: ${name}`);
+  else if (name !== 'create-kice-science-illustration') throw new Error(`Unexpected skill: ${name}`);
   for (const relative of listFiles(skillRoot).filter((file) => file.endsWith('.md'))) {
     const filePath = path.join(skillRoot, relative);
     const before = readFileSync(filePath, 'utf8');
@@ -228,10 +230,12 @@ export function buildClaudePlugin(targetRoot) {
   try {
     const useSkill = stageSkill('use-vectora', temporarySkills);
     const kiceSkill = stageSkill('create-kice-illustration', temporarySkills);
+    const scienceSkill = stageSkill('create-kice-science-illustration', temporarySkills);
     mkdirSync(stagedRoot, { recursive: true });
     mkdirSync(path.join(stagedRoot, 'skills'), { recursive: true });
     cpSync(useSkill, path.join(stagedRoot, 'skills', 'use-vectora'), { recursive: true });
     cpSync(kiceSkill, path.join(stagedRoot, 'skills', 'create-kice-illustration'), { recursive: true });
+    cpSync(scienceSkill, path.join(stagedRoot, 'skills', 'create-kice-science-illustration'), { recursive: true });
     addProductionSources(path.join(stagedRoot, 'skills', 'create-kice-illustration'));
 
     const scriptsRoot = path.join(stagedRoot, 'scripts');
@@ -257,7 +261,7 @@ export function buildClaudePlugin(targetRoot) {
     writeFileSync(path.join(stagedRoot, '.claude-plugin', 'plugin.json'), `${JSON.stringify({
       name: 'vectora',
       version: PLUGIN_VERSION,
-      description: 'Local Vectora MCP and two assessment-style illustration skills for Claude. Install or update the Vectora app to 1.1.11 or later before using the new font features.',
+      description: 'Local Vectora MCP with editing, integrated social studies illustration, and an empty integrated science skill for Claude. Install or update the Vectora app to 1.2.0 or later before using grayscale JPEG/PNG raster export.',
       author: { name: 'Vectora' },
     }, null, 2)}\n`);
     writeFileSync(path.join(stagedRoot, '.mcp.json'), `${JSON.stringify({

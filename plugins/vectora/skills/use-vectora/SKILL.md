@@ -1,6 +1,6 @@
 ---
 name: use-vectora
-description: "Claude의 Vectora MCP로 벡터 그림을 편집하고 저장한다. SVG·AI/PDF·이미지 가져오기, 문자·도형·그래프·레이어 편집과 평가원 스타일 제작에 사용한다."
+description: "Claude의 Vectora MCP로 벡터 그림을 편집하고 저장한다. SVG·AI/PDF·이미지 가져오기, 문자·도형·그래프·레이어 편집과 통합사회 평가원 스타일 제작에 사용한다. 통합과학 스킬은 본문이 비어 있는 준비 중 항목이다."
 ---
 
 # Vectora로 벡터 편집
@@ -24,7 +24,7 @@ Claude Desktop 스킬의 코드 실행 첨부 경로는 별도 작업공간일 �
 - 새 도형은 채우기 없음·검정 선 0.4pt, 새 문자는 UND v3.0 계열의 Regular 면 8pt·자간 charSpacing:-60(1/1000em)이 기본이다. 굵게·기울임은 실제 UNDv30-Bold/UNDv30-Italic 면을 쓴다. 이 기본 자간은 가로·세로 새 문자 생성에 적용한다. 입력 스키마가 charSpacing을 노출하면 -60을 전달하고, 측정 도구가 있으면 실제 글꼴로 측정한다. 기존 문자의 서체·자간은 요청 없이 바꾸지 않는다. 평가원 작업은 별도 제작 원칙의 유형별 선 굵기와 자간 등을 따른다.
 - `vectora_inspect(includeObjects:true)`의 `pathNodes`는 각 개체의 **문서 좌표 mm**와 0부터 시작하는 점 번호를 제공한다. `objects`의 원시 경로 px와 혼동하지 않는다.
 - 개별 점은 `vectora_apply`의 `{type:"pathPoint",id,index,point:{x,y}}`로 이동한다. `incoming`/`outgoing`은 곡률 핸들의 절대 좌표이며 `null`이면 그 핸들을 접는다. 점만 옮기면 연결된 핸들도 함께 움직인다. 사각형·타원 등의 한 꼭짓점을 수정하면 같은 ID를 유지한 편집 경로가 된다. 잠긴 대상은 먼저 해당 잠금을 해제한다.
-- 사용자가 프리셋을 요청하면 `vectora_list_presets`로 실제 ID를 조회하고 `vectora_create_preset`으로 새 문서를 만든다. 자료 틀과 말풍선은 빈 틀이며 그래프·모식도의 글·수치는 편집용 예시다. 사용자의 자료로 교체한다. 원 그래프 프리셋은 `pieChart` 명령으로 수치를 다시 수정할 수 있다. 일반 평가원 그림은 최신 create-kice-illustration 원칙으로 새로 설계하되, 지도 양식이 필요하면 해당 스킬의 지도 원칙에 따라 적합한 프리셋을 조회해 새 문서로 시작한다.
+- 사용자가 프리셋을 요청하면 `vectora_list_presets`로 실제 ID를 조회하고 `vectora_create_preset`으로 새 문서를 만든다. 자료 틀과 말풍선은 빈 틀이며 그래프·모식도의 글·수치는 편집용 예시다. 사용자의 자료로 교체한다. 원 그래프 프리셋은 `pieChart` 명령으로 수치를 다시 수정할 수 있다. 통합사회 평가원 그림은 최신 create-kice-illustration 원칙으로 새로 설계하되, 지도 양식이 필요하면 해당 스킬의 지도 원칙에 따라 적합한 프리셋을 조회해 새 문서로 시작한다.
 
 ## 사용자 프리셋
 
@@ -68,7 +68,7 @@ Claude Desktop 스킬의 코드 실행 첨부 경로는 별도 작업공간일 �
 - 실제 글꼴 목록 도구 vectora_fonts로 UND v3.0 및 UND v3.0 Body의 설치 face를 찾고, vectora_check_font가 현재 도구 목록에 있으면 실제 출력 문자열과 사용할 family/style/weight를 확인한다. supportsText와 missingGlyphs를 읽는다. 이름 검색만으로 글리프 존재를 보증하지 않는다.
 - 기존 0→⓪ 입력 변환은 유지한다. 현재 UND v3.0 면은 ⓪ 글리프를 제공하지 않으므로 UND 지원 문자라고 주장하지 말고 실제 누락 글리프로 보고한다.
 - vectora_open_document/vectora_import_svg의 현재 입력 스키마에 fontReplacements가 있을 때만 {"원본 글꼴명":"설치 글꼴명"} 형태의 매핑을 보낸다. MISSING_FONTS가 반환되면 목록과 vectora_fonts에서 실제 설치 글꼴을 확인하고 사용자가 선택한 경우만 재시도한다. 미지원 필드는 보내지 않고 UND v3.0을 임의 대체하지 않는다. 기존 문서의 글꼴은 요청 없이 변환하지 않는다.
-- 평가원 작업은 create-kice-illustration의 최신 규칙을 읽고 UND v3.0을 기본으로 사용한다. 일반 명령에서 typography의 profile:kice를 지정하는 기능은 현재 입력 스키마에서 지원될 때만 쓴다. vectora_audit_illustration은 인쇄 크기·팔레트까지 보증하지 않는다.
+- 통합사회 평가원 작업은 create-kice-illustration의 최신 규칙을 읽고 UND v3.0을 기본으로 사용한다. 일반 명령에서 typography의 profile:kice를 지정하는 기능은 현재 입력 스키마에서 지원될 때만 쓴다. vectora_audit_illustration은 인쇄 크기·팔레트까지 보증하지 않는다.
 - 긴 산문에서는 텍스트 일러스트·문서·활동·대화의 영어 라틴 문자 범위에 UND v3.0 Body를 기본 적용한다. 한국어와 기호는 UND v3.0에 둔다. 한글 문장 안의 영어 단어도 범위별 textRange/fontFamily 서식을 적용하며, 문단 전체를 Body로 바꾸지 않는다. 라이브 스키마에서 실제 지원되는 범위 필드만 사용한다.
 - PDF에서 설치 글꼴을 보존하려면 `outlineText:true`를 지정한다. 배포 사본의 글자만 윤곽선으로 바뀌며 원본 문자·이력은 보존된다. 살아 있는 문자가 필요한 원본 SVG를 함께 저장한다. 글꼴 파일을 결과물이나 플러그인에 복사하지 않는다.
 - `.ai`는 PDF 호환 데이터가 있는 파일만 지원한다. 경고·변환 한계를 전달한다. AI로 다시 저장하지 않는다.

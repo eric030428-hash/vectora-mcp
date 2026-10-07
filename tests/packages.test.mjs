@@ -18,7 +18,7 @@ function listFiles(directory, prefix = '') {
   });
 }
 
-test('Claude marketplace installs one self-contained plugin with both skills and portable launchers', () => {
+test('Claude marketplace installs one self-contained plugin with three skills and portable launchers', () => {
   const catalog = json('.claude-plugin/marketplace.json');
   assert.equal(catalog.name, 'vectora');
   assert.deepEqual(catalog.plugins.map(({ name, source }) => ({ name, source })), [{ name: 'vectora', source: './plugins/vectora' }]);
@@ -27,7 +27,7 @@ test('Claude marketplace installs one self-contained plugin with both skills and
   const server = json('plugins/vectora/.mcp.json').mcpServers.vectora;
   assert.equal(server.command, 'node');
   assert.deepEqual(server.args, ['${CLAUDE_PLUGIN_ROOT}/scripts/claude/claude-mcp-launcher.mjs']);
-  assert.deepEqual(readdirSync(path.join(plugin, 'skills')).sort(), ['create-kice-illustration', 'use-vectora']);
+  assert.deepEqual(readdirSync(path.join(plugin, 'skills')).sort(), ['create-kice-illustration', 'create-kice-science-illustration', 'use-vectora']);
   for (const file of ['start-mcp.sh', 'start-mcp.ps1', 'configure-app.sh', 'configure-app.ps1', 'claude/claude-mcp-launcher.mjs']) {
     assert.deepEqual(readFileSync(path.join(plugin, 'scripts', file)), readFileSync(path.join(PLUGIN_ROOT, 'scripts', file)), file);
   }
@@ -36,6 +36,18 @@ test('Claude marketplace installs one self-contained plugin with both skills and
     assert.doesNotMatch(file, /(?:^|\/)(?:__pycache__|\.git)(?:\/|$)/, file);
   }
   assert.match(readFileSync(path.join(skill, 'vendor/python/fonttools-4.63.0.dist-info/WHEEL'), 'utf8'), /^Tag: py3-none-any$/m);
+});
+
+test('the science skill stays metadata-only in every marketplace plugin', () => {
+  const relative = 'skills/create-kice-science-illustration/SKILL.md';
+  const source = readFileSync(path.join(PLUGIN_ROOT, relative), 'utf8');
+  assert.match(source, /^---\nname: create-kice-science-illustration\n/);
+  assert.match(source, /^disable-model-invocation: true$/m);
+  assert.equal(source.replace(/^---\n[\s\S]*?\n---\n/, '').trim(), '');
+  for (const id of ['vectora', 'vectora-macos', 'vectora-windows']) {
+    assert.equal(readFileSync(path.join(PLUGIN_ROOT, 'plugins', id, relative), 'utf8'), source, id);
+  }
+  assert.deepEqual(listFiles(path.join(plugin, 'skills/create-kice-science-illustration')), ['SKILL.md']);
 });
 
 test('Claude adaptations preserve the assessment artwork rules', () => {
