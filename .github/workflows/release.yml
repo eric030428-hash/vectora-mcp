@@ -1,0 +1,46 @@
+name: Publish marketplace release notes
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate explicit version tag and main source
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          node --input-type=module -e 'import assert from "node:assert/strict"; import fs from "node:fs"; const version = JSON.parse(fs.readFileSync(".codex-plugin/plugin.json", "utf8")).version; assert.match(version, /^\d+\.\d+\.\d+$/); assert.equal(process.env.RELEASE_TAG, `v${version}`);'
+          git fetch origin main
+          git merge-base --is-ancestor HEAD origin/main
+      - name: Check marketplace and bundled contracts
+        run: |
+          node scripts/build-marketplace.mjs --check
+          node --test tests/*.test.mjs
+      - name: Validate clean release staging
+        run: node scripts/stage-release.mjs
+
+  release:
+    needs: verify
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publish notes without installation assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ github.ref_name }}
+          GH_REPO: ${{ github.repository }}
+        run: gh release create "$RELEASE_TAG" --verify-tag --title "Vectora MCP $RELEASE_TAG" --notes-file RELEASE_NOTES.md

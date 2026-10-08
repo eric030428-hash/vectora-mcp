@@ -1,6 +1,6 @@
 {
   "name": "vectora",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Local Vectora MCP with editing, integrated social studies illustration, and an empty integrated science skill for Claude. Install or update the Vectora app to 1.2.0 or later before using grayscale JPEG/PNG raster export.",
   "author": {
     "name": "Vectora"
