@@ -261,7 +261,7 @@ export function buildClaudePlugin(targetRoot) {
     writeFileSync(path.join(stagedRoot, '.claude-plugin', 'plugin.json'), `${JSON.stringify({
       name: 'vectora',
       version: PLUGIN_VERSION,
-      description: 'Local Vectora MCP with editing, integrated social studies illustration, and an empty integrated science skill for Claude. Progress, checkpoints and diagnostic previews require Vectora app 1.3.0 or later and live tool/schema support. Grayscale JPEG/PNG export requires app 1.2.0 or later.',
+      description: 'Local Vectora MCP with editing, integrated social studies illustration, and an empty integrated science skill for Claude. Native tables, composition, compact/delta inspection and checked KICE delivery require Vectora app 1.4.0 or later and live capability/schema support. Older apps use supported editing and saving paths.',
       author: { name: 'Vectora' },
     }, null, 2)}\n`);
     writeFileSync(path.join(stagedRoot, '.mcp.json'), `${JSON.stringify({

@@ -3,7 +3,7 @@
   "owner": {
     "name": "Vectora"
   },
-  "description": "Vectora MCP and Korean assessment illustration skills for Claude. Progress, checkpoints and diagnostic previews require Vectora app 1.3.0 or later and live tool/schema support. Grayscale JPEG/PNG export requires app 1.2.0 or later.",
+  "description": "Vectora MCP and Korean assessment illustration skills for Claude. Native tables, composition, compact/delta inspection and checked KICE delivery require Vectora app 1.4.0 or later and live capability/schema support. Older apps use supported editing and saving paths.",
   "plugins": [
     {
       "name": "vectora",

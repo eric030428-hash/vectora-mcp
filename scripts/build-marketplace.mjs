@@ -19,11 +19,11 @@ const CLAUDE_PLUGIN = { id: 'vectora' };
 function codexMarketplaceText() {
   return `${JSON.stringify({
     name: 'vectora',
-    description: '진행 상태·체크포인트·진단 미리보기는 Vectora 앱 1.3.0 이상에서 지원을 확인해 사용하세요. JPEG/PNG 회색조 내보내기는 앱 1.2.0 이상이 필요합니다.',
+    description: '네이티브 표·복합 조판·검사·평가원 납품은 Vectora 앱 1.4.0 이상에서 실제 지원을 확인해 사용하세요. 구형 앱은 지원되는 기존 편집·저장 경로를 사용합니다.',
     interface: { displayName: 'Vectora' },
     plugins: CODEX_PLUGINS.map(({ id }) => ({
       name: id,
-      description: '진행 상태·체크포인트·진단 미리보기는 Vectora 앱 1.3.0 이상에서 지원을 확인해 사용하세요. JPEG/PNG 회색조 내보내기는 앱 1.2.0 이상이 필요합니다.',
+      description: '네이티브 표·복합 조판·검사·평가원 납품은 Vectora 앱 1.4.0 이상에서 실제 지원을 확인해 사용하세요. 구형 앱은 지원되는 기존 편집·저장 경로를 사용합니다.',
       source: { source: 'local', path: `./plugins/${id}` },
       policy: { installation: 'AVAILABLE', authentication: 'ON_INSTALL' },
       category: 'Productivity',
@@ -35,7 +35,7 @@ function claudeMarketplaceText() {
   return `${JSON.stringify({
     name: 'vectora',
     owner: { name: 'Vectora' },
-    description: 'Vectora MCP and Korean assessment illustration skills for Claude. Progress, checkpoints and diagnostic previews require Vectora app 1.3.0 or later and live tool/schema support. Grayscale JPEG/PNG export requires app 1.2.0 or later.',
+    description: 'Vectora MCP and Korean assessment illustration skills for Claude. Native tables, composition, compact/delta inspection and checked KICE delivery require Vectora app 1.4.0 or later and live capability/schema support. Older apps use supported editing and saving paths.',
     plugins: [{ name: 'vectora', source: './plugins/vectora' }],
   }, null, 2)}\n`;
 }
