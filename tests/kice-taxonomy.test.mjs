@@ -34,6 +34,8 @@ function instructionLinks(rel) {
     const resolved = path.resolve(skill, path.dirname(rel), target);
     assert.ok(resolved.startsWith(`${skill}${path.sep}`), `${rel}: outside-skill reference ${target}`);
     assert.ok(existsSync(resolved), `${rel}: missing link ${target}`);
+    // The caller guide is an installed input reference, not a creator instruction edge.
+    if (target === 'references/caller/exam-agent-guide.md') continue;
     if (resolved.endsWith('.md')) links.push(path.relative(skill, resolved).split(path.sep).join('/'));
   }
   // A bare legacy filename must not silently reintroduce a fourth instruction read.

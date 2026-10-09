@@ -46,10 +46,20 @@ Claude Desktop 스킬의 코드 실행 첨부 경로는 별도 작업공간일 �
 1. 지정한 파일은 `vectora_open_document`, 새 그림은 `vectora_new_document`로 연다. 모든 경로는 현재 컴퓨터의 절대 경로다. 반환된 `documentId`만 사용한다.
 2. `vectora_inspect(includeObjects:true)`로 개체 ID와 현재 `revision`을 읽는다. 새 문서/직전 편집의 반환값도 최신 revision으로 사용할 수 있다.
 3. `vectora_apply`에 `documentId`, `expectedRevision`, 고유 `requestId`, `commands`를 보낸다. 한 배치는 한 실행 취소 단위이며 실패하면 문서가 되돌아간다. 대상에 `select`한 뒤 `style/transform` 등을 적용한다. `add`는 생성한 개체를 선택한다. 개체 ID를 추측하지 않는다.
-4. 같은 요청의 재전송에는 동일한 인자와 requestId를 사용한다. 다른 편집에는 새 ID를 사용한다. 버전 충돌이면 다시 inspect하고 내용을 확인한다. 실행 중인 작업의 취소는 이미 적용된 편집을 되돌린다는 뜻이 아니므로 취소·응답 유실 후에도 inspect로 상태를 확인한다. `vectora_history`로 실행 취소/다시 실행한다.
+4. 같은 요청의 재전송에는 동일한 전체 인자와 requestId를 사용한다. 응답 유실이나 `REQUEST_RESULT_EXPIRED`는 편집 미실행을 뜻하지 않는다. 먼저 inspect로 실제 객체·revision·저장 상태를 대조하고 새 ID로 무작정 중복 실행하지 않는다. 다른 편집에는 새 ID를 사용한다. 버전 충돌이면 다시 inspect하고 내용을 확인한다. 실행 중인 작업의 취소는 이미 적용된 편집을 되돌린다는 뜻이 아니므로 취소·응답 유실 후에도 inspect로 상태를 확인한다. `vectora_history`로 실행 취소/다시 실행한다.
 5. **1차 완성본의 `vectora_preview` 이미지를 직접 보고** 최종 사용 크기와 확대에서 글리프·겹침·잘림·과도한 틈/여백·원화 화풍·꼬리/인출선 대상을 확인한다. 수치 audit/렌더 성공은 시각 검수를 대신하지 않는다. 명백한 결함은 수정/필요한 재생성 후 같은 완성본 전체를 재검수한다. 기본 최대 3회 수정하며 개선 정체·도구 한계는 미완료로 보고하고 축소·흐림·클리핑으로 숨기지 않는다.
 6. 저장·내보내기 직전 아래 **실제 외곽 맞춤**을 수행한다. `vectora_save`로 요청 편집 원본을 저장하고 반환 경로·바이트 수·SHA256을 확인한다. 기본 래스터 내보내기는 `vectora_export(scale:4)`이며 사용자 배율/픽셀 지정이 우선한다. `vectora_export_package`는 요청 파일 구성과 맞을 때만 쓰고 pngScale 지원 시 4를 명시한다. 덮어쓰기는 승인된 대상에만 `overwrite:true`로 한다.
 7. 저장 파일을 다시 열어 개체·문자·글꼴·그룹·실제 치수·이미지 보존을 확인하고 그 문서에서 내보낸 **실제 결과 이미지도 직접 본다**. 결함 수정 시 외곽 맞춤→저장→재열기→내보내기→이미지 검수를 반복해 동일 최종 상태를 확인한다. JPEG 납품은 JPEG 자체를 본다. 실제 파일 링크와 미확인/실패 상태를 전달한다. 완료 문서는 닫아 16개 한도를 관리하며 연결 종료 시 미저장 문서는 남지 않는다.
+
+
+### 진행 상태·체크포인트·진단 미리보기 — 지원 연결본만
+
+- 앱 버전 숫자만으로 지원을 가정하지 않는다. `vectora_status`와 현재 `tools/list`의 실제 도구·입력/응답 계약을 확인한다. 아래 도구/필드가 없으면 보내지 않으며 기존 inspect/preview/save 경로를 사용한다. 새 기능이 없는 설치본에서도 기존 검수·미완료 보고 조건은 유지한다.
+- `vectora_operation_status({operationId?})`가 있으면 장기 호출의 실제 operationId와 `queued/running/completed/failed/cancelled`, elapsedMs, errorCode 및 connectionId/sessionId를 확인한다. 상태 조회는 편집 재실행이나 실행 취소가 아니다. `completed`는 작업 메타데이터이며 최종 그림 검수 합격이나 응답 본문 복구를 보증하지 않는다. 기록이 없거나 세션이 다르면 원래 문서/결과가 남았다고 가정하지 않는다.
+- 클라이언트가 MCP progressToken을 지원하면 프로토콜의 `_meta.progressToken`으로 진행 통지를 받을 수 있다. 실제 단계 전환만 보고하며 카운터를 완료율/예상 시간으로 해석하지 않는다. 통지가 없다고 실패 또는 미실행으로 단정하지 않는다. 취소·응답 유실 뒤에는 inspect/체크포인트 상태를 확인한다.
+- `vectora_checkpoint({documentId,path,overwrite?})`가 있으면 접근 가능한 절대 `.vectora` 경로의 **내부 임시 영역**에 중간 문서를 보존한다. 기존 사용자 파일은 임의로 덮어쓰지 않는다. 최초 성공은 이 연결의 해당 문서에 `autoRefresh:true`를 설정하여 이후 적용/production/history/가져오기/추적 편집 성공마다 같은 지정 경로를 갱신한다. 자동 갱신 대상은 내부 체크포인트로 한정한다. 응답의 `checkpoint.saved/path/revision`을 확인하며 `saved:false/error/warnings`이면 편집 성공과 보존 실패를 구별한다. 편집은 이미 반영되므로 저장 실패를 이유로 재실행하지 않는다. 실패한 최초 저장은 자동 갱신을 설정하지 않는다. 성공 응답의 경로·revision·세션 정보를 확인하고 체크포인트를 최종 납품/검수 완료로 취급하지 않는다. 도구가 없으면 vectora_save의 기존 계약으로 중간 원본을 저장한다.
+- `vectora_restore_checkpoint({path})`는 체크포인트를 **새 독립 문서**로 연다. 응답의 새 documentId/revision과 restoredFrom을 확인하고 다시 inspect한다. 이전 세션의 ID/revision·작업 캐시는 재사용하지 않는다. 복구는 원 경로 자동 갱신을 설정하지 않으며 새 문서에 checkpoint를 다시 호출해야 설정된다. 포함 이미지·글꼴·자료 대응을 재검수하고 체크포인트 이후 편집을 복구했다고 주장하지 않는다. 이 도구가 없으면 실제 저장 파일을 vectora_open_document로 연다.
+- 미리보기 응답이 `warnings`, `deliveryReady`, artboardId, widthMm/heightMm를 제공하면 경고와 실제 치수를 읽는다. `deliveryReady:false`인 이미지도 결함을 확인하는 **진단 미리보기**로 직접 볼 수 있으나 납품 가능한 완성본으로 보고하지 않는다. 미리보기의 렌더 성공/치수는 내용·글꼴·실외곽 검수와 최종 내보내기 성공을 대신하지 않는다. 오류와 경고를 수정한 뒤 저장·재열기·실제 결과 이미지 검수를 완료한다.
 
 ### 실제 외곽 맞춤
 

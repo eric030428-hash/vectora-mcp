@@ -19,11 +19,11 @@ const CLAUDE_PLUGIN = { id: 'vectora' };
 function codexMarketplaceText() {
   return `${JSON.stringify({
     name: 'vectora',
-    description: 'JPEG/PNG 회색조 래스터 내보내기를 사용하려면 Vectora 앱 1.2.0 이상을 설치하거나 업데이트하세요.',
+    description: '진행 상태·체크포인트·진단 미리보기는 Vectora 앱 1.3.0 이상에서 지원을 확인해 사용하세요. JPEG/PNG 회색조 내보내기는 앱 1.2.0 이상이 필요합니다.',
     interface: { displayName: 'Vectora' },
     plugins: CODEX_PLUGINS.map(({ id }) => ({
       name: id,
-      description: 'JPEG/PNG 회색조 래스터 내보내기를 사용하기 전에 Vectora 앱 1.2.0 이상을 설치하거나 업데이트하세요.',
+      description: '진행 상태·체크포인트·진단 미리보기는 Vectora 앱 1.3.0 이상에서 지원을 확인해 사용하세요. JPEG/PNG 회색조 내보내기는 앱 1.2.0 이상이 필요합니다.',
       source: { source: 'local', path: `./plugins/${id}` },
       policy: { installation: 'AVAILABLE', authentication: 'ON_INSTALL' },
       category: 'Productivity',
@@ -35,7 +35,7 @@ function claudeMarketplaceText() {
   return `${JSON.stringify({
     name: 'vectora',
     owner: { name: 'Vectora' },
-    description: 'Vectora MCP and Korean assessment illustration skills for Claude. Install or update the Vectora app to 1.2.0 or later before using grayscale JPEG/PNG raster export.',
+    description: 'Vectora MCP and Korean assessment illustration skills for Claude. Progress, checkpoints and diagnostic previews require Vectora app 1.3.0 or later and live tool/schema support. Grayscale JPEG/PNG export requires app 1.2.0 or later.',
     plugins: [{ name: 'vectora', source: './plugins/vectora' }],
   }, null, 2)}\n`;
 }

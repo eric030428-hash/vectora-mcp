@@ -91,7 +91,7 @@ Claude 코드 실행 첨부 경로는 로컬 앱·글꼴 경로와 별개일 수
 
 이 패키지는 이미지 생성 모델을 포함하지 않는다. 먼저 현재 세션에 실제 연결된 외부 이미지 생성/편집 MCP 등의 도구를 확인한다. 있으면 이 문서의 화풍 계약·참조 검색·투명 배경 조건을 해당 도구의 실제 스키마에 맞춰 전달한다. 생성 결과는 실제로 열어 대상·화풍·배경을 확인하고 Vectora가 접근 가능한 로컬 파일 또는 지원되는 data URL로 가져온다. 원격 URL이나 Claude 첨부 경로를 로컬 파일 경로로 간주하지 않는다.
 
-생성 도구가 없으면 사용자가 제공했거나 재사용을 명시한 원화를 먼저 검토한다. 새 원화가 여전히 필요하면 대상·포즈·시점·식별 특징·공통 화풍 계약·배경 조건을 담은 생성 프롬프트와 벡터 조판을 준비하고 필요한 원화를 요청한다. 외부에서 생성한 원화를 받으면 이미지로 포함하고 문자·말풍선·도형은 별도 편집 요소로 마무리할 수 있다. 도구가 없다는 이유로 손그린 코드 도형·임시 얼굴·과거 예시를 대체 삽화로 넣지 않는다. 원본 Photo는 생성 대체하지 않으며 미완성 조판을 완성본으로 보고하지 않는다. 이 문서와 선택한 유형·하위유형의 세 단계 화풍·편집·저장 규칙은 그대로 적용한다.`,
+생성 도구 부재의 재사용 검토·생성 프롬프트·비최종 조판·미완료 보고는 이 문서의 공통 「새 원화와 참조 검색」의 동일 규칙을 적용한다.`,
     'create-kice-illustration/SKILL.md client boundary',
   ));
 }
@@ -261,7 +261,7 @@ export function buildClaudePlugin(targetRoot) {
     writeFileSync(path.join(stagedRoot, '.claude-plugin', 'plugin.json'), `${JSON.stringify({
       name: 'vectora',
       version: PLUGIN_VERSION,
-      description: 'Local Vectora MCP with editing, integrated social studies illustration, and an empty integrated science skill for Claude. Install or update the Vectora app to 1.2.0 or later before using grayscale JPEG/PNG raster export.',
+      description: 'Local Vectora MCP with editing, integrated social studies illustration, and an empty integrated science skill for Claude. Progress, checkpoints and diagnostic previews require Vectora app 1.3.0 or later and live tool/schema support. Grayscale JPEG/PNG export requires app 1.2.0 or later.',
       author: { name: 'Vectora' },
     }, null, 2)}\n`);
     writeFileSync(path.join(stagedRoot, '.mcp.json'), `${JSON.stringify({
