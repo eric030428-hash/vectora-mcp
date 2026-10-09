@@ -21,3 +21,7 @@
 
 `widthMm` 기본 108/범위 30–108, 필수 `contentHeightMm`은 실제 측정/지정 본문 높이이며 `paddingMm`은 그 밖에 더한다. 반환 `{svg,layout}`의 `layout.slots`는 문서 px 좌표이며 실제 높이에 맞는 `textAlign`/`verticalAlign`을 적용한다. `lineCount`/`contentWidthMm`은 미지원이므로 입력하지 않고 실제 content 슬롯의 연속 너비/높이를 확인한다. 색·아이콘은 반환 SVG/개체를 편집한다.
 도구는 본문을 작성하거나 줄 수를 측정하지 않는다. 지정 너비는 외곽/여백 계산과 실제 슬롯으로 확인하며, 여러 슬롯 면적의 합이 아닌 하나의 연속 content 직사각형이 지정 크기를 수용해야 한다.
+
+## 내부 자료와 예약 공간
+
+현재 newspaper/scroll/browser native text 프레임의 blocks에서만 `{type:"component",id,spec}`로 실제 내부 표·자료를, `{type:"reserve",id,reserve}`로 치수 또는 UND 측정 줄 수 공간을 둔다. root의 현재 계약과 라이브 종류별 스키마를 확인한다. 예약용 probe 문구는 최종 문서에 포함하지 않는다. 예약 칸의 빈 의미와 표시할 실제 원문을 구별하고 전체 외피와 내부 자료를 따로 편집 가능하게 유지한다. maxHeightMm은 실제 외피 전체 높이 상한이다. 최대 높이를 넘으면 원문을 줄이거나 글자를 축소하지 말고 열·영역·흐름을 다시 조판한다. 무지원이면 기존 편집 개체로 같은 내용을 배치하고 실제 측정 결과를 보고한다.
